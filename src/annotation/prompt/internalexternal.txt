@@ -36,13 +36,13 @@ Avoid using Borderline solely because of uncertainty or insufficient context; us
 
 
 Step 3: Evidence Documentation
-Provide explicit justification grounded in linguistic and contextual evidence.
+Provide explicit justification grounded in linguistic and contextual evidence. Give all of them inside justification inside json.
 
-For each highlighted expression, provide the following structured analysis:
+For each highlighted expression, provide the following structured analysis (give all the info inside this json file; no info must be outside the json):
 json{
    "role": "<Metadiscourse|Propositional|Borderline>",
    "confidence": <1-5>,
-   "note": "<comments about secondary roles or uncertainty>",
+   "note": "<comments about secondary roles or uncertainty; if the role is borderline, give all the info about it here>",
    "justification": "<evidence-based rationale citing specific contextual or linguistic features>",
    "context_assessment": "<assess whether context is sufficient and indicate whether more context would change classification>"
 }
