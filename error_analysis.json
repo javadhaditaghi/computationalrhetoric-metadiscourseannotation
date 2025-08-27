@@ -1,0 +1,25 @@
+{
+  "model_accuracy": {
+    "claude": 1.0,
+    "gemini": 1.0,
+    "deepseek": 0.5
+  },
+  "disagreement_count": 1,
+  "disagreement_cases": [
+    {
+      "index": 0,
+      "sentence": "This study takes the standpoint that genre is \u2018a staged, goal oriented, purposeful activity in which speakers engage as members of our culture\u2019.",
+      "expression": "(this study) takes the standpoint\u2026",
+      "model_decisions": {
+        "claude": "Metadiscourse",
+        "gemini": "Metadiscourse",
+        "deepseek": "Borderline"
+      },
+      "optimized_decision": "Metadiscourse"
+    }
+  ],
+  "context_configuration": {
+    "context_words_before": 30,
+    "context_words_after": 30
+  }
+}

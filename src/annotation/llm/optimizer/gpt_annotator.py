@@ -21,60 +21,23 @@ logger = logging.getLogger(__name__)
 
 
 class AnnotationOptimizer:
-    def __init__(self, openai_api_key: str, model: str = "gpt-5"):
+    def __init__(self, openai_api_key: str, model: str = "gpt-5",
+                 context_words_before: int = 10, context_words_after: int = 10):
         """
         Initialize the Annotation Optimizer
 
         Args:
             openai_api_key: OpenAI API key
             model: GPT model to use for optimization
+            context_words_before: Number of words to include from context_before column
+            context_words_after: Number of words to include from context_after column
         """
         self.client = OpenAI(api_key=openai_api_key)
         self.model = model
+        self.context_words_before = context_words_before
+        self.context_words_after = context_words_after
         self.optimization_prompt = self._load_optimization_prompt()
 
-    def _load_optimization_prompt(self) -> str:
-        """Load the optimization prompt from file"""
-        try:
-            # Construct path relative to project root
-            prompt_path = os.path.join(project_root, Config.OPTIMIZATION_PROMPT_PATH)
-            with open(prompt_path, 'r', encoding='utf-8') as f:
-                return f.read()
-        except FileNotFoundError:
-            logger.warning(
-                f"Optimization prompt file not found at {Config.OPTIMIZATION_PROMPT_PATH}. Using default prompt.")
-            return self._get_default_optimization_prompt()
-
-    # def _get_default_optimization_prompt(self) -> str:
-    #     """Default optimization prompt if file is not found"""
-    #     return """
-    #     You are an expert annotation optimizer. Your task is to analyze annotations from three different AI models (Claude, Gemini, and DeepSeek) and provide the most accurate final decision.
-    #
-    #     Each annotation contains:
-    #     - role: Metadiscourse, Propositional, or Borderline
-    #     - confidence: 1-5 scale
-    #     - note: Additional comments
-    #     - justification: Evidence-based rationale
-    #     - context_assessment: Context sufficiency assessment
-    #
-    #     Consider the following factors when making your final decision:
-    #     1. Confidence scores from each model
-    #     2. Quality and specificity of justifications
-    #     3. Consistency across models
-    #     4. Context assessment quality
-    #     5. Linguistic and contextual evidence provided
-    #
-    #     Provide your final decision in the same JSON format:
-    #     {
-    #         "role": "<Metadiscourse|Propositional|Borderline>",
-    #         "confidence": <1-5>,
-    #         "note": "<synthesis of key insights from all models>",
-    #         "justification": "<comprehensive rationale based on all annotations>",
-    #         "context_assessment": "<overall context assessment>"
-    #     }
-    #     """
-
-    # If there is no prompt in the directory it falls into error
     def _load_optimization_prompt(self) -> str:
         """Load the optimization prompt from file"""
         # Construct path relative to project root
@@ -98,6 +61,24 @@ class AnnotationOptimizer:
         except Exception as e:
             absolute_prompt_path = os.path.abspath(prompt_path)
             raise IOError(f"Error reading prompt file from {absolute_prompt_path}: {e}")
+
+    def _extract_limited_context(self, context_text: str, word_limit: int) -> str:
+        """
+        Extract limited number of words from context text
+
+        Args:
+            context_text: The context text to limit
+            word_limit: Maximum number of words to extract
+
+        Returns:
+            Limited context string
+        """
+        if pd.isna(context_text) or not context_text:
+            return ""
+
+        words = str(context_text).strip().split()
+        limited_words = words[:word_limit] if len(words) > word_limit else words
+        return " ".join(limited_words)
 
     def load_csv_files(self, base_path: str = None) -> Dict[str, pd.DataFrame]:
         """
@@ -360,7 +341,7 @@ class AnnotationOptimizer:
             dataframes: Dictionary of DataFrames from each model
 
         Returns:
-            Merged DataFrame with all annotations
+            Merged DataFrame with all annotations including context columns
         """
         # Start with the first model's DataFrame structure
         base_df = dataframes['claude'].copy()
@@ -380,16 +361,22 @@ class AnnotationOptimizer:
                 how='outer'
             )
 
-        # Select only required columns
+        # Select required columns including context columns if they exist
         required_columns = [
             'thesis_code', 'section', 'sentence', 'expression',
             'claude_metadiscourse_annotation', 'gemini_metadiscourse_annotation', 'deepseek_metadiscourse_annotation'
         ]
 
+        # Add context columns if they exist in the dataset
+        if 'context_before' in base_df.columns:
+            required_columns.append('context_before')
+        if 'context_after' in base_df.columns:
+            required_columns.append('context_after')
+
         return base_df[required_columns]
 
     def optimize_annotation(self, claude_ann: Dict, gemini_ann: Dict, deepseek_ann: Dict,
-                            sentence: str, expression: str) -> Dict:
+                            sentence: str, expression: str, context_before: str = "", context_after: str = "") -> Dict:
         """
         Use GPT to optimize annotations from three models
 
@@ -399,27 +386,46 @@ class AnnotationOptimizer:
             deepseek_ann: DeepSeek's annotation
             sentence: The sentence being annotated
             expression: The specific expression being annotated
+            context_before: Context before the sentence
+            context_after: Context after the sentence
 
         Returns:
             Optimized annotation dictionary
         """
+        # Extract limited context based on word limits
+        limited_context_before = self._extract_limited_context(context_before, self.context_words_before)
+        limited_context_after = self._extract_limited_context(context_after, self.context_words_after)
+
+        # Build the context section for the prompt
+        context_section = ""
+        if limited_context_before or limited_context_after:
+            context_section = f"""
+CONTEXT INFORMATION:
+CONTEXT_BEFORE ({self.context_words_before} words): {limited_context_before if limited_context_before else "[No context before]"}
+CONTEXT_AFTER ({self.context_words_after} words): {limited_context_after if limited_context_after else "[No context after]"}
+"""
+
+        # Build the full prompt
         prompt = f"""
-        {self.optimization_prompt}
+{self.optimization_prompt}
 
-        sentence: {sentence}
-        expression: {expression}
+ANNOTATION TARGET:
+SENTENCE: {sentence}
+EXPRESSION: {expression}
+{context_section}
+MODEL ANNOTATIONS TO ANALYZE:
 
-        CLAUDE ANNOTATION:
-        {json.dumps(claude_ann, indent=2) if claude_ann else "No annotation available"}
+CLAUDE ANNOTATION:
+{json.dumps(claude_ann, indent=2) if claude_ann else "No annotation available"}
 
-        GEMINI ANNOTATION:
-        {json.dumps(gemini_ann, indent=2) if gemini_ann else "No annotation available"}
+GEMINI ANNOTATION:
+{json.dumps(gemini_ann, indent=2) if gemini_ann else "No annotation available"}
 
-        DEEPSEEK ANNOTATION:
-        {json.dumps(deepseek_ann, indent=2) if deepseek_ann else "No annotation available"}
+DEEPSEEK ANNOTATION:
+{json.dumps(deepseek_ann, indent=2) if deepseek_ann else "No annotation available"}
 
-        Provide your optimized final decision:
-        """
+Based on the sentence, expression, context (if available), and the three model annotations above, provide your optimized final decision in JSON format.
+"""
 
         try:
             response = self.client.chat.completions.create(
@@ -509,10 +515,15 @@ class AnnotationOptimizer:
             deepseek_ann = self.parse_json_annotation(row['deepseek_metadiscourse_annotation'])
             deepseek_ann = self.validate_and_clean_annotation(deepseek_ann) if deepseek_ann else None
 
-            # Optimize annotation
+            # Get context information if available
+            context_before = row.get('context_before', '')
+            context_after = row.get('context_after', '')
+
+            # Optimize annotation with context
             optimized = self.optimize_annotation(
                 claude_ann, gemini_ann, deepseek_ann,
-                row['sentence'], row['expression']
+                row['sentence'], row['expression'],
+                context_before, context_after
             )
 
             optimized_decisions.append(json.dumps(optimized))
@@ -612,48 +623,48 @@ class AnnotationOptimizer:
 
         # Generate improvement suggestions based on patterns
         improvement_prompt = f"""
-        IMPROVED ANNOTATION PROMPT
-        ==========================
+IMPROVED ANNOTATION PROMPT
+==========================
 
-        Based on analysis of {len(disagreements)} disagreement cases between annotator models,
-        the following improvements have been identified:
+Based on analysis of {len(disagreements)} disagreement cases between annotator models,
+the following improvements have been identified:
 
-        ACCURACY SCORES:
-        - Claude: {error_analysis['model_accuracy']['claude']:.2%}
-        - Gemini: {error_analysis['model_accuracy']['gemini']:.2%}
-        - DeepSeek: {error_analysis['model_accuracy']['deepseek']:.2%}
+ACCURACY SCORES:
+- Claude: {error_analysis['model_accuracy']['claude']:.2%}
+- Gemini: {error_analysis['model_accuracy']['gemini']:.2%}
+- DeepSeek: {error_analysis['model_accuracy']['deepseek']:.2%}
 
-        COMMON ERROR PATTERNS IDENTIFIED:
-        {'[Analysis of specific patterns would be added here based on disagreement cases]'}
+COMMON ERROR PATTERNS IDENTIFIED:
+[Analysis of specific patterns would be added here based on disagreement cases]
 
-        ENHANCED GUIDELINES:
+ENHANCED GUIDELINES:
 
-        1. METADISCOURSE vs PROPOSITIONAL DISTINCTION:
-           - Pay special attention to expressions that organize, evaluate, or guide reader interpretation
-           - Consider the functional role of expressions in discourse management
-           - Look for signals that help readers navigate the text structure
+1. METADISCOURSE vs PROPOSITIONAL DISTINCTION:
+   - Pay special attention to expressions that organize, evaluate, or guide reader interpretation
+   - Consider the functional role of expressions in discourse management
+   - Look for signals that help readers navigate the text structure
 
-        2. CONFIDENCE ASSESSMENT:
-           - Use confidence scores more systematically
-           - Score 1-2 for highly uncertain cases
-           - Score 4-5 only for clear, unambiguous cases
-           - Score 3 for borderline cases with some uncertainty
+2. CONFIDENCE ASSESSMENT:
+   - Use confidence scores more systematically
+   - Score 1-2 for highly uncertain cases
+   - Score 4-5 only for clear, unambiguous cases
+   - Score 3 for borderline cases with some uncertainty
 
-        3. CONTEXT CONSIDERATIONS:
-           - Always assess whether sufficient context is provided
-           - Consider both local and global discourse context
-           - Note when additional context might change the classification
+3. CONTEXT CONSIDERATIONS:
+   - Always assess whether sufficient context is provided
+   - Consider both local and global discourse context
+   - Note when additional context might change the classification
 
-        4. JUSTIFICATION REQUIREMENTS:
-           - Provide specific linguistic evidence
-           - Reference discourse function explicitly
-           - Explain why alternative classifications were rejected
+4. JUSTIFICATION REQUIREMENTS:
+   - Provide specific linguistic evidence
+   - Reference discourse function explicitly
+   - Explain why alternative classifications were rejected
 
-        ORIGINAL PROMPT:
-        {current_prompt}
+ORIGINAL PROMPT:
+{current_prompt}
 
-        [Additional specific improvements would be added based on detailed error pattern analysis]
-        """
+[Additional specific improvements would be added based on detailed error pattern analysis]
+"""
 
         return improvement_prompt
 
@@ -738,13 +749,10 @@ if __name__ == "__main__":
         model=Config.OPENAI_MODEL
     )
 
-    # Debug JSON parsing for a specific file (optional)
-    # optimizer.debug_json_parsing("result/claude/your_file.csv")
-
     # Run full pipeline with optional debugging
     try:
         optimized_df, error_analysis = optimizer.run_full_pipeline(
-            debug_parsing=True  # Set to False to skip debugging
+            debug_parsing=True
         )
 
         print(f"Optimization completed!")

@@ -1,43 +1,43 @@
 
-        IMPROVED ANNOTATION PROMPT
-        ==========================
+IMPROVED ANNOTATION PROMPT
+==========================
 
-        Based on analysis of 1 disagreement cases between annotator models,
-        the following improvements have been identified:
+Based on analysis of 1 disagreement cases between annotator models,
+the following improvements have been identified:
 
-        ACCURACY SCORES:
-        - Claude: 100.00%
-        - Gemini: 100.00%
-        - DeepSeek: 50.00%
+ACCURACY SCORES:
+- Claude: 100.00%
+- Gemini: 100.00%
+- DeepSeek: 50.00%
 
-        COMMON ERROR PATTERNS IDENTIFIED:
-        [Analysis of specific patterns would be added here based on disagreement cases]
+COMMON ERROR PATTERNS IDENTIFIED:
+[Analysis of specific patterns would be added here based on disagreement cases]
 
-        ENHANCED GUIDELINES:
+ENHANCED GUIDELINES:
 
-        1. METADISCOURSE vs PROPOSITIONAL DISTINCTION:
-           - Pay special attention to expressions that organize, evaluate, or guide reader interpretation
-           - Consider the functional role of expressions in discourse management
-           - Look for signals that help readers navigate the text structure
+1. METADISCOURSE vs PROPOSITIONAL DISTINCTION:
+   - Pay special attention to expressions that organize, evaluate, or guide reader interpretation
+   - Consider the functional role of expressions in discourse management
+   - Look for signals that help readers navigate the text structure
 
-        2. CONFIDENCE ASSESSMENT:
-           - Use confidence scores more systematically
-           - Score 1-2 for highly uncertain cases
-           - Score 4-5 only for clear, unambiguous cases
-           - Score 3 for borderline cases with some uncertainty
+2. CONFIDENCE ASSESSMENT:
+   - Use confidence scores more systematically
+   - Score 1-2 for highly uncertain cases
+   - Score 4-5 only for clear, unambiguous cases
+   - Score 3 for borderline cases with some uncertainty
 
-        3. CONTEXT CONSIDERATIONS:
-           - Always assess whether sufficient context is provided
-           - Consider both local and global discourse context
-           - Note when additional context might change the classification
+3. CONTEXT CONSIDERATIONS:
+   - Always assess whether sufficient context is provided
+   - Consider both local and global discourse context
+   - Note when additional context might change the classification
 
-        4. JUSTIFICATION REQUIREMENTS:
-           - Provide specific linguistic evidence
-           - Reference discourse function explicitly
-           - Explain why alternative classifications were rejected
+4. JUSTIFICATION REQUIREMENTS:
+   - Provide specific linguistic evidence
+   - Reference discourse function explicitly
+   - Explain why alternative classifications were rejected
 
-        ORIGINAL PROMPT:
-        Metadiscourse Classification Task: Internal vs. External Functions
+ORIGINAL PROMPT:
+Metadiscourse Classification Task: Internal vs. External Functions
 
 Objective
 Classify highlighted expressions according to their primary rhetorical function within academic discourse, distinguishing between:
@@ -109,5 +109,4 @@ Distinguish between reference to research processes (potentially metadiscourse) 
 Account for disciplinary conventions that may influence metadiscourse patterns
 
 
-        [Additional specific improvements would be added based on detailed error pattern analysis]
-        
+[Additional specific improvements would be added based on detailed error pattern analysis]

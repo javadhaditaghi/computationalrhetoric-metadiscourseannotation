@@ -3,6 +3,8 @@ import os
 import sys
 from pathlib import Path
 from dotenv import load_dotenv
+import pandas as pd
+import json
 
 
 def create_directory_structure():
@@ -47,6 +49,7 @@ def check_csv_files():
     """Check if CSV files exist in the required directories"""
     models = ['claude', 'gemini', 'deepseek']
     missing_files = []
+    found_files = []
 
     for model in models:
         csv_dir = f"result/{model}"
@@ -59,14 +62,15 @@ def check_csv_files():
             missing_files.append(f"{csv_dir}/*.csv")
         else:
             print(f"✓ Found {len(csv_files)} CSV file(s) in {csv_dir}/")
+            found_files.append(os.path.join(csv_dir, csv_files[0]))  # Store first CSV file path
 
     if missing_files:
         print("⚠️  Missing CSV files:")
         for missing in missing_files:
             print(f"   - {missing}")
-        return False
+        return False, []
 
-    return True
+    return True, found_files
 
 
 def check_prompt_files():
@@ -214,6 +218,164 @@ def check_file_structure():
     return True
 
 
+def load_sample_data(csv_files):
+    """Load first row from each CSV file and return merged sample data"""
+    try:
+        sample_data = {}
+
+        # Load first row from each model's CSV
+        models = ['claude', 'gemini', 'deepseek']
+        for i, model in enumerate(models):
+            if i < len(csv_files):
+                df = pd.read_csv(csv_files[i])
+                if len(df) > 0:
+                    sample_data[model] = df.iloc[0].to_dict()
+                    print(f"✓ Loaded sample data from {csv_files[i]}")
+                else:
+                    print(f"⚠️  CSV file {csv_files[i]} is empty")
+                    return None
+            else:
+                print(f"⚠️  No CSV file found for {model}")
+                return None
+
+        return sample_data
+
+    except Exception as e:
+        print(f"⚠️  Error loading sample data: {e}")
+        return None
+
+
+def extract_limited_context(context_text, word_limit=10):
+    """Extract limited number of words from context text"""
+    if pd.isna(context_text) or not context_text:
+        return ""
+
+    words = str(context_text).strip().split()
+    limited_words = words[:word_limit] if len(words) > word_limit else words
+    return " ".join(limited_words)
+
+
+def parse_json_annotation(json_str):
+    """Simple JSON parsing for preview (mimics the optimizer method)"""
+    try:
+        if pd.isna(json_str) or not json_str:
+            return None
+        return json.loads(str(json_str).strip())
+    except:
+        return None
+
+
+def build_sample_prompt(sample_data, context_words_before=10, context_words_after=10):
+    """Build the exact prompt that would be sent to OpenAI in optimize_annotation method"""
+    try:
+        # Load the optimization prompt (same as AnnotationOptimizer does)
+        prompt_path = "src/annotation/prompt/optimization_prompt.txt"
+        if not os.path.exists(prompt_path):
+            print("⚠️  Optimization prompt file not found")
+            return None
+
+        with open(prompt_path, 'r', encoding='utf-8') as f:
+            optimization_prompt = f.read()
+
+        # Get sample data from first model (usually claude)
+        first_model_data = sample_data.get('claude', sample_data.get('gemini', sample_data.get('deepseek', {})))
+
+        if not first_model_data:
+            print("⚠️  No sample data available")
+            return None
+
+        # Extract basic information (same as process_all_annotations does)
+        sentence = first_model_data.get('sentence', 'No sentence available')
+        expression = first_model_data.get('expression', 'No expression available')
+
+        # Extract and limit context (same as optimize_annotation does)
+        context_before = first_model_data.get('context_before', '')
+        context_after = first_model_data.get('context_after', '')
+
+        limited_context_before = extract_limited_context(context_before, context_words_before)
+        limited_context_after = extract_limited_context(context_after, context_words_after)
+
+        # Parse annotations (same as process_all_annotations does)
+        claude_ann = parse_json_annotation(sample_data.get('claude', {}).get('metadiscourse_annotation'))
+        gemini_ann = parse_json_annotation(sample_data.get('gemini', {}).get('metadiscourse_annotation'))
+        deepseek_ann = parse_json_annotation(sample_data.get('deepseek', {}).get('metadiscourse_annotation'))
+
+        # Build the context section (exact same logic as optimize_annotation)
+        context_section = ""
+        if limited_context_before or limited_context_after:
+            context_section = f"""
+CONTEXT INFORMATION:
+CONTEXT_BEFORE ({context_words_before} words): {limited_context_before if limited_context_before else "[No context before]"}
+CONTEXT_AFTER ({context_words_after} words): {limited_context_after if limited_context_after else "[No context after]"}
+"""
+
+        # Build the EXACT prompt that optimize_annotation sends to OpenAI
+        prompt = f"""
+{optimization_prompt}
+
+ANNOTATION TARGET:
+SENTENCE: {sentence}
+EXPRESSION: {expression}
+{context_section}
+MODEL ANNOTATIONS TO ANALYZE:
+
+CLAUDE ANNOTATION:
+{json.dumps(claude_ann, indent=2) if claude_ann else "No annotation available"}
+
+GEMINI ANNOTATION:
+{json.dumps(gemini_ann, indent=2) if gemini_ann else "No annotation available"}
+
+DEEPSEEK ANNOTATION:
+{json.dumps(deepseek_ann, indent=2) if deepseek_ann else "No annotation available"}
+
+Based on the sentence, expression, context (if available), and the three model annotations above, provide your optimized final decision in JSON format.
+"""
+
+        return prompt
+
+    except Exception as e:
+        print(f"⚠️  Error building sample prompt: {e}")
+        return None
+
+
+def preview_prompt_with_data(csv_files):
+    """Preview the exact prompt that gets sent to OpenAI in the optimize_annotation method"""
+    if not csv_files:
+        print("No CSV files available for prompt preview")
+        return
+
+    print("\n" + "=" * 60)
+    print("EXACT OPENAI PROMPT PREVIEW FROM ANNOTATION OPTIMIZER")
+    print("=" * 60)
+
+    # Load sample data
+    sample_data = load_sample_data(csv_files)
+    if not sample_data:
+        print("Could not load sample data for prompt preview")
+        return
+
+    # Build sample prompt (exact same as optimize_annotation method)
+    sample_prompt = build_sample_prompt(sample_data)
+    if not sample_prompt:
+        print("Could not build sample prompt")
+        return
+
+    print("\nThis is the EXACT prompt sent to OpenAI by the optimize_annotation method:")
+    print("-" * 60)
+    print(sample_prompt)
+    print("-" * 60)
+
+    # Show data source information
+    print(f"\nSample data loaded from:")
+    for model, data in sample_data.items():
+        print(f"  {model}: thesis_code = {data.get('thesis_code', 'N/A')}, "
+              f"expression = '{data.get('expression', 'N/A')}'")
+
+    print(f"\nContext configuration used: 10 words before, 10 words after")
+    print(f"(Change with --context-before and --context-after when running run_optimizer.py)")
+    print(f"\nThis prompt will be sent to OpenAI's chat.completions.create() method")
+
+
 def main():
     """Main setup function"""
     print("🚀 Annotation Optimizer Setup")
@@ -241,7 +403,7 @@ def main():
 
     # Check CSV files
     print("\n📊 Checking CSV data files...")
-    csv_ok = check_csv_files()
+    csv_ok, csv_files = check_csv_files()
 
     # Run API test if env is configured
     if env_ok:
@@ -249,6 +411,10 @@ def main():
         api_ok = run_quick_test()
     else:
         api_ok = False
+
+    # Preview prompt with actual data if everything is ready
+    if files_ok and prompts_ok and csv_ok:
+        preview_prompt_with_data(csv_files)
 
     # Summary
     print("\n" + "=" * 40)
@@ -269,6 +435,9 @@ def main():
     if all([files_ok, env_ok, prompts_ok, csv_ok, api_ok]):
         print(f"\n🎉 Setup complete! You can now run:")
         print(f"   python run_optimizer.py")
+        print(f"\nOptional parameters:")
+        print(f"   python run_optimizer.py --context-before 15 --context-after 20")
+        print(f"   python run_optimizer.py --model gpt-4 --context-before 5")
     else:
         print(f"\n⚠️  Setup incomplete. Please resolve the issues above before running the optimizer.")
 
