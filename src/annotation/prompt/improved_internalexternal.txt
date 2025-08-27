@@ -1,0 +1,113 @@
+
+        IMPROVED ANNOTATION PROMPT
+        ==========================
+
+        Based on analysis of 1 disagreement cases between annotator models,
+        the following improvements have been identified:
+
+        ACCURACY SCORES:
+        - Claude: 100.00%
+        - Gemini: 100.00%
+        - DeepSeek: 50.00%
+
+        COMMON ERROR PATTERNS IDENTIFIED:
+        [Analysis of specific patterns would be added here based on disagreement cases]
+
+        ENHANCED GUIDELINES:
+
+        1. METADISCOURSE vs PROPOSITIONAL DISTINCTION:
+           - Pay special attention to expressions that organize, evaluate, or guide reader interpretation
+           - Consider the functional role of expressions in discourse management
+           - Look for signals that help readers navigate the text structure
+
+        2. CONFIDENCE ASSESSMENT:
+           - Use confidence scores more systematically
+           - Score 1-2 for highly uncertain cases
+           - Score 4-5 only for clear, unambiguous cases
+           - Score 3 for borderline cases with some uncertainty
+
+        3. CONTEXT CONSIDERATIONS:
+           - Always assess whether sufficient context is provided
+           - Consider both local and global discourse context
+           - Note when additional context might change the classification
+
+        4. JUSTIFICATION REQUIREMENTS:
+           - Provide specific linguistic evidence
+           - Reference discourse function explicitly
+           - Explain why alternative classifications were rejected
+
+        ORIGINAL PROMPT:
+        Metadiscourse Classification Task: Internal vs. External Functions
+
+Objective
+Classify highlighted expressions according to their primary rhetorical function within academic discourse, distinguishing between:
+Discourse-oriented (Metadiscourse/Internal): organizes text, guides the reader, manages writer-reader interaction
+Content-oriented (Propositional/External): conveys factual content about real-world phenomena, theoretical concepts, or empirical data
+Important: Classification applies only to the highlighted expression (typically phrase/clause level), not the entire sentence. Sentences may contain both propositional and metadiscourse segments; classify only the marked span in context.
+
+Definitions
+Metadiscourse: The expression organizes the text, guides the reader, or manages writer-reader interaction. This includes organizing textual structure, signaling the writer's stance or evaluation, guiding reader interpretation, or referring to the discourse itself.
+Propositional: The expression conveys factual content about real-world phenomena, including empirical findings and data, theoretical concepts and entities, events and processes in the world, or domain-specific facts independent of text organization.
+Borderline: Use when: 1) The expression simultaneously conveys factual information (propositional) and guides, frames, or organizes reader understanding (metadiscourse). 2) There is genuine functional overlap, not merely interpretive uncertainty. 3) Ambiguous references exist, making it impossible to assign a clear single function.
+Rule of thumb: Definitions, explanatory phrases, or reporting verbs that both present content and guide reader interpretation should often be classified as Borderline.
+
+Tip 1: This can be helpful:
+If expression simultaneously:
+  - conveys factual information (propositional), AND
+  - organizes, frames, or guides reader interpretation (metadiscourse)
+Then → classify as Borderline.
+Otherwise → classify based on dominant function.
+
+
+Important: Do not use Borderline simply because you are uncertain or the decision is difficult. Use it only when the expression genuinely exhibits the characteristics described above. If you are uncertain due to insufficient context or complexity, classify based on the most likely primary function and reflect your uncertainty in the confidence score and note field.
+
+Step 1: Contextual Analysis
+Examine the provided context window to identify:
+Syntactic position and grammatical function
+Semantic relationships with surrounding text
+Discourse-level positioning and rhetorical purpose
+Whether the expression defines, frames, or interprets content for the reader
+
+Step 2: Functional Classification
+Borderline first: If the expression genuinely exhibits dual functionality, classify as Borderline.
+Otherwise, classify based on dominant function.
+Avoid using Borderline solely because of uncertainty or insufficient context; use confidence scores (1–5) for uncertainty.
+
+
+Step 3: Evidence Documentation
+Provide explicit justification grounded in linguistic and contextual evidence. Give all of them inside justification inside json.
+
+For each highlighted expression, provide the following structured analysis (give all the info inside this json file; no info must be outside the json):
+json{
+   "role": "<Metadiscourse|Propositional|Borderline>",
+   "confidence": <1-5>,
+   "note": "<comments about secondary roles or uncertainty; if the role is borderline, give all the info about it here>",
+   "justification": "<evidence-based rationale citing specific contextual or linguistic features>",
+   "context_assessment": "<assess whether context is sufficient and indicate whether more context would change classification>"
+}
+
+
+Quality Assurance Guidelines
+
+Confidence Scale:
+
+5 = Unambiguous classification with clear linguistic evidence
+4 = High confidence with minor interpretive uncertainty
+3 = Moderate confidence with some ambiguity
+2 = Low confidence with significant uncertainty
+1 = Minimal confidence; classification highly uncertain
+
+
+Consistency Check: Consider whether similar expressions in comparable contexts would receive equivalent classifications.
+Functional Primacy: When multiple functions are present, classify based on the dominant communicative purpose, but if a secondary function is clearly prominent, consider using the Borderline category or reflecting it in the confidence score and note field.
+
+Important Notes
+
+Focus on functional analysis rather than surface-level categorization
+Consider the writer's rhetorical intent as evidenced through context
+Distinguish between reference to research processes (potentially metadiscourse) and research content (propositional)
+Account for disciplinary conventions that may influence metadiscourse patterns
+
+
+        [Additional specific improvements would be added based on detailed error pattern analysis]
+        

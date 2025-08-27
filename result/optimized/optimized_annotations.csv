@@ -1,0 +1,53 @@
+thesis_code,section,sentence,expression,claude_metadiscourse_annotation,gemini_metadiscourse_annotation,deepseek_metadiscourse_annotation,Optimized_final_decision
+AP1,Introduction,"This study takes the standpoint that genre is ‘a staged, goal oriented, purposeful activity in which speakers engage as members of our culture’.",(this study) takes the standpoint…,"```json
+{
+   ""role"": ""Metadiscourse"",
+   ""confidence"": 4,
+   ""note"": ""While the expression does present a theoretical definition of 'genre' (propositional content), its primary function is to establish the study's theoretical framework and position the research perspective, which guides reader interpretation of subsequent analysis."",
+   ""justification"": ""The expression 'This study takes the standpoint that' explicitly signals the writer's adopted theoretical position, functioning as a frame marker that establishes the conceptual lens through which the research will proceed. The verb phrase 'takes the standpoint' is inherently metadiscursive, indicating how the writer positions their research within theoretical discourse. Although the subordinate clause contains a definition of genre (propositional content), the entire highlighted expression primarily serves to orient readers to the study's theoretical framework rather than simply conveying factual information about genre theory."",
+   ""context_assessment"": ""The context is sufficient for classification. The expression appears in the Introduction section where theoretical positioning is expected. The subsequent elaboration ('It is further elaborated as...') confirms this is establishing a theoretical framework rather than merely reporting facts about genre.""
+}
+```","```json
+{
+  ""role"": ""Metadiscourse"",
+  ""confidence"": 5,
+  ""note"": """",
+  ""justification"": ""The phrase \""(this study) takes the standpoint…\"" explicitly signals the author's stance or perspective within the research. It functions as a writer-oriented metadiscourse element, framing the subsequent content as the study's specific position.  It guides the reader's interpretation by clarifying the lens through which the research will be conducted. The phrase does not present factual information about the world but rather about the study's approach."",
+  ""context_assessment"": ""Sufficient context. More context might elaborate on the standpoint, but it wouldn't change the metadiscursive nature of the highlighted phrase.""
+}
+```
+","```json
+{
+  ""role"": ""Borderline"",
+  ""confidence"": 4,
+  ""note"": ""The expression simultaneously presents the study's theoretical position (propositional content about its stance) and functions to frame/guide reader interpretation by signaling the conceptual framework being adopted"",
+  ""justification"": ""The phrase 'takes the standpoint' serves dual functions: (1) It propositionally communicates the study's adopted theoretical position regarding genre definition, constituting factual information about the research framework; (2) It metadiscursively frames the subsequent definition by signaling the conceptual lens through which the reader should interpret the concept of genre, serving an organizational function within the academic argument. The demonstrative 'this study' explicitly references the research discourse itself, while 'takes the standpoint' performs both content-presentation and reader-guidance functions."",
+  ""context_assessment"": ""Context is sufficient for classification. The preceding context establishes the research focus on political discourse genres, and the subsequent context elaborates the definition. Additional context might provide more nuance but would not eliminate the dual functionality evident in this expression.""
+}
+```","{""role"": ""Metadiscourse"", ""confidence"": 4.5, ""note"": ""While the expression does present a theoretical definition of 'genre' (propositional content), its primary function is to establish the study's theoretical framework and position the research perspective, which guides reader interpretation of subsequent analysis."", ""justification"": ""The expression 'This study takes the standpoint that' explicitly signals the writer's adopted theoretical position, functioning as a frame marker that establishes the conceptual lens through which the research will proceed. The verb phrase 'takes the standpoint' is inherently metadiscursive, indicating how the writer positions their research within theoretical discourse. Although the subordinate clause contains a definition of genre (propositional content), the entire highlighted expression primarily serves to orient readers to the study's theoretical framework rather than simply conveying factual information about genre theory."", ""context_assessment"": ""The context is sufficient for classification. The expression appears in the Introduction section where theoretical positioning is expected. The subsequent elaboration ('It is further elaborated as...') confirms this is establishing a theoretical framework rather than merely reporting facts about genre.""}"
+AP1,Introduction,This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics.,This thesis focuses…,"```json
+{
+   ""role"": ""Metadiscourse"",
+   ""confidence"": 5,
+   ""note"": ""Classic metadiscourse expression that announces the research focus and objectives. While it mentions the research object ('text as an instrument', 'generic structure'), the primary function is to orient the reader to what the thesis will do rather than conveying content about these concepts."",
+   ""justification"": ""The expression 'This thesis focuses on... and aims to...' is a prototypical metadiscourse marker that: (1) uses the self-referential 'This thesis' to refer to the current academic text itself, (2) employs performative verbs 'focuses on' and 'aims to' that describe the text's rhetorical actions rather than external phenomena, (3) appears in the Introduction section where authors typically outline their research agenda, and (4) functions to guide reader expectations about the upcoming content. The expression organizes the discourse by announcing the study's scope and objectives, making it fundamentally discourse-oriented rather than content-oriented."",
+   ""context_assessment"": ""Context is sufficient for classification. The surrounding text confirms this is part of the thesis introduction where the author is outlining the study's approach and objectives. Additional context would not change this classification as the metadiscursive function is unambiguous.""
+}
+```","```json
+{
+  ""role"": ""Metadiscourse"",
+  ""confidence"": 5,
+  ""note"": """",
+  ""justification"": ""The phrase \""This thesis focuses…\"" explicitly signals the scope and direction of the current research project. It functions as a roadmap for the reader, indicating the central theme and objective of the subsequent text. This is a clear example of metadiscourse, specifically a textual-organizational function, guiding the reader's understanding of the thesis's purpose and content."",
+  ""context_assessment"": ""Sufficient context. More context might elaborate on the specific focus, but it wouldn't change the metadiscursive nature of this phrase.""
+}
+```
+","```json
+{
+  ""role"": ""Metadiscourse"",
+  ""confidence"": 5,
+  ""note"": ""Purely organizational function with no secondary propositional content about real-world phenomena"",
+  ""justification"": ""The expression 'This thesis focuses...' explicitly refers to the document itself ('this thesis') and announces its central objective ('focuses on 'text as an instrument' and aims to reveal...'). This serves to frame and organize the reader's understanding of the document's structure and purpose, rather than conveying factual content about external phenomena. The verb 'focuses' is a clear metadiscursive marker indicating textual organization."",
+  ""context_assessment"": ""Context is sufficient. The surrounding text establishes the theoretical positioning, making it clear this is a framing statement about the document's scope. More context would not change this classification as the expression's self-referential nature is unambiguous.""
+}
+```","{""role"": ""Metadiscourse"", ""confidence"": 5, ""note"": ""All annotators agree on the role and there is no secondary propositional content or uncertainty."", ""justification"": ""The expression 'This thesis focuses...' is a metadiscourse marker that uses self-referential language to refer to the academic text itself and employs performative verbs ('focuses on', 'aims to') to describe the text's rhetorical actions. It appears in the introduction, where authors typically outline their research agenda, and functions to guide reader expectations about the upcoming content. The expression organizes the discourse by announcing the study's scope and objectives, making it fundamentally discourse-oriented rather than content-oriented."", ""context_assessment"": ""The context is sufficient for classification. The surrounding text confirms this is part of the thesis introduction where the author is outlining the study's approach and objectives. Additional context would not change this classification as the metadiscursive function is unambiguous.""}"
