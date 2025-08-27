@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 class AnnotationOptimizer:
-    def __init__(self, openai_api_key: str, model: str = "gpt-4"):
+    def __init__(self, openai_api_key: str, model: str = "gpt-5"):
         """
         Initialize the Annotation Optimizer
 
@@ -45,34 +45,59 @@ class AnnotationOptimizer:
                 f"Optimization prompt file not found at {Config.OPTIMIZATION_PROMPT_PATH}. Using default prompt.")
             return self._get_default_optimization_prompt()
 
-    def _get_default_optimization_prompt(self) -> str:
-        """Default optimization prompt if file is not found"""
-        return """
-        You are an expert annotation optimizer. Your task is to analyze annotations from three different AI models (Claude, Gemini, and DeepSeek) and provide the most accurate final decision.
+    # def _get_default_optimization_prompt(self) -> str:
+    #     """Default optimization prompt if file is not found"""
+    #     return """
+    #     You are an expert annotation optimizer. Your task is to analyze annotations from three different AI models (Claude, Gemini, and DeepSeek) and provide the most accurate final decision.
+    #
+    #     Each annotation contains:
+    #     - role: Metadiscourse, Propositional, or Borderline
+    #     - confidence: 1-5 scale
+    #     - note: Additional comments
+    #     - justification: Evidence-based rationale
+    #     - context_assessment: Context sufficiency assessment
+    #
+    #     Consider the following factors when making your final decision:
+    #     1. Confidence scores from each model
+    #     2. Quality and specificity of justifications
+    #     3. Consistency across models
+    #     4. Context assessment quality
+    #     5. Linguistic and contextual evidence provided
+    #
+    #     Provide your final decision in the same JSON format:
+    #     {
+    #         "role": "<Metadiscourse|Propositional|Borderline>",
+    #         "confidence": <1-5>,
+    #         "note": "<synthesis of key insights from all models>",
+    #         "justification": "<comprehensive rationale based on all annotations>",
+    #         "context_assessment": "<overall context assessment>"
+    #     }
+    #     """
 
-        Each annotation contains:
-        - role: Metadiscourse, Propositional, or Borderline
-        - confidence: 1-5 scale
-        - note: Additional comments
-        - justification: Evidence-based rationale
-        - context_assessment: Context sufficiency assessment
+    # If there is no prompt in the directory it falls into error
+    def _load_optimization_prompt(self) -> str:
+        """Load the optimization prompt from file"""
+        # Construct path relative to project root
+        prompt_path = os.path.join(project_root, Config.OPTIMIZATION_PROMPT_PATH)
 
-        Consider the following factors when making your final decision:
-        1. Confidence scores from each model
-        2. Quality and specificity of justifications
-        3. Consistency across models
-        4. Context assessment quality
-        5. Linguistic and contextual evidence provided
+        if not os.path.exists(prompt_path):
+            # Get the absolute path to show in error message
+            absolute_prompt_path = os.path.abspath(prompt_path)
+            expected_directory = os.path.dirname(absolute_prompt_path)
 
-        Provide your final decision in the same JSON format:
-        {
-            "role": "<Metadiscourse|Propositional|Borderline>",
-            "confidence": <1-5>,
-            "note": "<synthesis of key insights from all models>",
-            "justification": "<comprehensive rationale based on all annotations>",
-            "context_assessment": "<overall context assessment>"
-        }
-        """
+            raise FileNotFoundError(
+                f"Prompt is not inside the correct directory.\n"
+                f"Expected directory: {expected_directory}\n"
+                f"Expected file path: {absolute_prompt_path}\n"
+                f"Please ensure the prompt file exists in the correct directory."
+            )
+
+        try:
+            with open(prompt_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        except Exception as e:
+            absolute_prompt_path = os.path.abspath(prompt_path)
+            raise IOError(f"Error reading prompt file from {absolute_prompt_path}: {e}")
 
     def load_csv_files(self, base_path: str = None) -> Dict[str, pd.DataFrame]:
         """
