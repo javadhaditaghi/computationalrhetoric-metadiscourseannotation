@@ -23,7 +23,7 @@ class Config:
     BATCH_SIZE = 10  # Process annotations in batches to manage API rate limits
     MAX_RETRIES = 3  # Number of retries for API calls
     RETRY_DELAY = 5  # Seconds to wait between retries
-    TEMPERATURE = 0.3  # OpenAI temperature for consistency
+    TEMPERATURE = 0  # OpenAI temperature for consistency
     MAX_TOKENS = 1000  # Maximum tokens for GPT responses
 
     # Model directories
