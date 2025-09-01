@@ -31,6 +31,7 @@ Respond only with a valid JSON object, no commentary outside JSON:
   "note": "<secondary roles, uncertainty sources, or annotator divergence>",
   "justification": "<final evidence-based rationale, integrating strongest points from annotators>",
   "context_assessment": "<evaluation of whether context was sufficient and if more context would change classification>"
+  "prompt_improvement_note": "<analysis of model disagreement sources and give prompt enhancement suggestions>"
 }
 
 Additional Rules

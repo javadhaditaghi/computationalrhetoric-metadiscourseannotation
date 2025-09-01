@@ -19,7 +19,6 @@ If expression simultaneously:
 Then → classify as Borderline.
 Otherwise → classify based on dominant function.
 
-
 Important: Do not use Borderline simply because you are uncertain or the decision is difficult. Use it only when the expression genuinely exhibits the characteristics described above. If you are uncertain due to insufficient context or complexity, classify based on the most likely primary function and reflect your uncertainty in the confidence score and note field.
 
 Step 1: Contextual Analysis
@@ -45,6 +44,7 @@ json{
    "note": "<comments about secondary roles or uncertainty; if the role is borderline, give all the info about it here>",
    "justification": "<evidence-based rationale citing specific contextual or linguistic features>",
    "context_assessment": "<assess whether context is sufficient and indicate whether more context would change classification>"
+
 }
 
 

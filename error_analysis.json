@@ -1,21 +1,153 @@
 {
   "model_accuracy": {
-    "claude": 1.0,
-    "gemini": 1.0,
-    "deepseek": 0.5
+    "claude": 0.64,
+    "gemini": 0.56,
+    "deepseek": 0.56
   },
-  "disagreement_count": 1,
+  "disagreement_count": 13,
   "disagreement_cases": [
     {
-      "index": 0,
-      "sentence": "This study takes the standpoint that genre is \u2018a staged, goal oriented, purposeful activity in which speakers engage as members of our culture\u2019.",
-      "expression": "(this study) takes the standpoint\u2026",
+      "index": 2,
+      "sentence": "Further, Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as a process.",
+      "expression": "First\u2026 then\u2026",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 3,
+      "sentence": "Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment.",
+      "expression": "Halliday\u2026explains\u2026",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Propositional"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 4,
+      "sentence": "Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as a process.",
+      "expression": "maintains that\u2026",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 5,
+      "sentence": "It is possible to establish a sub-genre within the Radio Address.",
+      "expression": "It is possible\u2026",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 7,
+      "sentence": "Scacci (2011) states, \u2018genres exist in relation to certain situational constraints, the weekly address is unique in its routine response to the week\u2019s events packaged for both public and press consumption\u2019.",
+      "expression": "Scacci (2011) states\u2026",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 12,
+      "sentence": "Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation.",
+      "expression": "demonstrates that\u2026",
       "model_decisions": {
         "claude": "Metadiscourse",
         "gemini": "Metadiscourse",
-        "deepseek": "Borderline"
+        "deepseek": "Propositional"
       },
       "optimized_decision": "Metadiscourse"
+    },
+    {
+      "index": 15,
+      "sentence": "A high TTR indicates a large amount of lexical variation, while a low TTR indicates a limited lexical variation.",
+      "expression": "indicates",
+      "model_decisions": {
+        "claude": "Borderline",
+        "gemini": "Propositional",
+        "deepseek": "Propositional"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 16,
+      "sentence": "But while American EPA writers are wordier, their British colleagues seem to employ longer sentences in comparison (+3.2 words).",
+      "expression": "seem to",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 17,
+      "sentence": "Considering the EPA Diacorpus in its whole extension, table 7.1 highlights a difference in terms of length between American and British EPAs, covering respectively 60% (180,375 tokens) and 40% (118,763 tokens) of the overall tokens, despite texts are almost equally distributed across both areas (187 American and 191 British EPAs).",
+      "expression": "highlights",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 18,
+      "sentence": "Eventually, the mean sentence length of the corpus was calculated, which is 21.04",
+      "expression": "Eventually",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Metadiscourse"
+    },
+    {
+      "index": 20,
+      "sentence": "From a diachronic perspective, EPAs have become not only longer but also more syntactically developed and lexically richer over time: their length has more than doubled, from about 40 thousand tokens in the 1950s to more than 80 thousand tokens in the 2000s.",
+      "expression": "From a diachronic perspective",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
+    },
+    {
+      "index": 23,
+      "sentence": "The vocabulary size of EPA Diacorpus and its sections was derived using a program suite largely acknowledged in linguistics, WordSmith Tools 5 (Scott 2007).",
+      "expression": "(Scott 2007)",
+      "model_decisions": {
+        "claude": "Propositional",
+        "gemini": "Metadiscourse",
+        "deepseek": "Propositional"
+      },
+      "optimized_decision": "Propositional"
+    },
+    {
+      "index": 24,
+      "sentence": "Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well.",
+      "expression": "denote",
+      "model_decisions": {
+        "claude": "Borderline",
+        "gemini": "Propositional",
+        "deepseek": "Metadiscourse"
+      },
+      "optimized_decision": "Borderline"
     }
   ],
   "context_configuration": {

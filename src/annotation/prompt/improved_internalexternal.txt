@@ -2,13 +2,13 @@
 IMPROVED ANNOTATION PROMPT
 ==========================
 
-Based on analysis of 1 disagreement cases between annotator models,
+Based on analysis of 13 disagreement cases between annotator models,
 the following improvements have been identified:
 
 ACCURACY SCORES:
-- Claude: 100.00%
-- Gemini: 100.00%
-- DeepSeek: 50.00%
+- Claude: 64.00%
+- Gemini: 56.00%
+- DeepSeek: 56.00%
 
 COMMON ERROR PATTERNS IDENTIFIED:
 [Analysis of specific patterns would be added here based on disagreement cases]
