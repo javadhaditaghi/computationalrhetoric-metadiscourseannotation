@@ -1,0 +1,6 @@
+Metric,Value
+Raw_Agreement,0.9629629629629629
+Cohens_Kappa,0.9302325581395349
+Total_Samples,27.0
+Disagreements,1.0
+Chi_Square_p_value,5.0980595185669415e-08
