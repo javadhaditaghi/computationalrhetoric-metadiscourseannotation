@@ -298,8 +298,8 @@ def analyze_discrepancies(csv_path='result/optimized/optimized_annotations.csv')
             print(f"{role}: {count}")
 
         # Save CSV files
-        discrepancy_filename = 'discrepancy_cases.csv'
-        regular_filename = 'regular_cases.csv'
+        discrepancy_filename = 'result/prompt-analysis/discrepancy/discrepancy_cases.csv'
+        regular_filename = 'result/prompt-analysis/regular/regular_cases.csv'
 
         discrepancies.to_csv(discrepancy_filename, index=False)
         regular_cases.to_csv(regular_filename, index=False)
