@@ -8,17 +8,27 @@ Each annotation contains: role, confidence, note, justification, context_assessm
 
 Decision Protocol
 
-1. Check for role disagreement.
+1. Analyze disagreement patterns first.
+When annotators disagree, systematically identify WHY they disagree:
+- Are they applying different interpretations of Metadiscourse vs Propositional boundaries?
+- Are they weighing local vs global discourse functions differently?
+- Are they influenced by insufficient context or ambiguous phrasing?
+- Are they inconsistent in handling expressions with dual functions?
+
+2. Check for role disagreement.
 If any annotator labels the expression as Metadiscourse and another labels it as Propositional, first test whether the case is truly Borderline.
 Apply Borderline only if:
 The expression simultaneously conveys factual content (Propositional) and organizes, frames, or guides reader interpretation (Metadiscourse).
 There is genuine dual functionality, not just annotator uncertainty.
 If no genuine dual functionality exists, select the role best supported by contextual and linguistic evidence.
-2. Weigh evidence across annotators.
+
+3. Weigh evidence across annotators.
 Prefer annotations with explicit, detailed justifications over vague or unsupported ones.
 Consider confidence scores, but use them only when justifications are equally strong.
 Disregard uses of Borderline when it was applied merely as a fallback for uncertainty.
-3. Synthesize reasoning.
+Identify which annotator's reasoning process was most systematic and evidence-based.
+
+4. Synthesize reasoning.
 Merge the strongest elements from all justifications into a single coherent explanation.
 Reflect unresolved uncertainty, secondary roles, or annotator divergence in the note.
 Assign a final confidence score based on clarity and strength of evidence.
@@ -30,12 +40,15 @@ Respond only with a valid JSON object, no commentary outside JSON:
   "confidence": <1-5>,
   "note": "<secondary roles, uncertainty sources, or annotator divergence>",
   "justification": "<final evidence-based rationale, integrating strongest points from annotators>",
-  "context_assessment": "<evaluation of whether context was sufficient and if more context would change classification>"
-  "prompt_improvement_note": "<analysis of model disagreement sources and give prompt enhancement suggestions>"
+  "context_assessment": "<evaluation of whether context was sufficient and if more context would change classification>",
+  "discrepancy_cause": "<if models disagreed, explain the specific reason: unclear boundaries, context insufficiency, dual function confusion, inconsistent criteria application, or definitional ambiguity>",
+  "prompt_improvement_suggestions": "<specific guidance that could prevent this type of disagreement in future annotations: clearer definitions, additional examples, context requirements, or decision criteria>"
 }
 
 Additional Rules
-Always test for Borderline first when roles diverge.
+Always analyze disagreement causes before making final decisions.
+Focus on systematic reasoning flaws, not just different conclusions.
 Do not average scores mechanically; reason based on function and evidence.
 Confidence = strength of linguistic/contextual evidence, not majority agreement.
+Be specific about what annotation guidance would resolve similar disagreements.
 Output must always be strict JSON with no extra text.

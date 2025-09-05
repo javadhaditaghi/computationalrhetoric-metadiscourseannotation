@@ -152,7 +152,6 @@
 # OPENAI_API_KEY=sk-your_openai_api_key_here
 # """
 
-
 # run_optimizer.py - Main execution script
 import sys
 import time
@@ -228,6 +227,13 @@ def parse_arguments():
     )
 
     parser.add_argument(
+        '--rows',
+        type=int,
+        default=None,
+        help='Number of rows to process (default: process all rows)'
+    )
+
+    parser.add_argument(
         '--model',
         type=str,
         default=Config.OPENAI_MODEL,
@@ -251,13 +257,15 @@ def parse_arguments():
     return parser.parse_args()
 
 
-def print_results_summary(optimized_df, error_analysis: Dict[str, Any]):
+def print_results_summary(optimized_df, error_analysis: Dict[str, Any], rows_processed: int = None):
     """Print a summary of the optimization results"""
     print("\n" + "=" * 60)
     print("ANNOTATION OPTIMIZATION RESULTS SUMMARY")
     print("=" * 60)
 
-    print(f"\nTotal cases processed: {len(optimized_df)}")
+    if rows_processed:
+        print(f"\nRows processed (limited): {rows_processed}")
+    print(f"Total cases in results: {len(optimized_df)}")
     print(f"Disagreement cases found: {len(error_analysis['disagreement_cases'])}")
 
     print(f"\nModel Agreement with Optimized Decisions:")
@@ -288,6 +296,11 @@ def main():
     logger.info("Starting annotation optimization process...")
     logger.info(f"Context configuration: {args.context_before} words before, {args.context_after} words after")
 
+    if args.rows:
+        logger.info(f"Processing limited to {args.rows} rows")
+    else:
+        logger.info("Processing all available rows")
+
     # Validate environment
     if not validate_environment():
         logger.error("Environment validation failed. Please check the requirements.")
@@ -303,11 +316,12 @@ def main():
             context_words_after=args.context_after
         )
 
-        # Run optimization pipeline
+        # Run optimization pipeline with row limit
         start_time = time.time()
         optimized_df, error_analysis = optimizer.run_full_pipeline(
             base_path=args.base_path,
-            output_path=args.output
+            output_path=args.output,
+            max_rows=args.rows
         )
 
         end_time = time.time()
@@ -315,9 +329,11 @@ def main():
 
         logger.info(f"Optimization completed in {processing_time:.2f} seconds")
         logger.info(f"Used context: {args.context_before} words before, {args.context_after} words after")
+        if args.rows:
+            logger.info(f"Processed {args.rows} rows as requested")
 
         # Print results summary
-        print_results_summary(optimized_df, error_analysis)
+        print_results_summary(optimized_df, error_analysis, args.rows)
 
         # Save detailed error analysis
         import json
@@ -331,7 +347,8 @@ def main():
                 'context_configuration': {
                     'context_words_before': args.context_before,
                     'context_words_after': args.context_after
-                }
+                },
+                'rows_processed': args.rows if args.rows else 'all'
             }
             json.dump(serializable_analysis, f, indent=2)
 
@@ -353,14 +370,17 @@ if __name__ == "__main__":
 # Use default context (10 words before, 10 words after)
 python run_optimizer.py
 
-# Specify custom context words
-python run_optimizer.py --context-before 15 --context-after 20
+# Process only 2 rows
+python run_optimizer.py --rows 2
 
-# Use different model and context
-python run_optimizer.py --model gpt-4 --context-before 5 --context-after 8
+# Specify custom context words and limit rows
+python run_optimizer.py --context-before 15 --context-after 20 --rows 5
 
-# Full customization
-python run_optimizer.py --context-before 20 --context-after 25 --model gpt-4-turbo --base-path /custom/path --output /custom/output.csv
+# Use different model, context, and row limit
+python run_optimizer.py --model gpt-4 --context-before 5 --context-after 8 --rows 10
+
+# Full customization with row limit
+python run_optimizer.py --context-before 20 --context-after 25 --model gpt-4-turbo --base-path /custom/path --output /custom/output.csv --rows 2
 """
 
 # requirements.txt - Dependencies

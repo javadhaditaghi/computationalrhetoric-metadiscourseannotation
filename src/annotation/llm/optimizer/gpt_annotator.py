@@ -333,18 +333,24 @@ class AnnotationOptimizer:
         except Exception as e:
             logger.error(f"Failed to debug CSV file: {e}")
 
-    def merge_annotations(self, dataframes: Dict[str, pd.DataFrame]) -> pd.DataFrame:
+    def merge_annotations(self, dataframes: Dict[str, pd.DataFrame], max_rows: int = None) -> pd.DataFrame:
         """
         Merge annotations from all three models into a single DataFrame
 
         Args:
             dataframes: Dictionary of DataFrames from each model
+            max_rows: Maximum number of rows to process (None for all rows)
 
         Returns:
             Merged DataFrame with all annotations including context columns
         """
         # Start with the first model's DataFrame structure
         base_df = dataframes['claude'].copy()
+
+        # Apply row limit early if specified
+        if max_rows is not None:
+            logger.info(f"Limiting processing to {max_rows} rows")
+            base_df = base_df.head(max_rows)
 
         # Rename the annotation column for Claude
         base_df = base_df.rename(columns={'metadiscourse_annotation': 'claude_metadiscourse_annotation'})
@@ -353,6 +359,11 @@ class AnnotationOptimizer:
         for model in ['gemini', 'deepseek']:
             model_df = dataframes[model][
                 ['thesis_code', 'section', 'sentence', 'expression', 'metadiscourse_annotation']].copy()
+
+            # Apply same row limit to other models for consistency
+            if max_rows is not None:
+                model_df = model_df.head(max_rows)
+
             model_df = model_df.rename(columns={'metadiscourse_annotation': f'{model}_metadiscourse_annotation'})
 
             base_df = base_df.merge(
@@ -500,10 +511,13 @@ Based on the sentence, expression, context (if available), and the three model a
             DataFrame with optimized final decisions
         """
         optimized_decisions = []
+        total_rows = len(merged_df)
+
+        logger.info(f"Processing {total_rows} rows for optimization...")
 
         for idx, row in merged_df.iterrows():
-            if idx % 100 == 0:
-                logger.info(f"Processing row {idx}/{len(merged_df)}")
+            if idx % 10 == 0 or idx < 10:  # More frequent logging for small datasets
+                logger.info(f"Processing row {idx + 1}/{total_rows}")
 
             # Parse and validate annotations
             claude_ann = self.parse_json_annotation(row['claude_metadiscourse_annotation'])
@@ -531,6 +545,7 @@ Based on the sentence, expression, context (if available), and the three model a
         # Add optimized decisions to DataFrame
         merged_df['Optimized_final_decision'] = optimized_decisions
 
+        logger.info(f"Completed processing {total_rows} rows")
         return merged_df
 
     def analyze_model_errors(self, optimized_df: pd.DataFrame) -> Dict:
@@ -669,7 +684,7 @@ ORIGINAL PROMPT:
         return improvement_prompt
 
     def run_full_pipeline(self, base_path: str = None, output_path: str = None,
-                          debug_parsing: bool = False):
+                          debug_parsing: bool = False, max_rows: int = None):
         """
         Run the complete optimization pipeline
 
@@ -677,11 +692,15 @@ ORIGINAL PROMPT:
             base_path: Base directory containing model subdirectories (relative to project root)
             output_path: Path for output CSV file (relative to project root)
             debug_parsing: Whether to run JSON parsing debug before processing
+            max_rows: Maximum number of rows to process (None for all rows)
 
         Returns:
             Tuple of (optimized DataFrame, error analysis)
         """
         logger.info("Starting annotation optimization pipeline...")
+
+        if max_rows is not None:
+            logger.info(f"Row processing limited to: {max_rows}")
 
         # Use config defaults if not provided
         if base_path is None:
@@ -710,8 +729,8 @@ ORIGINAL PROMPT:
                         logger.info(f"Debugging {model} annotations...")
                         self.debug_json_parsing(csv_path)
 
-        # Merge annotations
-        merged_df = self.merge_annotations(dataframes)
+        # Merge annotations with row limiting
+        merged_df = self.merge_annotations(dataframes, max_rows)
         logger.info(f"Merged {len(merged_df)} annotation cases")
 
         # Process and optimize annotations
@@ -749,10 +768,11 @@ if __name__ == "__main__":
         model=Config.OPENAI_MODEL
     )
 
-    # Run full pipeline with optional debugging
+    # Run full pipeline with optional debugging and row limiting
     try:
         optimized_df, error_analysis = optimizer.run_full_pipeline(
-            debug_parsing=True
+            debug_parsing=True,
+            max_rows=5  # Example: process only 5 rows
         )
 
         print(f"Optimization completed!")
