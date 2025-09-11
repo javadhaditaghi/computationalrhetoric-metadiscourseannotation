@@ -1,0 +1,139 @@
+# IMPROVED ANNOTATION PROMPT
+# Generated on: 2025-09-05 17:58:05
+# Based on analysis report: analysis_report_20250905_175626.md
+# Original prompt: src/annotation/prompt/internalexternal.txt
+
+Metadiscourse vs. Propositional Classification (Span-level)
+
+Task
+Classify ONLY the highlighted expression (phrase/clause) by its primary rhetorical function in academic discourse:
+- Metadiscourse (Internal/Discourse-oriented): organizes the text, guides the reader, signals stance/evaluation, manages writer–reader interaction, or refers to the discourse/text itself.
+- Propositional (External/Content-oriented): states facts about the world, theories, methods, data, processes, or domain entities independent of text organization.
+- Borderline: use only when the highlighted span simultaneously and inseparably performs both functions to a comparable degree.
+
+Scope and Constraints
+- Classify the highlighted span in its given context. Do not classify the whole sentence.
+- Do not re-segment or extend/reduce the span; judge the span as provided.
+- If context is limited, choose the most likely primary function and reflect uncertainty in confidence and note fields.
+- Many sentences mix functions; focus strictly on the highlighted span.
+
+Core Tests (apply in order)
+1) Truth-conditions test:
+   - If the span adds a claim about the world that can be true/false independent of this text → Propositional.
+   - If it is primarily about organizing, evaluating, or attributing within this text (or discourse in general) → Metadiscourse.
+2) Deletion test:
+   - If removing the span leaves the core factual content intact but weakens guidance/stance → Metadiscourse.
+   - If removing the span removes or alters the world-claim/content → Propositional.
+3) Paraphrase target test:
+   - If the span paraphrases as “about what the author/text is doing (arguing, structuring, evaluating, citing)” → Metadiscourse.
+   - If it paraphrases as “about phenomena, methods, results, theories” → Propositional.
+4) Dual-function check:
+   - If both roles are equally salient and cannot be disentangled at the span-level → Borderline.
+   - Otherwise, assign the dominant function and use confidence/note to reflect any secondary role.
+
+Refined Definitions and Signals
+A. Metadiscourse (Internal)
+- Text organization and navigation: in this section; below; as shown in Figure 2; first, secondly; to conclude; however; therefore.
+- Code glosses/reformulation: that is; in other words; for example; for instance; namely.
+- Stance and engagement: importantly; we argue/claim; it seems/appears; likely/perhaps/may; note that; we believe; we contend.
+- Evidential/attribution frames: according to X; as suggested by Y; previous work has shown; as noted earlier.
+- Self-referential discourse acts: we discuss/present/examine; this paper proposes; we outline; the following section describes.
+Default: stance markers (hedges/boosters), transitions, discourse frames, endophoric markers, directives → Metadiscourse.
+
+B. Propositional (External)
+- Domain facts, empirical results, theoretical content: contributes to growth; cells divide; Model A outperforms B; temperature increased by 5°C.
+- Methods as world actions: we collected data; participants completed a task; we used a ResNet-50; the Smith (2020) algorithm.
+- Entities/events/processes independent of the text: dataset contains 10k images; reaction eventually stops; X is a subgraph of Y.
+Default: content about phenomena, methods, data, results → Propositional.
+
+C. Borderline (Use sparingly)
+Use only when the single highlighted span inherently and equally:
+- frames/guides the discourse AND
+- contributes irreducible domain content.
+Typical candidates: definitional acts tightly fused with content (e.g., is defined as when the span itself both signals the act and encodes essential meaning), explanatory glosses that both situate and add indispensable content.
+Do NOT use Borderline merely due to uncertainty. Prefer dominant-function classification + lower confidence.
+
+Handling Dual-function Triggers (with defaults and overrides)
+1) Reporting/attribution verbs and hedges: show, demonstrate, suggest, indicate, argue, claim; seem to, appear to; likely, probably, may
+- Default: If the highlighted span is the reporting/stance frame itself (e.g., suggests that; we argue that; seem to), classify as Metadiscourse (stance/evidential).
+- Override to Propositional only if the highlighted span, by itself, adds indispensable content about the world (rare; e.g., demonstrates microstructure failure where demonstrates is part of a fixed technical relation and its removal changes the world-claim).
+- Borderline only if the span both strongly asserts content and simultaneously frames it, and the two cannot be separated at span level.
+
+2) Connectives and organizers: however; therefore; in contrast; finally; in this section
+- Metadiscourse. These guide argument flow or text structure.
+
+3) Temporal/sequencing adverbs: eventually; initially; subsequently
+- If sequencing discourse steps (Eventually, we discuss…) → Metadiscourse.
+- If sequencing events in the world (The reaction eventually stops) → Propositional.
+
+4) Definitions and glosses: is defined as; means; refers to; i.e.,; e.g.,; that is
+- If the highlighted span is a framing device without the definitional content (is defined as; that is) → Metadiscourse.
+- If the highlighted span fuses the definitional act with essential domain meaning such that deleting it removes the core content → Borderline.
+- If the highlighted span is the definitional content itself (the meaning) without the framing device → Propositional.
+
+5) Citations and attribution (critical to reduce discrepancies)
+- Parenthetical/numbered-only citation tokens: (Smith, 2020); [12]
+  Default → Metadiscourse (evidential support/attribution that guides the argument, removable without changing world truth-conditions).
+- Integral citation as part of a domain entity/method: the Smith (2020) model; the ICD-10 classification; the DSM-5 criteria
+  Default → Propositional (identifies a specific method/entity; removal changes which entity is referenced).
+- Attribution frames: according to Smith (2020); prior work (e.g., [12]) suggests
+  Default → Metadiscourse (guides reader about source and stance).
+Use context: In Methods, citing a specific protocol often names the actual procedure (Propositional when part of the method NP). In Discussion, citations more often frame argument or stance (Metadiscourse). Apply the deletion and truth-conditions tests.
+
+6) First-person verbs (we show/present vs we measured/collected)
+- We show/present/argue/discuss → Metadiscourse (discourse act).
+- We measured/collected/implemented/trained → Propositional (research actions as part of the study’s world).
+
+Decision Procedure (apply consistently)
+Step A. Locate span role using the tests (truth-conditions, deletion, paraphrase).
+Step B. Check triggers above for default classification and apply context overrides.
+Step C. If dual roles are present, decide whether one is dominant.
+- If one is dominant → assign it; reflect secondary role in note and confidence.
+- If both are equally salient and inseparable → Borderline (explain why).
+Step D. Consistency check: Would a similar span in a similar context receive the same label? If not, reconsider and document in note.
+
+Contextual Analysis (what to look for)
+- Syntactic function (matrix verb vs modifier vs connective).
+- Whether the span points to text/discourse (this paper, in Section 3, as shown above) vs world entities/events.
+- Section and genre cues (Methods often propositional; Discussion often metadiscursive stance)—use as cues, not as rules.
+- Surrounding propositions: Does the span alter factual content or mainly package it?
+
+Examples (span in [brackets]; label → rationale)
+- [However], the results were mixed. → Metadiscourse (connective organizes argument)
+- [In this section], we describe… → Metadiscourse (text navigation)
+- Our results [suggest that] X increases. → Metadiscourse (stance/evidential frame; content in complement)
+- It [seems to] increase under heat. → Metadiscourse (hedge); complement carries content
+- The reaction [eventually] stops. → Propositional (temporal property of the reaction)
+- [Eventually], we discuss limitations. → Metadiscourse (organizing what comes next)
+- We [measured] conductivity at 25°C. → Propositional (method action in the world)
+- The [Smith (2020)] model outperforms baselines. → Propositional (integral citation identifies entity)
+- Prior work [e.g., 12] shows… → Metadiscourse (evidential parenthetical)
+- [According to Smith (2020)], X is rare. → Metadiscourse (attribution frame)
+- X [is defined as] Y. → Metadiscourse if only the framing verb is highlighted; Borderline if the highlighted span both frames and encodes essential definitional content inseparably; Propositional if the highlighted span is the definition content itself.
+
+Output Format (return one JSON object per highlighted span; no text outside JSON)
+json{
+  "role": "<Metadiscourse|Propositional|Borderline>",
+  "confidence": <1-5>,
+  "note": "<brief comments on secondary roles or uncertainty; if Borderline, explain the inseparability and dual function>",
+  "justification": "<concise, evidence-based rationale referencing the applied tests (truth-conditions/deletion) and specific contextual/linguistic cues>",
+  "context_assessment": "<state whether context was sufficient; if more context could flip the decision, say how>"
+}
+
+Quality Assurance
+- Confidence scale:
+  5 = Clear, unambiguous evidence
+  4 = Strong evidence, minor uncertainty
+  3 = Mixed signals, plausible alternative
+  2 = Significant uncertainty
+  1 = Highly uncertain
+- Prefer dominant-function labeling with confidence notes over Borderline. Use Borderline only when dual roles are equal and inseparable at the span level.
+- Apply consistency: similar spans in similar contexts should receive the same label; document any principled deviations.
+- Do not let section alone determine labels; always apply the core tests.
+
+Quick Checklist Before Submitting
+- Did you apply the truth-conditions and deletion tests?
+- Is the span about the text/stance (Metadiscourse) or about the world (Propositional)?
+- If dual, are the roles truly inseparable? If not, pick the dominant one.
+- Is the citation integral to naming an entity/method (Propositional) or evidential framing (Metadiscourse)?
+- Is your confidence aligned with the evidence and your note clear?
