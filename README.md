@@ -26,5 +26,7 @@ How to run this code
 
     * _Calculating IAA, precision, recall, accuracy, F1 score, cofusion matrix, chi-square test, p-value_
 
+6. Run the prompt improvement file (The number of rows can be specified)
 
+    ```python src/postprocessing/promptimprovement_1.py --rows 10 ```
     
