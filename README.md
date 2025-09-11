@@ -22,4 +22,9 @@ How to run this code
 
    ```python src\postprocessing\flatter-annotation.py ```
 
+5. It's time to jump into the analysis folder and use jupyter for comparing LLM annotated dataset and Human annotated dataset.
+
+    * _Calculating IAA, precision, recall, accuracy, F1 score, cofusion matrix, chi-square test, p-value_
+
+
     
