@@ -1,0 +1,699 @@
+
+{
+  "task_name": "Metadiscourse Classification Task: Form-Function Analysis",
+  "objective": "Classify highlighted expressions using a two-dimensional framework that distinguishes Form (based on Hyland's taxonomy) from Function (determined by morphosyntactic role in context). Classification applies only to the highlighted expression (typically phrase/clause level), not the entire sentence.",
+
+  "theoretical_framework": {
+    "core_principle": {
+      "form": "Hyland's taxanomy of metadiscourse (metadiscourse vs. propositional forms)",
+      "function": "Determined by morphosyntactic role and syntactic position in context",
+      "bridge": "Syntax bridges form and function: Syntactic positioning and structural cues are the organizing principles that enable functional interpretation."
+    },
+
+    "dimensions": {
+      "dimension_1_form": {
+        "name": "FORM",
+        "types": [
+          {
+            "type": "MD-Form",
+            "label": "Metadiscourse Form",
+            "description": "Surface structures from Hyland's metadiscourse taxonomy (hedges, boosters, attitude markers, self-mentions, engagement markers, etc.)"
+          },
+          {
+            "type": "P-Form",
+            "label": "Propositional Form",
+            "description": "Surface structures typically conveying factual content (bare assertions, ability modals, integrated adverbs, etc.)"
+          }
+        ]
+      },
+
+      "dimension_2_function": {
+        "name": "FUNCTION",
+        "types": [
+          {
+            "type": "MD-Func",
+            "label": "Metadiscourse Function",
+            "description": "Organizes text, guides reader, manages writer-reader interaction, expresses stance/evaluation"
+          },
+          {
+            "type": "B-Func",
+            "label": "Borderline Function",
+            "description": "Simultaneously conveys factual information AND guides/frames reader understanding. It is both metadiscourse and proposition."
+          },
+          {
+            "type": "P-Func",
+            "label": "Propositional Function",
+            "description": "Conveys factual content about real-world phenomena, theoretical concepts, empirical data"
+          }
+        ]
+      }
+    },
+
+    "coverage_and_scope": {
+      "description": "This model provides detailed morphosyntactic guidance for commonly occurring forms in Hyland's taxonomy.",
+      "handling_unspecified_forms": {
+        "condition": "If you encounter an expression that clearly matches a form in Hyland's metadiscourse taxonomy (e.g., transition markers, code glosses, evidentials not covered in examples) but lacks specific morphosyntactic guidance in this framework",
+        "procedure": [
+          "Identify and report the Form (MD-Form with specific Hyland category)",
+          "Mark the Function as 'Not Specified'",
+          "Explain in justification why function cannot be determined with current framework specifications",
+          "Suggest what additional morphosyntactic criteria would be needed to classify function"
+        ],
+        "principle": "Form identification is based on Hyland's comprehensive taxonomy; functional classification requires morphosyntactic analysis as specified in this model."
+      }
+    }
+  },
+
+
+  "hyland_taxonomy_reference": {
+    "description": "Complete overview of Hyland's metadiscourse taxonomy. Use this reference to identify the form category in Step 1. The morphosyntactic indicators in Classification Categories provide detailed guidance on how these forms function in context.",
+    "note": "This taxonomy identifies surface structures (FORM). Functional classification requires morphosyntactic analysis as detailed in the Classification Categories section.",
+
+    "interactive_metadiscourse": {
+      "definition": "Resources that help organize discourse and guide the reader through the text",
+      "categories": [
+        {
+          "category": "Transitions",
+          "function": "Express relations (additive, causative, contrastive) between main clauses, functioning internally to link ideas in the argument",
+          "typical_markers": [
+            "and", "but", "however", "therefore", "thus", "in addition",
+            "moreover", "consequently"
+          ]
+        },
+        {
+          "category": "Frame markers",
+          "function": "Signal text boundaries or elements of schematic text structure (e.g., sequencing arguments, announcing goals, shifting topics)",
+          "typical_markers": [
+            "first", "finally", "to conclude", "my purpose is",
+            "in this section", "to sum up"
+          ]
+        },
+        {
+          "category": "Endophoric markers",
+          "function": "Refer to information in other parts of the text, assisting the recovery of the writer's meanings",
+          "typical_markers": [
+            "as noted above", "see Table 2", "in the next section",
+            "as mentioned earlier"
+          ]
+        },
+        {
+          "category": "Evidentials",
+          "function": "Elaborate propositional meanings by rephrasing, explaining, or clarifying what has been said, based on the writer’s predictions about the reader's knowledge-base.",
+          "typical_markers": [
+            "according to Smith (2020)", "as suggested by previous studies",
+            "as shown by research"
+          ]
+        },
+        {
+          "category": "Code glosses",
+          "function": "Explain or reformulate information to ensure comprehension",
+          "typical_markers": [
+            "namely", "in other words", "that is to say", "for example",
+            "such as"
+          ]
+        }
+      ]
+    },
+
+    "interactional_metadiscourse": {
+      "definition": "Resources that involve the reader in the discourse and express the writer's stance",
+      "categories": [
+        {
+          "category": "Hedges",
+          "function": "Indicate uncertainty or open up dialogue; mitigate commitment to a proposition",
+          "typical_markers": [
+            "might", "perhaps", "possible", "suggest", "appear", "seems",
+            "likely"
+          ]
+        },
+        {
+          "category": "Boosters",
+          "function": "Emphasize certainty, close down alternatives, head off conflicting views, and express certainty in what the writer says",
+          "typical_markers": [
+            "clearly", "definitely", "obviously", "show", "demonstrate",
+            "in fact"
+          ]
+        },
+        {
+          "category": "Attitude markers",
+          "function": "Indicate the writer’s affective, rather than epistemic, attitude to propositions (e.g., surprise, agreement, importance)",
+          "typical_markers": [
+            "unfortunately", "surprisingly", "importantly",
+            "it is interesting to note"
+          ]
+        },
+        {
+          "category": "Self-mentions",
+          "function": "Explicitly reference the author(s), promoting a scholarly identity or emphasis on individual contribution.",
+          "typical_markers": [
+            "I", "we", "my", "our", "the author(s)"
+          ]
+        },
+        {
+          "category": "Engagement markers",
+          "function": "Explicitly address readers, either to focus their attention or include them as discourse participants (e.g., reader pronouns, questions, directives)",
+          "typical_markers": [
+            "consider", "note that", "you can see", "we can observe",
+            "let us", "remember that"
+          ]
+        }
+      ]
+    },
+
+    "using_this_reference": {
+      "step_1_form_identification": "Match the highlighted expression to one of the categories above to identify its form as MD-Form",
+      "step_2_morphosyntactic_analysis": "Then consult the Classification Categories section for detailed morphosyntactic criteria to determine how this form functions in context",
+      "unspecified_forms": "If a form category from this taxonomy lacks morphosyntactic guidance in the Classification Categories section, mark the function as 'Not Specified' and proceed according to the Coverage and Scope guidelines"
+    }
+  },
+
+  "classification_categories": [
+    {
+      "category_number": 1,
+      "name": "Pure Metadiscourse",
+      "formula": "MD-Form + MD-Func",
+      "definition": "Fully non-propositional forms conveying stance, engagement, or attitude without carrying core propositional content.",
+      "morphosyntactic_indicators": [
+        {
+          "indicator": "A. Hedging Verbs / Uncertainty Expressions",
+          "patterns": [
+            {
+              "pattern": "Verb + infinitive",
+              "example": "hostage-takers seem to have sought..."
+            },
+            {
+              "pattern": "Verb + that-clause",
+              "example": "It seems that X..."
+            },
+            {
+              "pattern": "Parenthetical hedges",
+              "example": "X, possibly Y, ..."
+            }
+          ]
+        },
+        {
+          "indicator": "B. Epistemic Modality",
+          "patterns": [
+            {
+              "pattern": "Modal verbs",
+              "examples": ["may", "might", "could", "seem to"]
+            },
+            {
+              "pattern": "Modal + progressive",
+              "example": "may be doing..."
+            },
+            {
+              "pattern": "Verbs expressing writer's (un)certainty",
+              "examples": ["appear", "seem", "suggest"]
+            }
+          ]
+        },
+        {
+          "indicator": "C. Deontic Modality (as Attitudinal/Engagement Markers)",
+          "sub_types": [
+            {
+              "type": "Expressions of Obligation",
+              "description": "Must/should expressing writer's attitude toward desirability of actions",
+              "example": "Brown must break with it (writer's opinion on necessity)"
+            },
+            {
+              "type": "Reader-Address",
+              "description": "Deontic modals engaging the reader. Creates writer-reader relationship"
+            }
+          ]
+        },
+        {
+          "indicator": "D. Attitudinal Adjectives and Adverbs",
+          "patterns": [
+            {
+              "pattern": "Sentence-initial or comma-separated",
+              "example": "Clearly, this supports X"
+            },
+            {
+              "pattern": "Answering rhetorical questions",
+              "example": "Hardly"
+            },
+            {
+              "pattern": "Multi-word intensifiers",
+              "example": "Without a doubt, ..."
+            }
+          ]
+        },
+        {
+          "indicator": "E. Impersonal Structures",
+          "examples": [
+            "It is obvious that...",
+            "It is true that...",
+            "It seems/appears that... (hedging)"
+          ]
+        },
+        {
+          "indicator": "F. Attribution and Evidentials",
+          "patterns": [
+            {
+              "pattern": "Parenthetical attribution",
+              "example": "Y (according to X)..."
+            },
+            {
+              "pattern": "Reporting verbs with stance",
+              "example": "X claims that Y..."
+            },
+            {
+              "pattern": "Punctuation cues (colon, dash) separating source"
+            }
+          ]
+        },
+        {
+          "indicator": "G. Intensifiers / Certainty Expressions",
+          "patterns": [
+            {
+              "pattern": "Sentence-initial",
+              "example": "Certainly, ..."
+            },
+            {
+              "pattern": "Multi-word phrases",
+              "example": "We can be sure that..."
+            },
+            {
+              "pattern": "Embedded intensifiers",
+              "example": "It is absolutely clear that..."
+            }
+          ]
+        },
+        {
+          "indicator": "Reflexive Complement Clause Construction",
+          "pattern": "[Reflexive NP referring to the text or author] + [stance/purpose verb] + [complement clause]",
+          "examples": [
+            "This thesis focuses on...",
+            "This study takes the standpoint that...",
+            "We argue that...",
+            "The author proposes that...",
+            "The paper aims to show that..."
+          ],
+          "function": "Interactional metadiscourse — self-mention and stance. These constructions, though syntactically integrated, perform discourse-organizing and stance-taking functions because they reflexively refer to the text and govern propositional complements.",
+          "diagnostic": "If the subject refers to the discourse itself and the predicate projects a complement clause, classify as Metadiscourse regardless of syntactic integration."
+        }
+        ,
+        {
+          "indicator": "H. Pronouns Signaling Stance/Engagement",
+          "patterns": [
+            {
+              "pattern": "First-person expressing stance",
+              "example": "I believe..."
+            },
+            {
+              "pattern": "Inclusive pronouns (engagement)",
+              "example": "Let us consider..."
+            },
+            {
+              "pattern": "Authorial presence",
+              "example": "We argue that X..."
+            }
+          ]
+        },
+        {
+          "indicator": "I. Asides (as Engagement Markers)",
+          "description": "Parenthetical remarks departing from main topic",
+          "example": "Higher-paid (but by no means highly paid) employees..."
+        },
+        {
+          "indicator": "J. Attitudinal Verbs + Personal Pronouns",
+          "form": "I/We + believe, feel, think, argue",
+          "function": "Expresses writer's attitude toward state of affairs",
+          "example": "I believe this study is full of complexities"
+        }
+      ]
+    },
+
+    {
+      "category_number": 2,
+      "name": "Metadiscourse Form with Propositional Function",
+      "formula": "MD-Form + P-Func",
+      "definition": "Hyland's metadiscourse forms that are syntactically integrated into the main clause, adding to core factual content rather than commenting on it.",
+      "morphosyntactic_indicators": [
+        {
+          "indicator": "A. Hedging Verbs in Complement Clauses",
+          "form": ["believe", "think", "argue", "claim"],
+          "function": "Propositional when reporting others' opinions (attribution, not writer's stance)",
+          "example": "For those who believe that anything but prison is a soft option...",
+          "explanation": "believe conveys attribution, not author's stance"
+        },
+        {
+          "indicator": "B. Personal Pronouns as Neutral Subjects",
+          "form": ["I", "we", "us"],
+          "function": "Propositional when indicating agency in factual reporting only",
+          "example": "I measured the samples (action, not stance)"
+        },
+        {
+          "indicator": "C. Intensifiers in Descriptive Function",
+          "form": ["highly", "extremely", "exactly"],
+          "function": "Propositional when specifying factual content (not evaluation/commitment)",
+          "example": "The solution is highly concentrated"
+        },
+        {
+          "indicator": "D. Asides (Adding Topical Information)",
+          "condition": "Not metadiscourse when giving extra factual information about the topic",
+          "example": "The CEO (who was appointed last year) announced the merger",
+          "explanation": "Adds factual detail, doesn't manage writer-reader relationship"
+        },
+        {
+          "indicator": "E. Conditional Clauses (Actual Conditions)",
+          "md_condition": "Only MD when indicating hypothetical situations expressing writer's uncertainty",
+          "prop_condition": "Propositional when describing actual logical/causal conditions",
+          "example_md": "...had they come from the mouth of a conservative minister, would have provoked howls of anger (hypothetical, expressing possibility)"
+        }
+      ]
+    },
+
+    {
+      "category_number": 3,
+      "name": "Propositional Form with Metadiscourse Function",
+      "formula": "P-Form + MD-Func",
+      "definition": "Words/phrases normally part of core factual message that become metadiscourse due to specific syntactic cues.",
+      "critical_principle": "Syntactic detachment (via punctuation or positioning) shifts function from propositional to metadiscoursal.",
+      "morphosyntactic_indicators": [
+        {
+          "indicator": "A. Adverbs of Frequency (Syntactically Separated)",
+          "key_rule": "Only MD if commas separate them from main clause OR used to answer rhetorical questions",
+          "examples": [
+            {
+              "type": "MD",
+              "example": "Usually, it means several new emails...",
+              "explanation": "Comma creates separation → comment on following proposition"
+            },
+            {
+              "type": "Propositional",
+              "example": "The machine usually works",
+              "explanation": "Integrated into clause → describes typical behavior"
+            }
+          ]
+        },
+        {
+          "indicator": "B. Sentence-Initial Adjuncts (Fronted with Commas)",
+          "examples": [
+            {
+              "expression": "Frankly, ...",
+              "function": "stance"
+            },
+            {
+              "expression": "In fact, ...",
+              "function": "emphasis/attitude"
+            },
+            {
+              "expression": "On the whole, ...",
+              "function": "hedging/stance"
+            },
+            {
+              "expression": "Generally, ...",
+              "function": "framing"
+            }
+          ]
+        },
+        {
+          "indicator": "C. Parentheticals (Clause-Internal)",
+          "description": "Adverbs/phrases set off by commas",
+          "examples": [
+            "It is, of course, difficult to measure",
+            "The results are, in a sense, inconclusive"
+          ]
+        },
+        {
+          "indicator": "D. Tag Clauses / Detached Clauses",
+          "description": "Propositional form (I think, I believe) syntactically detached",
+          "examples": [
+            "It is important — I think — to notice this",
+            "The problem, I believe, lies elsewhere"
+          ]
+        },
+        {
+          "indicator": "E. Absolute Constructions (Sentence-Level Adjuncts)",
+          "description": "Structurally clause-like, functioning to frame what follows",
+          "examples": [
+            "That said, ...",
+            "This being the case, ..."
+          ]
+        }
+      ]
+    },
+
+    {
+      "category_number": 4,
+      "name": "Pure Proposition",
+      "formula": "P-Form + P-Func",
+      "definition": "Core factual/informational content without metadiscoursal function.",
+      "morphosyntactic_indicators": [
+        {
+          "indicator": "A. Bare Assertions",
+          "description": "Declaratives without modal or stance markers",
+          "example": "The results indicate an increase in X"
+        },
+        {
+          "indicator": "B. Modal Verbs in Ability Contexts",
+          "form": ["can", "could"],
+          "function": "Describing physical/logical ability (not epistemic possibility or deontic obligation)",
+          "example": "The machine can produce 100 units per hour"
+        },
+        {
+          "indicator": "C. Adverbs of Frequency (Default/Integrated Usage)",
+          "description": "Not MD in default usage; integrated into clause",
+          "example": "The machine usually works",
+          "explanation": "Describes typical behavior (no syntactic separation)"
+        }
+      ]
+    },
+
+    {
+      "category_number": 5,
+      "name": "Borderline Function",
+      "formula": "Either Form + B-Func",
+      "condition": "Use when the expression simultaneously conveys factual information (propositional) AND organizes, frames, or guides reader interpretation (metadiscourse)",
+      "criteria": [
+        "Genuine functional overlap (not mere interpretive uncertainty)",
+        "Expression has dual communicative purpose in context",
+        "Ambiguous references making single-function assignment impossible"
+      ],
+      "examples": [
+        "Definitions that both explain concepts AND guide understanding",
+        "Reporting verbs that attribute claims AND frame them evaluatively",
+        "Explanatory phrases that present content AND structure argument"
+      ],
+      "important_exclusions": {
+        "do_not_use_for": [
+          "Simple uncertainty or difficulty in classification",
+          "Insufficient context"
+        ],
+        "alternative": "In these cases, classify based on dominant function; reflect uncertainty in confidence score and note"
+      }
+    }
+  ],
+
+  "classification_procedure": {
+    "steps": [
+      {
+        "step": 1,
+        "name": "Form Identification",
+        "description": "Identify whether the highlighted expression is:",
+        "options": [
+          {
+            "type": "MD-Form",
+            "description": "Matches Hyland's metadiscourse taxonomy (hedges, boosters, attitude markers, self-mentions, engagement markers, transition markers, frame markers, endophoric markers, evidentials, code glosses, etc.)"
+          },
+          {
+            "type": "P-Form",
+            "description": "Propositional surface structure (assertions, ability modals, integrated descriptors, etc.)"
+          }
+        ],
+        "special_case": {
+          "condition": "If the expression matches a Hyland form category NOT detailed in this framework's examples",
+          "procedure": [
+            "Identify it as MD-Form with the specific Hyland category",
+            "Note that morphosyntactic criteria are not specified for this subcategory",
+            "Proceed to output with function marked as 'Not Specified'",
+            "Skip Steps 2-4 for this expression"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "name": "Morphosyntactic Analysis",
+        "description": "Examine syntactic position and structural cues:",
+        "analysis_points": [
+          "Positioning: Sentence-initial, parenthetical, clause-internal, tag position?",
+          "Punctuation: Commas, dashes, parentheses creating separation/detachment?",
+          "Integration: Embedded in main clause or syntactically detached?",
+          "Grammatical role: Subject, predicate, complement, adjunct, modifier?"
+        ]
+      },
+      {
+        "step": 3,
+        "name": "Function Determination",
+        "description": "Based on morphosyntactic analysis, determine function using this decision tree:",
+        "decision_tree": [
+          {
+            "question": "Does expression simultaneously convey factual content AND guide/frame reader understanding with genuine dual functionality?",
+            "yes": "Borderline Function",
+            "no": "Continue to question 2"
+          },
+          {
+            "question": "Does expression organize text, guide reader, manage interaction, or express stance/evaluation?",
+            "yes": "Metadiscourse Function",
+            "no": "Continue to question 3"
+          },
+          {
+            "question": "Does expression convey factual content about real-world phenomena, concepts, or data?",
+            "yes": "Propositional Function"
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "name": "Combine Form + Function",
+        "description": "Assign final classification:",
+        "combinations": [
+          {
+            "formula": "MD-Form + MD-Func",
+            "result": "Pure Metadiscourse"
+          },
+          {
+            "formula": "MD-Form + P-Func",
+            "result": "MD Form with Propositional Function"
+          },
+          {
+            "formula": "P-Form + MD-Func",
+            "result": "Propositional Form with MD Function"
+          },
+          {
+            "formula": "P-Form + P-Func",
+            "result": "Pure Proposition"
+          },
+          {
+            "formula": "Either Form + B-Func",
+            "result": "Borderline Function"
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "name": "Evidence Documentation",
+        "description": "Provide structured justification citing:",
+        "required_elements": [
+          "Form identification (Hyland category)",
+          "Morphosyntactic evidence (positioning, punctuation, integration)",
+          "Functional analysis (dominant communicative purpose)",
+          "Contextual factors influencing classification"
+        ]
+      }
+    ]
+  },
+
+  "output_format": {
+    "description": "For each highlighted expression, provide this JSON structure:",
+    "schema": {
+      "form": {
+        "type": "string",
+        "enum": ["MD-Form", "P-Form"],
+        "description": "Metadiscourse Form or Propositional Form"
+      },
+      "form_category": {
+        "type": "string",
+        "description": "Specific Hyland category or propositional type"
+      },
+      "function": {
+        "type": "string",
+        "enum": ["MD-Func", "B-Func", "P-Func", "Not Specified"],
+        "description": "Metadiscourse Function, Borderline Function, Propositional Function, or Not Specified"
+      },
+      "classification": {
+        "type": "string",
+        "enum": [
+          "Pure Metadiscourse",
+          "MD Form with Propositional Function",
+          "Propositional Form with MD Function",
+          "Pure Proposition",
+          "Borderline Function",
+          "Form Identified - Function Not Specified"
+        ],
+        "description": "Combined form-function classification"
+      },
+      "confidence": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5,
+        "description": "Confidence level from 1 (minimal) to 5 (unambiguous)"
+      },
+      "morphosyntactic_evidence": {
+        "type": "string",
+        "description": "Syntactic position, punctuation, integration pattern; OR 'N/A - morphosyntactic criteria not specified for this form category'"
+      },
+      "justification": {
+        "type": "string",
+        "description": "Evidence-based rationale citing form, morphosyntactic cues, and functional analysis"
+      },
+      "note": {
+        "type": "string",
+        "description": "Secondary functions, uncertainty, or borderline considerations; OR explanation of why function cannot be determined"
+      },
+      "context_assessment": {
+        "type": "string",
+        "description": "Whether context is sufficient; if more context would change classification"
+      }
+    },
+    "example_standard": {
+      "form": "MD-Form",
+      "form_category": "Hedging verb (epistemic modality)",
+      "function": "MD-Func",
+      "classification": "Pure Metadiscourse",
+      "confidence": 5,
+      "morphosyntactic_evidence": "Verb + infinitive construction, sentence-initial position",
+      "justification": "The expression 'seem to have sought' uses the hedging verb 'seem' with infinitive construction, expressing epistemic uncertainty about the hostage-takers' intentions. This form is syntactically detached from factual assertion and functions to mitigate the writer's commitment to the proposition.",
+      "note": "No secondary propositional function detected",
+      "context_assessment": "Context is sufficient for clear classification"
+    },
+    "example_not_specified": {
+      "form": "MD-Form",
+      "form_category": "Transition marker (Hyland's interactive metadiscourse)",
+      "function": "Not Specified",
+      "classification": "Form Identified - Function Not Specified",
+      "confidence": 5,
+      "morphosyntactic_evidence": "N/A - morphosyntactic criteria not specified for transition markers in this framework",
+      "justification": "The expression 'therefore' clearly belongs to Hyland's transition marker category (interactive metadiscourse), but this framework does not provide specific morphosyntactic criteria for determining whether transition markers function metadiscursively or propositionally in context. Form identification is certain; functional classification requires additional framework specification.",
+      "note": "To classify function, framework would need to specify: (1) when transition markers are integrated vs. detached, (2) whether they connect propositional content or organize discourse structure, (3) punctuation patterns that signal functional shifts.",
+      "context_assessment": "Context is sufficient for form identification but insufficient for functional classification without additional morphosyntactic criteria."
+    }
+  },
+
+  "quality_assurance": {
+    "confidence_scale": {
+      "5": "Unambiguous form and function with clear morphosyntactic evidence",
+      "4": "High confidence with minor interpretive uncertainty",
+      "3": "Moderate confidence; some ambiguity in form or function",
+      "2": "Low confidence; significant uncertainty in morphosyntactic analysis",
+      "1": "Minimal confidence; classification highly uncertain"
+    },
+
+    "critical_checkpoints": [
+      "Syntactic positioning verified? (Initial, parenthetical, integrated, tag)",
+      "Punctuation cues identified? (Commas, dashes, parentheses)",
+      "Clause-initial position confirmed? Does it gain scope over the entire proposition",
+      "Form correctly matched to Hyland taxonomy?",
+      "Function determined by morphosyntactic role, not surface form alone?",
+      "Borderline used only for genuine dual functionality?"
+    ],
+
+    "consistency_principles": [
+      "Similar forms in identical syntactic positions should receive equivalent classifications",
+      "Syntactic detachment (punctuation) consistently signals functional shift",
+      "Form identification precedes functional analysis",
+      "Morphosyntactic evidence takes precedence over semantic intuition"
+    ]
+  },
+
+  "key_reminders": [
+    "Syntax bridges form and function – always analyze morphosyntactic role",
+    "Punctuation matters – commas/dashes can shift propositional forms to metadiscoursal function",
+    "Integration vs. detachment – determines whether MD-forms function propositionally",
+    "Form ≠ Function – Don't assume metadiscourse forms always have metadiscourse functions",
+    "Context is crucial – same expression can have different functions in different syntactic positions",
+    "Borderline is for dual functionality – not for uncertainty or difficult decisions"
+  ]
+}

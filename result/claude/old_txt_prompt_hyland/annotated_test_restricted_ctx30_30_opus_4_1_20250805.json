@@ -1,0 +1,25 @@
+{
+  "total_rows": 20,
+  "successful_annotations": 20,
+  "failed_annotations": 0,
+  "success_rate": 1.0,
+  "annotation_model": "claude-opus-4-1-20250805",
+  "breakdown_by_thesis_section": {
+    "AP1": {
+      "Introduction": {
+        "total": 13,
+        "successful": 13,
+        "failed": 0,
+        "success_rate": 1.0
+      }
+    },
+    "AP2": {
+      "Method": {
+        "total": 7,
+        "successful": 7,
+        "failed": 0,
+        "success_rate": 1.0
+      }
+    }
+  }
+}

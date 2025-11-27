@@ -1,24 +1,16 @@
 {
-  "total_rows": 25,
-  "successful_annotations": 25,
-  "failed_annotations": 0,
-  "success_rate": 1.0,
+  "total_rows": 4,
+  "successful_annotations": 3,
+  "failed_annotations": 1,
+  "success_rate": 0.75,
   "annotation_model": "deepseek-reasoner",
   "breakdown_by_thesis_section": {
     "AP1": {
       "Introduction": {
-        "total": 13,
-        "successful": 13,
-        "failed": 0,
-        "success_rate": 1.0
-      }
-    },
-    "AP2": {
-      "Method": {
-        "total": 12,
-        "successful": 12,
-        "failed": 0,
-        "success_rate": 1.0
+        "total": 4,
+        "successful": 3,
+        "failed": 1,
+        "success_rate": 0.75
       }
     }
   }

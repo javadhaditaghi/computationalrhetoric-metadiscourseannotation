@@ -1,0 +1,105 @@
+sentence,context_before,context_after,section,thesis_code,expression,source_file,metadiscourse_annotation,annotation_status,annotation_model,row_index
+This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics.,"“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways. It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning.","The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political Speeches. This study takes the standpoint that genre is “a staged, goal oriented, purposeful activity in which speakers engage as members of our culture” (Martin 1984: 25). It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,This thesis focuses…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression"": ""This thesis focuses on 'text as an instrument' and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics."",
+  ""context"": ""Introduction section, early paragraph establishing research scope and objectives. Follows discussion of theoretical viewpoint on language and meaning. Precedes statement about sub-genres in political discourse."",
+  ""analysis"": {
+    ""dimension_1_structural_realization"": {
+      ""morphological_form"": ""Demonstrative pronoun + genre noun ('This thesis') + discourse verbs ('focuses', 'aims to reveal')"",
+      ""syntactic_position"": ""Subject position at sentence-initial, fully integrated as main clause with compound predicate structure"",
+      ""punctuation_cues"": ""No punctuation marking detachment; fully integrated sentence structure"",
+      ""grammatical_integration"": ""Fully integrated - 'This thesis' functions as grammatical subject with two coordinated verb phrases ('focuses on' and 'aims to reveal')"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive and Discourse-Act Reflexive (hybrid)"",
+        ""reflexivity_reasoning"": ""Expression exhibits strong reflexivity on two levels: (1) Text-Reflexive: 'This thesis' is a metatextual noun that refers to the text itself as an object; (2) Discourse-Act Reflexive: 'focuses' and 'aims to reveal' are discourse verbs that describe the research actions being performed in/by the text. The expression makes the text and its discourse purposes explicitly visible, stepping outside propositional content to announce what the text does.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""The expression operates across the entire thesis document. 'This thesis' refers globally to the complete work, and the dual purposes stated ('focuses on' and 'aims to reveal') establish the overarching research scope and objectives that organize the entire document."",
+      ""removal_test_result"": ""If removed, readers would lose explicit understanding of the thesis's global research focus and aims. The propositional content about political discourse would remain, but the organizational frame announcing what THIS TEXT does would be lost."",
+      ""boundary_test_result"": ""The functional reach extends far beyond the immediate sentence or paragraph - it frames the entire research project. This is evidenced by: (1) the use of 'thesis' (whole-document reference), (2) the programmatic nature of 'focuses' and 'aims' (establishing global agenda), (3) position in Introduction where global scope is conventionally announced."",
+      ""reasoning"": ""Despite being grammatically localized in a single sentence, the functional scope is macro because: (1) the referent is the entire thesis document, (2) the discourse acts announced (focusing, aiming to reveal) are global research purposes that organize all subsequent sections, (3) this is a prototypical thesis-scope announcement in Introduction section, (4) the anticipatory reach extends through Methods, Results, Discussion, and Conclusion.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Clear metadiscourse status confirmed by multiple converging indicators: (1) Reflexivity Test: POSITIVE - expression is both text-reflexive and discourse-act reflexive, referring to the text itself and its research actions; (2) Removal Test: removing the expression eliminates discourse guidance (what this text does) but leaves propositional content about political discourse intact; (3) Genre Convention Test: this is a prototypical thesis-scope announcement in academic introductions; (4) Function: organizes reader understanding of the text's global purpose and scope rather than conveying factual information about the world."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The expression primarily organizes and guides rather than expresses stance or engages readers. Specifically: (1) it announces the text's organizational structure and research scope, (2) it guides readers by establishing what to expect throughout the thesis, (3) while the author is implicitly present, the primary function is structural/organizational (announcing what the text does) rather than evaluative or interpersonal, (4) it helps readers navigate by providing a global roadmap of the research focus and aims."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_reasoning"": ""This is a prototypical Frame Marker because: (1) it signals discourse boundaries and organization at the macro level, (2) it announces the global purpose and scope of the entire thesis, (3) it orients readers to the text's structure and research agenda, (4) it exhibits the text-reflexivity characteristic of frame markers ('This thesis'), (5) it uses discourse verbs ('focuses', 'aims') that explicitly label what the text does, (6) it appears in the conventional position for thesis-scope frame markers (Introduction section), (7) it sequences the research agenda (focus + aims), which is a framing function.""
+    }
+  },
+  ""confidence_ratings"": {
+    ""structural_realization"": 5,
+    ""functional_scope"": 5,
+    ""metadiscourse_type"": 5,
+    ""overall_confidence"": 5,
+    ""confidence_justification"": ""Maximum confidence across all dimensions. Structural realization is unambiguous: clear text-reflexive noun phrase with discourse verbs, fully integrated syntax, strong reflexivity. Functional scope is prototypically macro: 'thesis' refers to entire document, programmatic verbs establish global agenda, conventional Introduction position. Metadiscourse classification is certain: reflexivity confirms MD status, interactive function is clear (organizing/guiding not evaluating), frame marker type is prototypical for thesis-scope announcements. This is a textbook example of a macro-scope reflexive frame marker.""
+  },
+  ""borderline_considerations"": {
+    ""is_borderline"": false,
+    ""competing_interpretations"": [],
+    ""primary_vs_secondary_functions"": ""Primary function is clearly Interactive Frame Marker (announcing text structure and purpose). A very minor secondary function could be considered Interactional Self-Mention (implicit author presence through 'thesis'), but this is negligible - the dominant function is organizational/structural, not stance-taking or author-foregrounding."",
+    ""borderline_justification"": null
+  },
+  ""comprehensive_justification"": ""This expression is a prototypical macro-scope Interactive Frame Marker with maximum confidence across all analytical dimensions. STRUCTURAL ANALYSIS: The expression exhibits strong text-reflexivity through 'This thesis' (metatextual noun referring to the document itself) and discourse-act reflexivity through 'focuses' and 'aims to reveal' (verbs describing what the text does). The structure is fully integrated grammatically but functionally detached from propositional content - it operates at the meta-level to announce what the text does rather than conveying facts about political discourse. SCOPE ANALYSIS: The functional scope is unambiguously macro. Despite grammatical localization in one sentence, the expression operates across the entire thesis: (1) 'thesis' is a whole-document reference, (2) 'focuses' and 'aims' establish global research purposes that organize all sections, (3) the anticipatory reach extends through the complete document structure, (4) this appears in the conventional Introduction position for thesis-scope announcements. FUNCTIONAL CLASSIFICATION: Level 1 - METADISCOURSE status is certain due to strong reflexivity (sufficient condition) plus removal test confirmation (discourse guidance lost, propositional content intact). Level 2 - INTERACTIVE function is clear: the expression organizes and guides readers through announcing text structure and purpose, rather than expressing stance or engaging interpersonally. Level 3 - FRAME MARKER type is prototypical: announces discourse boundaries and organization, orients readers to global research agenda, uses text-reflexive language and discourse verbs characteristic of framing, appears in conventional position for thesis-scope frame markers. CONTEXTUAL VALIDATION: Genre conventions strongly support this classification - thesis introductions prototypically contain such macro-scope frame markers to establish research scope. The expression follows theoretical positioning and precedes more specific claims about sub-genres, fitting the expected rhetorical structure. This is a clear, unambiguous case requiring no hedging or borderline consideration.""
+}
+```",success,claude-sonnet-4-5-20250929,0
+"This study takes the standpoint that genre is ‘a staged, goal oriented, purposeful activity in which speakers engage as members of our culture’.","“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways.It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning. This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics. The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political speeches.","It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,(this study) takes the standpoint…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression"": ""This study takes the standpoint that"",
+  ""context"": ""Introduction section, defining theoretical framework. Expression introduces the study's theoretical position on genre, following discussion of sub-genres in political discourse."",
+  ""analysis"": {
+    ""dimension_1_structural_realization"": {
+      ""morphological_form"": ""Demonstrative pronoun 'This' + genre noun 'study' + stance verb 'takes' + stance noun 'standpoint' + complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial, subject position with complement clause structure"",
+      ""punctuation_cues"": ""No punctuation separating expression from complement clause (fully integrated)"",
+      ""grammatical_integration"": ""Fully integrated - forms main clause with complement clause containing the theoretical position"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive + Discourse-Act Reflexive (hybrid)"",
+        ""reflexivity_reasoning"": ""'This study' is text-reflexive (refers to the thesis itself as textual object). 'Takes the standpoint' is discourse-act reflexive (refers to the act of adopting a theoretical position within the discourse). The expression makes the text and its discourse act explicitly present.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces the theoretical framework that will underpin the entire study. This is not a local claim but a global positioning statement that frames the research approach throughout the thesis."",
+      ""removal_test_result"": ""If removed, the propositional content (the definition of genre) remains, but the explicit framing of this as THE STUDY'S theoretical position is lost. Readers would not know this is the foundational stance."",
+      ""boundary_test_result"": ""The functional reach extends across the entire thesis - this theoretical position will inform analysis in multiple chapters. Not limited to current paragraph or section."",
+      ""reasoning"": ""In Introduction sections, expressions like 'This study takes the standpoint' typically announce macro-level theoretical commitments. The context confirms this is establishing the foundational framework (followed by elaboration), not making a local point. Scope is determined by the global framing function, not syntactic position.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Strong reflexivity present (text-reflexive + discourse-act reflexive). Removal test confirms: propositional content (genre definition) remains, but the metadiscursive framing (that THIS STUDY adopts THIS position) is lost. Function is to organize reader's understanding of the study's theoretical framework, not to convey factual information about the world. Classic metadiscursive move in academic introductions."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Primary function is to organize and guide reader understanding of the text's theoretical structure. While there is an element of authorial presence (the study 'takes' a position), the dominant function is organizational - announcing the framework that structures the research. This guides readers through the argumentative architecture rather than expressing stance toward specific content."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_reasoning"": ""Announces and labels a major structural element of the thesis (its theoretical framework). Typical frame marker function: signals discourse boundaries and stages. In academic introductions, 'This study takes the standpoint/position/view' is a conventional frame marker for announcing theoretical commitments. The macro-scope and text-reflexive properties align with frame marker category.""
+    }
+  },
+  ""confidence_ratings"": {
+    ""structural_realization"": 5,
+    ""functional_scope"": 5,
+    ""metadiscourse_type"": 4,
+    ""overall_confidence"": 4,
+    ""confidence_justification"": ""Very high confidence on structural realization (clear reflexivity, observable properties). Very high confidence on macro-scope (prototypical Introduction framing move). Slightly lower confidence (4) on specific type because there is tension between Interactive (frame marker) and Interactional (self-mention) interpretations. The expression contains authorial presence ('This study') but primary function appears organizational. In some frameworks, this might be classified as self-mention, but the dominant function here is framing the theoretical structure.""
+  },
+  ""borderline_considerations"": {
+    ""is_borderline"": true,
+    ""competing_interpretations"": [
+      ""Frame Marker (Interactive): Primary interpretation - announces theoretical framework, organizes reader understanding of study's structure"",
+      ""Self-Mention (Interactional): Secondary interpretation - makes study/author present as agent taking theoretical position"",
+      ""Evidential (Interactive): Tertiary interpretation - could be seen as attributing theoretical position, though here it's adoption rather than citation""
+    ],
+    ""primary_vs_secondary_functions"": ""PRIMARY: Frame Marker (organizing/announcing theoretical framework). SECONDARY: Self-Mention (asserting study's agency/presence). The expression serves both functions simultaneously, but the macro-scope and conventional Introduction context suggest framing function is dominant."",
+    ""borderline_justification"": ""This expression exhibits characteristics of multiple metadiscourse types. The text-reflexive 'This study' creates authorial presence (self-mention feature), while 'takes the standpoint that' announces a theoretical framework (frame marker feature). In Introduction sections, such expressions conventionally function to organize the theoretical architecture, which supports frame marker classification. However, the explicit agency ('takes') and self-reference create legitimate ambiguity. This reflects genuine multifunctionality rather than annotation uncertainty.""
+  },
+  ""comprehensive_justification"": ""This is a prototypical macro-scope metadiscourse marker in an academic Introduction. STRUCTURAL: Strong reflexivity on two levels - 'This study' is text-reflexive (refers to thesis itself), and 'takes the standpoint' is discourse-act reflexive (refers to act of adopting position). SCOPE: Macro-scope because it announces the theoretical framework for the entire study, not a local claim. Context confirms this is foundational positioning. CLASSIFICATION: Metadiscourse status is certain (reflexivity + organizational function). Interactive vs. Interactional is more complex: the expression both organizes (announces framework) and asserts presence (study as agent). Primary function appears organizational (frame marker), given macro-scope, Introduction context, and conventional use of such expressions to structure theoretical commitments. However, self-mention interpretation is legitimate secondary reading. Borderline status reflects genuine multifunctionality of expressions that simultaneously organize and assert authorial presence.""
+}
+```",success,claude-sonnet-4-5-20250929,1

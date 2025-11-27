@@ -1,0 +1,994 @@
+{
+    "task_name": "Metadiscourse Classification Task: Functional Alignment Matrix Analysis",
+    "objective": "Classify highlighted expressions in the column 'expression' using the Functional Alignment Matrix framework that distinguishes F1 (Lexico-syntactic Function) from F2 (Contextual Function). Classification applies to the highlighted expression within its discourse context.",
+    "important_note": "Only consider the whole expression inside the 'expression' column.",
+  
+    "theoretical_framework": {
+      "core_principle": {
+        "definition": "Metadiscourse is distinct from propositional aspects of discourse. Metadiscourse refers to the writer's rhetorical acts within the discourse, denoting writer-reader interaction.",
+        "key_insight": "The same linguistic form can function differently depending on both its lexico-syntactic structure (F1) and its contextual role (F2). Alignment or misalignment between these two dimensions determines the final classification.",
+        "hyland_integration": "Once metadiscourse is confirmed through F1×F2 analysis, Hyland's Framework describes how it is realized as Interactive or Interactional (with specific subcategories and markers)."
+      },
+  
+      "dimensions": {
+        "f1_lexico_syntactic_local_function": {
+          "name": "F1: Lexico-syntactic + Local Context Function",
+          "description": "Function determined by the form's structural, syntactic, and local contextual properties within the immediate sentence. Local context is defined as the linguistic environment bounded by sentence markers (period, question mark, exclamation mark, or major semicolon). Includes morphological patterns, syntactic positioning, intra-sentential collocations, and conventional phrasal patterns, but excludes discourse-level contextual factors beyond the sentence boundary.",
+          "scope": "Analysis restricted to the immediate sentence containing the target expression",
+          "boundary": "Orthographic sentence boundaries (. ? ! ; as major breaks)",
+            "types": [
+              {
+                "type": "MD-F1",
+                "label": "Metadiscourse at Lexico-syntactic Level",
+                "definition": "Fully non-propositional forms that convey stance, engagement, or attitude, without carrying core propositional content",
+                "identification": "Based on syntactic/structural cues and morphological patterns"
+              },
+              {
+                "type": "P-F1",
+                "label": "Propositional at Lexico-syntactic Level",
+                "definition": "Forms that structurally carry factual or referential content",
+                "identification": "Integrated into clause structure, descriptive function, no stance markers"
+              }
+            ]
+        },
+  
+        "f2_global_contextual_function": {
+          "name": "F2: Global Contextual Function",
+          "description": "Actual function determined by discourse elements beyond the immediate sentence, including preceding and following sentences, paragraph/section structure, genre conventions, rhetorical situation, and overall discourse goals. Global context encompasses all factors external to the sentence containing the target expression.",
+          "scope": "Analysis of inter-sentential relationships and broader discourse organization",
+          "boundary": "Beyond the immediate sentence; includes all supra-sentential discourse factors",
+          "types": [
+            {
+              "type": "MD-F2",
+              "label": "Metadiscourse at Contextual Level",
+              "definition": "Organizes text, guides reader, manages writer-reader interaction, or expresses stance/evaluation in the specific discourse context"
+            },
+            {
+              "type": "P-F2",
+              "label": "Propositional at Contextual Level",
+              "definition": "Contributes factual meaning, describes states of affairs, or adds referential content in the larger discourse"
+            }
+          ]
+        }
+      },
+      "context_boundaries": {
+        "definition": "Clear operational distinction between local and global context",
+        "local_context": {
+          "definition": "The immediate sentence containing the target expression",
+          "boundary_markers": [
+            "period (.)",
+            "question_mark (?)",
+            "exclamation_mark (!)",
+            "semicolon_as_major_break (;)"
+          ],
+          "includes": [
+            "All words, phrases, and clauses within the same sentence",
+            "Syntactic structure and word order within the sentence",
+            "Punctuation internal to the sentence (commas, dashes, colons)",
+            "Grammatical relationships within the sentence",
+            "Conventional collocations and phrasal patterns"
+          ],
+          "excludes": [
+            "Preceding sentences",
+            "Following sentences",
+            "Paragraph-level organization",
+            "Section-level information",
+            "Overall discourse structure"
+          ]
+        },
+        "global_context": {
+          "definition": "All discourse elements beyond the immediate sentence",
+          "includes": [
+            "Preceding and following sentences",
+            "Paragraph structure and organization",
+            "Section location (Introduction, Methods, Discussion, etc.)",
+            "Genre conventions (PhD thesis, research article, etc.)",
+            "Overall rhetorical purpose",
+            "Discourse goals and text organization",
+            "Writer-reader relationship in the broader discourse"
+          ]
+        },
+        "rationale": "Sentence boundaries provide a clear, operationalizable distinction that annotators can consistently apply, while allowing for both structural/local pattern analysis (F1) and broader discourse function analysis (F2)."
+      },
+  
+      "functional_alignment_matrix": {
+        "description": "Four possible classification outcomes based on F1 × F2 alignment",
+        "classifications": [
+          {
+            "classification": "Stable Metadiscourse",
+            "f1": "MD-F1",
+            "f2": "MD-F2",
+            "description": "Both lexico-syntactically and contextually align as metadiscourse",
+            "example": "Clearly, this demonstrates… (sentence-initial attitudinal adverb with comma, functioning rhetorically in context)"
+          },
+          {
+            "classification": "Contextual Shift to Proposition",
+            "f1": "MD-F1",
+            "f2": "P-F2",
+            "description": "Form appears metadiscursive, but contributes factual meaning in the larger discourse",
+            "example": "I believe this effect occurs at high temperature (hedging verb structure, but 'believe' reports content of a belief, not writer's stance)"
+          },
+          {
+            "classification": "Contextual Shift to Metadiscourse",
+            "f1": "P-F1",
+            "f2": "MD-F2",
+            "description": "Form is propositional, but context shows rhetorical or evaluative use",
+            "example": "The data show that… (propositional form used as authorial stance marker in argumentative context)"
+          },
+          {
+            "classification": "Stable Proposition",
+            "f1": "P-F1",
+            "f2": "P-F2",
+            "description": "Fully factual and referential across both levels",
+            "example": "The samples were heated to 90°C (bare assertion with no stance or rhetorical function)"
+          }
+        ]
+      }
+    },
+  
+    "f1_lexico_syntactic_indicators": {
+      "description": "Syntactic and structural cues for identifying F1 classification",
+
+      "propositonal_clues": "integrated",
+      
+      "md_f1_indicators": {
+        "description": "Structural patterns that signal metadiscourse at the lexico-syntactic level",
+        "metadiscourse_lexico_syntactic_clues": {
+    "structural_position": [
+      "sentence_initial",
+      "parenthetical",
+      "embedded_clause_internal",
+      "tag_clause_detached",
+      "absolute_construction"
+    ],
+
+    "punctuation_markers": [
+      "comma_separated",
+      "dash_enclosed",
+      "colon_separated",
+      "parentheses_enclosed"
+    ],
+
+    "syntactic_patterns": [
+      "verb_infinitive_structure",
+      "verb_that_clause",
+      "modal_progressive",
+      "impersonal_it_structure",
+      "reporting_verb_structure"
+    ],
+
+    "lexical_features": {
+      "description": "Lexical and phrasal patterns detectable within the sentence boundary",
+      "patterns": [
+        {
+          "category": "Self-referential_patterns",
+          "description": "Conventional patterns indicating text-internal reference detectable at local level",
+          "types": [
+            {
+              "pattern": "Proximal_demonstrative_genre_name",
+              "structure": "this/these + [thesis/study/paper/article/chapter/research/analysis/investigation/work]",
+              "examples": [
+                "This thesis focuses on...",
+                "This study examines...",
+                "This paper investigates...",
+                "This chapter discusses..."
+              ],
+              "detection": "Proximal demonstrative ('this'/'these') + genre-naming noun signals self-reference through local collocation pattern",
+              "f1_classification": "MD-F1 (self-referential pattern at local level)",
+              "note": "Distal demonstratives ('that'/'those') typically indicate external reference"
+            },
+            {
+              "pattern": "First_person_text_act_verb",
+              "structure": "I/we + [argue/claim/demonstrate/show/propose/suggest/contend]",
+              "examples": [
+                "I argue that...",
+                "We demonstrate...",
+                "I propose...",
+                "We contend..."
+              ],
+              "detection": "First-person pronoun + verb naming textual/rhetorical act",
+              "f1_classification": "MD-F1 (writer reflexivity through pronoun-verb collocation)"
+            },
+            {
+              "pattern": "Text_deictic_navigation",
+              "structure": "[above/below/here/earlier/later] + we/I + [discuss/show/examine/presented]",
+              "examples": [
+                "As mentioned above...",
+                "Below we show...",
+                "Earlier I discussed...",
+                "Here we examine..."
+              ],
+              "detection": "Deictic reference to text location combined with text-act verb",
+              "f1_classification": "MD-F1 (text-internal navigation marker)"
+            },
+            {
+              "pattern": "Textual_noun_with_possessive",
+              "structure": "[my/our/the] + [argument/claim/analysis/approach/framework/method]",
+              "examples": [
+                "My argument rests on...",
+                "Our analysis reveals...",
+                "The present study...",
+                "This approach enables..."
+              ],
+              "detection": "Possessive or demonstrative + noun naming discourse element",
+              "f1_classification": "Context-dependent (requires F2 analysis to determine if self-referential)"
+            }
+          ]
+        },
+        {
+          "category": "Pronoun_verb_combinations",
+          "description": "Conventional metadiscourse patterns formed by pronoun-verb collocations"
+        },
+        {
+          "category": "Multi_word_expressions",
+          "description": "Fixed or semi-fixed expressions functioning as metadiscourse units"
+        }
+      ]
+    }
+  },
+        "categories": [
+          {
+            "category": "Hedging verbs / expressions of uncertainty",
+            "subcategories": [
+              {
+                "pattern": "Verb + infinitive",
+                "example": "seem to…, appear to…",
+                "instance": "hostage-takers seem to have sought out…"
+              },
+              {
+                "pattern": "Verb + that clause",
+                "example": "It seems that X…, It appears that…"
+              },
+              {
+                "pattern": "Parenthetical hedges",
+                "example": "X, possibly Y, …"
+              }
+            ]
+          },
+          {
+            "category": "Epistemic modality",
+            "subcategories": [
+              {
+                "pattern": "Modal verbs expressing uncertainty",
+                "markers": ["may", "might", "seem to", "appear to"]
+              },
+              {
+                "pattern": "Modal + progressive",
+                "example": "may be doing…"
+              },
+              {
+                "pattern": "Verbs expressing writer's certainty",
+                "markers": ["must", "should", "cannot"]
+              }
+            ]
+          },
+          {
+            "category": "Deontic modality",
+            "note": "Classification depends on syntactic positioning and addressee",
+            "subcategories": [
+              {
+                "pattern": "Expressions of obligation (Attitudinal Marker)",
+                "condition": "When directed at third party, expressing writer's attitude toward desirability of actions",
+                "example": "Brown must break with it",
+                "function": "Non-propositional attitudinal marker"
+              },
+              {
+                "pattern": "Expressions of reader-address (Engagement Marker)",
+                "condition": "When addressing reader directly or indirectly",
+                "function": "Engagement marker creating writer-reader relationship"
+              }
+            ]
+          },
+          {
+            "category": "Attitudinal adjectives and adverbs",
+            "subcategories": [
+              {
+                "pattern": "Sentence-initial or comma-separated",
+                "example": "Clearly, this supports X.",
+                "cue": "Comma sets off the adverb"
+              },
+              {
+                "pattern": "Adverbs answering rhetorical questions",
+                "example": "Hardly"
+              },
+              {
+                "pattern": "Multi-word intensifiers / certainty expressions",
+                "example": "Without a doubt, …"
+              }
+            ]
+          },
+          {
+            "category": "Impersonal structures",
+            "patterns": [
+              "It is obvious that …",
+              "It is true that …",
+              "It seems / appears that … (hedging)"
+            ]
+          },
+          {
+            "category": "Attribution and reported speech (evidentials)",
+            "subcategories": [
+              {
+                "pattern": "Parenthetical attribution",
+                "example": "Y (according to X) …"
+              },
+              {
+                "pattern": "Reporting verbs with stance",
+                "example": "X claims that Y …"
+              },
+              {
+                "pattern": "Punctuation cues (colon, dash) separating source",
+                "example": "X argues: Y …"
+              }
+            ],
+            "function": "Signals author stance or reinforces claim, without adding propositional content"
+          },
+          {
+            "category": "Intensifiers / expressions of certainty",
+            "subcategories": [
+              {
+                "pattern": "Sentence-initial adverbs",
+                "example": "Certainly, …"
+              },
+              {
+                "pattern": "Multi-word phrases",
+                "example": "We can be sure that …"
+              },
+              {
+                "pattern": "Embedded intensifiers framing the clause",
+                "example": "It is absolutely clear that …"
+              }
+            ]
+          },
+          {
+            "category": "Pronouns signaling stance / engagement / self-mention",
+            "subcategories": [
+              {
+                "pattern": "First-person pronouns expressing stance",
+                "example": "I believe …"
+              },
+              {
+                "pattern": "Plural / inclusive pronouns",
+                "example": "Let us consider … (engagement marker)"
+              },
+              {
+                "pattern": "Authorial presence",
+                "example": "We argue that X …"
+              },
+              {
+                "pattern": "Institutional / rhetorical distancing",
+                "example": "We (the government) will …"
+              }
+            ]
+          },
+          {
+            "category": "Asides (engagement markers)",
+            "definition": "Parenthetical remarks that serve as temporary departure from main topic to convey special message to readers",
+            "example": "Higher-paid (but by no means highly paid) local authority employees... may strike",
+            "condition": "Only when engaging reader's judgment, not when adding propositional information"
+          },
+          {
+            "category": "Hedging attitudinal verbs + personal pronouns",
+            "pattern": "I/We + believe, feel, think, argue",
+            "example": "I believe this study is full of complexities",
+            "function": "Makes entire phrase attitudinal, expressing writer's attitude toward state of affairs"
+          },
+          {
+            "category": "Adverbs of frequency (conditional)",
+            "condition": "Only when syntactic cues (commas) separate them from main clause, or used to answer rhetorical question",
+            "example_md": "Usually, it means several new emails... (comma separation)",
+            "example_prop": "The machine usually works (integrated, propositional)"
+          },
+          {
+            "category": "Sentence-initial adjuncts",
+            "note": "When fronted and set off by commas, function metadiscursively",
+            "examples": [
+              "Frankly, … (stance)",
+              "In fact, … (emphasis/attitude)",
+              "On the whole, … (hedging/stance)"
+            ]
+          },
+          {
+            "category": "Parentheticals (clause-internal)",
+            "examples": [
+              "It is, of course, difficult to measure.",
+              "The results are, in a sense, inconclusive."
+            ],
+            "note": "With comma = stance marker"
+          },
+          {
+            "category": "Tag clauses / detached clauses",
+            "description": "Propositional form (I think, I believe) gets syntactically detached and functions as metadiscourse",
+            "examples": [
+              "It is important — I think — to notice this.",
+              "The problem, I believe, lies elsewhere."
+            ]
+          },
+          {
+            "category": "Absolute constructions (sentence-level adjuncts)",
+            "description": "Structurally clause-like, but functioning metadiscursively to frame what follows",
+            "examples": [
+              "That said, …",
+              "This being the case, …"
+            ]
+          },
+          {
+            "category": "Conditional clauses (uncertainty markers)",
+            "condition": "Only when used to indicate hypothetical situation on part of writer",
+            "function": "Presents claim as one possibility among many, expressing opinion without full commitment",
+            "example": "...a Labour government can sometimes get away with announcing policies which, had they come from the mouth of a conservative minister, would have provoked howls of anger"
+          }
+        ]
+      },
+  
+      "p_f1_indicators": {
+        "description": "Structural patterns that signal propositional function at the lexico-syntactic level",
+        
+        "categories": [
+          {
+            "category": "Hedging verbs in complement clauses",
+            "pattern": "believe, think, argue, claim",
+            "function": "Propositional when embedded in clause reporting others' opinions rather than expressing writer's stance",
+            "example": "For those who believe that anything but prison is a soft option… (attribute belief, not author's stance)"
+          },
+          {
+            "category": "Personal pronouns as neutral subjects",
+            "pattern": "I, we, us",
+            "function": "Propositional when indicating agency in factual reporting only",
+            "example": "I measured the samples (conveys action, not stance)"
+          },
+          {
+            "category": "Intensifiers in descriptive function",
+            "pattern": "highly, extremely, exactly",
+            "function": "Propositional when sharpening or specifying factual content rather than indicating commitment",
+            "example": "The solution is highly concentrated"
+          },
+          {
+            "category": "Asides (propositional)",
+            "condition": "When used to give extra information about the topic",
+            "example": "The CEO (who was appointed last year) announced the merger",
+            "function": "Adds factual detail, not metadiscourse"
+          },
+          {
+            "category": "Bare assertions",
+            "pattern": "Declaratives without modal or stance markers",
+            "function": "Purely propositional, presenting information as fact",
+            "example": "The results indicate an increase in X"
+          },
+          {
+            "category": "Modal verbs in ability contexts",
+            "pattern": "can, could",
+            "function": "Propositional when describing physical or logical ability, not epistemic possibility",
+            "example": "The machine can produce 100 units per hour"
+          },
+          {
+            "category": "Adverbs of frequency (integrated)",
+            "condition": "Not counted as metadiscourse due to propositional nature in default usage",
+            "example": "The machine usually works (integrated into clause, describes typical behavior)"
+          }
+        ]
+      }
+    },
+  
+    "f2_contextual_tests": {
+      "description": "Apply these tests sequentially to determine F2 classification. Context must be checked (Hyland, 2017).",
+      
+      "core_tests": [
+        {
+          "test_number": 1,
+          "test_name": "Propositional Removal Test",
+          "instruction": "Remove the candidate item from the sentence",
+          "question": "Does the core propositional meaning change?",
+          "decision_logic": {
+            "if_yes": "Likely P-F2 (Propositional at contextual level)",
+            "if_no": "Proceed to Test 2"
+          },
+          "example": {
+            "sentence": "I believe this effect occurs at high temperature",
+            "remove": "I believe",
+            "result": "This effect occurs at high temperature",
+            "analysis": "Propositional meaning UNCHANGED (still about the effect)",
+            "verdict": "MD-F2 (if F1 supports it)"
+          }
+        },
+        {
+          "test_number": 2,
+          "test_name": "Discourse Function Test",
+          "instruction": "Identify the primary function of the item in context",
+          "questions": [
+            "Does it organize/structure the text?",
+            "Does it express writer's stance/attitude?",
+            "Does it engage the reader?",
+            "Does it describe a state of affairs in the world?"
+          ],
+          "decision_logic": {
+            "if_abc": "MD-F2 (Metadiscourse at contextual level)",
+            "if_d_only": "P-F2 (Propositional at contextual level)"
+          }
+        },
+        {
+          "test_number": 3,
+          "test_name": "Co-text Dependency Test",
+          "instruction": "Examine the surrounding discourse (context before and after, section, discipline)",
+          "question": "Does the item's function change based on what comes before/after?",
+          "examples": [
+            {
+              "expression": "First, we heated the sample",
+              "context": "In methodology section",
+              "verdict": "P-F2 (temporal sequence)"
+            },
+            {
+              "expression": "First, I will discuss X",
+              "context": "In introduction",
+              "verdict": "MD-F2 (discourse organization)"
+            },
+            {
+              "expression": "The data show that X is true",
+              "context": "Making evidential claim",
+              "verdict": "P-F2"
+            },
+            {
+              "expression": "As the data show, we can conclude Y",
+              "context": "Used as stance marker in argument",
+              "verdict": "MD-F2"
+            }
+          ]
+        },
+        {
+          "test_number": 4,
+          "test_name": "Substitution Test",
+          "instruction": "Try substituting with synonyms",
+          "question": "Can it be replaced by purely propositional alternatives?",
+          "decision_logic": {
+            "metadiscourse": "Cannot substitute without losing rhetorical function",
+            "propositional": "Can substitute with factual equivalents"
+          },
+          "examples": [
+            {
+              "original": "Clearly, this is problematic",
+              "substitute": "This is problematic",
+              "result": "Loses epistemic stance",
+              "verdict": "MD-F2"
+            },
+            {
+              "original": "I measured the temperature",
+              "substitute": "The temperature was measured",
+              "result": "Same propositional content",
+              "verdict": "P-F2"
+            }
+          ]
+        }
+      ],
+  
+      "contextual_features_checklist": {
+        "description": "Additional contextual factors that influence F2 classification",
+        
+        "rhetorical_situation": {
+          "genre": "PhD thesis",
+          "section_options": ["abstract", "introduction", "methods", "results", "discussion", "conclusion"],
+          "purpose_options": ["arguing", "explaining", "instructing", "narrating"],
+          "rule": "Same lexical item may function differently across contexts (e.g., 'should' in methods vs. discussion)"
+        },
+  
+        "writer_reader_relationship": {
+          "questions": [
+            "Is the item guiding the reader through text organization?",
+            "Is it expressing writer's commitment to proposition?",
+            "Is it anticipating reader's objections/questions?",
+            "Is it establishing common ground with reader?"
+          ],
+          "decision": "If any checked → MD-F2 tendency ↑"
+        },
+  
+        "propositional_integration": {
+          "questions": [
+            "Is the item part of a factual claim about the world?",
+            "Is it contributing to the truth conditions of the statement?",
+            "Is it describing an action, state, or event?",
+            "Is it essential to the referential meaning?"
+          ],
+          "decision": "If any checked → P-F2 tendency ↑"
+        }
+      }
+    },
+  
+    "hyland_taxonomy_reference": {
+      "description": "After confirming metadiscourse through F1×F2 analysis, use Hyland's Framework to identify specific subcategory",
+      "note": "This taxonomy provides the specific metadiscourse categories for classification once metadiscourse function is established",
+  
+      "interactive_metadiscourse": {
+        "definition": "Resources that help organize discourse and guide the reader through the text",
+        "categories": [
+          {
+            "category": "Transitions",
+            "function": "Express relations (additive, causative, contrastive) between main clauses",
+            "typical_markers": ["and", "but", "however", "therefore", "thus", "in addition", "moreover", "consequently"]
+          },
+          {
+            "category": "Frame markers",
+            "function": "Signal text boundaries or elements of schematic text structure",
+            "typical_markers": ["first", "finally", "to conclude", "my purpose is", "in this section", "to sum up"]
+          },
+          {
+            "category": "Endophoric markers",
+            "function": "Refer to information in other parts of the text",
+            "typical_markers": ["as noted above", "see Table 2", "in the next section", "as mentioned earlier"]
+          },
+          {
+            "category": "Evidentials",
+            "function": "Reference to information from other texts",
+            "typical_markers": ["according to Smith (2020)", "as suggested by previous studies", "as shown by research"]
+          },
+          {
+            "category": "Code glosses",
+            "function": "Explain or reformulate information to ensure comprehension",
+            "typical_markers": ["namely", "in other words", "that is to say", "for example", "such as"]
+          }
+        ]
+      },
+  
+      "interactional_metadiscourse": {
+        "definition": "Resources that involve the reader in the discourse and express the writer's stance",
+        "categories": [
+          {
+            "category": "Hedges",
+            "function": "Indicate uncertainty or open up dialogue; mitigate commitment to a proposition",
+            "typical_markers": ["might", "perhaps", "possible", "suggest", "appear", "seems", "likely"]
+          },
+          {
+            "category": "Boosters",
+            "function": "Emphasize certainty, close down alternatives, express certainty",
+            "typical_markers": ["clearly", "definitely", "obviously", "show", "demonstrate", "in fact"]
+          },
+          {
+            "category": "Attitude markers",
+            "function": "Indicate writer's affective attitude to propositions",
+            "typical_markers": ["unfortunately", "surprisingly", "importantly", "it is interesting to note"]
+          },
+          {
+            "category": "Self-mentions",
+            "function": "Explicitly reference the author(s)",
+            "typical_markers": ["I", "we", "my", "our", "the author(s)"]
+          },
+          {
+            "category": "Engagement markers",
+            "function": "Explicitly address readers",
+            "typical_markers": ["consider", "note that", "you can see", "we can observe", "let us", "remember that"]
+          }
+        ]
+      }
+    },
+  
+    "classification_workflow": {
+      "description": "Step-by-step process for applying the Functional Alignment Matrix",
+      
+      "steps": [
+        {
+          "step": 1,
+          "name": "Analyze F1 (Lexico-syntactic Function)",
+          "description": "Examine the structural and syntactic properties of the expression",
+          "actions": [
+            "Identify syntactic positioning (sentence-initial, parenthetical, integrated, tag)",
+            "Check for punctuation cues (commas, dashes, parentheses)",
+            "Determine morphological pattern (verb forms, modal auxiliaries, etc.)",
+            "Match against F1 indicators in framework"
+          ],
+          "output": "MD-F1 or P-F1"
+        },
+        {
+          "step": 2,
+          "name": "Analyze F2 (Contextual Function)",
+          "description": "Apply contextual tests to determine actual discourse function",
+          "actions": [
+            "Apply Propositional Removal Test",
+            "Apply Discourse Function Test",
+            "Apply Co-text Dependency Test",
+            "Apply Substitution Test",
+            "Check Contextual Features Checklist"
+          ],
+          "output": "MD-F2 or P-F2"
+        },
+        {
+          "step": 3,
+          "name": "Determine Classification",
+          "description": "Combine F1 and F2 to determine final classification",
+          "matrix": [
+            {
+              "f1": "MD-F1",
+              "f2": "MD-F2",
+              "result": "Stable Metadiscourse"
+            },
+            {
+              "f1": "MD-F1",
+              "f2": "P-F2",
+              "result": "Contextual Shift to Proposition"
+            },
+            {
+              "f1": "P-F1",
+              "f2": "MD-F2",
+              "result": "Contextual Shift to Metadiscourse"
+            },
+            {
+              "f1": "P-F1",
+              "f2": "P-F2",
+              "result": "Stable Proposition"
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "name": "Identify Hyland Category (if metadiscourse)",
+          "description": "If classification is Stable Metadiscourse or Contextual Shift to Metadiscourse, identify the specific Hyland category",
+          "actions": [
+            "Match against Interactive or Interactional categories",
+            "Identify specific subcategory (hedge, booster, attitude marker, etc.)",
+            "Note typical markers and functions"
+          ],
+          "output": "Specific Hyland metadiscourse category or 'N/A' if propositional"
+        },
+        {
+          "step": 5,
+          "name": "Evidence Documentation",
+          "description": "Provide structured justification",
+          "required_elements": [
+            "F1 analysis with syntactic/structural evidence",
+            "F2 analysis with contextual test results",
+            "Final classification with alignment explanation",
+            "Hyland category (if applicable)",
+            "Contextual factors influencing classification"
+          ]
+        }
+      ]
+    },
+  
+    "output_format": {
+      "description": "For each highlighted expression, provide this JSON structure:",
+      "schema": {
+        "f1_lexico_syntactic": {
+          "type": "string",
+          "enum": ["MD-F1", "P-F1"],
+          "description": "Metadiscourse or Propositional at lexico-syntactic level"
+        },
+        "f1_evidence": {
+          "type": "string",
+          "description": "Syntactic position, punctuation, structural pattern supporting F1 classification"
+        },
+        "f2_contextual": {
+          "type": "string",
+          "enum": ["MD-F2", "P-F2"],
+          "description": "Metadiscourse or Propositional at contextual level"
+        },
+        "f2_tests_applied": {
+          "type": "array",
+          "items": {
+            "test_name": "string",
+            "result": "string"
+          },
+          "description": "Results from each contextual test applied"
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "Stable Metadiscourse",
+            "Contextual Shift to Proposition",
+            "Contextual Shift to Metadiscourse",
+            "Stable Proposition"
+          ],
+          "description": "Final F1×F2 classification"
+        },
+        "hyland_category": {
+          "type": "string",
+          "description": "Specific Hyland category if metadiscourse; 'N/A' if propositional"
+        },
+        "hyland_subcategory": {
+          "type": "string",
+          "description": "Specific subcategory (hedge, booster, transition, etc.) if applicable"
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Confidence level from 1 (minimal) to 5 (unambiguous)"
+        },
+        "justification": {
+          "type": "string",
+          "description": "Comprehensive rationale explaining F1 analysis, F2 analysis, and alignment"
+        },
+        "contextual_factors": {
+          "type": "object",
+          "properties": {
+            "genre": "string",
+            "section": "string",
+            "rhetorical_purpose": "string",
+            "co_text_influence": "string"
+          },
+          "description": "Contextual factors that influenced F2 classification"
+        },
+        "note": {
+          "type": "string",
+          "description": "Additional observations, borderline considerations, or alternative interpretations"
+        }
+      },
+  
+      "example_stable_metadiscourse": {
+        "f1_lexico_syntactic": "MD-F1",
+        "f1_evidence": "Sentence-initial attitudinal adverb 'Clearly' with comma separation, giving scope over entire proposition",
+        "f2_contextual": "MD-F2",
+        "f2_tests_applied": [
+          {
+            "test_name": "Propositional Removal Test",
+            "result": "Removing 'Clearly,' does not change propositional content—only removes epistemic stance"
+          },
+          {
+            "test_name": "Discourse Function Test",
+            "result": "Expresses writer's certainty/attitude toward the proposition"
+          }
+        ],
+        "classification": "Stable Metadiscourse",
+        "hyland_category": "Interactional",
+        "hyland_subcategory": "Booster",
+        "confidence": 5,
+        "justification": "F1 Analysis: 'Clearly' is structurally positioned as a sentence-initial attitudinal adverb, separated by comma, which is a canonical MD-F1 pattern. F2 Analysis: Contextually, it functions to express the writer's epistemic certainty and does not contribute propositional content about the subject matter. The removal test confirms this—removing 'Clearly' leaves the propositional meaning intact. Classification: Both F1 and F2 align as metadiscourse, resulting in Stable Metadiscourse. This functions as a booster in Hyland's framework.",
+        "contextual_factors": {
+          "genre": "PhD thesis",
+          "section": "discussion",
+          "rhetorical_purpose": "arguing",
+          "co_text_influence": "Used to strengthen author's interpretation of results"
+        },
+        "note": "Unambiguous classification with strong alignment across both dimensions"
+      },
+  
+      "example_contextual_shift_to_proposition": {
+        "f1_lexico_syntactic": "MD-F1",
+        "f1_evidence": "Hedging verb 'believe' in 'I believe' construction—typical MD-F1 pattern",
+        "f2_contextual": "P-F2",
+        "f2_tests_applied": [
+          {
+            "test_name": "Propositional Removal Test",
+            "result": "Removing 'I believe' changes meaning—the sentence is about the content of a belief"
+          },
+          {
+            "test_name": "Discourse Function Test",
+            "result": "Describes a state of affairs (what is believed) rather than expressing writer's stance"
+          },
+          {
+            "test_name": "Co-text Dependency Test",
+            "result": "Context shows this reports belief content, not authorial hedging"
+          }
+        ],
+        "classification": "Contextual Shift to Proposition",
+        "hyland_category": "N/A",
+        "hyland_subcategory": "N/A",
+        "confidence": 4,
+        "justification": "F1 Analysis: 'I believe' structurally matches the hedging verb pattern (first-person pronoun + attitudinal verb), typically signaling MD-F1. F2 Analysis: However, contextual analysis reveals the expression contributes factual content about what is believed ('this effect occurs at high temperature') rather than hedging the writer's commitment. The removal test shows propositional meaning would change. Classification: F1 suggests metadiscourse, but F2 reveals propositional function—a Contextual Shift to Proposition. This is NOT Hyland's metadiscourse in context.",
+        "contextual_factors": {
+          "genre": "PhD thesis",
+          "section": "literature review",
+          "rhetorical_purpose": "explaining",
+          "co_text_influence": "Reporting the content of others' beliefs, not expressing writer's hedged stance"
+        },
+        "note": "This illustrates the importance of contextual analysis—form alone is insufficient for classification"
+      },
+  
+      "example_contextual_shift_to_metadiscourse": {
+        "f1_lexico_syntactic": "P-F1",
+        "f1_evidence": "Propositional verb form 'show' in declarative construction 'The data show that...'",
+        "f2_contextual": "MD-F2",
+        "f2_tests_applied": [
+          {
+            "test_name": "Discourse Function Test",
+            "result": "Functions as authorial stance marker, not purely evidential reporting"
+          },
+          {
+            "test_name": "Co-text Dependency Test",
+            "result": "In argumentative context, used to strengthen writer's position rhetorically"
+          },
+          {
+            "test_name": "Substitution Test",
+            "result": "Cannot substitute with neutral reporting verb without losing rhetorical force"
+          }
+        ],
+        "classification": "Contextual Shift to Metadiscourse",
+        "hyland_category": "Interactional",
+        "hyland_subcategory": "Evidential (with stance function)",
+        "confidence": 4,
+        "justification": "F1 Analysis: 'The data show' is structurally a propositional form—declarative verb with subject. F2 Analysis: Contextually, in the discussion section's argumentative context, this functions as a stance marker. The writer uses 'show' (rather than neutral 'indicate') to strengthen their interpretive claim. Co-text reveals this is not objective reporting but rhetorical positioning. Classification: F1 is propositional, but F2 reveals metadiscursive function—a Contextual Shift to Metadiscourse. Functions as evidential with clear stance-taking.",
+        "contextual_factors": {
+          "genre": "PhD thesis",
+          "section": "discussion",
+          "rhetorical_purpose": "arguing",
+          "co_text_influence": "Preceded by author's interpretation, followed by evaluative claims"
+        },
+        "note": "Shows how propositional forms can function metadiscursively depending on rhetorical situation"
+      },
+  
+      "example_stable_proposition": {
+        "f1_lexico_syntactic": "P-F1",
+        "f1_evidence": "Bare declarative assertion, passive voice, factual reporting without stance markers",
+        "f2_contextual": "P-F2",
+        "f2_tests_applied": [
+          {
+            "test_name": "Propositional Removal Test",
+            "result": "N/A—entire sentence is propositional content"
+          },
+          {
+            "test_name": "Discourse Function Test",
+            "result": "Describes action/state of affairs in the research procedure"
+          }
+        ],
+        "classification": "Stable Proposition",
+        "hyland_category": "N/A",
+        "hyland_subcategory": "N/A",
+        "confidence": 5,
+        "justification": "F1 Analysis: Structurally a bare assertion with no modal, stance, or rhetorical markers. F2 Analysis: Contextually reports factual procedure in methods section. No discourse organization, stance expression, or reader engagement function. Classification: Both F1 and F2 align as propositional—Stable Proposition. This is purely referential content, not metadiscourse.",
+        "contextual_factors": {
+          "genre": "PhD thesis",
+          "section": "methods",
+          "rhetorical_purpose": "narrating procedures",
+          "co_text_influence": "Part of step-by-step procedural description"
+        },
+        "note": "Unambiguous propositional classification at both levels"
+      }
+    },
+  
+    "quality_assurance": {
+      "confidence_scale": {
+        "5": "Unambiguous alignment between F1 and F2 with clear evidence",
+        "4": "Strong F1 and F2 evidence with minor interpretive considerations",
+        "3": "Moderate confidence; some ambiguity in F1 or F2 classification",
+        "2": "Low confidence; significant uncertainty in contextual analysis",
+        "1": "Minimal confidence; classification highly uncertain or borderline"
+      },
+  
+      "critical_checkpoints": [
+  "F1: Expression analyzed within sentence boundary? (Local context defined)",
+  "F1: Syntactic positioning verified? (Initial, parenthetical, integrated, tag)",
+  "F1: Punctuation cues identified within sentence? (Commas, dashes, parentheses)",
+  "F1: Morphological and phrasal patterns matched to framework?",
+  "F1: Self-referential patterns detected at local level? (e.g., 'this + genre-name')",
+  "F1: Conventional collocations indicating metadiscourse identified?",
+  "F2: Global context analyzed beyond sentence boundary?",
+  "F2: All relevant contextual tests applied at discourse level?",
+  "F2: Rhetorical situation considered? (Genre, section, purpose)",
+  "F2: Inter-sentential dependencies examined?",
+  "Boundary: Clear distinction maintained between local (sentence) and global (discourse) analysis?",
+  "Alignment: F1×F2 relationship clearly explained with reference to both local and global factors?",
+  "Hyland: Correct category assigned if metadiscourse confirmed?"
+],
+  
+      "consistency_principles": [
+        "Local context is defined operationally as the immediate sentence; global context includes all discourse elements beyond the sentence boundary",
+"F1 classification must be justified with evidence from within the target sentence",
+"F2 classification must reference factors beyond the immediate sentence (preceding/following text, section, genre, etc.)",
+"Self-referential patterns detectable within sentence boundaries (e.g., 'this thesis') should be classified as MD-F1",
+        "Similar lexico-syntactic structures in identical syntactic positions should receive equivalent F1 classifications",
+        "Same expression in different contexts may have different F2 classifications",
+        "F1 classification precedes F2 analysis—analyze structure before context",
+        "Evidence-based reasoning: Every classification must cite specific F1 indicators and F2 test results",
+        "Alignment explanation required: Always explain how/why F1 and F2 align or diverge"
+      ]
+    },
+  
+    "key_reminders": [
+      "F1 includes LOCAL context (the immediate sentence); F2 includes GLOBAL context (beyond the sentence boundary)",
+      "Local context boundary: The sentence containing the target expression, marked by orthographic sentence boundaries",
+      "Global context includes: All sentences beyond the target sentence, plus genre, section, and rhetorical factors",
+      "Self-referential patterns like 'this + genre-name' are detectable at F1 through local collocation analysis",
+      "F1 question: What does the form + immediate sentence signal? F2 question: What does it accomplish in the broader discourse?",
+      "Sentence boundaries provide a clear, operationalizable distinction between F1 and F2 analysis",
+      "F1 analyzes STRUCTURE; F2 analyzes CONTEXT—these are separate dimensions",
+      "Alignment ≠ Agreement: F1 and F2 can diverge (contextual shifts)",
+      "Punctuation is crucial for F1: Commas, dashes, parentheses signal detachment",
+      "Context is mandatory for F2: Always apply contextual tests systematically",
+      "Form does not determine function: MD-F1 structures can have P-F2 function",
+      "Hyland's taxonomy applies AFTER confirming metadiscourse through F1×F2 analysis",
+      "Same lexical item, different functions: 'First' in methods vs. introduction",
+      "Confidence reflects both F1 and F2 certainty: Lower confidence if either dimension is ambiguous"
+    ],
+  
+    "theoretical_notes": {
+      "core_insight": "This framework recognizes that linguistic forms have both inherent structural properties (F1) and context-dependent discourse functions (F2). Metadiscourse identification requires alignment analysis across both dimensions.",
+      "hyland_compatibility": "Hyland's taxonomy describes metadiscourse categories. This framework provides the analytical apparatus to determine when expressions function as metadiscourse through F1×F2 analysis.",
+      "key_innovation": "By separating lexico-syntactic function (F1) from contextual function (F2), the framework can systematically identify: (1) Stable classifications where form and function align, and (2) Contextual shifts where form and function diverge."
+    }
+  }
