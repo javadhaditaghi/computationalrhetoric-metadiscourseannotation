@@ -1,0 +1,411 @@
+sentence,context_before,context_after,section,thesis_code,expression,source_file,metadiscourse_annotation,annotation_status,annotation_model,row_index
+This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics.,"“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways. It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning.","The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political Speeches. This study takes the standpoint that genre is “a staged, goal oriented, purposeful activity in which speakers engage as members of our culture” (Martin 1984: 25). It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,This thesis focuses…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This thesis focuses on"",
+  ""expression_2"": ""and aims to reveal"",
+  ""expression_3"": null,
+  ""context"": ""Introduction section, announcing the research focus and aims."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'This' + genre noun 'thesis' + research verb 'focuses on'"",
+      ""syntactic_position"": ""Sentence-initial, subject-verb structure"",
+      ""punctuation_cues"": ""None (fully integrated)"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""'This thesis' refers to the text itself as an object, making the expression self-referential.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces the primary topic for the entire document."",
+      ""removal_test_result"": ""Removing the expression leaves the topic, but loses the explicit framing of it as the thesis's central focus."",
+      ""boundary_test_result"": ""The function extends across the entire thesis by defining its scope."",
+      ""reasoning"": ""In an introduction, this type of expression functions to frame the entire research project, giving it a global or macro-scope.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression is text-reflexive, a sufficient condition for metadiscourse. Its function is to organize the text for the reader, not to describe the world."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The primary function is to guide the reader by organizing the discourse and announcing the text's focus."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""The dominant function is to announce the topic and scope of the thesis, a core feature of a Frame Marker. It also has a secondary Self-Mention function.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""Prototypical reflexive frame marker. Confidence is slightly reduced due to the secondary Self-Mention function, making it a Level 2 borderline case.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Self-Mention"",
+        ""tertiary_md_type"": null,
+        ""relative_strength"": ""PRIMARY (Frame Marker) is dominant due to the macro-scope and organizing function. SECONDARY (Self-Mention) is present as 'This thesis' asserts textual agency."",
+        ""level_2_borderline_justification"": ""The expression's main goal is to frame the text's topic (Frame Marker), but by using 'This thesis', it also makes the authorial/textual presence explicit (Self-Mention).""
+      }
+    }
+  },
+  ""analysis_2"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Conjunction 'and' + research verb 'aims to reveal'"",
+      ""syntactic_position"": ""Medial, part of a compound verb phrase"",
+      ""punctuation_cues"": ""None (fully integrated)"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Discourse-Act Reflexive"",
+        ""reflexivity_reasoning"": ""The subject is elliptically 'This thesis'. The phrase refers to the goal of the discourse act being performed in the text.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces a primary goal for the entire document, parallel to the first expression."",
+      ""removal_test_result"": ""Removing it loses the explicit statement of the thesis's research objective."",
+      ""boundary_test_result"": ""The function extends across the entire thesis by defining one of its main goals."",
+      ""reasoning"": ""This expression works with the first to establish the global purpose of the thesis, giving it a macro-scope.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression is reflexive through ellipsis and its function is to state the text's purpose, guiding the reader's expectations."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The primary function is to organize the discourse by stating a key objective, helping the reader understand the text's structure."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""Its dominant function is to announce a key aim of the thesis, a framing move. It also carries a secondary Self-Mention function.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""Clear reflexive frame marker. Confidence is slightly lowered because of the secondary Self-Mention function, making it a Level 2 borderline case.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Self-Mention"",
+        ""tertiary_md_type"": null,
+        ""relative_strength"": ""PRIMARY (Frame Marker) is dominant due to the macro-scope and goal-stating function. SECONDARY (Self-Mention) is present via the elided subject 'This thesis'."",
+        ""level_2_borderline_justification"": ""The expression's main purpose is to frame a research goal (Frame Marker), but it simultaneously reinforces the text's agency (Self-Mention).""
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains two coordinated, reflexive expressions that function together as a macro-scope Frame Marker. Their primary, interactive function is to announce the thesis's focus and aims, organizing the reader's expectations. Both expressions also exhibit a secondary, interactional Self-Mention function by asserting the text's agency. The Frame Marker role is dominant given the introductory context and global scope."",
+  ""Important_remark"": null
+}
+```",success,gemini-2.5-pro,0
+"This study takes the standpoint that genre is ‘a staged, goal oriented, purposeful activity in which speakers engage as members of our culture’.","“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways.It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning. This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics. The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political speeches.","It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,(this study) takes the standpoint…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This study takes the standpoint that"",
+  ""expression_2"": null,
+  ""expression_3"": null,
+  ""context"": ""Introduction section, defining the theoretical framework for the key concept of 'genre'."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'This' + genre noun 'study' + verb phrase 'takes the standpoint' + complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial, main clause"",
+      ""punctuation_cues"": ""None (fully integrated)"",
+      ""grammatical_integration"": ""Fully integrated as main clause governing a complement clause"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive and Discourse-Act Reflexive"",
+        ""reflexivity_reasoning"": ""'This study' is text-reflexive, referring to the document. 'takes the standpoint' is discourse-act reflexive, referring to the act of adopting a theoretical position.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces the theoretical framework for 'genre' that underpins the entire thesis."",
+      ""removal_test_result"": ""If removed, the definition of genre remains, but the crucial framing that this is the study's adopted theoretical position is lost."",
+      ""boundary_test_result"": ""The function extends globally across the thesis, as this definition informs all subsequent sections."",
+      ""reasoning"": ""In an introduction, such expressions conventionally establish a global theoretical commitment, giving them a macro-level function.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression is strongly reflexive, which confirms its metadiscourse status. Its function is to organize the discourse by announcing the text's theoretical position, not to state a fact about the world."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The primary function is to organize the text and guide the reader by establishing the theoretical framework. While it has interactional features, the dominant function is organizational."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""The primary function is to announce a major structural element of the thesis (the theoretical framework), which is a core function of a Frame Marker. However, it also performs other MD functions simultaneously.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""High confidence. Structure and scope are prototypical for an introduction. The type is slightly complex due to its multi-functional nature (Level 2 Borderline), but the primary function is clear.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Self-Mention"",
+        ""tertiary_md_type"": ""Evidential"",
+        ""relative_strength"": ""PRIMARY (Frame Marker) is dominant due to macro-scope and organizing function. SECONDARY (Self-Mention) is significant. TERTIARY (Evidential) is weak."",
+        ""level_2_borderline_justification"": ""The expression is clearly metadiscourse but serves multiple functions. It primarily organizes the text by announcing the theoretical framework (Frame Marker), while also asserting textual agency (Self-Mention) and signaling the adoption of a viewpoint (Evidential).""
+      }
+    }
+  },
+  ""comprehensive_justification"": ""This is a clear, reflexive metadiscourse operator with a macro-scope. It functions primarily as a Frame Marker by announcing the theoretical framework for the entire thesis. It is a Level 2 Borderline case because it simultaneously functions as a Self-Mention, making it a multi-functional expression where the organizing role is dominant.""
+}
+```",success,gemini-2.5-pro,1
+"Scacci (2011) states, ‘genres exist in relation to certain situational constraints, the weekly address is unique in its routine response to the week’s events packaged for both public and press consumption’.","And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004). In order to study the goal, social purpose and generic structure of written-to-be-spoken language of political discourse, study investigates the genre of the American Presidential radio address by way of a Thematic structure analysis. The radio address is its own genre within political discourse and it is embedded in the context of American culture.","The radio address thus is realised, operates and has expected functions within the context of an American president and Americans are familiar with the radio address due to its long history and tradition. There has been research on the presidential weekly radio address, but there is a gap of linguistic investigation of this genre. Martin (1984) researched Reagan’s return to the radio address, he revealed that Reagan felt other forms of communication, such a news conferences, were more restrictive and thus Reagan felt he was able to speak freely and be publically more present. Horvit, Schiffer, and Wright (2008) investigated the Sunday press coverage of the radio address from 1982 to 2005. Since the address is delivered on Saturdays, they found that the Sunday press coverage diminished over this time period including the number of paragraphs citing the president. Meernik and Ault (2013) researched the radio address from the perspective of foreign policy.",Introduction,AP1,Scacci (2011) states…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Scacci (2011) states"",
+  ""expression_2"": null,
+  ""expression_3"": null,
+  ""context"": ""Introduction section, citing an external source to define a concept (genre)."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Proper noun + parenthetical date (citation) + reporting verb ('states')."",
+      ""syntactic_position"": ""Sentence-initial."",
+      ""punctuation_cues"": ""Followed by a comma."",
+      ""grammatical_integration"": ""Fully integrated as the main clause introducing a direct quote."",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""The expression refers to an external source and their discourse act, not the current text, its author, or the immediate discourse act.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""The function is limited to attributing the immediately following proposition (the quote) to its source."",
+      ""removal_test_result"": ""If removed, the propositional content (the quote) remains, but its attribution to an external source is lost."",
+      ""boundary_test_result"": ""The function is contained within the sentence and applies only to the quoted material. The operator stops at 'states' (Rule 2)."",
+      ""reasoning"": ""The expression sources a single, specific proposition, which is a classic micro-scope function.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression's function is to manage the discourse by attributing information to a source, not to convey propositional content itself."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""It guides the reader by clarifying the source of information, which is an organizational function, rather than expressing authorial stance."",
+      ""level_3_specific_type"": ""Evidential"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""It explicitly refers to an external source of information to support a claim, which is the defining feature of an Evidential.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""This is a prototypical, non-reflexive Evidential marker. All features are unambiguous.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""A prototypical micro-scope Evidential. The expression is non-reflexive, as it refers to an external source, not the current text. Its function is clearly metadiscursive (attributing information) and interactive (guiding the reader's understanding of the argument's basis). There are no borderline features.""
+}
+```",success,gemini-2.5-pro,2
+The present study aims to fill this gap within studies of this particular genre.,"Since the address is delivered on Saturdays, they found that the Sunday press coverage diminished over this time period including the number of paragraphs citing the president. Meernik and Ault (2013) researched the radio address from the perspective of foreign policy. They argued presidents have the ability to manipulate the agenda of foreign policy and make more tactical choices by placing more attention on domestic issues within the radio address. Han (2006) looked into the radio address as an old medium combined with new strategies, thus comparing the addresses of Reagan and Clinton. Jones and Rowland (2009) analysed the thematic overviews of Reagan’s addresses and researched his rhetorical strategies and ideology. Research more from a language perspective, Oddo (2011) investigated ‘us’ versus ‘them’ through critical intertextual analysis (Thibault 1991), and compared the addresses of F.D. Roosevelt and G.W. Bush through their legitimization strategies, thus establishing that Bush was among many who misled the public into war. Oddo delved into the language of the addresses but did not contain any linguistic analysis especially not to mention from an SFL perspective. Moreover, Scacco (2011) analysed Obama’s radio address, but from a ritualistic rhetoric standpoint, and compared Obama’s addresses to that of Clinton’s to understand how they both projected their presidencies onto the public, again, not from a perspective of linguistics. Thus, there has been research on the radio address, but none from a strictly functional linguistic perspective.","The present study focuses on the Radio Addresses of President Barack Obama during his first term as President, 2009-2012. It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses); healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses). Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this:",Introduction,AP1,aims to fill this gap…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""The present study aims to"",
+  ""expression_2"": ""this gap"",
+  ""expression_3"": ""this particular genre"",
+  ""context"": ""Introduction section, stating the research's purpose by identifying and addressing a gap in the literature."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'The present' + genre noun 'study' + discourse verb 'aims to'"",
+      ""syntactic_position"": ""Sentence-initial, subject and main verb"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive and Discourse-Act Reflexive"",
+        ""reflexivity_reasoning"": ""'The present study' refers to the text itself, while 'aims to' refers to the discourse act of stating a research goal.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces a primary goal of the entire thesis, framing its contribution in relation to the field."",
+      ""removal_test_result"": ""Removing the expression would eliminate the agent (the study) and the framing of the action as a research goal, losing the macro-level purpose."",
+      ""boundary_test_result"": ""The function extends across the entire thesis, as it establishes the overall research objective."",
+      ""reasoning"": ""In an introduction, this type of phrase establishes the research's main purpose, which is a macro-level organizational function.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Strong reflexivity confirms MD status. Its function is to organize the reader's understanding of the text's purpose, not to state a fact about the world."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The primary function is to guide the reader by stating the text's organizational purpose and goal."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""The primary function is a Frame Marker, as it announces the text's main goal. It also has a clear secondary Self-Mention function.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""High confidence overall. The type is rated 4 due to the clear presence of multiple metadiscourse functions, though the primary function is identifiable.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Self-Mention"",
+        ""tertiary_md_type"": null,
+        ""relative_strength"": ""PRIMARY (Frame Marker) is dominant due to its macro-scope and goal-stating function. SECONDARY (Self-Mention) is also present, establishing the text's agency."",
+        ""level_2_borderline_justification"": ""The expression simultaneously announces the text's purpose (Frame Marker) and makes the text itself an explicit agent (Self-Mention). The organizational function is primary in this introductory context.""
+      }
+    }
+  },
+  ""analysis_2"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'this' + metadiscursive noun 'gap'"",
+      ""syntactic_position"": ""Object of the verb 'fill'"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""Refers anaphorically to a concept established in the preceding discourse (the lack of research from a specific perspective).""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Connects the current sentence to the argument developed in the preceding sentences about the lack of research."",
+      ""removal_test_result"": ""Removing it makes the sentence nonsensical. It is essential for creating a cohesive link to the prior discourse."",
+      ""boundary_test_result"": ""Its function is to link back to the immediately preceding discourse segment that established the problem."",
+      ""reasoning"": ""The scope is meso because it creates a cohesive link between the current statement of purpose and the problem statement established in the previous few sentences.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression is text-reflexive, referring to a concept constructed in the prior text. Its function is to create a cohesive tie, which is an organizational, metadiscursive function."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""It helps the reader navigate the text by connecting different parts of the argument (problem -> solution)."",
+      ""level_3_specific_type"": ""Endophoric Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""It is a classic endophoric marker, pointing backward (anaphorically) to a previously mentioned part of the discourse.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical case of an endophoric marker with clear reflexive properties and a distinct meso-scope cohesive function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""analysis_3"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'this' + adjective 'particular' + genre noun 'genre'"",
+      ""syntactic_position"": ""Object of the preposition 'of'"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""Refers anaphorically to the 'radio address' mentioned in the preceding sentence.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Connects the current sentence to the topic established in the preceding sentence."",
+      ""removal_test_result"": ""Removing it would leave the phrase incomplete. It is necessary for specifying the domain of the research gap."",
+      ""boundary_test_result"": ""Its function is to link back to the topic of the immediately preceding discourse."",
+      ""reasoning"": ""Its scope is meso as it provides a cohesive link to the immediately preceding context, ensuring the reader understands which genre is being discussed.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression is text-reflexive, referring to a concept established in the prior text. Its function is purely organizational and cohesive."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""It guides the reader by maintaining referential coherence, linking back to the established topic."",
+      ""level_3_specific_type"": ""Endophoric Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""It is a clear endophoric marker, pointing backward (anaphorically) to a previously mentioned concept in the text.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical case of an endophoric marker used for referential cohesion. All features are unambiguous.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""This sentence is densely metadiscursive. 'The present study aims to' is a macro-scope Frame Marker (with a secondary Self-Mention function) that announces the thesis's goal. It is supported by two meso-scope Endophoric Markers, 'this gap' and 'this particular genre', which create cohesion by referring to the problem and topic established in the preceding discourse."",
+  ""Important_remark"": ""The analysis is split into three parts as the sentence contains three distinct metadiscourse operators with different functions and scopes.""
+}
+```",success,gemini-2.5-pro,3

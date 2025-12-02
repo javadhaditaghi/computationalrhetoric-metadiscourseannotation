@@ -1,0 +1,174 @@
+sentence,context_before,context_after,section,thesis_code,expression,source_file,metadiscourse_annotation,annotation_status,annotation_model,row_index
+This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics.,"“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways. It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning.","The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political Speeches. This study takes the standpoint that genre is “a staged, goal oriented, purposeful activity in which speakers engage as members of our culture” (Martin 1984: 25). It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,This thesis focuses…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This thesis focuses on"",
+  ""expression_2"": ""and aims to reveal"",
+  ""context"": ""Introduction section, stating the research scope and objectives of the thesis, following a general statement about language and meaning."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'this' + genre noun 'thesis' + verb 'focuses' + preposition 'on'"",
+      ""syntactic_position"": ""Subject position, sentence-initial, integrated"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated as subject-verb-prepositional phrase"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""'This thesis' explicitly refers to the document itself. 'Focuses on' describes an action performed by the text/study.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces the primary subject matter and scope of the entire thesis, framing the global content of the document."",
+      ""removal_test_result"": ""If removed, the propositional content ('text as an instrument') remains, but its framing as the central focus of *this specific thesis* is lost. The reader would not know this is the main topic of the entire document."",
+      ""boundary_test_result"": ""The function of stating the main focus extends to the entire study, as it defines the core subject matter that will be explored throughout the thesis."",
+      ""reasoning"": ""In an Introduction, stating what 'this thesis focuses on' is a macro-level organizational move, framing the entire document's content and guiding reader expectations.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Strong text-reflexivity confirms metadiscourse status. Removal test shows propositional content intact but metadiscursive framing (statement of purpose/focus) is lost. It organizes reader understanding of the text's scope."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The primary function is to organize the propositional content by stating the main focus of the study, guiding the reader through the text's overall structure and purpose. It is not primarily expressing stance or engaging the reader directly."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""It announces the main topic and scope of the study, signaling a major structural element (the research focus). This is a conventional way to orient readers to the text's organization in an introduction.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical case with clear text-reflexive structure, unambiguous macro-scope, and a clear frame marker function in an Introduction. No borderline features.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_",success,gemini-2.5-flash,0
+"This study takes the standpoint that genre is ‘a staged, goal oriented, purposeful activity in which speakers engage as members of our culture’.","“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways.It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning. This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics. The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political speeches.","It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,(this study) takes the standpoint…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This study takes the standpoint that"",
+  ""context"": ""Introduction section, defining theoretical framework following discussion of sub-genres in political discourse."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'This' + genre noun 'study' + stance verb 'takes' + stance noun 'standpoint' + complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial, subject position with complement clause"",
+      ""punctuation_cues"": ""No punctuation (fully integrated)"",
+      ""grammatical_integration"": ""Fully integrated - main clause with complement"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive + Discourse-Act Reflexive (hybrid)"",
+        ""reflexivity_reasoning"": ""'This study' is text-reflexive (refers to thesis itself). 'Takes the standpoint' is discourse-act reflexive (refers to act of adopting theoretical position in discourse).""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces theoretical framework underpinning entire study - global positioning statement framing research approach throughout thesis."",
+      ""removal_test_result"": ""Propositional content (genre definition) remains, but explicit framing as THE STUDY'S theoretical position is lost."",
+      ""boundary_test_result"": ""Functional reach extends across entire thesis - theoretical position informs analysis in multiple chapters."",
+      ""reasoning"": ""In Introduction, such expressions announce macro-level theoretical commitments. Context confirms foundational framework establishment.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Strong reflexivity (text-reflexive + discourse-act reflexive) confirms metadiscourse status. Removal test: propositional content remains but metadiscursive framing lost. Function is to organize reader understanding of study's theoretical framework. Classic metadiscursive move in academic introductions."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""PRIMARY function is organizational - announces framework structuring the research, guides readers through argumentative architecture. While authorial presence exists, DOMINANT function is organizing (Interactive) not stance-expressing (Interactional)."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""PRIMARY type: Announces major structural element (theoretical framework). Signals discourse boundaries and stages. Conventional frame marker for announcing theoretical commitments in academic introductions. Macro-scope and text-reflexive properties align with frame markers.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""Very high confidence on structure (clear reflexivity) and scope (prototypical Introduction framing). Slightly lower (4) on type due to Level 2 Borderline - expression has features of multiple MD types, though Frame Marker is dominant.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,",success,gemini-2.5-flash,1
+"Scacci (2011) states, ‘genres exist in relation to certain situational constraints, the weekly address is unique in its routine response to the week’s events packaged for both public and press consumption’.","And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004). In order to study the goal, social purpose and generic structure of written-to-be-spoken language of political discourse, study investigates the genre of the American Presidential radio address by way of a Thematic structure analysis. The radio address is its own genre within political discourse and it is embedded in the context of American culture.","The radio address thus is realised, operates and has expected functions within the context of an American president and Americans are familiar with the radio address due to its long history and tradition. There has been research on the presidential weekly radio address, but there is a gap of linguistic investigation of this genre. Martin (1984) researched Reagan’s return to the radio address, he revealed that Reagan felt other forms of communication, such a news conferences, were more restrictive and thus Reagan felt he was able to speak freely and be publically more present. Horvit, Schiffer, and Wright (2008) investigated the Sunday press coverage of the radio address from 1982 to 2005. Since the address is delivered on Saturdays, they found that the Sunday press coverage diminished over this time period including the number of paragraphs citing the president. Meernik and Ault (2013) researched the radio address from the perspective of foreign policy.",Introduction,AP1,Scacci (2011) states…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Scacci (2011) states"",
+  ""context"": ""Introduction section, discussing the genre of presidential radio addresses and their situational constraints, leading into a direct quote from an external source."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Proper noun (Scacci), year (2011), reporting verb (states)"",
+      ""syntactic_position"": ""Subject + main verb, sentence-initial"",
+      ""punctuation_cues"": ""Comma-bounded (before the direct quote)"",
+      ""grammatical_integration"": ""Fully integrated as the main clause introducing a direct quote"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Refers to an external author (Scacci) and their statement, not the current text, the act of writing/reading, or the current author/reader. It is not self-referential.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Attributes the specific quoted proposition about genres and the weekly address to Scacci (2011). Its function is limited to this single piece of information."",
+      ""removal_test_result"": ""If removed, the propositional content (the definition of genres and description of the weekly address) remains, but its attribution to Scacci (2011) is lost. The claim would then appear as the current author's assertion or general knowledge."",
+      ""boundary_test_result"": ""The functional reach is limited to introducing and attributing the immediate following quote. It does not organize larger segments of the text or the entire thesis."",
+      ""reasoning"": ""The expression serves to introduce and attribute a specific piece of information to an external source. This function is inherently local, operating on the single proposition being reported.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression does not convey factual content about the world itself, but rather manages the flow of information by attributing a statement to an external source. Its removal affects the discourse function (attribution) while leaving the propositional content largely intact. It guides the reader on the origin of the information."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Its primary function is to organize the flow of information by indicating the source of a particular claim. It helps the reader understand the origin of the content, which is an organizational function, rather than expressing the author's stance or directly engaging the reader."",
+      ""level_3_specific_type"": ""Evidentials"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicitly refers to an external source (Scacci) for the information presented in the quote. This is the defining characteristic of an Evidential marker, which attributes information to external sources.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical evidential marker. Clear structural features, unambiguous micro-scope, and direct attribution function. No borderline features.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'Scacci (2011) states' is a clear micro-scope evidential marker. STRUCTURAL: It is a non-reflexive reporting clause, integrated into the sentence, introducing a direct quote. SCOPE: Micro-scope, as it attributes a single proposition (the quote) to an external source. CLASSIFICATION: Metadiscourse (manages information flow by attributing content), Interactive (organizes source information), Evidential (explicitly references an external source). No borderline features. High confidence.""
+}
+```",success,gemini-2.5-flash,2
+The present study aims to fill this gap within studies of this particular genre.,"Since the address is delivered on Saturdays, they found that the Sunday press coverage diminished over this time period including the number of paragraphs citing the president. Meernik and Ault (2013) researched the radio address from the perspective of foreign policy. They argued presidents have the ability to manipulate the agenda of foreign policy and make more tactical choices by placing more attention on domestic issues within the radio address. Han (2006) looked into the radio address as an old medium combined with new strategies, thus comparing the addresses of Reagan and Clinton. Jones and Rowland (2009) analysed the thematic overviews of Reagan’s addresses and researched his rhetorical strategies and ideology. Research more from a language perspective, Oddo (2011) investigated ‘us’ versus ‘them’ through critical intertextual analysis (Thibault 1991), and compared the addresses of F.D. Roosevelt and G.W. Bush through their legitimization strategies, thus establishing that Bush was among many who misled the public into war. Oddo delved into the language of the addresses but did not contain any linguistic analysis especially not to mention from an SFL perspective. Moreover, Scacco (2011) analysed Obama’s radio address, but from a ritualistic rhetoric standpoint, and compared Obama’s addresses to that of Clinton’s to understand how they both projected their presidencies onto the public, again, not from a perspective of linguistics. Thus, there has been research on the radio address, but none from a strictly functional linguistic perspective.","The present study focuses on the Radio Addresses of President Barack Obama during his first term as President, 2009-2012. It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses); healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses). Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this:",Introduction,AP1,aims to fill this gap…,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""The present study aims to fill this gap"",
+  ""context"": ""Introduction section, following a statement about a lack of research from a specific linguistic perspective. The sentence announces the study's purpose."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Noun phrase 'The present study' + verb 'aims' + infinitive phrase 'to fill' + noun phrase 'this gap'"",
+      ""syntactic_position"": ""Subject-verb-object structure, sentence-initial"",
+      ""punctuation_cues"": ""None (fully integrated)"",
+      ""grammatical_integration"": """,success,gemini-2.5-flash,3

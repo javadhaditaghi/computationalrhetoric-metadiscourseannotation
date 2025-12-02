@@ -1079,7 +1079,7 @@
          "expression_2": "string (if any)",
          "expression_3": "string (if any)",
          "context":"\"context\": \"Brief description of context (e.g., 'Introduction section, stating research scope')",
-         "analysis": {
+         "analysis_1": {
            "dimension_1_observable_realization": {
              "Lexico-grammatical_form": "string",
              "syntactic_position": "string",
@@ -1106,31 +1106,89 @@
              "level_3_specific_type": "string or null",
              "level_3_borderline_features": "boolean (TRUE if specific types more than 1)",
              "level_3_reasoning": "string or null"
+           },
+
+           "confidence_ratings": {
+             "structural_realization": "integer (1-5)",
+             "functional_scope": "integer (1-5)",
+             "metadiscourse_type": "integer (1-5)",
+             "overall_confidence": "integer (1-5)",
+             "confidence_justification": "string"
+           },
+           "borderline_classification": {
+              "level_1_borderline_md_propositional": {
+                "is_level_1_borderline": "boolean",
+                "dominant_function": "string or null (METADISCOURSE | PROPOSITIONAL)",
+                "secondary_function": "string or null",
+                "level_1_borderline_justification": "string (required if is_level_1_borderline=true)"
+              },
+              "level_2_borderline_md_features": {
+                "is_level_2_borderline": "boolean (true if multiple MD functions present)",
+                "primary_md_type": "string or null (e.g., 'Frame Marker')",
+                "secondary_md_type": "string or null (e.g., 'Self-Mention')",
+                "tertiary_md_type": "string or null (if applicable)",
+                "relative_strength": "string or null (e.g., 'PRIMARY strongly dominant, SECONDARY moderate, TERTIARY weak')",
+                "level_2_borderline_justification": "string (required if is_level_2_borderline=true, explain why expression exhibits multiple MD functions)"
+              }
            }
          },
-         "confidence_ratings": {
-           "structural_realization": "integer (1-5)",
-           "functional_scope": "integer (1-5)",
-           "metadiscourse_type": "integer (1-5)",
-           "overall_confidence": "integer (1-5)",
-           "confidence_justification": "string"
+         "if expression_2": {
+           "analysis_2": {
+           "dimension_1_observable_realization": {
+             "Lexico-grammatical_form": "string",
+             "syntactic_position": "string",
+             "punctuation_cues": "string",
+             "grammatical_integration": "string",
+             "reflexivity": {
+               "is_reflexive": "boolean (true/false)",
+               "reflexivity_type": "string or null",
+               "reflexivity_reasoning": "string"
+             }
+           },
+           "dimension_2_functional_scope": {
+             "classification": "string (MICRO-SCOPE | MESO-SCOPE | MACRO-SCOPE)",
+             "reach_description": "string",
+             "removal_test_result": "string",
+             "boundary_test_result": "string",
+             "reasoning": "string"
+           },
+           "dimension_3_metadiscourse_classification": {
+             "level_1_primary_classification": "string (METADISCOURSE | PROPOSITIONAL | BORDERLINE_MD_PROPOSITIONAL)",
+             "level_1_reasoning": "string",
+             "level_2_functional_category": "string or null (INTERACTIVE | INTERACTIONAL)",
+             "level_2_reasoning": "string or null",
+             "level_3_specific_type": "string or null",
+             "level_3_borderline_features": "boolean (TRUE if specific types more than 1)",
+             "level_3_reasoning": "string or null"
+           },
+
+           "confidence_ratings": {
+             "structural_realization": "integer (1-5)",
+             "functional_scope": "integer (1-5)",
+             "metadiscourse_type": "integer (1-5)",
+             "overall_confidence": "integer (1-5)",
+             "confidence_justification": "string"
+           },
+           "borderline_classification": {
+              "level_1_borderline_md_propositional": {
+                "is_level_1_borderline": "boolean",
+                "dominant_function": "string or null (METADISCOURSE | PROPOSITIONAL)",
+                "secondary_function": "string or null",
+                "level_1_borderline_justification": "string (required if is_level_1_borderline=true)"
+              },
+              "level_2_borderline_md_features": {
+                "is_level_2_borderline": "boolean (true if multiple MD functions present)",
+                "primary_md_type": "string or null (e.g., 'Frame Marker')",
+                "secondary_md_type": "string or null (e.g., 'Self-Mention')",
+                "tertiary_md_type": "string or null (if applicable)",
+                "relative_strength": "string or null (e.g., 'PRIMARY strongly dominant, SECONDARY moderate, TERTIARY weak')",
+                "level_2_borderline_justification": "string (required if is_level_2_borderline=true, explain why expression exhibits multiple MD functions)"
+              }
+           }
+         }
          },
-         "borderline_classification": {
-        "level_1_borderline_md_propositional": {
-          "is_level_1_borderline": "boolean",
-          "dominant_function": "string or null (METADISCOURSE | PROPOSITIONAL)",
-          "secondary_function": "string or null",
-          "level_1_borderline_justification": "string (required if is_level_1_borderline=true)"
-        },
-        "level_2_borderline_md_features": {
-          "is_level_2_borderline": "boolean (true if multiple MD functions present)",
-          "primary_md_type": "string or null (e.g., 'Frame Marker')",
-          "secondary_md_type": "string or null (e.g., 'Self-Mention')",
-          "tertiary_md_type": "string or null (if applicable)",
-          "relative_strength": "string or null (e.g., 'PRIMARY strongly dominant, SECONDARY moderate, TERTIARY weak')",
-          "level_2_borderline_justification": "string (required if is_level_2_borderline=true, explain why expression exhibits multiple MD functions)"
-        }
-      },
+
+
          "comprehensive_justification": "string <as short and concise as possible>",
          "Important_remark":"If the number of metadiscourse expressions is more than one create the three levels of analysis again for them and mark it with analysis_2 and analysis_3."
        },

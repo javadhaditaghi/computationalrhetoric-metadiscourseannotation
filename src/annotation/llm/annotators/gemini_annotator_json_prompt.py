@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 
 class GeminiMetadiscourseAnnotator:
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-flash",
+    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-pro",
                  context_words_before: Optional[int] = None, context_words_after: Optional[int] = None):
         """
         Initialize the Gemini annotator for metadiscourse labeling.
@@ -51,7 +51,7 @@ class GeminiMetadiscourseAnnotator:
             system_instruction=system_instruction,
             generation_config=genai.GenerationConfig(
                 temperature=0,
-                max_output_tokens=3000,
+                max_output_tokens=8000,
                 candidate_count=1,
             ),
             safety_settings={

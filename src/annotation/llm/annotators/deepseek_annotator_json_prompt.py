@@ -259,7 +259,7 @@ Provide your classification in JSON format."""
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": user_prompt}
             ],
-            "max_tokens": 3000,
+            "max_tokens": 8000,
             "temperature": 0,
             "stream": False
         }
