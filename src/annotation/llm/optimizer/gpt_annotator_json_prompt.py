@@ -87,101 +87,336 @@ class AnnotationOptimizer:
             return self.optimization_prompt
 
     def _load_annotation_framework(self) -> Dict:
-        """Load the full annotation framework JSON"""
+        """
+        Load the adjunction protocol JSON file.
+
+        UPDATED: Now loads adjunction_protocol.json instead of guidelines.json
+
+        Returns:
+            Dictionary containing the adjunction protocol
+        """
         try:
-            framework_path = os.path.join(project_root, Config.ANNOTATION_FRAMEWORK_PATH)
+            # Try to load from Config path first
+            if hasattr(Config, 'ADJUNCTION_PROTOCOL_PATH'):
+                framework_path = os.path.join(project_root, Config.ADJUNCTION_PROTOCOL_PATH)
+            else:
+                # Fallback: try common locations
+                possible_paths = [
+                    os.path.join(project_root, "adjunction_protocol.json"),
+                    os.path.join(project_root, "prompts/adjunction_protocol.json"),
+                    os.path.join(project_root, "config/adjunction_protocol.json"),
+                    os.path.join(project_root, "data/adjunction_protocol.json"),
+                ]
+
+                framework_path = None
+                for path in possible_paths:
+                    if os.path.exists(path):
+                        framework_path = path
+                        break
+
+                if not framework_path:
+                    logger.warning("adjunction_protocol.json not found in common locations")
+                    return {}
+
             with open(framework_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except (FileNotFoundError, AttributeError):
-            logger.warning("Annotation framework not found, retrieval will be disabled")
+                protocol = json.load(f)
+                logger.info(f"Loaded adjunction protocol from {framework_path}")
+                return protocol
+
+        except FileNotFoundError as e:
+            logger.warning(f"Adjunction protocol file not found: {e}")
+            return {}
+        except json.JSONDecodeError as e:
+            logger.error(f"Invalid JSON in adjunction protocol: {e}")
+            return {}
+        except Exception as e:
+            logger.error(f"Error loading adjunction protocol: {e}")
             return {}
 
     def _initialize_retrieval_map(self) -> Dict:
-        """Initialize the retrieval map for framework sections"""
+        """
+        Initialize the retrieval map for adjunction_protocol.json structure.
+
+        COMPLETELY REWRITTEN for adjunction_protocol.json paths.
+
+        The adjunction_protocol.json structure:
+        - task_name, role
+        - input_specification
+        - adjudication_procedure (stages 1-5)
+            - stage_1_pre_adjudication_analysis
+            - stage_2_evidence_based_weighting
+            - stage_3_dimensional_adjudication
+            - stage_4_confidence_synthesis
+            - stage_5_gold_annotation_synthesis
+        - output_format
+        - critical_rules
+        - final_instructions
+
+        Returns:
+            Dictionary mapping disagreement types to JSON paths
+        """
         return {
-            # TYPE A: REFLEXIVITY DISAGREEMENTS
+            # =================================================================
+            # TYPE A: REFLEXIVITY DISAGREEMENTS - HIGHEST PRIORITY
+            # =================================================================
             "Type A (Reflexivity)": {
                 "priority": "CRITICAL",
                 "json_paths": [
-                    "theoretical_framework.core_principle.reflexivity_principle",
-                    "theoretical_framework.dimensions.dimension_1_observable_realization.analysis_components.4",
-                    "theoretical_framework.contextual_analysis.analytical_procedures.procedures.1"
+                    # Core reflexivity principle and checks
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.reflexivity_principle",
+                    # D1 reflexivity adjudication logic
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_1_observable_realization.step_1_reflexivity_adjudication",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_a_reflexivity",
+                    # Tier 1 reflexivity criterion
+                    "adjudication_procedure.stage_2_evidence_based_weighting.tier_1_foundational_correctness.criteria.reflexivity_correctly_identified"
                 ],
-                "description": "Reflexivity definitions, types, and principle"
+                "description": "Reflexivity principle, adjudication logic, and Tier 1 disqualification criteria"
             },
 
-            # TYPE B: BOUNDARY DISAGREEMENTS
+            # =================================================================
+            # TYPE B: BOUNDARY DISAGREEMENTS - HIGH PRIORITY
+            # =================================================================
             "Type B (Boundary)": {
                 "priority": "HIGH",
                 "json_paths": [
-                    "boundary_stopping_rules.five_stopping_rules",
-                    "boundary_stopping_rules.applying_stopping_rules",
-                    "unit_of_analysis_principles.core_principle",
-                    "unit_of_analysis_principles.definition.metadiscursive_operator",
-                    "unit_of_analysis_principles.definition.propositional_operand"
+                    # Five stopping rules (detailed)
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_4_boundary_validation.five_stopping_rules",
+                    # Boundary violation types
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_4_boundary_validation.boundary_violations",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_b_boundary",
+                    # Tier 1 stopping rules criterion
+                    "adjudication_procedure.stage_2_evidence_based_weighting.tier_1_foundational_correctness.criteria.stopping_rules_followed"
                 ],
-                "description": "Five stopping rules and operator/operand distinction"
+                "description": "Five stopping rules, boundary violations, and validation output format"
             },
 
-            # TYPE C: SCOPE DISAGREEMENTS
+            # =================================================================
+            # TYPE C: SCOPE DISAGREEMENTS - MEDIUM PRIORITY
+            # =================================================================
             "Type C (Scope)": {
                 "priority": "MEDIUM",
                 "json_paths": [
-                    "theoretical_framework.dimensions.dimension_2_functional_scope.scope_levels",
-                    "theoretical_framework.dimensions.dimension_2_functional_scope.annotation_principle",
-                    "theoretical_framework.contextual_analysis.analytical_procedures.procedures.2"
+                    # Full D2 scope adjudication (includes all steps)
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_2_functional_scope",
+                    # Scope-function principle from framework alignment
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.scope_function_principle",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_c_scope"
                 ],
-                "description": "MICRO/MESO/MACRO definitions and scope principles"
+                "description": "Scope adjudication steps, scope-function principle, and MICRO/MESO/MACRO tests"
             },
 
-            # TYPE D: LEVEL 1 DISAGREEMENTS
+            # =================================================================
+            # TYPE D: LEVEL 1 CLASSIFICATION - HIGH PRIORITY
+            # =================================================================
             "Type D (Level 1)": {
                 "priority": "HIGH",
                 "json_paths": [
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_1_primary_classification",
-                    "theoretical_framework.contextual_analysis.analytical_procedures.procedures.0"
+                    # Full Level 1 adjudication
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_1_md_vs_propositional_vs_borderline",
+                    # Text-context-discourse principle
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.text_context_discourse_principle",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_d_level1",
+                    # Tier 1 framework alignment
+                    "adjudication_procedure.stage_2_evidence_based_weighting.tier_1_foundational_correctness.criteria.theoretical_framework_alignment"
                 ],
-                "description": "Level 1 classification and removal test"
+                "description": "Level 1 (MD/Propositional/Borderline) adjudication with removal test logic"
             },
 
-            # TYPE E: TYPE DISAGREEMENTS
+            # =================================================================
+            # TYPE E: INTERACTIVE TYPE DISAGREEMENTS - MEDIUM PRIORITY
+            # =================================================================
             "Type E (Type - Interactive)": {
                 "priority": "MEDIUM",
                 "json_paths": [
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_2_metadiscourse_subtype.options.INTERACTIVE",
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_3_specific_types.interactive_types"
+                    # Level 2 adjudication
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_2_interactive_vs_interactional",
+                    # Level 3 adjudication (specific types)
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_3_specific_type",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_e_type"
                 ],
-                "description": "Interactive types taxonomy"
+                "description": "Interactive/Interactional distinction and Level 3 specific type resolution"
             },
 
+            # =================================================================
+            # TYPE E: INTERACTIONAL TYPE DISAGREEMENTS - MEDIUM PRIORITY
+            # =================================================================
             "Type E (Type - Interactional)": {
                 "priority": "MEDIUM",
                 "json_paths": [
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_2_metadiscourse_subtype.options.INTERACTIONAL",
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_3_specific_types.interactional_types"
+                    # Same as Interactive - covers both categories
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_2_interactive_vs_interactional",
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_3_specific_type",
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_e_type"
                 ],
-                "description": "Interactional types taxonomy"
+                "description": "Interactive/Interactional distinction and Level 3 specific type resolution"
             },
 
-            # TYPE F: BORDERLINE DISAGREEMENTS
+            # =================================================================
+            # TYPE F: LEVEL 1 BORDERLINE - MEDIUM-HIGH PRIORITY
+            # =================================================================
             "Type F (Borderline - Level 1)": {
                 "priority": "MEDIUM-HIGH",
                 "json_paths": [
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_1_primary_classification.options.BORDERLINE_MD_PROPOSITIONAL",
-                    "theoretical_framework.contextual_analysis.for_borderline_cases.level_1_borderline"
+                    # Borderline system principle
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.borderline_system_principle",
+                    # Level 1 borderline adjudication (genuine vs pseudo)
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_1_md_vs_propositional_vs_borderline.step_3_borderline_adjudication",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_f_borderline"
                 ],
-                "description": "Level 1 borderline protocols"
+                "description": "Level 1 borderline (MD/Propositional dual functionality) adjudication"
             },
 
+            # =================================================================
+            # TYPE F: LEVEL 2 BORDERLINE - MEDIUM-HIGH PRIORITY
+            # =================================================================
             "Type F (Borderline - Level 2)": {
                 "priority": "MEDIUM-HIGH",
                 "json_paths": [
-                    "theoretical_framework.dimensions.dimension_3_metadiscourse_classification.level_3_specific_types.borderline_md_features_protocol",
-                    "theoretical_framework.contextual_analysis.for_borderline_cases.level_2_borderline"
+                    # Borderline system principle
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.borderline_system_principle",
+                    # Level 2 borderline check in Level 3 resolution
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_3_specific_type.step_3_resolve_type_disagreement.priority_1_check_level_2_borderline",
+                    # Level 3 synthesis for Level 2 borderline
+                    "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_3_specific_type.step_4_synthesize_level_3.if_level_2_borderline",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_f_borderline"
                 ],
-                "description": "Level 2 borderline protocols"
+                "description": "Level 2 borderline (multiple MD types) with PRIMARY/SECONDARY/TERTIARY ranking"
+            },
+
+            # =================================================================
+            # TYPE G: CONFIDENCE DISAGREEMENTS - LOW PRIORITY (NEW)
+            # =================================================================
+            "Type G (Confidence)": {
+                "priority": "LOW",
+                "json_paths": [
+                    # Full confidence synthesis stage
+                    "adjudication_procedure.stage_4_confidence_synthesis",
+                    # Tier 3 confidence calibration
+                    "adjudication_procedure.stage_2_evidence_based_weighting.tier_3_confidence_calibration",
+                    # Disagreement type definition
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_1_disagreement_pattern_identification.disagreement_types.type_g_confidence"
+                ],
+                "description": "Confidence calibration when only confidence ratings differ"
+            },
+
+            # =================================================================
+            # GENERAL: EVIDENCE WEIGHTING (Always included for disagreements)
+            # =================================================================
+            "Evidence Weighting": {
+                "priority": "HIGH",
+                "json_paths": [
+                    # Tier 1 foundational correctness (disqualifying criteria)
+                    "adjudication_procedure.stage_2_evidence_based_weighting.tier_1_foundational_correctness",
+                    # Tier 2 reasoning quality
+                    "adjudication_procedure.stage_2_evidence_based_weighting.tier_2_reasoning_quality"
+                ],
+                "description": "Tier 1 and Tier 2 evidence-based weighting criteria"
+            },
+
+            # =================================================================
+            # GENERAL: ROOT CAUSE ANALYSIS
+            # =================================================================
+            "Root Cause Analysis": {
+                "priority": "MEDIUM",
+                "json_paths": [
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_2_root_cause_identification"
+                ],
+                "description": "Root cause identification for why disagreements occurred"
+            },
+
+            # =================================================================
+            # GENERAL: GOLD ANNOTATION SYNTHESIS
+            # =================================================================
+            "Gold Synthesis": {
+                "priority": "MEDIUM",
+                "json_paths": [
+                    "adjudication_procedure.stage_5_gold_annotation_synthesis.synthesis_principles",
+                    "adjudication_procedure.stage_5_gold_annotation_synthesis.required_metadata"
+                ],
+                "description": "Final gold annotation synthesis principles and required metadata"
             }
         }
+
+    def _retrieve_framework_sections(self, disagreement_types: List[str]) -> Dict:
+        """
+        Retrieve relevant framework sections based on disagreement types.
+
+        ENHANCED VERSION:
+        - Automatically includes Evidence Weighting for any disagreement
+        - Better section naming from paths
+        - More robust error handling
+
+        Args:
+            disagreement_types: List of disagreement type keys
+
+        Returns:
+            Dictionary of retrieved framework sections
+        """
+        retrieved_sections = {}
+
+        if not self.annotation_framework:
+            logger.warning("Annotation framework not loaded, cannot retrieve sections")
+            return retrieved_sections
+
+        # Always include evidence weighting if there are any disagreements
+        types_to_retrieve = list(disagreement_types) if disagreement_types else []
+        if types_to_retrieve and "Evidence Weighting" not in types_to_retrieve:
+            types_to_retrieve.append("Evidence Weighting")
+
+        for dtype in types_to_retrieve:
+            if dtype not in self.retrieval_map:
+                logger.debug(f"Disagreement type '{dtype}' not in retrieval map")
+                continue
+
+            config = self.retrieval_map[dtype]
+
+            for json_path in config["json_paths"]:
+                try:
+                    section_content = self._get_nested_value(self.annotation_framework, json_path)
+
+                    # Create a meaningful, unique section name from the path
+                    path_parts = json_path.split('.')
+
+                    # Extract meaningful parts (skip generic prefixes)
+                    meaningful_parts = []
+                    for part in path_parts:
+                        # Skip stage prefixes but keep step info
+                        if part.startswith('stage_') and len(part) > 8:
+                            meaningful_parts.append(part.split('_', 2)[-1] if '_' in part else part)
+                        elif part.startswith('step_'):
+                            continue  # Skip step numbers
+                        elif part not in ['adjudication_procedure', 'core_principles_to_check', 'criteria']:
+                            meaningful_parts.append(part)
+
+                    # Use last 2-3 meaningful parts
+                    section_name = '_'.join(meaningful_parts[-3:]) if meaningful_parts else path_parts[-1]
+
+                    # Ensure uniqueness by adding dtype prefix if needed
+                    if section_name in retrieved_sections:
+                        section_name = f"{dtype.replace(' ', '_').replace('(', '').replace(')', '')}_{section_name}"
+
+                    # Only add if not already present
+                    if section_name not in retrieved_sections:
+                        retrieved_sections[section_name] = section_content
+                        logger.debug(f"Retrieved '{section_name}' from '{json_path}'")
+
+                except (KeyError, IndexError, TypeError) as e:
+                    logger.warning(f"Could not retrieve path '{json_path}': {e}")
+                    continue
+                except Exception as e:
+                    logger.error(f"Unexpected error retrieving '{json_path}': {e}")
+                    continue
+
+        logger.info(
+            f"Retrieved {len(retrieved_sections)} framework sections for {len(types_to_retrieve)} disagreement types")
+        return retrieved_sections
 
     def _get_nested_value(self, data: Dict, path: str) -> any:
         """
@@ -429,8 +664,9 @@ class AnnotationOptimizer:
     def _detect_disagreement_types(self, claude_ann: Dict, gemini_ann: Dict,
                                    deepseek_ann: Dict) -> List[str]:
         """
-        Detect disagreement types between the three annotations
-        Compares ALL expressions and their corresponding analyses
+        Detect disagreement types between the three annotations.
+
+        UPDATED: Now includes Type G (Confidence) detection from adjunction_protocol.
 
         Args:
             claude_ann: Claude's annotation
@@ -449,76 +685,70 @@ class AnnotationOptimizer:
         # Determine maximum number of expressions across all models
         max_expressions = max([self._count_expressions(ann) for ann in annotations])
 
-        # TYPE A: Reflexivity disagreement (check first analysis only, as it's typically document-level)
+        # =====================================================================
+        # TYPE A: Reflexivity disagreement
+        # =====================================================================
         reflexivity_values = [
             self._get_analysis_value(ann, 1, "dimension_1_observable_realization", "reflexivity", "is_reflexive")
             for ann in annotations
         ]
-        if len(set([v for v in reflexivity_values if v is not None])) > 1:
+        valid_reflexivity = [v for v in reflexivity_values if v is not None]
+        if len(set(valid_reflexivity)) > 1:
             disagreement_types.append("Type A (Reflexivity)")
 
-        # TYPE B: Boundary disagreement (NORMALIZED) - Check ALL expression positions
+        # =====================================================================
+        # TYPE B: Boundary disagreement (NORMALIZED) - Check ALL expressions
+        # =====================================================================
         for expr_num in range(1, max_expressions + 1):
             expressions = [self._get_expression(ann, expr_num) for ann in annotations]
             normalized_expressions = [self._normalize_expression(e) for e in expressions]
 
-            # Remove empty strings from comparison
             non_empty_normalized = [e for e in normalized_expressions if e]
 
-            # Only check if at least 2 models have this expression
             if len(non_empty_normalized) >= 2:
                 if len(set(non_empty_normalized)) > 1:
-                    # Only add once, even if multiple expressions disagree
                     if "Type B (Boundary)" not in disagreement_types:
                         disagreement_types.append("Type B (Boundary)")
-
                     logger.debug(f"Boundary disagreement detected in expression_{expr_num}")
 
+        # =====================================================================
         # TYPE C, D, E: Check scope and classification for EACH analysis
+        # =====================================================================
         for analysis_num in range(1, max_expressions + 1):
-            # TYPE C: Scope disagreement (NORMALIZED)
+            # TYPE C: Scope disagreement
             scopes = [
                 self._get_analysis_value(ann, analysis_num, "dimension_2_functional_scope", "classification")
                 for ann in annotations
             ]
-            normalized_scopes = [
-                self._normalize_classification(s) for s in scopes
-            ]
+            normalized_scopes = [self._normalize_classification(s) for s in scopes]
 
-            # Only check if at least 2 models have this analysis
             non_empty_scopes = [s for s in normalized_scopes if s]
-            if len(non_empty_scopes) >= 2:
-                if len(set(non_empty_scopes)) > 1:
-                    if "Type C (Scope)" not in disagreement_types:
-                        disagreement_types.append("Type C (Scope)")
-                    logger.debug(f"Scope disagreement detected in analysis_{analysis_num}")
+            if len(non_empty_scopes) >= 2 and len(set(non_empty_scopes)) > 1:
+                if "Type C (Scope)" not in disagreement_types:
+                    disagreement_types.append("Type C (Scope)")
+                logger.debug(f"Scope disagreement detected in analysis_{analysis_num}")
 
-            # TYPE D: Level 1 classification disagreement (NORMALIZED)
+            # TYPE D: Level 1 classification disagreement
             level_1 = [
                 self._get_analysis_value(ann, analysis_num, "dimension_3_metadiscourse_classification",
                                          "level_1_primary_classification")
                 for ann in annotations
             ]
-            normalized_level_1 = [
-                self._normalize_classification(l) for l in level_1
-            ]
+            normalized_level_1 = [self._normalize_classification(l) for l in level_1]
 
             non_empty_level_1 = [l for l in normalized_level_1 if l]
-            if len(non_empty_level_1) >= 2:
-                if len(set(non_empty_level_1)) > 1:
-                    if "Type D (Level 1)" not in disagreement_types:
-                        disagreement_types.append("Type D (Level 1)")
-                    logger.debug(f"Level 1 disagreement detected in analysis_{analysis_num}")
+            if len(non_empty_level_1) >= 2 and len(set(non_empty_level_1)) > 1:
+                if "Type D (Level 1)" not in disagreement_types:
+                    disagreement_types.append("Type D (Level 1)")
+                logger.debug(f"Level 1 disagreement detected in analysis_{analysis_num}")
 
-            # TYPE E: Type disagreement (NORMALIZED)
+            # TYPE E: Type disagreement (Level 2 and Level 3)
             level_2 = [
                 self._get_analysis_value(ann, analysis_num, "dimension_3_metadiscourse_classification",
                                          "level_2_functional_category")
                 for ann in annotations
             ]
-            normalized_level_2 = [
-                self._normalize_classification(l) for l in level_2
-            ]
+            normalized_level_2 = [self._normalize_classification(l) for l in level_2]
             level_2_unique = set([l for l in normalized_level_2 if l])
 
             if len(level_2_unique) > 1:
@@ -529,43 +759,62 @@ class AnnotationOptimizer:
                     if "Type E (Type - Interactional)" not in disagreement_types:
                         disagreement_types.append("Type E (Type - Interactional)")
             else:
-                # Check Level 3 types
+                # Check Level 3 types if Level 2 agrees
                 level_3 = [
                     self._get_analysis_value(ann, analysis_num, "dimension_3_metadiscourse_classification",
                                              "level_3_specific_type")
                     for ann in annotations
                 ]
-                normalized_level_3 = [
-                    self._normalize_classification(l) for l in level_3
-                ]
+                normalized_level_3 = [self._normalize_classification(l) for l in level_3]
 
                 non_empty_level_3 = [l for l in normalized_level_3 if l]
-                if len(non_empty_level_3) >= 2:
-                    if len(set(non_empty_level_3)) > 1:
-                        # Determine category from normalized Level 2
-                        if normalized_level_2 and normalized_level_2[0] == "INTERACTIVE":
-                            if "Type E (Type - Interactive)" not in disagreement_types:
-                                disagreement_types.append("Type E (Type - Interactive)")
-                        elif normalized_level_2 and normalized_level_2[0] == "INTERACTIONAL":
-                            if "Type E (Type - Interactional)" not in disagreement_types:
-                                disagreement_types.append("Type E (Type - Interactional)")
+                if len(non_empty_level_3) >= 2 and len(set(non_empty_level_3)) > 1:
+                    # Determine which category based on Level 2
+                    first_valid_l2 = next((l for l in normalized_level_2 if l), None)
+                    if first_valid_l2 == "INTERACTIVE":
+                        if "Type E (Type - Interactive)" not in disagreement_types:
+                            disagreement_types.append("Type E (Type - Interactive)")
+                    elif first_valid_l2 == "INTERACTIONAL":
+                        if "Type E (Type - Interactional)" not in disagreement_types:
+                            disagreement_types.append("Type E (Type - Interactional)")
 
-        # TYPE F: Borderline disagreement (check first analysis only)
+        # =====================================================================
+        # TYPE F: Borderline disagreement (check first analysis)
+        # =====================================================================
         borderline_l1 = [
-            self._get_analysis_value(ann, 1, "borderline_classification", "level_1_borderline_md_propositional",
-                                     "is_level_1_borderline")
+            self._get_analysis_value(ann, 1, "borderline_classification",
+                                     "level_1_borderline_md_propositional", "is_level_1_borderline")
             for ann in annotations
         ]
-        if any(borderline_l1) or (len(set([bl for bl in borderline_l1 if bl is not None])) > 1):
+        valid_bl1 = [bl for bl in borderline_l1 if bl is not None]
+        if any(borderline_l1) or (len(set(valid_bl1)) > 1):
             disagreement_types.append("Type F (Borderline - Level 1)")
 
         borderline_l2 = [
-            self._get_analysis_value(ann, 1, "borderline_classification", "level_2_borderline_md_features",
-                                     "is_level_2_borderline")
+            self._get_analysis_value(ann, 1, "borderline_classification",
+                                     "level_2_borderline_md_features", "is_level_2_borderline")
             for ann in annotations
         ]
-        if any(borderline_l2) or (len(set([bl for bl in borderline_l2 if bl is not None])) > 1):
+        valid_bl2 = [bl for bl in borderline_l2 if bl is not None]
+        if any(borderline_l2) or (len(set(valid_bl2)) > 1):
             disagreement_types.append("Type F (Borderline - Level 2)")
+
+        # =====================================================================
+        # TYPE G: Confidence disagreement (NEW - from adjunction_protocol)
+        # Only flag if classifications agree but confidence differs significantly
+        # =====================================================================
+        if not disagreement_types:
+            confidence_values = [
+                self._get_analysis_value(ann, 1, "confidence_ratings", "overall_confidence")
+                for ann in annotations
+            ]
+            valid_confidences = [c for c in confidence_values if c is not None and isinstance(c, (int, float))]
+
+            if len(valid_confidences) >= 2:
+                conf_range = max(valid_confidences) - min(valid_confidences)
+                if conf_range > 1:  # More than 1 point difference
+                    disagreement_types.append("Type G (Confidence)")
+                    logger.debug(f"Confidence disagreement detected: range={conf_range}")
 
         return disagreement_types
 
@@ -1514,7 +1763,7 @@ Based on the JSON input above, analyze the three model annotations and provide y
             # Optimize annotation with context
             optimized = self.optimize_annotation(
                 claude_ann, gemini_ann, deepseek_ann,
-                row['sentence'], row['expression'],
+                row['sentence'],
                 context_before, context_after
             )
 
