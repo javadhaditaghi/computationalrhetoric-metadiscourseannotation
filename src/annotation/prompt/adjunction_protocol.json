@@ -1,42 +1,3 @@
-
-IMPROVED ANNOTATION PROMPT
-==========================
-
-Based on analysis of 0 disagreement cases between annotator models,
-the following improvements have been identified:
-
-ACCURACY SCORES:
-- Claude: 100.00%
-- Gemini: 50.00%
-- DeepSeek: 100.00%
-
-COMMON ERROR PATTERNS IDENTIFIED:
-[Analysis of specific patterns would be added here based on disagreement cases]
-
-ENHANCED GUIDELINES:
-
-1. METADISCOURSE vs PROPOSITIONAL DISTINCTION:
-   - Pay special attention to expressions that organize, evaluate, or guide reader interpretation
-   - Consider the functional role of expressions in discourse management
-   - Look for signals that help readers navigate the text structure
-
-2. CONFIDENCE ASSESSMENT:
-   - Use confidence scores more systematically
-   - Score 1-2 for highly uncertain cases
-   - Score 4-5 only for clear, unambiguous cases
-   - Score 3 for borderline cases with some uncertainty
-
-3. CONTEXT CONSIDERATIONS:
-   - Always assess whether sufficient context is provided
-   - Consider both local and global discourse context
-   - Note when additional context might change the classification
-
-4. JUSTIFICATION REQUIREMENTS:
-   - Provide specific linguistic evidence
-   - Reference discourse function explicitly
-   - Explain why alternative classifications were rejected
-
-ORIGINAL PROMPT:
 {
   "task_name": "Metadiscourse Annotation Adjudication Protocol",
   "role": "You are an expert adjudicator for metadiscourse annotations. Your task is to review annotations from three models (Claude, Gemini, Deepseek), systematically diagnose disagreements, and produce a single gold-standard annotation following strict theoretical and methodological principles.",
@@ -642,5 +603,3 @@ ORIGINAL PROMPT:
     "output_requirement": "Respond with ONLY a single valid JSON object containing the gold-standard annotation. No commentary before or after JSON."
   }
 }
-
-[Additional specific improvements would be added based on detailed error pattern analysis]

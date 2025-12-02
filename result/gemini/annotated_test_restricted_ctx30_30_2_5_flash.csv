@@ -75,7 +75,9 @@ This thesis focuses on ‘text as an instrument’ and aims to reveal the generi
     ""dimension_2_functional_scope"": {
       ""classification"": ""MACRO-SCOPE"",
       ""reach_description"": ""Announces a key objective that structures the entire study, similar to the preceding 'focuses on'."",
-      ""removal_test_result"": ""If",success,gemini-2.5-flash,0
+      ""removal_test_result"": ""If""}
+      }
+```",success,gemini-2.5-flash,0
 "This study takes the standpoint that genre is ‘a staged, goal oriented, purposeful activity in which speakers engage as members of our culture’.","“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways.It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning. This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics. The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political speeches.","It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,(this study) takes the standpoint…,test_restricted.csv,"```json
 {
   ""thesis_code"": ""AP1"",
@@ -244,5 +246,7 @@ The present study aims to fill this gap within studies of this particular genre.
     ""level_1_borderline_md_propositional"": {
       ""is_level_1_borderline"": false,
       ""dominant_function"": null,
-      ""secondary_function"": null,
-      ""level_1",success,gemini-2.5-flash,3
+      ""secondary_function"": null,}
+}
+```
+  ",success,gemini-2.5-flash,3

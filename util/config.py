@@ -9,22 +9,27 @@ load_dotenv()
 class Config:
     # OpenAI Configuration
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-    OPENAI_MODEL = 'gpt-4'  # or 'gpt-3.5-turbo' for faster/cheaper processing
+    OPENAI_MODEL = 'gpt-5'  # or 'gpt-3.5-turbo' for faster/cheaper processing
 
     # File paths (relative to project root)
     BASE_DATA_PATH = 'result'
     # OUTPUT_DIR = 'result/optimized'
     OUTPUT_CSV_PATH = 'result/optimized/optimized_annotations.csv'
-    OPTIMIZATION_PROMPT_PATH = 'src/annotation/prompt/optimization_prompt.txt'
+    OPTIMIZATION_PROMPT_PATH = 'src/annotation/prompt/adjunction_protocol.json'
     INTERNAL_EXTERNAL_PROMPT_PATH = 'src/annotation/prompt/internalexternal.txt'
     IMPROVED_PROMPT_PATH = 'src/annotation/prompt/improved_internalexternal.txt'
+    ADJUDICATION_PROTOCOL_PATH = "src/annotation/prompt/adjunction_protocol.json"
+    ADJUNCTION_PROTOCOL_PATH = "src/annotation/prompt/adjunction_protocol.json"
+
+    MINIMAL_ADJUDICATION_PROMPT_PATH = "src/annotation/prompt/minimal_adjudication_prompt.json"
+    ANNOTATION_FRAMEWORK_PATH = "src/annotation/prompt/guidelines.json"
 
     # Processing configuration
     BATCH_SIZE = 10  # Process annotations in batches to manage API rate limits
     MAX_RETRIES = 3  # Number of retries for API calls
     RETRY_DELAY = 5  # Seconds to wait between retries
     TEMPERATURE = 0  # OpenAI temperature for consistency
-    MAX_TOKENS = 1000  # Maximum tokens for GPT responses
+    MAX_TOKENS = 12000  # Maximum tokens for GPT responses
 
     # Model directories
     MODEL_DIRECTORIES = ['claude', 'gemini', 'deepseek']
@@ -38,7 +43,6 @@ class Config:
         'thesis_code',
         'section',
         'Sentence',
-        'Expression',
         'gemini_metadiscourse_annotation',
         'claude_metadiscourse_annotation',
         'deepseek_metadiscourse_annotation',
