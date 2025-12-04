@@ -448,7 +448,7 @@
       "expr_3": "string | null",
       "ctx": "string (synthesized/complete)",
 
-      "analysis": {
+      "analysis_1": {
         "D1": {
           "form": "string (synthesized)",
           "pos": "string (synthesized)",
@@ -477,49 +477,55 @@
           "L3": "string | null (Hyland type)",
           "L3_border": "boolean (true if multiple MD types)",
           "L3_why": "string | null (synthesized)"
-        }
-      },
-
-      "conf": {
-        "D1": "integer (1-5)",
-        "D2": "integer (1-5)",
-        "D3": "integer (1-5)",
-        "overall": "integer (1-5)",
-        "just": "string"
-      },
-
-      "border": {
-        "L1": {
-          "is": "boolean",
-          "dom": "string | null (MD | PROP)",
-          "sec": "string | null",
-          "why": "string | null (required if is=true)"
         },
-        "L2": {
-          "is": "boolean",
-          "pri": "string | null",
-          "sec": "string | null",
-          "ter": "string | null",
-          "strength": "string | null",
-          "why": "string | null (required if is=true)"
+
+        "conf": {
+          "D1": "integer (1-5)",
+          "D2": "integer (1-5)",
+          "D3": "integer (1-5)",
+          "overall": "integer (1-5)",
+          "just": "string"
+        },
+
+        "border": {
+          "L1": {
+            "is": "boolean",
+            "dom": "string | null (MD | PROP)",
+            "sec": "string | null",
+            "why": "string | null (required if is=true)"
+          },
+          "L2": {
+            "is": "boolean",
+            "pri": "string | null",
+            "sec": "string | null",
+            "ter": "string | null",
+            "strength": "string | null",
+            "why": "string | null (required if is=true)"
+          }
+        },
+
+        "comp_just": "string (concise synthesis across dimensions)",
+
+        "adj": {
+          "agree": "string (all | 2-1 | differ)",
+          "disagree": "string (A | B | C | D | E | F | G)",
+          "cause": "string (from S1)",
+          "basis": "string (reflex | boundaries | framework | tests | genre | T1_weight)",
+          "boundary_corr": "string | null",
+          "violations": "string | null",
+          "disqual": "string | null",
+          "ctx_suff": "string (SUFF | INSUFF)",
+          "improve": "string"
         }
       },
-
-      "comp_just": "string (concise synthesis across dimensions)",
-
-      "adj": {
-        "agree": "string (all | 2-1 | differ)",
-        "disagree": "string (A | B | C | D | E | F | G)",
-        "cause": "string (from S1)",
-        "basis": "string (reflex | boundaries | framework | tests | genre | T1_weight)",
-        "boundary_corr": "string | null",
-        "violations": "string | null",
-        "disqual": "string | null",
-        "ctx_suff": "string (SUFF | INSUFF)",
-        "improve": "string"
+      "if analysis_2": {
+        "analysis_2":"The same structure as analysis_1"
+      },
+      "if analysis_3": {
+        "analysis_3":"The same structure as analysis_1"
       }
     }
-  },
+    },
 
   "rules": [
     "R1: Complete all 5 stages systematically",

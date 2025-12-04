@@ -1827,11 +1827,11 @@ Based on the JSON input above, analyze the three model annotations and provide y
             }
 
             # Get expression from first valid annotation
-            expression = ""
-            for ann in [claude_ann, gemini_ann, deepseek_ann]:
-                if ann:
-                    expression = self._get_expression(ann, 1) or ""
-                    break
+            # expression = ""
+            # for ann in [claude_ann, gemini_ann, deepseek_ann]:
+            #     if ann:
+            #         expression = self._get_expression(ann, 1) or ""
+            #         break
 
             # Optimize annotation with context
             optimized = self.optimize_annotation(
