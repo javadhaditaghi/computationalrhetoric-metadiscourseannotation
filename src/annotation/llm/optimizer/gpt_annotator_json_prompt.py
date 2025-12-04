@@ -818,36 +818,36 @@ class AnnotationOptimizer:
 
         return disagreement_types
 
-    def _retrieve_framework_sections(self, disagreement_types: List[str]) -> Dict:
-        """
-        Retrieve relevant framework sections based on disagreement types
-
-        Args:
-            disagreement_types: List of disagreement type keys
-
-        Returns:
-            Dictionary of retrieved framework sections
-        """
-        retrieved_sections = {}
-
-        for dtype in disagreement_types:
-            if dtype in self.retrieval_map:
-                config = self.retrieval_map[dtype]
-
-                for json_path in config["json_paths"]:
-                    try:
-                        section_content = self._get_nested_value(self.annotation_framework, json_path)
-                        section_name = json_path.split('.')[-1]
-
-                        # Avoid duplicates
-                        if section_name not in retrieved_sections:
-                            retrieved_sections[section_name] = section_content
-
-                    except (KeyError, IndexError, TypeError) as e:
-                        logger.warning(f"Could not retrieve {json_path}: {e}")
-                        continue
-
-        return retrieved_sections
+    # def _retrieve_framework_sections(self, disagreement_types: List[str]) -> Dict:
+    #     """
+    #     Retrieve relevant framework sections based on disagreement types
+    #
+    #     Args:
+    #         disagreement_types: List of disagreement type keys
+    #
+    #     Returns:
+    #         Dictionary of retrieved framework sections
+    #     """
+    #     retrieved_sections = {}
+    #
+    #     for dtype in disagreement_types:
+    #         if dtype in self.retrieval_map:
+    #             config = self.retrieval_map[dtype]
+    #
+    #             for json_path in config["json_paths"]:
+    #                 try:
+    #                     section_content = self._get_nested_value(self.annotation_framework, json_path)
+    #                     section_name = json_path.split('.')[-1]
+    #
+    #                     # Avoid duplicates
+    #                     if section_name not in retrieved_sections:
+    #                         retrieved_sections[section_name] = section_content
+    #
+    #                 except (KeyError, IndexError, TypeError) as e:
+    #                     logger.warning(f"Could not retrieve {json_path}: {e}")
+    #                     continue
+    #
+    #     return retrieved_sections
 
     #Test the model; it must be removed afterwards
     def test_normalization_with_real_data(self, max_cases: int = 10):
@@ -1594,8 +1594,8 @@ class AnnotationOptimizer:
         return base_df[required_columns]
 
     def optimize_annotation(self, claude_ann: Dict, gemini_ann: Dict, deepseek_ann: Dict,
-                            sentence: str, expression: str, context_before: str = "",
-                            context_after: str = "") -> Dict:
+                            sentence: str, context_before: str = "",
+                            context_after: str = "", row_data: Dict = None) -> Dict:
         """
         Use GPT to optimize annotations with smart retrieval or full framework
 
@@ -1632,7 +1632,6 @@ class AnnotationOptimizer:
 ## CASE TO ADJUDICATE
 
 Sentence: {sentence}
-Expression: {expression}
 Context Before: {limited_context_before if limited_context_before else "N/A"}
 Context After: {limited_context_after if limited_context_after else "N/A"}
 
@@ -1656,7 +1655,6 @@ TASK: Adjudicate systematically following the adjudication process. Output ONLY 
             json_input = {
                 "prompt_instructions": self.optimization_prompt,
                 "sentence": sentence,
-                "expression": expression,
                 "context_before": limited_context_before if limited_context_before else None,
                 "context_after": limited_context_after if limited_context_after else None,
                 "claude_annotation": claude_ann if claude_ann else None,
@@ -1690,42 +1688,101 @@ Based on the JSON input above, analyze the three model annotations and provide y
 
         except Exception as e:
             logger.error(f"Error in GPT optimization: {e}")
-            return self._fallback_optimization(claude_ann, gemini_ann, deepseek_ann)
+            return self._fallback_optimization(claude_ann, gemini_ann, deepseek_ann, row_data)
 
-    def _fallback_optimization(self, claude_ann: Dict, gemini_ann: Dict, deepseek_ann: Dict) -> Dict:
+    def _fallback_optimization(self, claude_ann: Dict, gemini_ann: Dict,
+                               deepseek_ann: Dict, row_data: Dict = None) -> Dict:
         """
-        Fallback optimization method using majority vote and confidence scores
+        Fallback when GPT optimization fails.
+        Logs the failed case to a separate CSV file for review.
 
         Args:
             claude_ann: Claude's annotation
             gemini_ann: Gemini's annotation
             deepseek_ann: DeepSeek's annotation
+            row_data: Original row data (sentence, thesis_code, etc.) for logging
 
         Returns:
-            Optimized annotation dictionary
+            Fallback annotation dictionary
         """
-        annotations = [ann for ann in [claude_ann, gemini_ann, deepseek_ann] if ann is not None]
+        # Log this failure to the error CSV
+        self._log_failed_annotation(claude_ann, gemini_ann, deepseek_ann, row_data)
 
-        if not annotations:
-            return {
-                "thesis_code": "FALLBACK",
-                "section": "Unknown",
-                "expression_1": "Unknown",
-                "analysis": {
-                    "dimension_1_observable_realization": {},
-                    "dimension_2_functional_scope": {},
-                    "dimension_3_metadiscourse_classification": {
-                        "level_1_primary_classification": "BORDERLINE_MD_PROPOSITIONAL"
-                    }
+        # Return consistent structure with actual annotations
+        return {
+            "thesis_code": row_data.get("thesis_code", "FALLBACK") if row_data else "FALLBACK",
+            "section": row_data.get("section", "Unknown") if row_data else "Unknown",
+            "expression_1": "Unknown",
+            "expression_2": None,
+            "expression_3": None,
+            "analysis_1": {  # ← FIXED: matches actual structure
+                "dimension_1_observable_realization": {
+                    "reflexivity": {"is_reflexive": None}
                 },
-                "confidence_ratings": {
-                    "overall_confidence": 1
+                "dimension_2_functional_scope": {
+                    "classification": None
                 },
-                "comprehensive_justification": "Fallback due to missing or invalid annotations"
+                "dimension_3_metadiscourse_classification": {
+                    "level_1_primary_classification": "BORDERLINE_MD_PROPOSITIONAL",
+                    "level_2_functional_category": None,
+                    "level_3_specific_type": None
+                }
+            },
+            "confidence_ratings": {
+                "overall_confidence": 0  # ← FIXED: 0 not 1 (we have no confidence)
+            },
+            "borderline_classification": {
+                "level_1_borderline_md_propositional": {"is_level_1_borderline": None},
+                "level_2_borderline_md_features": {"is_level_2_borderline": None}
+            },
+            "_fallback_metadata": {
+                "is_fallback": True,
+                "reason": "GPT optimization failed",
+                "timestamp": pd.Timestamp.now().isoformat()
             }
+        }
 
-        # Return the first valid annotation as fallback
-        return annotations[0]
+    def _log_failed_annotation(self, claude_ann: Dict, gemini_ann: Dict,
+                               deepseek_ann: Dict, row_data: Dict = None) -> None:
+        """
+        Log failed annotation case to CSV file for later review.
+
+        Args:
+            claude_ann: Claude's annotation
+            gemini_ann: Gemini's annotation
+            deepseek_ann: DeepSeek's annotation
+            row_data: Original row data
+        """
+        error_file_path = os.path.join(project_root, Config.FAILED_ANNOTATION_PATH)
+
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(error_file_path), exist_ok=True)
+
+        # Prepare error record
+        error_record = {
+            "timestamp": pd.Timestamp.now().isoformat(),
+            "thesis_code": row_data.get("thesis_code", "Unknown") if row_data else "Unknown",
+            "section": row_data.get("section", "Unknown") if row_data else "Unknown",
+            "sentence": row_data.get("sentence", "Unknown") if row_data else "Unknown",
+            "claude_annotation": json.dumps(claude_ann) if claude_ann else "None",
+            "gemini_annotation": json.dumps(gemini_ann) if gemini_ann else "None",
+            "deepseek_annotation": json.dumps(deepseek_ann) if deepseek_ann else "None",
+            "failure_reason": "GPT optimization failed"
+        }
+
+        # Check if file exists to determine if we need headers
+        file_exists = os.path.exists(error_file_path)
+
+        # Append to CSV
+        error_df = pd.DataFrame([error_record])
+        error_df.to_csv(
+            error_file_path,
+            mode='a',  # Append mode
+            header=not file_exists,  # Only write header if file is new
+            index=False
+        )
+
+        logger.warning(f"⚠️ Failed annotation logged to {error_file_path}")
 
     def process_all_annotations(self, merged_df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -1760,11 +1817,28 @@ Based on the JSON input above, analyze the three model annotations and provide y
             context_before = row.get('context_before', '')
             context_after = row.get('context_after', '')
 
+            # Prepare row_data for error logging
+            row_data = {
+                "thesis_code": row.get("thesis_code", "Unknown"),
+                "section": row.get("section", "Unknown"),
+                "sentence": row.get("sentence", "Unknown"),
+                "context_before": context_before,
+                "context_after": context_after
+            }
+
+            # Get expression from first valid annotation
+            expression = ""
+            for ann in [claude_ann, gemini_ann, deepseek_ann]:
+                if ann:
+                    expression = self._get_expression(ann, 1) or ""
+                    break
+
             # Optimize annotation with context
             optimized = self.optimize_annotation(
                 claude_ann, gemini_ann, deepseek_ann,
                 row['sentence'],
-                context_before, context_after
+                context_before, context_after,
+                row_data=row_data
             )
 
             optimized_decisions.append(json.dumps(optimized))

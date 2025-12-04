@@ -23,6 +23,7 @@ class Config:
 
     MINIMAL_ADJUDICATION_PROMPT_PATH = "src/annotation/prompt/minimal_adjudication_prompt.json"
     ANNOTATION_FRAMEWORK_PATH = "src/annotation/prompt/guidelines.json"
+    FAILED_ANNOTATION_PATH = "data/output/failed_annotation_error.csv"
 
     # Processing configuration
     BATCH_SIZE = 10  # Process annotations in batches to manage API rate limits
