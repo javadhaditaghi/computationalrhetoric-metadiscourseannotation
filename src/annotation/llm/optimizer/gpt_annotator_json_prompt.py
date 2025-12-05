@@ -10,19 +10,21 @@ import logging
 from unidecode import unidecode
 import string
 from json_repair import repair_json
+from stop_words import get_stop_words
 
 # Add the project root to the path to import config
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
 sys.path.insert(0, project_root)
 
 from util.config import Config
-
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
 class AnnotationOptimizer:
+    # Class attribute for stopwords
+    ENGLISH_STOPWORDS = set(get_stop_words('en'))
     def __init__(self, openai_api_key: str, model: str = "gpt-5",
                  context_words_before: int = 30, context_words_after: int = 30,
                  use_retrieval: bool = True):
@@ -526,6 +528,59 @@ class AnnotationOptimizer:
 
         return normalized
 
+    def _get_content_tokens(self, expr: str) -> List[str]:
+        """
+        Extract content tokens from expression after removing stopwords.
+
+        Two expressions are considered equivalent boundaries if they have
+        identical content tokens after stopword removal.
+
+        Args:
+            expr: Expression string
+
+        Returns:
+            List of content tokens (lowercase, stopwords removed)
+
+        Examples:
+            "aims to" → ["aims"]
+            "This thesis focuses on" → ["thesis", "focuses"]
+            "Scacci (2011) states" → ["scacci", "(2011)", "states"]
+        """
+        if not expr or pd.isna(expr):
+            return []
+
+        # Normalize first (Unicode, lowercase, punctuation handling)
+        normalized = self._normalize_expression(expr)
+
+        if not normalized:
+            return []
+
+        # Tokenize
+        tokens = normalized.split()
+
+        # Remove stopwords, keep content words
+        content_tokens = [t for t in tokens if t not in self.ENGLISH_STOPWORDS]
+
+        return content_tokens
+
+    def _are_boundaries_equivalent(self, expr1: str, expr2: str) -> bool:
+        """
+        Check if two expression boundaries are equivalent.
+
+        Equivalence = identical content tokens after stopword removal.
+
+        Args:
+            expr1: First expression
+            expr2: Second expression
+
+        Returns:
+            True if boundaries are equivalent, False otherwise
+        """
+        tokens1 = self._get_content_tokens(expr1)
+        tokens2 = self._get_content_tokens(expr2)
+
+        return tokens1 == tokens2
+
     def _get_expression(self, ann: Dict, expr_number: int = 1) -> Optional[str]:
         """
         Flexibly get expression from annotation, handling both 'expression' and 'expression_1' formats
@@ -697,19 +752,41 @@ class AnnotationOptimizer:
             disagreement_types.append("Type A (Reflexivity)")
 
         # =====================================================================
-        # TYPE B: Boundary disagreement (NORMALIZED) - Check ALL expressions
+        # TYPE B: Boundary disagreement - STOPWORD-BASED COMPARISON
         # =====================================================================
         for expr_num in range(1, max_expressions + 1):
             expressions = [self._get_expression(ann, expr_num) for ann in annotations]
-            normalized_expressions = [self._normalize_expression(e) for e in expressions]
 
-            non_empty_normalized = [e for e in normalized_expressions if e]
+            # Filter to non-empty expressions
+            non_empty_expressions = [e for e in expressions if e]
 
-            if len(non_empty_normalized) >= 2:
-                if len(set(non_empty_normalized)) > 1:
+            if len(non_empty_expressions) >= 2:
+                # Get content tokens for each expression (stopwords removed)
+                content_token_lists = [self._get_content_tokens(e) for e in non_empty_expressions]
+
+                # Check if all content token lists are identical
+                first_tokens = content_token_lists[0]
+                all_equivalent = all(tokens == first_tokens for tokens in content_token_lists)
+
+                if not all_equivalent:
                     if "Type B (Boundary)" not in disagreement_types:
                         disagreement_types.append("Type B (Boundary)")
-                    logger.debug(f"Boundary disagreement detected in expression_{expr_num}")
+                    logger.debug(f"Boundary disagreement in expression_{expr_num}: {content_token_lists}")
+
+        # # =====================================================================
+        # # TYPE B: Boundary disagreement (NORMALIZED) - Check ALL expressions
+        # # =====================================================================
+        # for expr_num in range(1, max_expressions + 1):
+        #     expressions = [self._get_expression(ann, expr_num) for ann in annotations]
+        #     normalized_expressions = [self._normalize_expression(e) for e in expressions]
+        #
+        #     non_empty_normalized = [e for e in normalized_expressions if e]
+        #
+        #     if len(non_empty_normalized) >= 2:
+        #         if len(set(non_empty_normalized)) > 1:
+        #             if "Type B (Boundary)" not in disagreement_types:
+        #                 disagreement_types.append("Type B (Boundary)")
+        #             logger.debug(f"Boundary disagreement detected in expression_{expr_num}")
 
         # =====================================================================
         # TYPE C, D, E: Check scope and classification for EACH analysis
