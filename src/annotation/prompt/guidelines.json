@@ -66,8 +66,9 @@
         "about/regarding/concerning (topic introduction)",
         "including/such as (exemplification)",
         "e.g./i.e. (specification)"
-      ],
-      "rule_2_propositional_complements": {
+        ]
+      },
+    "rule_2_propositional_complements": {
         "name": "STOP before propositional complement clauses",
         "description": "After reporting verbs, epistemic expressions, or evaluative predicates, the complement clause typically contains propositional content",
         "stopping_signals": [
@@ -76,24 +77,25 @@
           "embedded clauses after evaluative expressions"
         ]
       },
-      "rule_3_end_of_reflexivity": {
+    "rule_3_end_of_reflexivity": {
         "name": "STOP when reflexivity ends",
         "description": "Reflexive elements are MD. When you transition to non-reflexive content, STOP. Reflexivity does NOT extend to adjacent non-reflexive elements.",
         "key_principle": "Reflexivity applies ONLY to the reflexive element itself, NOT to syntactically integrated non-reflexive elements"
       },
-      "rule_4_descriptive_predicates": {
+    "rule_4_descriptive_predicates": {
         "name": "STOP before descriptive predicates about text elements",
         "description": "When a text-element reference (figure, table, section) is followed by a predicate describing what it contains/shows/does, the predicate is typically propositional",
         "rationale": "The text-element reference itself is MD (endophoric marker), but describing the element's content is propositional"
       },
-      "rule_5_hedges_and_stance": {
+    "rule_5_hedges_and_stance": {
         "name": "STOP after hedge/booster/stance marker/attitude marker - do not include the claim",
         "description": "Hedges, boosters, stance marker, and attitude markers operate ON propositions but do not absorb them into MD status",
         "key_principle": "The hedge/booster/stance marker is MD. The proposition being hedged/boosted is NOT MD."
       },
-      "rule_6_functional_marker_inclusion": {
-        "name": "INCLUDE grammatically obligatory functional markers, STOP before propositional content",
-        "description": "When a functional marker (complementizer, infinitival marker, or preposition) is grammatically required by the verb's complement structure, include it as part of the MD operator. The propositional content following the marker is excluded.",
+    "rule_6_functional_marker_inclusion": {
+        "name": "INCLUDE grammatically obligatory functional markers (overrides Rules 1-2 boundary signals)",
+        "description": "Rules 1-2 identify boundary zones. This rule specifies: when a functional marker is grammatically obligatory, include it in the MD unit. Stop before the propositional content that follows.",
+        "overrides": "When Rules 1-2 signal 'stop at/before that/to/on/about', check if the marker is obligatory. If yes, INCLUDE the marker, then stop.",
         "functional_markers": [
           "that (complementizer after reporting/stance verbs)",
           "to (infinitival marker)",
