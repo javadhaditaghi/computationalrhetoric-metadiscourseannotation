@@ -114,8 +114,8 @@
       "step_5": "Validate: Can you remove the MD part and propositional content remains? If yes, boundary is correct."
     },
     "critical_reminder": "These stopping rules prevent the most common error: extending MD annotation into propositional content. When in doubt, stop earlier rather than later - it's better to under-annotate than to include non-MD content."
-  }
-},
+  },
+
 
   "theoretical_framework": {
     "core_principle": {
