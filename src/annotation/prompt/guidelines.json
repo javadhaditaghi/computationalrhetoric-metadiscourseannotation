@@ -57,7 +57,7 @@
   "boundary_stopping_rules": {
   "critical_principle": "Knowing WHERE to stop is as important as knowing WHERE to start. Follow these explicit stopping rules to avoid including propositional content in MD annotation.",
 
-  "five_stopping_rules": {
+  "six_stopping_rules": {
     "rule_1_content_specification": {
       "name": "STOP at content specification phrases",
       "description": "Prepositions that introduce lists, topics, or content details mark the boundary between MD operator and propositional operand",
@@ -90,6 +90,18 @@
         "name": "STOP after hedge/booster/stance marker/attitude marker - do not include the claim",
         "description": "Hedges, boosters, stance marker, and attitude markers operate ON propositions but do not absorb them into MD status",
         "key_principle": "The hedge/booster/stance marker is MD. The proposition being hedged/boosted is NOT MD."
+      },
+      "rule_6_functional_marker_inclusion": {
+        "name": "INCLUDE grammatically obligatory functional markers, STOP before propositional content",
+        "description": "When a functional marker (complementizer, infinitival marker, or preposition) is grammatically required by the verb's complement structure, include it as part of the MD operator. The propositional content following the marker is excluded.",
+        "functional_markers": [
+          "that (complementizer after reporting/stance verbs)",
+          "to (infinitival marker)",
+          "whether/if (embedded question markers)",
+          "on/about/into/with (obligatory prepositions for certain verbs)"
+        ],
+        "key_principle": "The MD unit = operator + obligatory functional marker. Propositional content after the marker is always excluded.",
+        "test": "Remove the functional marker. Is the sentence ungrammatical? If yes, the marker is obligatory and must be included in the MD unit."
       }
     },
     "applying_stopping_rules": {
