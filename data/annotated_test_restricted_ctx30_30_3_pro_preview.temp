@@ -1,0 +1,1806 @@
+sentence,context_before,context_after,section,thesis_code,source_file,metadiscourse_annotation,annotation_status,annotation_model,row_index
+This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics.,"“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways. It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning.","The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political Speeches. This study takes the standpoint that genre is “a staged, goal oriented, purposeful activity in which speakers engage as members of our culture” (Martin 1984: 25). It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This thesis focuses on"",
+  ""expression_2"": ""aims to reveal"",
+  ""expression_3"": null,
+  ""context"": ""Introduction section, defining the research scope and objectives following a statement about the richness of text."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'This' + genre noun 'thesis' + verb 'focuses' + preposition 'on'"",
+      ""syntactic_position"": ""Sentence-initial, subject position"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""'This thesis' explicitly refers to the document itself as the subject.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Defines the central topic for the entire document."",
+      ""removal_test_result"": ""Propositional content ('text as an instrument') remains, but the explicit framing of this as the thesis's focus is lost."",
+      ""boundary_test_result"": ""Functional reach extends to the entire thesis."",
+      ""reasoning"": ""Explicitly labels the subject matter of the whole text.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Text-reflexive expression organizing the reader's understanding of the document's topic."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Organizes the discourse by announcing the topic; guides reader expectations."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Announces the focus/topic of the text.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical text-reflexive frame marker in Introduction.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""analysis_2"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Verb 'aims' + infinitive marker 'to' + verb 'reveal'"",
+      ""syntactic_position"": ""Predicate of the main clause (coordinated)"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""Implicit subject is 'This thesis', referring to the document's intention.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""States the research objective for the entire study."",
+      ""removal_test_result"": ""Specific goal content remains, but the explicit labeling of it as the thesis's aim is lost."",
+      ""boundary_test_result"": ""Functional reach extends to the whole document's purpose."",
+      ""reasoning"": ""Defines the global goal of the research presented in the text.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Reflexive expression defining the text's purpose."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader by stating the text's goal/purpose."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Announces the goal/purpose of the discourse.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear text-reflexive frame marker indicating text purpose.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains two coordinated metadiscourse expressions governed by the subject 'This thesis'. Both are text-reflexive Frame Markers operating at a macro-scope. 'This thesis focuses on' announces the topic, and '(this thesis) aims to reveal' announces the research goal. Both are prototypical Interactive metadiscourse organizing the reader's understanding of the text's nature and purpose within the Introduction section.""
+}
+```",success,gemini-3-pro-preview,0
+"This study takes the standpoint that genre is ‘a staged, goal oriented, purposeful activity in which speakers engage as members of our culture’.","“To a grammarian, text is a rich, many-faceted phenomenon that ‘means’ in many different ways.It can be explored from many different points of view. But we can distinguish two main angles of vision: one, focus on the text as an object in its own right; two, focus on the text as an instrument for finding out about something else. Focusing on text as an object, a grammarian will be asking questions such as: Why is it valued as it is? Focusing on text as instrument, the grammarian will be asking what the text reveals about the system of the language in which it is spoken or written.” Halliday and Matthiessen (2004: 3) 1. Establishing the Study Halliday and Matthiessen above state that “text is a rich, many-faceted phenomenon that ‘means’ in different ways” and this study adopts the same viewpoint: language is rich and it is full of meaning. This thesis focuses on ‘text as an instrument’ and aims to reveal the generic structure of written-to-be-spoken language within the discourse of politics. The study postulates that sub-genres exist within the genre of political discourse and can be revealed by investigating the generic structure of political speeches.","It is further elaborated as “a staged, goal-oriented social process. Social, because we participate in genres with other people; goal-oriented, because we use genres to get things done; staged, because it usually takes us a few steps to reach our goals” (Martin & Rose 2007: 8). Sub-genre is interpreted as a genre belonging to an already established genre. And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004).",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This study takes the standpoint that"",
+  ""expression_2"": null,
+  ""expression_3"": null,
+  ""context"": ""Introduction section, defining the theoretical framework and specific definition of 'genre' that underpins the research."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Demonstrative 'This' + genre noun 'study' + stance verb 'takes' + stance noun 'standpoint' + obligatory complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial, subject position with complement clause"",
+      ""punctuation_cues"": ""None (fully integrated)"",
+      ""grammatical_integration"": ""Fully integrated main clause introducing a propositional complement"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive + Discourse-Act Reflexive"",
+        ""reflexivity_reasoning"": ""'This study' refers to the text itself (text-reflexive). 'Takes the standpoint' refers to the discourse act of adopting a theoretical position (discourse-act reflexive).""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Establishes the global theoretical definition of 'genre' that informs the entire study's methodology and analysis."",
+      ""removal_test_result"": ""If removed, the definition of genre remains as a bare assertion, but the explicit framing that this is the specific theoretical lens adopted by the study is lost."",
+      ""boundary_test_result"": ""Functional reach extends across the entire thesis as it defines the core concept (genre) investigated."",
+      ""reasoning"": ""In an Introduction, explicitly adopting a 'standpoint' or definition sets the parameters for the whole document, not just the immediate sentence.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Strong reflexivity confirms MD status. The expression organizes the discourse by framing the subsequent proposition as the study's chosen theoretical basis, rather than conveying new factual content itself."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Primary function is organizational: orienting the reader to the theoretical framework used in the text. While it implies stance, the dominant role is guiding the reader's understanding of the study's architecture."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""Primary type is Frame Marker as it announces a structural element (theoretical framework). It explicitly labels the text's positioning.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""High confidence in structure (clear reflexivity) and scope (macro-framing). Slightly lower confidence in type due to the presence of secondary functions (Self-Mention/Stance), creating a Level 2 borderline case.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Self-Mention"",
+        ""tertiary_md_type"": ""Attitude Marker"",
+        ""relative_strength"": ""PRIMARY (Frame Marker) dominant due to organizational function in Introduction. SECONDARY (Self-Mention) moderate as 'This study' proxies for author. TERTIARY (Attitude Marker) weak as 'standpoint' implies evaluation."",
+        ""level_2_borderline_justification"": ""The expression is clearly metadiscourse but performs multiple functions simultaneously. It frames the text (Frame Marker), represents the author's agency via the text (Self-Mention), and indicates a specific theoretical choice (Attitude/Stance). Frame Marker is selected as primary because the rhetorical goal in this context is to establish the study's framework.""
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'This study takes the standpoint that' is a reflexive metadiscursive operator with MACRO-SCOPE, functioning primarily as a Frame Marker. Structurally, it combines text-reflexivity ('This study') with discourse-act reflexivity ('takes the standpoint'). Functionally, it operates at the macro-level by establishing the theoretical definition of 'genre' that underpins the entire thesis. While it exhibits secondary features of Self-Mention (personifying the text) and Attitude (adopting a stance), its dominant function in the Introduction is Interactive: organizing the reader's understanding of the research framework.""
+}
+```",success,gemini-3-pro-preview,1
+"Scacci (2011) states, ‘genres exist in relation to certain situational constraints, the weekly address is unique in its routine response to the week’s events packaged for both public and press consumption’.","And this study sees this corpus, the American presidential radio addresses, as a genre within political discourse and the data of this study as possible sub-genres of the radio address. In order to illustrate genre, the research examines the generic structure of such speeches and proposes a functional approach of analysing the thematic structure by way of Theme and Rheme, which is part of the textual metafunction of systemic functional linguistics (SFL) (Halliday 1994; Halliday and Matthiessen 2004; Eggins 2004; Thompson 2004). In order to study the goal, social purpose and generic structure of written-to-be-spoken language of political discourse, study investigates the genre of the American Presidential radio address by way of a Thematic structure analysis. The radio address is its own genre within political discourse and it is embedded in the context of American culture.","The radio address thus is realised, operates and has expected functions within the context of an American president and Americans are familiar with the radio address due to its long history and tradition. There has been research on the presidential weekly radio address, but there is a gap of linguistic investigation of this genre. Martin (1984) researched Reagan’s return to the radio address, he revealed that Reagan felt other forms of communication, such a news conferences, were more restrictive and thus Reagan felt he was able to speak freely and be publically more present. Horvit, Schiffer, and Wright (2008) investigated the Sunday press coverage of the radio address from 1982 to 2005. Since the address is delivered on Saturdays, they found that the Sunday press coverage diminished over this time period including the number of paragraphs citing the president. Meernik and Ault (2013) researched the radio address from the perspective of foreign policy.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Scacci (2011) states,"",
+  ""context"": ""Introduction section, defining genre characteristics via citation to establish theoretical background."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Proper noun (citation) + Reporting verb"",
+      ""syntactic_position"": ""Sentence-initial"",
+      ""punctuation_cues"": ""Comma-bounded (introduces quote)"",
+      ""grammatical_integration"": ""Integrated (Subject + Verb)"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Refers to external source/agent, not the current text or author.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Attributes the specific following definition/claim to an external source."",
+      ""removal_test_result"": ""Propositional content (the definition of genre) remains, but the attribution/authority is lost."",
+      ""boundary_test_result"": ""Stops at the comma before the quoted content (propositional operand)."",
+      ""reasoning"": ""Operates only on the immediate quoted proposition to provide evidentiary support.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Function is to guide the reader by establishing intertextual support and authority for the definition."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader by linking current text to external literature (intertextuality)."",
+      ""level_3_specific_type"": ""Evidential"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicit reference to an external source (Scacci) to support an argument.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical evidential marker with clear boundaries and function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'Scacci (2011) states,' is a clear Evidential marker. Structurally, it is a non-reflexive citation with a reporting verb. Functionally, it has micro-scope, attributing the specific following definition to an external authority. It is classified as Interactive Metadiscourse because it manages the information flow by establishing intertextual relationships.""
+}
+```",success,gemini-3-pro-preview,2
+The present study aims to fill this gap within studies of this particular genre.,"Since the address is delivered on Saturdays, they found that the Sunday press coverage diminished over this time period including the number of paragraphs citing the president. Meernik and Ault (2013) researched the radio address from the perspective of foreign policy. They argued presidents have the ability to manipulate the agenda of foreign policy and make more tactical choices by placing more attention on domestic issues within the radio address. Han (2006) looked into the radio address as an old medium combined with new strategies, thus comparing the addresses of Reagan and Clinton. Jones and Rowland (2009) analysed the thematic overviews of Reagan’s addresses and researched his rhetorical strategies and ideology. Research more from a language perspective, Oddo (2011) investigated ‘us’ versus ‘them’ through critical intertextual analysis (Thibault 1991), and compared the addresses of F.D. Roosevelt and G.W. Bush through their legitimization strategies, thus establishing that Bush was among many who misled the public into war. Oddo delved into the language of the addresses but did not contain any linguistic analysis especially not to mention from an SFL perspective. Moreover, Scacco (2011) analysed Obama’s radio address, but from a ritualistic rhetoric standpoint, and compared Obama’s addresses to that of Clinton’s to understand how they both projected their presidencies onto the public, again, not from a perspective of linguistics. Thus, there has been research on the radio address, but none from a strictly functional linguistic perspective.","The present study focuses on the Radio Addresses of President Barack Obama during his first term as President, 2009-2012. It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses); healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses). Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this:",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""The present study aims to fill this gap"",
+  ""context"": ""Introduction section, immediately following a review of previous research that identified a lack of functional linguistic perspectives (the 'gap'). The sentence announces the study's purpose."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Text-reflexive NP ('The present study') + Discourse verb ('aims to') + Metadiscursive metaphor ('fill this gap')"",
+      ""syntactic_position"": ""Sentence-initial main clause"",
+      ""punctuation_cues"": ""None (integrated)"",
+      ""grammatical_integration"": ""Fully integrated subject-verb-object structure"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""'The present study' explicitly refers to the text itself. 'Aims to fill this gap' refers to the discourse act being performed (addressing the previously mentioned lack of research).""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Announces the global purpose of the entire thesis. The 'gap' refers to the state of the field established in the preceding context, and the 'aim' governs the entire document's contribution."",
+      ""removal_test_result"": ""If removed, the explicit statement of the thesis's purpose and its rhetorical relationship to previous literature (filling the gap) is lost. The reader would not know the specific goal of the document."",
+      ""boundary_test_result"": ""Functional reach extends to the entire thesis (defining its goal) and bridges the gap between the literature review and the current study."",
+      ""reasoning"": ""Standard macro-scope framing move in Introductions. It defines the raison d'être for the whole text.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Strong reflexivity ('The present study'). Function is to organize the discourse by announcing the study's purpose and positioning it relative to prior research (filling a gap), rather than conveying primary factual content about the world."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Primary function is to organize the reader's understanding of the text's purpose and structure (Frame Marker function). While it implies authorial agency, the dominant role is structural/organizational."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""Primary: Frame Marker (announces research goal/purpose). Secondary: Endophoric Marker ('this gap' points back to the preceding negative evaluation of literature). Tertiary: Self-Mention (inanimate 'The present study' acts as a proxy for the author).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""High confidence due to clear text-reflexivity and standard genre convention (purpose statement). Slight ambiguity in Type (Level 2 Borderline) due to the fusion of framing, endophoric reference, and proxy self-mention, but Frame Marker is the standard classification for purpose statements.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Endophoric Marker"",
+        ""tertiary_md_type"": ""Self-Mention"",
+        ""relative_strength"": ""PRIMARY (Frame Marker) dominant as it defines the text's goal. SECONDARY (Endophoric) moderate as 'this gap' links to prior text. TERTIARY (Self-Mention) weak as it is depersonalized."",
+        ""level_2_borderline_justification"": ""The expression performs multiple functions simultaneously: it frames the study's goal (Frame Marker), points back to the literature review ('this gap' - Endophoric), and asserts the text's agency ('The present study aims' - proxy Self-Mention).""
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'The present study aims to fill this gap' is a prototypical metadiscursive purpose statement found in academic Introductions. STRUCTURAL: It is explicitly text-reflexive ('The present study') and discourse-act reflexive ('aims to fill'). SCOPE: It has macro-scope, defining the goal of the entire thesis. CLASSIFICATION: It is classified as a Frame Marker (Interactive) because its primary function is to label the text's purpose and sequence the argument (moving from problem to solution). It exhibits Level 2 borderline features, functioning secondarily as an Endophoric Marker (referencing the 'gap' established in prior text) and a proxy Self-Mention (attributing agency to the study).""
+}
+```",success,gemini-3-pro-preview,3
+"Below, Figure 1.1 visualises this:","Moreover, Scacco (2011) analysed Obama’s radio address, but from a ritualistic rhetoric standpoint, and compared Obama’s addresses to that of Clinton’s to understand how they both projected their presidencies onto the public, again, not from a perspective of linguistics. Thus, there has been research on the radio address, but none from a strictly functional linguistic perspective. The present study aims to fill this gap within studies of this particular genre. The present study focusses on the Radio Addresses of President Barack Obama during his first term as President, 2009-2012. It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses); 2 healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses). Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address.","Genre: American Presidential Radio Address Sub-Genres of the American Presidential Radio Address: The Economy Health Care Man-Inflicted Tragedy Christmas Figure 1.1: Demonstrating Genre to Sub-genre This introductory chapter will first explain the functions of language, politics and discourse. Secondly, it will state reasons for studying the grammar of political discourse. Next, the main theoretical concepts of the study will be mapped out, from genre, cline of instantiation to context of situation. Fourth, the overall research objective will be addressed. This includes the research questions, the data, the analytical tool, the prospective results and the importance of the study. Finally, the structure of the overall thesis will be explained.",Introduction,AP1,test_restricted.csv,"{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Below, Figure 1.1 visualises this"",
+  ""context"": ""Introduction section, linking the preceding argument about generic structure variation to a visual diagram (Figure 1.1) that follows immediately."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Adverb (Below) + Noun Phrase (Figure 1.1) + Verb (visualises) + Demonstrative Pronoun (this)"",
+      ""syntactic_position"": ""Independent clause, sentence-initial"",
+      ""punctuation_cues"": ""Ends with colon (cataphoric signal)"",
+      ""grammatical_integration"": ""Fully integrated clause"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""Explicitly refers to a text artifact ('Figure 1.1'), its location ('Below'), and the preceding discourse content ('this'). The entire proposition is about the text itself.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Connects the preceding argument (referenced by 'this') to the specific visual aid that follows. Operates across the text-graphic boundary."",
+      ""removal_test_result"": ""If removed, the explicit directive to look at the figure and the explanation of the figure's function are lost. The connection between the argument and the image becomes implicit or broken."",
+      ""boundary_test_result"": ""The unit functions to bridge the verbal argument and the visual display. It does not organize the entire text (macro) but manages the immediate local relationship between modes (meso)."",
+      ""reasoning"": ""The scope is determined by the connection it establishes between the prior claim and the immediate visual evidence.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The sentence is entirely reflexive; it describes the text ('Figure 1.1') and its function ('visualises') rather than the external world. Its primary purpose is to direct reader attention to internal resources."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The function is to guide the reader through the text's resources and manage the flow of information from text to figure. It organizes the reading path."",
+      ""level_3_specific_type"": ""Endophoric Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicitly refers to another part of the text ('Figure 1.1') and directs the reader to it ('Below'). This is the prototypical function of Endophoric Markers.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""The expression is a prototypical Endophoric Marker with clear text-reflexive properties ('Figure 1.1', 'Below'). The function is unambiguously to direct attention to a visual aid.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence 'Below, Figure 1.1 visualises this' is a clear example of an Endophoric Marker. STRUCTURAL: It is entirely text-reflexive, using a location marker ('Below') and a text-artifact label ('Figure 1.1'). SCOPE: Meso-scope, as it bridges the preceding verbal argument and the following visual display. CLASSIFICATION: It is Interactive Metadiscourse because it guides the reader's navigation of the text. Specifically, it is an Endophoric Marker because it points to another location within the document. There is no ambiguity.""
+}",success,gemini-3-pro-preview,4
+"This introductory chapter will first explain the functions of language, politics and discourse.","The present study focusses on the Radio Addresses of President Barack Obama during his first term as President, 2009-2012. It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses);healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses). Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this: Genre: American Presidential Radio Address Sub-Genres of the American Presidential Radio Address: The Economy Health Care Man-Inflicted Tragedy Christmas Figure 1.1: Demonstrating Genre to Sub-genre","Secondly, it will state reasons for studying the grammar of political discourse. Next, the main theoretical concepts of the study will be mapped out, from genre, cline of instantiation to context of situation. Fourth, the overall research objective will be addressed. This includes the research questions, the data, the analytical tool, the prospective results and the importance of the study. Finally, the structure of the overall thesis will be explained. 1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8).",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""This introductory chapter will first explain"",
+  ""context"": ""Introduction section, roadmap paragraph outlining the chapter's structure following a figure and preceding further structural steps (Secondly, Next)."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Text-reflexive noun phrase ('This introductory chapter') + modal ('will') + sequencer ('first') + discourse verb ('explain')"",
+      ""syntactic_position"": ""Sentence-initial, main clause subject and verb"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated subject-verb structure"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive and Discourse-Act Reflexive"",
+        ""reflexivity_reasoning"": ""Refers explicitly to the text itself ('This introductory chapter') and the discourse act being performed ('explain').""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Frames the organization of the entire chapter by announcing the first step in a multi-part sequence."",
+      ""removal_test_result"": ""If removed, the propositional content (functions of language...) remains, but the explicit roadmap and structural sequencing are lost."",
+      ""boundary_test_result"": ""Functional reach extends to the whole chapter structure, setting up expectations for subsequent parts ('Secondly', 'Next')."",
+      ""reasoning"": ""The expression organizes the chapter's content hierarchy and announces the immediate discourse goal.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression functions to organize the discourse and guide the reader, not to convey propositional content about the world. It is strongly reflexive."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Primary function is to manage the information flow and help the reader navigate the text structure."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""It explicitly sequences the discourse ('first') and labels the text stage/purpose ('introductory chapter... explain'). Matches the definition of signaling text organization and stages.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical Frame Marker in a thesis introduction roadmap. High reflexivity and clear sequencing function leave no ambiguity.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'This introductory chapter will first explain' is a clear Interactive Frame Marker. Structurally, it combines text-reflexivity ('This introductory chapter') with discourse-act reflexivity ('explain') and sequencing ('first'). Functionally, it operates at a macro-scope to provide a roadmap for the chapter, distinguishing it from the propositional content (the functions of language) that follows. It is a standard convention in academic introductions to orient the reader.""
+}
+```",success,gemini-3-pro-preview,5
+"Next, the main theoretical concepts of the study will be mapped out, from genre, cline of instantiation to context of situation.","It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses); healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses). Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this: Genre: American Presidential Radio Address Sub-Genres of the American Presidential Radio Address: The Economy Health Care Man-Inflicted Tragedy Christmas Figure 1.1: Demonstrating Genre to Sub-genre This introductory chapter will first explain the functions of language, politics and discourse. Secondly, it will state reasons for studying the grammar of political discourse","Fourth, the overall research objective will be addressed. This includes the research questions, the data, the analytical tool, the prospective results and the importance of the study. Finally, the structure of the overall thesis will be explained. 1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8). All types of social activities are related to different contexts of situations, and language is needed to communicate according to the various contexts. Thus, the construction of language is dependent on the context in which it was produced. Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Next, the main theoretical concepts of the study will be mapped out"",
+  ""context"": ""Introduction section, outlining the chapter structure (step 3 of 4) and announcing the content of the upcoming section."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Sequence adverb 'Next' + Noun Phrase with text-reflexive modifier 'of the study' + Passive discourse verb phrase 'will be mapped out'"",
+      ""syntactic_position"": ""Sentence-initial main clause"",
+      ""punctuation_cues"": ""Comma after 'Next', comma after 'out' (before content list)"",
+      ""grammatical_integration"": ""Integrated clause"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive and Discourse-Act Reflexive"",
+        ""reflexivity_reasoning"": ""'of the study' refers to the text/research itself (Text-Reflexive). 'will be mapped out' refers to the discourse act of structuring/explaining the content (Discourse-Act Reflexive).""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Organizes the chapter structure by announcing the specific topic and function of the next section. It operates at the level of text organization, sequencing the third step in the introductory chapter."",
+      ""removal_test_result"": ""If removed, the explicit sequencing ('Next') and the framing of the upcoming content as a 'mapping out' of theoretical concepts would be lost. The list 'from genre...' would lack its structural introduction."",
+      ""boundary_test_result"": ""Stops before 'from', which introduces the specific content list (Stopping Rule 1: Stop at content specification phrases)."",
+      ""reasoning"": ""The expression functions to sequence and label a major text stage (the theoretical concepts section), giving it macro-scope over the chapter organization.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression is reflexive and functions primarily to organize the discourse (sequencing and announcing topic) rather than conveying propositional content about the world. It frames the subsequent content."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""The primary function is to guide the reader through the text's structure (sequencing and labeling stages), which is an Interactive function."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""It explicitly sequences the discourse ('Next') and labels the text stage/topic ('main theoretical concepts... will be mapped out'). This is a prototypical Frame Marker function (sequencing and topic announcement).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear case of a reflexive Frame Marker in a roadmap context. The stopping rule (before 'from') is unambiguous, and the function is clearly organizational.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'Next, the main theoretical concepts of the study will be mapped out' is a clear Frame Marker. Structurally, it contains the sequence adverb 'Next', the text-reflexive reference 'of the study', and the discourse verb 'mapped out'. Functionally, it operates at a MACRO-SCOPE level, organizing the chapter by announcing the third step in the roadmap. The unit ends before 'from', following Stopping Rule 1 (content specification). It is classified as Interactive Metadiscourse because it guides the reader through the text structure.""
+}
+```",success,gemini-3-pro-preview,6
+"Finally, the structure of the overall thesis will be explained.","Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation and that it is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this: Genre: American Presidential Radio Address Sub-Genres of the American Presidential Radio Address: The Economy Health Care Man-Inflicted Tragedy Christmas Figure 1.1: Demonstrating Genre to Sub-genre This introductory chapter will first explain the functions of language, politics and discourse. Secondly, it will state reasons for studying the grammar of political discourse. Next, the main theoretical concepts of the study will be mapped out, from genre, cline of instantiation to context of situation. Fourth, the overall research objective will be addressed. This includes the research questions, the data, the analytical tool, the prospective results and the importance of the study.","1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8). All types of social activities are related to different contexts of situations, and language is needed to communicate according to the various contexts. Thus, the construction of language is dependent on the context in which it was produced. Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment. Further, Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as aprocess.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Finally"",
+  ""expression_2"": ""the structure of the overall thesis will be explained"",
+  ""context"": ""Introduction section, concluding a list of research objectives (following 'Fourth...') and outlining the thesis organization before the next section."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Sequencing adverb"",
+      ""syntactic_position"": ""Sentence-initial"",
+      ""punctuation_cues"": ""Comma-bounded"",
+      ""grammatical_integration"": ""Loosely attached"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Does not refer to text or discourse act explicitly; signals sequential relationship in the enumeration.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Sequences the final item in a list of research objectives/steps initiated in previous sentences."",
+      ""removal_test_result"": ""Sequence and closure of the list are lost; relationship to previous 'Fourth' point becomes unclear."",
+      ""boundary_test_result"": ""Connects current sentence to the preceding list structure."",
+      ""reasoning"": ""Operates across the paragraph to close the enumeration sequence.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes discourse flow by signaling the end of a sequence. No propositional content."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides reader through the text structure (sequencing)."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicitly sequences the discourse (sequencing sub-type of Frame Marker).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical sequencing frame marker.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""if expression_2"": {
+    ""analysis_2"": {
+      ""dimension_1_observable_realization"": {
+        ""Lexico-grammatical_form"": ""Noun phrase (Text-Reflexive) + Passive verb (Discourse-Act Reflexive)"",
+        ""syntactic_position"": ""Main clause (Subject + Verb)"",
+        ""punctuation_cues"": ""None"",
+        ""grammatical_integration"": ""Fully integrated"",
+        ""reflexivity"": {
+          ""is_reflexive"": true,
+          ""reflexivity_type"": ""Text-Reflexive and Discourse-Act Reflexive"",
+          ""reflexivity_reasoning"": ""'the structure of the overall thesis' refers to the text itself; 'will be explained' refers to the discourse act of explaining that structure.""
+        }
+      },
+      ""dimension_2_functional_scope"": {
+        ""classification"": ""MACRO-SCOPE"",
+        ""reach_description"": ""Announces the organization of the entire document ('overall thesis')."",
+        ""removal_test_result"": ""The explicit announcement of the text's structure is lost."",
+        ""boundary_test_result"": ""Refers to the whole thesis structure."",
+        ""reasoning"": ""Global scope due to reference to 'overall thesis' and function of outlining the document.""
+      },
+      ""dimension_3_metadiscourse_classification"": {
+        ""level_1_primary_classification"": ""METADISCOURSE"",
+        ""level_1_reasoning"": ""Reflexive statement about the text's organization. Content is the text itself, not the world."",
+        ""level_2_functional_category"": ""INTERACTIVE"",
+        ""level_2_reasoning"": ""Organizes reader understanding of the text's architecture."",
+        ""level_3_specific_type"": ""Frame Marker"",
+        ""level_3_borderline_features"": false,
+        ""level_3_reasoning"": ""Labels and announces text stages/organization. Prototypical roadmap statement.""
+      },
+      ""confidence_ratings"": {
+        ""structural_realization"": 5,
+        ""functional_scope"": 5,
+        ""metadiscourse_type"": 5,
+        ""overall_confidence"": 5,
+        ""confidence_justification"": ""Clear reflexive frame marker announcing text structure.""
+      },
+      ""borderline_classification"": {
+        ""level_1_borderline_md_propositional"": {
+          ""is_level_1_borderline"": false,
+          ""dominant_function"": null,
+          ""secondary_function"": null,
+          ""level_1_borderline_justification"": null
+        },
+        ""level_2_borderline_md_features"": {
+          ""is_level_2_borderline"": false,
+          ""primary_md_type"": null,
+          ""secondary_md_type"": null,
+          ""tertiary_md_type"": null,
+          ""relative_strength"": null,
+          ""level_2_borderline_justification"": null
+        }
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains two distinct metadiscourse units. 'Finally' is a sequencing Frame Marker closing the list of objectives. 'The structure of the overall thesis will be explained' is a reflexive Frame Marker (roadmap) announcing the organization of the document. Both are Interactive, serving to guide the reader through the text's structure. High confidence due to clear reflexivity and standard sequencing cues.""
+}
+```",success,gemini-3-pro-preview,7
+"Further, Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as a process.","1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8). All types of social activities are related to different contexts of situations, and language is needed to communicate according to the various contexts. Thus, the construction of language is dependent on the context in which it was produced. Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment. Further, Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as aprocess.","This study stresses the importance of language, grammar, and the construction thereof within the context of political discourse. The term discourse may be described as “anything beyond a clause” (Schiffrin et al 2001:1). De Beaugrande (Rankema 2004: 49-50) has identified seven criteria for textuality: (1) cohesion, (2) coherence, (3) intentionality, (4) acceptability, (5) informativeness, (6) situationailty, (7) intertextuality. Further, political discourse can be defined as discourse produced by actors or authors that commonly include politicians or political institutions (van Dijk 1997: 12). According to van Dijk (2008: 90), political discourse includes “members of more powerful social groups and institutions, and especially their leaders, have more or less exclusive access to and control over, one or more types of public discourse”.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Further"",
+  ""expression_2"": ""Hasan (2001: 8) maintains that"",
+  ""expression_3"": ""first"",
+  ""context"": ""Introduction section, discussing the definition and importance of context in language, citing scholarly authorities."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Additive connective adverb"",
+      ""syntactic_position"": ""Sentence-initial"",
+      ""punctuation_cues"": ""Comma-bounded"",
+      ""grammatical_integration"": ""Loosely attached"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Signals additive semantic relationship between discourse segments; does not refer to text or discourse act.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Connects current sentence (Hasan's view) to preceding argument about environment/context."",
+      ""removal_test_result"": ""Propositional content remains, but the additive link to the previous argument is lost."",
+      ""boundary_test_result"": ""Operates across sentence boundaries to link two related claims."",
+      ""reasoning"": ""Standard meso-scope transition connecting the current proposition to the immediately preceding discourse.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes discourse flow by signaling addition; removal leaves content but breaks coherence."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides reader through the logical progression of the argument."",
+      ""level_3_specific_type"": ""Transition"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Signals an additive relationship to prior content.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical sentence-initial transition marker.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""analysis_2"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Proper noun (citation) + reporting verb + complementizer"",
+      ""syntactic_position"": ""Sentence-initial subject + verb"",
+      ""punctuation_cues"": ""None (integrated)"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Refers to external source and their assertion, not the current text or author's discourse act.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Attributes the specific following proposition (context is important...) to a source."",
+      ""removal_test_result"": ""The claim 'context is important...' remains, but the attribution to Hasan is lost."",
+      ""boundary_test_result"": ""Stops after 'that' (Rule 6: obligatory functional marker)."",
+      ""reasoning"": ""Scope is limited to framing the immediate proposition as a citation.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Attributes content to a source rather than asserting it directly; manages intertextuality."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader by establishing the source of the information."",
+      ""level_3_specific_type"": ""Evidential"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicit attribution to an external author (Hasan).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear evidential structure with reporting verb.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""analysis_3"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Ordinal numeral/sequencer"",
+      ""syntactic_position"": ""Integrated within clause"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""Refers to the internal enumeration structure ('two ways') of the text.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Sequences the first item in the list of 'two ways' within the sentence."",
+      ""removal_test_result"": ""The content remains, but the explicit ordering/sequencing is lost."",
+      ""boundary_test_result"": ""Stops after 'first'."",
+      ""reasoning"": ""Local scope organizing the immediate list structure.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes the text structure (sequencing) rather than adding propositional content."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Helps reader navigate the internal structure of the argument."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Sequences discourse items (first, then).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Standard sequencing frame marker.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The text contains three distinct metadiscourse markers. 'Further' is a Transition (meso-scope) connecting the sentence to the previous context. 'Hasan (2001: 8) maintains that' is an Evidential (micro-scope) attributing the claim to a source; the obligatory 'that' is included per Rule 6. 'First' is a Frame Marker (micro-scope) sequencing the list of 'two ways' mentioned in the proposition. All markers are clear examples of Interactive metadiscourse with no borderline ambiguity.""
+}
+```",success,gemini-3-pro-preview,8
+Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment.,"1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8). All types of social activities are related to different contexts of situations, and language is needed to communicate according to the various contexts. Thus, the construction of language is dependent on the context in which it was produced.","Further, Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as a process. This study stresses the importance of language, grammar, and the construction thereof within the context of political discourse. The term discourse may be described as “anything beyond a clause” (Schiffrin et al 2001:1). De Beaugrande (Rankema 2004: 49-50) has identified seven criteria for textuality: (1) cohesion, (2) coherence, (3) intentionality, (4) acceptability, (5) informativeness, (6) situationailty, (7) intertextuality. Further, political discourse can be defined as discourse produced by actors or authors that commonly include politicians or political institutions (van Dijk 1997: 12). According to van Dijk (2008: 90), political discourse includes “members of more powerful social groups and institutions, and especially their leaders, have more or less exclusive access to and control over, one or more types of public discourse”.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Halliday (2009:56) explains that"",
+  ""context"": ""Introduction section, establishing theoretical background regarding language and context."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Proper noun (citation) + reporting verb 'explains' + complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial, subject-verb position"",
+      ""punctuation_cues"": ""None (integrated)"",
+      ""grammatical_integration"": ""Fully integrated main clause introducing complement"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Source-oriented citation. Refers to external author (Halliday), not the current text or author.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Attributes the immediate proposition (language functions) to a specific source."",
+      ""removal_test_result"": ""Propositional content ('language provides the means...') remains, but attribution and intertextual link are lost."",
+      ""boundary_test_result"": ""Stops at complementizer 'that' (Rule 6). Scope covers the specific claim in the complement clause."",
+      ""reasoning"": ""Operates locally to attribute a single claim to an external authority.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Function is to manage the source of information and build intertextuality, not to convey the content itself."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader by establishing evidentiary support and linking to external literature."",
+      ""level_3_specific_type"": ""Evidential"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicit reference to an external source (Halliday) to support the argument.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical evidential marker with clear boundaries and function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression is a clear Evidential marker. Structurally, it uses a standard citation pattern with a reporting verb. It is not reflexive as it refers to an external source. The scope is micro, attributing the specific following proposition. It functions interactively to guide the reader's understanding of the theoretical basis.""
+}
+```",success,gemini-3-pro-preview,9
+"Hasan (2001: 8) maintains that context (of situation) is important in two ways, first in shaping language as a system and then highlighting language as a process.","1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8). All types of social activities are related to different contexts of situations, and language is needed to communicate according to the various contexts. Thus, the construction of language is dependent on the context in which it was produced. Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment.","This study stresses the importance of language, grammar, and the construction thereof within the context of political discourse. The term discourse may be described as “anything beyond a clause” (Schiffrin et al 2001:1). De Beaugrande (Rankema 2004: 49-50) has identified seven criteria for textuality: (1) cohesion, (2) coherence, (3) intentionality, (4) acceptability, (5) informativeness, (6) situationailty, (7) intertextuality. Further, political discourse can be defined as discourse produced by actors or authors that commonly include politicians or political institutions (van Dijk 1997: 12). According to van Dijk (2008: 90), political discourse includes “members of more powerful social groups and institutions, and especially their leaders, have more or less exclusive access to and control over, one or more types of public discourse”.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Hasan (2001: 8) maintains that"",
+  ""expression_2"": ""first"",
+  ""expression_3"": ""then"",
+  ""context"": ""Introduction section, citing scholars (Halliday, Hasan) to establish the theoretical background regarding language and context."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Proper noun + citation + reporting verb 'maintains' + obligatory complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial subject and verb phrase"",
+      ""punctuation_cues"": ""None (integrated)"",
+      ""grammatical_integration"": ""Fully integrated main clause introducing a complement"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Source-oriented citation. Refers to an external entity (Hasan) and their action, not the current text or author.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Attributes the specific proposition regarding the two ways context is important to an external source."",
+      ""removal_test_result"": ""If removed, the claim 'context is important in two ways...' remains as a bare assertion, losing its attribution and authority."",
+      ""boundary_test_result"": ""Stops at 'that' (Rule 6). The scope covers the immediate reported proposition."",
+      ""reasoning"": ""Standard evidential scope, attributing a specific claim to a source.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Manages the source of information and guides the reader's assessment of the content's authority. Distinct from the propositional content (the importance of context)."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader to the source of the information and integrates external knowledge into the discourse."",
+      ""level_3_specific_type"": ""Evidential"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicitly attributes information to an external source (Hasan).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical evidential marker with clear boundaries and function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""if expression_2"": {
+    ""analysis_2"": {
+      ""dimension_1_observable_realization"": {
+        ""Lexico-grammatical_form"": ""Ordinal adverb"",
+        ""syntactic_position"": ""Medial, introducing a list item"",
+        ""punctuation_cues"": ""None"",
+        ""grammatical_integration"": ""Integrated into the complement clause"",
+        ""reflexivity"": {
+          ""is_reflexive"": true,
+          ""reflexivity_type"": ""Discourse-Act Reflexive"",
+          ""reflexivity_reasoning"": ""Refers to the act of sequencing points within the discourse.""
+        }
+      },
+      ""dimension_2_functional_scope"": {
+        ""classification"": ""MICRO-SCOPE"",
+        ""reach_description"": ""Sequences the first item ('shaping language as a system') within the reported proposition."",
+        ""removal_test_result"": ""If removed, the sequential relationship between the two ways is less explicit."",
+        ""boundary_test_result"": ""Applies to the immediate phrase following it."",
+        ""reasoning"": ""Local sequencing within a sentence.""
+      },
+      ""dimension_3_metadiscourse_classification"": {
+        ""level_1_primary_classification"": ""METADISCOURSE"",
+        ""level_1_reasoning"": ""Organizes the structure of the argument (sequencing) rather than adding propositional content."",
+        ""level_2_functional_category"": ""INTERACTIVE"",
+        ""level_2_reasoning"": ""Helps the reader navigate the internal structure of the claim."",
+        ""level_3_specific_type"": ""Frame Marker"",
+        ""level_3_borderline_features"": false,
+        ""level_3_reasoning"": ""Signals the sequence of discourse items (1 of 2).""
+      },
+      ""confidence_ratings"": {
+        ""structural_realization"": 5,
+        ""functional_scope"": 5,
+        ""metadiscourse_type"": 5,
+        ""overall_confidence"": 5,
+        ""confidence_justification"": ""Clear sequencing marker.""
+      },
+      ""borderline_classification"": {
+        ""level_1_borderline_md_propositional"": {
+          ""is_level_1_borderline"": false,
+          ""dominant_function"": null,
+          ""secondary_function"": null,
+          ""level_1_borderline_justification"": null
+        },
+        ""level_2_borderline_md_features"": {
+          ""is_level_2_borderline"": false,
+          ""primary_md_type"": null,
+          ""secondary_md_type"": null,
+          ""tertiary_md_type"": null,
+          ""relative_strength"": null,
+          ""level_2_borderline_justification"": null
+        }
+      }
+    }
+  },
+  ""if expression_3"": {
+    ""analysis_3"": {
+      ""dimension_1_observable_realization"": {
+        ""Lexico-grammatical_form"": ""Adverb"",
+        ""syntactic_position"": ""Medial, following 'and'"",
+        ""punctuation_cues"": ""None"",
+        ""grammatical_integration"": ""Integrated"",
+        ""reflexivity"": {
+          ""is_reflexive"": true,
+          ""reflexivity_type"": ""Discourse-Act Reflexive"",
+          ""reflexivity_reasoning"": ""Refers to the act of sequencing the second point.""
+        }
+      },
+      ""dimension_2_functional_scope"": {
+        ""classification"": ""MICRO-SCOPE"",
+        ""reach_description"": ""Sequences the second item ('highlighting language as a process')."",
+        ""removal_test_result"": ""If removed, the sequence is lost, though 'and' provides some connection."",
+        ""boundary_test_result"": ""Applies to the immediate phrase."",
+        ""reasoning"": ""Local sequencing.""
+      },
+      ""dimension_3_metadiscourse_classification"": {
+        ""level_1_primary_classification"": ""METADISCOURSE"",
+        ""level_1_reasoning"": ""Organizes the text flow."",
+        ""level_2_functional_category"": ""INTERACTIVE"",
+        ""level_2_reasoning"": ""Guides reader through the list structure."",
+        ""level_3_specific_type"": ""Frame Marker"",
+        ""level_3_borderline_features"": false,
+        ""level_3_reasoning"": ""Signals the next step in the sequence.""
+      },
+      ""confidence_ratings"": {
+        ""structural_realization"": 5,
+        ""functional_scope"": 5,
+        ""metadiscourse_type"": 5,
+        ""overall_confidence"": 5,
+        ""confidence_justification"": ""Clear sequencing marker.""
+      },
+      ""borderline_classification"": {
+        ""level_1_borderline_md_propositional"": {
+          ""is_level_1_borderline"": false,
+          ""dominant_function"": null,
+          ""secondary_function"": null,
+          ""level_1_borderline_justification"": null
+        },
+        ""level_2_borderline_md_features"": {
+          ""is_level_2_borderline"": false,
+          ""primary_md_type"": null,
+          ""secondary_md_type"": null,
+          ""tertiary_md_type"": null,
+          ""relative_strength"": null,
+          ""level_2_borderline_justification"": null
+        }
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains three distinct metadiscourse markers. (1) 'Hasan (2001: 8) maintains that' is a clear Evidential, attributing the claim to an external source. It is non-reflexive but functionally interactive. (2) 'first' and (3) 'then' are Frame Markers (sequencing) that organize the internal structure of the reported proposition. They are discourse-act reflexive as they refer to the ordering of points. All operate at a micro-scope level within the sentence.""
+}
+```",success,gemini-3-pro-preview,10
+"Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation.","Oddo delved into the language of the addresses but did not contain any linguistic analysis especially not to mention from an SFL perspective. Moreover, Scacco (2011) analysed Obama’s radio address, but from a ritualistic rhetoric standpoint, and compared Obama’s addresses to that of Clinton’s to understand how they both projected their presidencies onto the public, again, not from a perspective of linguistics. Thus, there has been research on the radio address, but none from a strictly functional linguistic perspective. The present study aims to fill this gap within studies of this particular genre. The present study focusses on the Radio Addresses of President Barack Obama during his first term as President, 2009-2012. It concentrates on 4 different contexts of situations (repertoires) of the radio in order to investigate the possibility of sub-genres within this genre: the economy (4 addresses); healthcare (4 addresses); man-inflicted tragedies (4 addresses); and Christmas (4 addresses).","It is possible to establish a sub-genre within the Radio Address. Below, Figure 1.1 visualises this: Genre: American Presidential Radio Address Sub-Genres of the American Presidential Radio Address: The Economy Health Care Man-Inflicted Tragedy Christmas Figure 1.1: Demonstrating Genre to Sub-genre This introductory chapter will first explain the functions of language, politics and discourse. Secondly, it will state reasons for studying the grammar of political discourse. Next, the main theoretical concepts of the study will be mapped out, from genre, cline of instantiation to context of situation. Fourth, the overall research objective will be addressed. This includes the research questions, the data, the analytical tool, the prospective results and the importance of the study. Finally, the structure of the overall thesis will be explained.",Introduction,AP1,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""Ultimately"",
+  ""expression_2"": ""the study demonstrates that"",
+  ""expression_3"": ""do"",
+  ""context"": ""Introduction section, summarizing the main finding regarding the variation of generic structures in radio addresses."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Adverb"",
+      ""syntactic_position"": ""Sentence-initial"",
+      ""punctuation_cues"": ""Comma-bounded"",
+      ""grammatical_integration"": ""Loosely attached"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Does not refer to the text or discourse act; signals a logical conclusion/sequence.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Signals the conclusion/summary of the preceding argument about sub-genres."",
+      ""removal_test_result"": ""Propositional content remains, but the signal that this is the final/concluding point of the logic is lost."",
+      ""boundary_test_result"": ""Operates over the preceding paragraph's logic to introduce the summary claim."",
+      ""reasoning"": ""Connects the current summary statement to the preceding list of findings.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes the discourse flow by signaling the final stage/conclusion of the argument."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader through the text's logical structure (sequencing)."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Signals the sequence/stage of the discourse (conclusion/summary). 'Ultimately' functions here to label the final outcome of the reasoning.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear structural realization and function. Slight ambiguity between Transition (consequence) and Frame Marker (sequence), but position in Intro favors Frame Marker.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""analysis_2"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Noun phrase (Text-Reflexive) + Reporting verb + Complementizer"",
+      ""syntactic_position"": ""Subject + Verb + Complementizer (Main clause)"",
+      ""punctuation_cues"": ""None (Integrated)"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""'the study' refers to the text itself; 'demonstrates' refers to the discourse act of proving/showing.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MACRO-SCOPE"",
+      ""reach_description"": ""Attributes the finding to the entire thesis ('the study')."",
+      ""removal_test_result"": ""Specific proposition ('generic structures vary...') remains, but the attribution to the study and the strength of the demonstration are lost."",
+      ""boundary_test_result"": ""Refers to the whole document's contribution."",
+      ""reasoning"": ""The agent is the study itself, framing the global finding of the research.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Reflexive expression organizing the text by announcing its findings."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Primary function is to frame the finding as a product of the text."",
+      ""level_3_specific_type"": ""Frame Marker"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""Primary: Frame Marker (announces text outcomes). Secondary: Booster ('demonstrates' implies high certainty).""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""Clear reflexivity and scope. Classification is Frame Marker due to text-reflexivity, but 'demonstrates' adds strong interactional (Booster) flavor.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Frame Marker"",
+        ""secondary_md_type"": ""Booster"",
+        ""tertiary_md_type"": null,
+        ""relative_strength"": ""PRIMARY (Frame Marker) dominant as it structures the text's contribution; SECONDARY (Booster) moderate due to the verb 'demonstrates'."",
+        ""level_2_borderline_justification"": ""The expression functions to organize the text by labeling the study's output (Frame Marker), but the choice of 'demonstrates' (vs 'suggests') simultaneously boosts certainty (Booster).""
+      }
+    }
+  },
+  ""analysis_3"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Auxiliary verb (Emphatic)"",
+      ""syntactic_position"": ""Pre-verbal"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Modifies the force of the proposition.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Emphasizes the specific claim that structures 'do vary'."",
+      ""removal_test_result"": ""Proposition remains ('structures vary'), but the emphatic stress is lost."",
+      ""boundary_test_result"": ""Limited to the verb phrase it modifies."",
+      ""reasoning"": ""Local emphasis on the truth value of the predicate.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Modulates the writer's stance (certainty/emphasis) toward the proposition."",
+      ""level_2_functional_category"": ""INTERACTIONAL"",
+      ""level_2_reasoning"": ""Expresses conviction/emphasis."",
+      ""level_3_specific_type"": ""Booster"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Emphatic 'do' is a prototypical booster used to strengthen the force of a claim.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear instance of emphatic 'do' functioning as a booster.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains three distinct metadiscourse markers. 'Ultimately' is a Frame Marker (Interactive) signaling the conclusion of the argument sequence. 'The study demonstrates that' is a Text-Reflexive Frame Marker (Interactive) announcing the global finding, with a secondary Booster function due to the strong verb 'demonstrates'. 'Do' (in 'do vary') is a Booster (Interactional) providing emphatic stress on the validity of the claim. The analysis highlights the combination of organizational framing and stance-taking in the thesis introduction.""
+}
+```",success,gemini-3-pro-preview,11
+It is possible to establish a sub-genre within the Radio Address.,"1.2 The Function of Language, Politics, and Discourse The function and connection between language and any social activity is inherent, since “the nature of language has to be functional since language grows out of languaging and languaging itself is a form of social life” (Hasan 2001: 4). Social activities encompass many diverse events both written and spoken, such as greetings, cards, service encounters, casual conversations, arguments, telephone enquiries, instructions, lectures, debates, plays, jokes, or games (Martin and Rose 2007: 8). All types of social activities are related to different contexts of situations, and language is needed to communicate according to the various contexts. Thus, the construction of language is dependent on the context in which it was produced. Halliday (2009:56) explains that language provides the means by which we act as well as reflect on the environment. Ultimately, the study demonstrates that the generic structures of these addresses do vary according to context of situation.","Below, Figure 1.1 visualises this: Genre: American Presidential Radio Address Sub-Genres of the American Presidential Radio Address: The Economy Health Care Man-Inflicted Tragedy Christmas Figure 1.1: Demonstrating Genre to Sub-genre This introductory chapter will first explain the functions of language, politics and discourse. Secondly, it will state reasons for studying the grammar of political discourse. Next, the main theoretical concepts of the study will be mapped out, from genre, cline of instantiation to context of situation. Fourth, the overall research objective will be addressed. This includes the research questions, the data, the analytical tool, the prospective results and the importance of the study. Finally, the structure of the overall thesis will be explained.",Introduction,AP1,test_restricted.csv,"{
+  ""thesis_code"": ""AP1"",
+  ""section"": ""Introduction"",
+  ""expression_1"": ""It is possible to"",
+  ""context"": ""Introduction section, following a sentence where the study demonstrates that generic structures vary. This sentence introduces the feasibility of a specific classification (sub-genre) which is visualized in the subsequent figure."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Impersonal construction (Dummy 'It' + copula 'is' + adjective 'possible' + infinitival marker 'to')"",
+      ""syntactic_position"": ""Sentence-initial, main clause structure"",
+      ""punctuation_cues"": ""None (integrated)"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""The expression uses a dummy subject 'It' and does not explicitly refer to the text, the discourse act, or the participants. It modifies the modality of the following predicate.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Modifies the modality of the specific proposition 'establish a sub-genre'."",
+      ""removal_test_result"": ""If removed ('Establish a sub-genre...'), the statement becomes an imperative or a factual assertion ('A sub-genre is established'), losing the nuance of feasibility and epistemic caution."",
+      ""boundary_test_result"": ""The scope is limited to the immediate claim of establishing a sub-genre. It does not organize the broader text sections."",
+      ""reasoning"": ""The operator 'possible' functions locally to modulate the stance towards the act of establishing a sub-genre.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""BORDERLINE_MD_PROPOSITIONAL"",
+      ""level_1_reasoning"": ""The expression is borderline because 'possible' can be interpreted as dynamic modality (stating the factual feasibility of the act, which is propositional content) or epistemic modality (expressing the writer's cautious stance/judgment, which is metadiscourse). Given the context of a thesis introduction presenting a research outcome ('the study demonstrates...'), the rhetorical function of positioning the claim as a reasonable possibility is dominant."",
+      ""level_2_functional_category"": ""INTERACTIONAL"",
+      ""level_2_reasoning"": ""The primary function is to express the writer's stance (epistemic/dynamic judgment) towards the proposition, rather than to organize the text structure."",
+      ""level_3_specific_type"": ""Hedge"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Functions as a Hedge by withholding full commitment to the assertion. Instead of stating 'We establish a sub-genre' (categorical), the writer uses 'It is possible to establish' (tentative/feasible), opening space for the reader's acceptance of the classification.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""High confidence in structure and scope. Slightly lower confidence in type due to the inherent ambiguity between dynamic modality (propositional feasibility) and epistemic modality (metadiscursive hedge) in academic writing, though the hedging function is standard for 'possible'.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": true,
+        ""dominant_function"": ""METADISCOURSE"",
+        ""secondary_function"": ""PROPOSITIONAL"",
+        ""level_1_borderline_justification"": ""The expression 'It is possible to' sits on the boundary of describing a factual capability (propositional: 'the data allows this') and expressing a rhetorical stance (metadiscourse: 'I tentatively assert this'). In the context of introducing a classification scheme derived from the study, the stance-taking function (Hedge) is dominant as it manages the writer's claim to authority.""
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'It is possible to' is identified as a Hedge (Interactional Metadiscourse). Structurally, it is an impersonal construction with the obligatory infinitival marker 'to'. Functionally, it operates at a micro-scope level, modifying the specific claim of establishing a sub-genre. It is classified as borderline Level 1 because it blends dynamic modality (factual feasibility) with epistemic modality (writer's caution), but the metadiscursive function of modulating stance is dominant in this rhetorical context. It is not reflexive.""
+}",success,gemini-3-pro-preview,12
+"The vocabulary size of EPA Diacorpus and its sections was derived using a program suite largely acknowledged in linguistics, WordSmith Tools 5 (Scott 2007).","In view of the findings of the preliminary analysis, it was stipulated to concentrate the exploration of the EPA Diacorpus on two main linguistic aspects: diachronic lexical variation and diachronic structural variation, to be carried out, respectively, in chapter 8 and 9 of this thesis. With regard to the organization of this chapter, in the following section (7.1) the results of the preliminary analysis are reported. More specifically, an overview of general statistics concerning  the EPA Diacorpus is provided in sub-section 7.1.1,  along with a brief interpretation of them, while an account of the procedures followed for the pilot study and related results are provided in sub-section 7.1.2. Section 7.3 describes the methods applied to identify lexical items worth of interest in terms of diachronic lexical variation within the corpus and the subsequent procedures used to analyse them. Eventually, the methodologies taken into account to detect the diachronic structural development of EPAs are described in section 7.4. 7.1 Preliminary analysis 7.1.1 EPA Diacorpus: general statistics Information regarding vocabulary size, as well as the distribution of words, is very important when exploring corpora.","A first bunch of statistics extracted from the EPA Diacorpus is provided by the following table (tab.7.1). The columns respectively report: the number of EPAs, the number of tokens, the number of word types, TTR values, STTR values, and mean sentence length expressed in number of words. Horizontally reading, values are distinguished according to the provenance of EPAs – US and UK – and periods – 1950, 1960, 1970, 1980, 1990, 2000 –. As shown by table 7.1, the EPA Diacorpus amounts to 299,138 tokens and 20,384 word types. Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well. Conversely, a word type is a single word form; when counting types, therefore, multiple occurrences are not taken into consideration. In order to gain more information about the vocabulary variation, the ratio of different word types to tokens, also called type/token ratio (TTR), has also been calculated. A high TTR indicates a large amount of lexical variation, while a low TTR indicates a limited lexical variation.",Method,AP2,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP2"",
+  ""section"": ""Method"",
+  ""expression_1"": ""largely"",
+  ""expression_2"": ""(Scott 2007)"",
+  ""context"": ""Method section, describing the software tool used for vocabulary analysis and validating its choice."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Adverb of degree/intensity"",
+      ""syntactic_position"": ""Pre-modifying adjective in reduced relative clause"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Modifies the adjective 'acknowledged', referring to the degree of acceptance, not to the text or discourse act.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Intensifies the specific evaluative claim ('acknowledged') regarding the program suite."",
+      ""removal_test_result"": ""If removed ('a program suite acknowledged in linguistics'), the propositional description remains, but the emphatic force and degree of validation are reduced."",
+      ""boundary_test_result"": ""Operates locally on the adjective 'acknowledged'."",
+      ""reasoning"": ""The scope is limited to boosting the force of the immediate evaluative descriptor.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Functions to boost the writer's stance regarding the validity of the chosen method. While it has propositional meaning (degree), its primary function here is rhetorical validation (Interactional)."",
+      ""level_2_functional_category"": ""INTERACTIONAL"",
+      ""level_2_reasoning"": ""Expresses stance (certainty/intensity) toward the content (the tool's status) to build credibility."",
+      ""level_3_specific_type"": ""Booster"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Intensifies the force of the claim. 'Largely' functions as a booster emphasizing the high degree of consensus/acknowledgment.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""Clear structural identification. Classification as Booster is consistent with function of intensifying validity, though 'largely' can also be seen as propositional degree (Level 1 borderline potential).""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""if expression_2"": {
+    ""analysis_2"": {
+      ""dimension_1_observable_realization"": {
+        ""Lexico-grammatical_form"": ""Parenthetical citation (Proper noun + Year)"",
+        ""syntactic_position"": ""Post-position, parenthetical"",
+        ""punctuation_cues"": ""Parentheses"",
+        ""grammatical_integration"": ""Loosely attached (appositive/parenthetical)"",
+        ""reflexivity"": {
+          ""is_reflexive"": false,
+          ""reflexivity_type"": null,
+          ""reflexivity_reasoning"": ""Refers to an external source/entity, not the text itself or the discourse act.""
+        }
+      },
+      ""dimension_2_functional_scope"": {
+        ""classification"": ""MICRO-SCOPE"",
+        ""reach_description"": ""Attributes the specific tool (WordSmith Tools 5) to its source."",
+        ""removal_test_result"": ""If removed, the attribution to the specific source is lost, though the tool name remains."",
+        ""boundary_test_result"": ""Operates locally to attribute the preceding noun phrase."",
+        ""reasoning"": ""Scope is limited to providing the source for the specific element mentioned.""
+      },
+      ""dimension_3_metadiscourse_classification"": {
+        ""level_1_primary_classification"": ""METADISCOURSE"",
+        ""level_1_reasoning"": ""Standard Evidential function: attributes information to an external source to establish intertextual validity."",
+        ""level_2_functional_category"": ""INTERACTIVE"",
+        ""level_2_reasoning"": ""Guides the reader to the source of the information/tool. Manages the information flow by linking to external evidence."",
+        ""level_3_specific_type"": ""Evidential"",
+        ""level_3_borderline_features"": false,
+        ""level_3_reasoning"": ""Explicit reference to an external source (Scott 2007). Prototypical Evidential marker.""
+      },
+      ""confidence_ratings"": {
+        ""structural_realization"": 5,
+        ""functional_scope"": 5,
+        ""metadiscourse_type"": 5,
+        ""overall_confidence"": 5,
+        ""confidence_justification"": ""Prototypical Evidential marker (citation). No ambiguity.""
+      },
+      ""borderline_classification"": {
+        ""level_1_borderline_md_propositional"": {
+          ""is_level_1_borderline"": false,
+          ""dominant_function"": null,
+          ""secondary_function"": null,
+          ""level_1_borderline_justification"": null
+        },
+        ""level_2_borderline_md_features"": {
+          ""is_level_2_borderline"": false,
+          ""primary_md_type"": null,
+          ""secondary_md_type"": null,
+          ""tertiary_md_type"": null,
+          ""relative_strength"": null,
+          ""level_2_borderline_justification"": null
+        }
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains two distinct metadiscourse elements. 'Largely' functions as a Booster (Interactional), intensifying the evaluative adjective 'acknowledged' to validate the methodological choice by emphasizing community consensus. '(Scott 2007)' is a clear Evidential (Interactive), attributing the tool to its source. Both elements serve to establish the credibility of the methodology.""
+}
+```",success,gemini-3-pro-preview,13
+"The EPA Diacorpus amounts to 299,138 tokens and 20,384 word types.","7.1 Preliminary analysis 7.1.1 EPA Diacorpus: general statistics Information regarding vocabulary size, as well as the distribution of words, is very important when exploring corpora. The vocabulary size of EPA Diacorpus and its sections was derived using a program suite largely acknowledged in linguistics, WordSmith Tools 5 (Scott 2007). A first bunch of statistics extracted from the EPA Diacorpus is provided by the following table (tab.7.1). The columns respectively report: the number of EPAs, the number of tokens, the number of word types, TTR values, STTR values, and mean sentence length expressed in number of words. Horizontally reading, values are distinguished according to the provenance of EPAs – US and UK – and periods – 1950, 1960, 1970, 1980, 1990, 2000 –.","Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well. Conversely, a word type is a single word form; when counting types, therefore, multiple occurrences are not taken into consideration. In order to gain more information about the vocabulary variation, the ratio of different word types to tokens, also called type/token ratio (TTR), has also been calculated. A high TTR indicates a large amount of lexical variation, while a low TTR indicates a limited lexical variation. It has to be noted that larger corpora give lower values for TTR; therefore, it is better to consider the standardised type/token ratio (STTR), “calculated for the first 1,000 running words, then calculated afresh for the next 1,000, and so on to the end of your text or corpus” (Scott 2007).",Method,AP2,test_restricted.csv,,failed,gemini-3-pro-preview,14
+"Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well.","7.1 Preliminary analysis 7.1.1 EPA Diacorpus: general statistics Information regarding vocabulary size, as well as the distribution of words, is very important when exploring corpora. The vocabulary size of EPA Diacorpus and its sections was derived using a program suite largely acknowledged in linguistics, WordSmith Tools 5 (Scott 2007). A first bunch of statistics extracted from the EPA Diacorpus is provided by the following table (tab.7.1). The columns respectively report: the number of EPAs, the number of tokens, the number of word types, TTR values, STTR values, and mean sentence length expressed in number of words. Horizontally reading, values are distinguished according to the provenance of EPAs – US and UK – and periods – 1950, 1960, 1970, 1980, 1990, 2000 –. The EPA Diacorpus amounts to 299,138 tokens and 20,384 word types.","Conversely, a word type is a single word form; when counting types, therefore, multiple occurrences are not taken into consideration. In order to gain more information about the vocabulary variation, the ratio of different word types to tokens, also called type/token ratio (TTR), has also been calculated. A high TTR indicates a large amount of lexical variation, while a low TTR indicates a limited lexical variation. It has to be noted that larger corpora give lower values for TTR; therefore, it is better to consider the standardised type/token ratio (STTR), “calculated for the first 1,000 running words, then calculated afresh for the next 1,000, and so on to the end of your text or corpus” (Scott 2007).",Method,AP2,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP2"",
+  ""section"": ""Method"",
+  ""expression_1"": ""simply"",
+  ""expression_2"": ""as well"",
+  ""context"": ""Method section defining core terminology ('Tokens') used in the corpus analysis, contrasting them with 'word types'."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Adverb"",
+      ""syntactic_position"": ""Medial position (modifying the verb 'denote')"",
+      ""punctuation_cues"": ""None"",
+      ""grammatical_integration"": ""Fully integrated"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Modifies the manner of 'denoting', does not refer to the text or discourse act explicitly.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Operates locally on the definition of 'Tokens'."",
+      ""removal_test_result"": ""If removed ('Tokens denote all the running words...'), the definition remains factual but loses the writer's emphasis on its straightforwardness/simplicity."",
+      ""boundary_test_result"": ""Restricted to the immediate clause defining the term."",
+      ""reasoning"": ""The adverb modifies the specific act of denoting in this sentence, emphasizing the direct relationship between the term and its definition.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""The expression 'simply' adds an evaluative/emphatic layer to the proposition. It does not alter the truth condition of the definition but guides the reader's interpretation (don't overcomplicate it)."",
+      ""level_2_functional_category"": ""INTERACTIONAL"",
+      ""level_2_reasoning"": ""Expresses the writer's stance toward the content (emphasizing clarity/simplicity) rather than organizing the text structure."",
+      ""level_3_specific_type"": ""Booster"",
+      ""level_3_borderline_features"": true,
+      ""level_3_reasoning"": ""Primary function is to emphasize the directness and restrict the meaning to 'just this', closing down alternatives or complexity (Booster). It also carries an attitudinal shade of evaluating the concept as simple.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 4,
+      ""overall_confidence"": 4,
+      ""confidence_justification"": ""Clear metadiscourse status. Classification as Booster is consistent with Hyland (2005), though it shares features with Attitude Markers (evaluating simplicity).""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": true,
+        ""primary_md_type"": ""Booster"",
+        ""secondary_md_type"": ""Attitude Marker"",
+        ""tertiary_md_type"": null,
+        ""relative_strength"": ""PRIMARY (Booster) dominant as it restricts/emphasizes meaning; SECONDARY (Attitude Marker) moderate as it evaluates difficulty."",
+        ""level_2_borderline_justification"": ""'Simply' functions to boost certainty by implying the definition is obvious or restricted to 'merely' this (Booster), but inherently evaluates the content as uncomplicated (Attitude).""
+      }
+    }
+  },
+  ""if expression_2"": {
+    ""analysis_2"": {
+      ""dimension_1_observable_realization"": {
+        ""Lexico-grammatical_form"": ""Adverbial phrase"",
+        ""syntactic_position"": ""Sentence-final"",
+        ""punctuation_cues"": ""None"",
+        ""grammatical_integration"": ""Integrated"",
+        ""reflexivity"": {
+          ""is_reflexive"": false,
+          ""reflexivity_type"": null,
+          ""reflexivity_reasoning"": ""Signals an additive relationship between propositions, not self-referential.""
+        }
+      },
+      ""dimension_2_functional_scope"": {
+        ""classification"": ""MICRO-SCOPE"",
+        ""reach_description"": ""Connects the conditional clause ('if a specific word form occurs...') to the main counting rule."",
+        ""removal_test_result"": ""If removed, the additive relationship ('also') is implied but less explicit."",
+        ""boundary_test_result"": ""Links the specific case (multiple occurrences) to the general category (tokens)."",
+        ""reasoning"": ""Operates within the sentence to link two related criteria for counting tokens.""
+      },
+      ""dimension_3_metadiscourse_classification"": {
+        ""level_1_primary_classification"": ""METADISCOURSE"",
+        ""level_1_reasoning"": ""Signals the semantic relationship (addition) between discourse parts. Removal leaves content but obscures the logical connection."",
+        ""level_2_functional_category"": ""INTERACTIVE"",
+        ""level_2_reasoning"": ""Organizes the discourse by signaling that the second condition is an addition to the first."",
+        ""level_3_specific_type"": ""Transition"",
+        ""level_3_borderline_features"": false,
+        ""level_3_reasoning"": ""Standard additive transition (synonymous with 'also').""
+      },
+      ""confidence_ratings"": {
+        ""structural_realization"": 5,
+        ""functional_scope"": 5,
+        ""metadiscourse_type"": 5,
+        ""overall_confidence"": 5,
+        ""confidence_justification"": ""Prototypical additive transition.""
+      },
+      ""borderline_classification"": {
+        ""level_1_borderline_md_propositional"": {
+          ""is_level_1_borderline"": false,
+          ""dominant_function"": null,
+          ""secondary_function"": null,
+          ""level_1_borderline_justification"": null
+        },
+        ""level_2_borderline_md_features"": {
+          ""is_level_2_borderline"": false,
+          ""primary_md_type"": null,
+          ""secondary_md_type"": null,
+          ""tertiary_md_type"": null,
+          ""relative_strength"": null,
+          ""level_2_borderline_justification"": null
+        }
+      }
+    }
+  },
+  ""comprehensive_justification"": ""'Simply' is identified as an Interactional Booster (Level 2 Borderline with Attitude Marker) because it emphasizes the straightforwardness of the definition and restricts the meaning, guiding the reader not to overcomplicate the term. 'As well' is a clear Interactive Transition signaling an additive relationship between the general definition and the specific counting rule. The verb 'denote' is treated as propositional content (the act of defining variables) within the Method section context.""
+}
+```",success,gemini-3-pro-preview,15
+"A high TTR indicates a large amount of lexical variation, while a low TTR indicates a limited lexical variation.","As shown by table 7.1, the EPA Diacorpus amounts to 299,138 tokens and 20,384 word types. Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well. Conversely, a word type is a single word form; when counting types, therefore, multiple occurrences are not taken into consideration. In order to gain more information about the vocabulary variation, the ratio of different word types to tokens, also called type/token ratio (TTR), has also been calculated.","It has to be noted that larger corpora give lower values for TTR; therefore, it is better to consider the standardised type/token ratio (STTR), “calculated for the first 1,000 running words, then calculated afresh for the next 1,000, and so on to the end of your text or corpus” (Scott 2007). The overall STTR value of the EPA Diacorpus is 44.18. This indicates that there are at least 44 word types in every 1000 words of the EPA Diacorpus. In order to provide a term of comparison, we can recall, for instance, that the STTR in the FLOB corpus of British English, which contains a range of written texts from different genres, is 45.53. This result suggests that the EPA Diacorpus comprises a significant variety of words, not far from that of FLOB.",Method,AP2,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP2"",
+  ""section"": ""Method"",
+  ""expression_1"": ""while"",
+  ""context"": ""Method section, explaining the interpretation of the Type/Token Ratio (TTR) metric by contrasting high and low values."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Subordinating conjunction / Connective adverb"",
+      ""syntactic_position"": ""Medial position, connecting two clauses"",
+      ""punctuation_cues"": ""Comma-bounded (preceded by comma)"",
+      ""grammatical_integration"": ""Integrated as a connector between clauses"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Does not refer to the text, discourse act, or participants. Signals a semantic relationship (contrast) between two propositional claims.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Connects and contrasts two closely related propositions within a single sentence structure (implications of high TTR vs. low TTR)."",
+      ""removal_test_result"": ""If removed ('...lexical variation, a low TTR indicates...'), the explicit contrastive relationship is lost, though the propositions remain. The flow becomes disjointed."",
+      ""boundary_test_result"": ""Functional reach is limited to the immediate sentence, linking the first clause to the second."",
+      ""reasoning"": ""Operates within a propositional cluster (the sentence) to establish a contrastive relationship between the two clauses.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes the discourse by signaling a specific semantic relationship (contrast) between two facts. Removal leaves facts intact but loses the organizational cue."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader's understanding of the relationship between the two parts of the definition (high vs. low)."",
+      ""level_3_specific_type"": ""Transition"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Signals a contrastive/comparative relationship between discourse segments. Prototypical function of 'while' in this context.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear, prototypical example of a contrastive transition marker. Non-reflexive, micro-scope, unambiguous function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The target sentence contains one clear metadiscourse marker: 'while'. STRUCTURAL: It is a non-reflexive connective adverb in medial position. SCOPE: Micro-scope, as it links two clauses within the same sentence. CLASSIFICATION: It is an Interactive Transition, specifically signaling a contrast or comparison between the implications of high and low TTR values. The verb 'indicates' was considered but deemed Propositional in this context as it functions as the main predicate defining the metric's meaning, rather than a metadiscursive gloss.""
+}
+```",success,gemini-3-pro-preview,16
+"It has to be noted that larger corpora give lower values for TTR; therefore, it is better to consider the standardised type/token ratio (STTR), “calculated for the first 1,000 running words, then calculated afresh for the next 1,000, and so on to the end of your text or corpus” (Scott 2007).","Tab. 7.1 - EPA Diacorpus: general statistics (1) As shown by table 7.1, the EPA Diacorpus amounts to 299,138 tokens and 20,384 word types. Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well. Conversely, a word type is a single word form; when counting types, therefore, multiple occurrences are not taken into consideration. In order to gain more information about the vocabulary variation, the ratio of different word types to tokens, also called type/token ratio (TTR), has also been calculated. A high TTR indicates alarge amount of lexical variation, while a low TTR indicates a limited lexical variation.","The overall STTR value of the EPA Diacorpus is 44.18. This indicates that there are at least 44 word types in every 1000 words of the EPA Diacorpus. In order to provide a term of comparison, we can recall, for instance, that the STTR in the FLOB corpus of British English, which contains a range of written texts from different genres, is 45.53. This result suggests that the EPA Diacorpus comprises a significant variety of words, not far from that of FLOB. Eventually, the mean sentence length of the corpus was calculated, which is 21.04. This value is based on a count that identifies sentences as a “full-stop, question-mark or exclamation-mark [...] immediately followed by one or more word separators and then a capital letter in the current language, a number or a currency symbol “ (Scott 2007).",Method,AP2,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP2"",
+  ""section"": ""Method"",
+  ""expression_1"": ""It has to be noted that"",
+  ""context"": ""Method section discussing the limitations of Type/Token Ratio (TTR) and introducing Standardised TTR (STTR)."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Impersonal passive construction (dummy subject 'It' + modal 'has to' + passive 'be noted') + complementizer 'that'"",
+      ""syntactic_position"": ""Sentence-initial"",
+      ""punctuation_cues"": ""None (integrated)"",
+      ""grammatical_integration"": ""Fully integrated main clause introducing a complement"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Reader-Discourse Reflexive"",
+        ""reflexivity_reasoning"": ""Explicitly refers to the reader's cognitive act ('noted') regarding the discourse content. Directs attention to a specific fact.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Focuses attention on the immediate proposition that follows (larger corpora give lower values)."",
+      ""removal_test_result"": ""Propositional content ('larger corpora give lower values for TTR') remains, but the explicit direction of reader attention is lost."",
+      ""boundary_test_result"": ""Functional reach is limited to highlighting the specific claim in the complement clause."",
+      ""reasoning"": ""The operator functions to highlight the subsequent clause as a critical premise for the following argument.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Reflexive expression that organizes reader attention rather than conveying factual content about the world."",
+      ""level_2_functional_category"": ""INTERACTIONAL"",
+      ""level_2_reasoning"": ""Primary function is to engage the reader and direct their attention to a specific point."",
+      ""level_3_specific_type"": ""Engagement Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Directly addresses the reader (implicitly via passive directive) to focus on a specific point. 'Note that' is a prototypical engagement marker.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear reader-discourse reflexivity and prototypical engagement function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""expression_2"": ""therefore"",
+  ""analysis_2"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Conjunctive adverb"",
+      ""syntactic_position"": ""Medial (following semi-colon, preceding comma)"",
+      ""punctuation_cues"": ""Comma-bounded"",
+      ""grammatical_integration"": ""Loosely attached connective"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Signals a semantic relationship (consequence) between propositions; does not refer to the text or discourse act itself.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Connects the preceding premise (TTR flaw) with the subsequent methodological decision (use STTR)."",
+      ""removal_test_result"": ""The logical consequence relationship between the two clauses is lost, though the propositions remain."",
+      ""boundary_test_result"": ""Operates across the clause boundary to link the problem statement to the solution."",
+      ""reasoning"": ""Bridges two distinct propositions within the sentence, establishing a cause-effect rhetorical structure.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes the logical flow of the argument; removal leaves content but obscures the logical connection."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader through the text's logical structure by signaling a consequential relationship."",
+      ""level_3_specific_type"": ""Transition"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Signals a consequential/causal relationship between discourse segments.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Prototypical transition marker with clear logical function.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""expression_3"": ""(Scott 2007)"",
+  ""analysis_3"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Parenthetical citation"",
+      ""syntactic_position"": ""Sentence-final"",
+      ""punctuation_cues"": ""Parentheses"",
+      ""grammatical_integration"": ""Detached/Parenthetical"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Source-oriented reference. While it refers to external discourse, it is not reflexive to the current text's production.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Attributes the preceding definition/quote to a specific source."",
+      ""removal_test_result"": ""The attribution is lost, but the definition itself remains."",
+      ""boundary_test_result"": ""Scope is limited to the immediate quoted material."",
+      ""reasoning"": ""Provides evidentiary support for the specific definition of STTR provided.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Provides the source of information rather than the information itself."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Helps the reader assess the validity of the information by linking to external sources."",
+      ""level_3_specific_type"": ""Evidential"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Explicit attribution to an external source.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Standard academic citation functioning as an evidential.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The sentence contains three distinct metadiscourse markers organizing the methodological argument. 1) 'It has to be noted that' is a reflexive Engagement Marker (Interactional) directing reader attention to a critical premise. 2) 'therefore' is a Transition (Interactive) signaling the logical consequence of that premise, leading to the methodological choice. 3) '(Scott 2007)' is an Evidential (Interactive) attributing the definition of the chosen method. All expressions are prototypical examples of their respective categories with clear boundaries and functions.""
+}
+```",success,gemini-3-pro-preview,17
+A first bunch of statistics extracted from the EPA Diacorpus is provided by the following table (tab.7.1).,"With regard to the organization of this chapter, in the following section (7.1) the results of the preliminary analysis are reported. More specifically, an overview of general statistics concerning the EPA Diacorpus is provided in sub-section 7.1.1, along with a brief interpretation of them, while an account of the procedures followed for the pilot study and related results are provided in sub-section 7.1.2. Section 7.3 describes the methods applied to identify lexical items worth of interest in terms of diachronic lexical variation within the corpus and the subsequent procedures used to analyse them. Eventually, the methodologies taken into account to detect the diachronic structural development of EPAs are described in section 7.4.7.1 Preliminary analysis 7.1.1 EPA Diacorpus: general statistics Information regarding vocabulary size, as well as the distribution of words, is very important when exploring corpora. The vocabulary size of EPA Diacorpus and its sections was derived using a program suite largely acknowledged in linguistics, WordSmith Tools 5 (Scott 2007).","The columns respectively report: the number of EPAs, the number of tokens, the number of word types, TTR values, STTR values, and mean sentence length expressed in number of words. Horizontally reading, values are distinguished according to the provenance of EPAs – US and UK – and periods – 1950, 1960, 1970, 1980, 1990, 2000 –. EPA Diacorpus - General Statistics Tab. 7.1 - EPA Diacorpus: general statistics (1) As shown by table 7.1, the EPA Diacorpus amounts to 299,138 tokens and 20,384 word types. Tokens simply denote all the running words of a spoken or written text and if a specific word form occurs more often, these occurrences are counted as well. Conversely, a word type is a single word form; when counting types, therefore, multiple occurrences are not taken into consideration. In order to gain more information about the vocabulary variation, the ratio of different word types to tokens, also called type/token ratio (TTR), has also been calculated.",Method,AP2,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP2"",
+  ""section"": ""Method"",
+  ""expression_1"": ""the following table (tab.7.1)"",
+  ""context"": ""Method section, sentence introducing a table that presents statistics derived from the corpus."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Noun phrase with deictic adjective 'following', genre noun 'table', and parenthetical specific reference '(tab.7.1)'"",
+      ""syntactic_position"": ""Sentence-final, agent in passive construction ('provided by...')"",
+      ""punctuation_cues"": ""Parenthetical specification included"",
+      ""grammatical_integration"": ""Integrated as object of preposition 'by'"",
+      ""reflexivity"": {
+        ""is_reflexive"": true,
+        ""reflexivity_type"": ""Text-Reflexive"",
+        ""reflexivity_reasoning"": ""Explicitly refers to a physical part of the text/document ('table') and uses deictic 'following' to locate it relative to the current sentence.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MICRO-SCOPE"",
+      ""reach_description"": ""Directs reader attention to a specific visual aid (Table 7.1) that contains the data mentioned in the current proposition."",
+      ""removal_test_result"": ""If removed ('A first bunch of statistics... is provided.'), the link to the visual evidence is lost, though the proposition about the statistics remains."",
+      ""boundary_test_result"": ""Functional reach is local, linking the immediate claim/topic ('statistics') to the specific text artifact ('table')."",
+      ""reasoning"": ""Endophoric markers pointing to immediate tables/figures typically have micro-scope as they resolve the reference for the immediate context.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Expression is text-reflexive and functions to organize the reader's navigation of the document (pointing to a table), rather than conveying propositional content about the world."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Primary function is to guide the reader to internal resources (the table) and manage information flow. It does not express stance or evaluate the content."",
+      ""level_3_specific_type"": ""Endophoric Marker"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Prototypical Endophoric Marker: explicitly refers to another part of the text ('the following table') to guide the reader.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear text-reflexive endophoric marker with unambiguous function and scope.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""The expression 'the following table (tab.7.1)' is a clear example of a Text-Reflexive Endophoric Marker. STRUCTURAL: It uses the text-noun 'table' and the deictic 'following' to refer to the document itself. SCOPE: Micro-scope, as it links the immediate propositional content (statistics) to a specific visual aid. CLASSIFICATION: Metadiscourse (reflexive), Interactive (guides navigation), Endophoric Marker (references text part). The adjective 'first' in 'A first bunch' was considered as a potential Frame Marker but excluded due to ambiguity between propositional meaning (first extraction) and discourse meaning (first presentation), and its integration into the subject NP.""
+}
+```",success,gemini-3-pro-preview,18
+"Eventually, the mean sentence length of the corpus was calculated, which is 21.04","It has to be noted that larger corpora give lower values for TTR; therefore, it is better to consider the standardised type/token ratio (STTR), “calculated for the first 1,000 running words, then calculated afresh for the next 1,000, and so on to the end of your text or corpus” (Scott 2007). The overall STTR value of the EPA Diacorpus is 44.18. This indicates that there are at least 44 word types in every 1000 words of the EPA Diacorpus. In order to provide a term of comparison, we can recall, for instance, that the STTR in the FLOB corpus of British English, which contains a range of written texts from different genres, is 45.53. This result suggests that the EPA Diacorpus comprises a significant variety of words, not far from that of FLOB.","This value is based on a count that identifies sentences as a “full-stop, question-mark or exclamation- mark [...] immediately followed by one or more word separators and then a capital letter in the current language, a number or a currency symbol “ (Scott 2007). Considering the EPA Diacorpus in its whole extension, table 7.1 highlights a difference in terms of length between American and British EPAs, covering respectively 60% (180,375 tokens) and 40% (118,763 tokens) of the overall tokens, despite texts are almost equally distributed across both areas (187 American and 191 British EPAs). But while American EPA writers are wordier, their British colleagues seem to employ longer sentences in comparison (+3.2 words). With regard to the lexical variety, expressed by STTR, both components of the corpora show relevant values (44.41 and 43.41 respectively for American and British EPAs).",Method,AP2,test_restricted.csv,"```json
+{
+  ""thesis_code"": ""AP2"",
+  ""section"": ""Method"",
+  ""expression_1"": ""Eventually"",
+  ""context"": ""Method section, describing the sequence of data processing steps for the EPA Diacorpus."",
+  ""analysis_1"": {
+    ""dimension_1_observable_realization"": {
+      ""Lexico-grammatical_form"": ""Temporal adverb"",
+      ""syntactic_position"": ""Sentence-initial"",
+      ""punctuation_cues"": ""Comma-bounded"",
+      ""grammatical_integration"": ""Loosely attached"",
+      ""reflexivity"": {
+        ""is_reflexive"": false,
+        ""reflexivity_type"": null,
+        ""reflexivity_reasoning"": ""Does not refer to the text, discourse act, or participants. Signals temporal sequence of events.""
+      }
+    },
+    ""dimension_2_functional_scope"": {
+      ""classification"": ""MESO-SCOPE"",
+      ""reach_description"": ""Sequences the current procedural step (calculation of sentence length) relative to the preceding steps (lexical variety analysis)."",
+      ""removal_test_result"": ""Propositional content remains, but the temporal/sequential relationship to previous steps is lost."",
+      ""boundary_test_result"": ""Operates over the sentence to connect it to the preceding discourse segment."",
+      ""reasoning"": ""Connects the current event to the sequence established in the previous sentences.""
+    },
+    ""dimension_3_metadiscourse_classification"": {
+      ""level_1_primary_classification"": ""METADISCOURSE"",
+      ""level_1_reasoning"": ""Organizes the discourse flow by signaling sequence. Removal leaves content but loses the narrative structure."",
+      ""level_2_functional_category"": ""INTERACTIVE"",
+      ""level_2_reasoning"": ""Guides the reader through the sequence of the methodology."",
+      ""level_3_specific_type"": ""Transitions"",
+      ""level_3_borderline_features"": false,
+      ""level_3_reasoning"": ""Signals a temporal relationship between discourse segments. Functions as a temporal transition.""
+    },
+    ""confidence_ratings"": {
+      ""structural_realization"": 5,
+      ""functional_scope"": 5,
+      ""metadiscourse_type"": 5,
+      ""overall_confidence"": 5,
+      ""confidence_justification"": ""Clear instance of a temporal transition marker in a procedural context.""
+    },
+    ""borderline_classification"": {
+      ""level_1_borderline_md_propositional"": {
+        ""is_level_1_borderline"": false,
+        ""dominant_function"": null,
+        ""secondary_function"": null,
+        ""level_1_borderline_justification"": null
+      },
+      ""level_2_borderline_md_features"": {
+        ""is_level_2_borderline"": false,
+        ""primary_md_type"": null,
+        ""secondary_md_type"": null,
+        ""tertiary_md_type"": null,
+        ""relative_strength"": null,
+        ""level_2_borderline_justification"": null
+      }
+    }
+  },
+  ""comprehensive_justification"": ""'Eventually' is a temporal adverb functioning as a Transition marker. It organizes the procedural narrative by signaling the sequence of the calculation step relative to prior steps. It is non-reflexive, sentence-initial, and clearly interactive.""
+}
+```",success,gemini-3-pro-preview,19

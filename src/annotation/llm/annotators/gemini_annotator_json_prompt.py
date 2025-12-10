@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 
 class GeminiMetadiscourseAnnotator:
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-pro",
+    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-3-pro-preview",
                  context_words_before: Optional[int] = None, context_words_after: Optional[int] = None):
         """
         Initialize the Gemini annotator for metadiscourse labeling.
