@@ -112,7 +112,7 @@
 
       "step_1_4_boundary_validation": {
         "objective": "Verify annotators correctly identified MD operator boundary using five stopping rules",
-        "five_stopping_rules": {
+        "six_stopping_rules": {
           "rule_1_content_specification": {
             "description": "STOP at content specification phrases",
             "stopping_signals": ["from...to... (content list)", "about/regarding/concerning (topic introduction)", "including/such as (exemplification)", "e.g./i.e. (specification)"],
@@ -135,6 +135,11 @@
             "description": "STOP after hedge/booster/stance marker - do not include the claim being hedged/boosted",
             "principle": "Hedge/booster is MD; proposition being hedged/boosted is NOT MD",
             "example": "'possibly [STOP] indicates a correlation' ← 'possibly' is hedge (MD), 'indicates correlation' is hedged claim (operand)"
+          },
+          "rule_6_functional_marker_inclusion": {
+          "description": "INCLUDE obligatory functional markers - overrides Rules 1-2 when marker is grammatically required",
+          "stopping_signals": ["that (complementizer after reporting/stance verbs)", "to (infinitival marker)", "whether/if (embedded question markers)", "on/about/into/with (obligatory prepositions for certain verbs)"],
+          "example": "'We argue that [STOP] temperature affects...' ← 'argue that' is MD (that is obligatory), 'temperature affects' is operand. Test: 'We argue temperature affects' is ungrammatical → include 'that'."
           }
         },
         "boundary_violations": {

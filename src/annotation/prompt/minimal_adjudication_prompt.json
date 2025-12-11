@@ -81,7 +81,8 @@
           "R2_prop_comp": "STOP before that-clauses, to-infinitives",
           "R3_reflex_end": "STOP when reflexivity ends",
           "R4_descriptive": "STOP before descriptive predicates",
-          "R5_stance": "STOP after hedge/booster (not hedged claim)"
+          "R5_stance": "STOP after hedge/booster (not hedged claim)",
+          "R6_func_marker": "INCLUDE obligatory functional markers (that/to/whether/on/about) if grammatically required, then STOP before propositional content. Test: Remove marker—ungrammatical? If yes, include it."
         },
         "violations": {
           "operand_in": "Included operand (violates stopping)",
