@@ -159,10 +159,9 @@ class AnnotationOptimizer:
         """
         return {
             # =================================================================
-            # TYPE A: REFLEXIVITY DISAGREEMENTS - HIGHEST PRIORITY
+            # TYPE A: REFLEXIVITY DISAGREEMENTS
             # =================================================================
             "Type A (Reflexivity)": {
-                "priority": "CRITICAL",
                 "json_paths": [
                     # Core reflexivity principle and checks
                     "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.reflexivity_principle",
@@ -177,13 +176,12 @@ class AnnotationOptimizer:
             },
 
             # =================================================================
-            # TYPE B: BOUNDARY DISAGREEMENTS - HIGH PRIORITY
+            # TYPE B: BOUNDARY DISAGREEMENTS
             # =================================================================
             "Type B (Boundary)": {
-                "priority": "HIGH",
                 "json_paths": [
                     # Five stopping rules (detailed)
-                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_4_boundary_validation.five_stopping_rules",
+                    "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_4_boundary_validation.six_stopping_rules",
                     # Boundary violation types
                     "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_4_boundary_validation.boundary_violations",
                     # Disagreement type definition
@@ -191,14 +189,13 @@ class AnnotationOptimizer:
                     # Tier 1 stopping rules criterion
                     "adjudication_procedure.stage_2_evidence_based_weighting.tier_1_foundational_correctness.criteria.stopping_rules_followed"
                 ],
-                "description": "Five stopping rules, boundary violations, and validation output format"
+                "description": "Six stopping rules, boundary violations, and validation output format"
             },
 
             # =================================================================
             # TYPE C: SCOPE DISAGREEMENTS - MEDIUM PRIORITY
             # =================================================================
             "Type C (Scope)": {
-                "priority": "MEDIUM",
                 "json_paths": [
                     # Full D2 scope adjudication (includes all steps)
                     "adjudication_procedure.stage_3_dimensional_adjudication.dimension_2_functional_scope",
@@ -214,7 +211,6 @@ class AnnotationOptimizer:
             # TYPE D: LEVEL 1 CLASSIFICATION - HIGH PRIORITY
             # =================================================================
             "Type D (Level 1)": {
-                "priority": "HIGH",
                 "json_paths": [
                     # Full Level 1 adjudication
                     "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_1_md_vs_propositional_vs_borderline",
@@ -229,10 +225,9 @@ class AnnotationOptimizer:
             },
 
             # =================================================================
-            # TYPE E: INTERACTIVE TYPE DISAGREEMENTS - MEDIUM PRIORITY
+            # TYPE E: INTERACTIVE TYPE DISAGREEMENTS
             # =================================================================
             "Type E (Type - Interactive)": {
-                "priority": "MEDIUM",
                 "json_paths": [
                     # Level 2 adjudication
                     "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_2_interactive_vs_interactional",
@@ -245,10 +240,9 @@ class AnnotationOptimizer:
             },
 
             # =================================================================
-            # TYPE E: INTERACTIONAL TYPE DISAGREEMENTS - MEDIUM PRIORITY
+            # TYPE E: INTERACTIONAL TYPE DISAGREEMENTS
             # =================================================================
             "Type E (Type - Interactional)": {
-                "priority": "MEDIUM",
                 "json_paths": [
                     # Same as Interactive - covers both categories
                     "adjudication_procedure.stage_3_dimensional_adjudication.dimension_3_metadiscourse_classification.level_2_interactive_vs_interactional",
@@ -259,10 +253,9 @@ class AnnotationOptimizer:
             },
 
             # =================================================================
-            # TYPE F: LEVEL 1 BORDERLINE - MEDIUM-HIGH PRIORITY
+            # TYPE F: LEVEL 1 BORDERLINE
             # =================================================================
             "Type F (Borderline - Level 1)": {
-                "priority": "MEDIUM-HIGH",
                 "json_paths": [
                     # Borderline system principle
                     "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.borderline_system_principle",
@@ -275,10 +268,9 @@ class AnnotationOptimizer:
             },
 
             # =================================================================
-            # TYPE F: LEVEL 2 BORDERLINE - MEDIUM-HIGH PRIORITY
+            # TYPE F: LEVEL 2 BORDERLINE
             # =================================================================
             "Type F (Borderline - Level 2)": {
-                "priority": "MEDIUM-HIGH",
                 "json_paths": [
                     # Borderline system principle
                     "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_3_theoretical_framework_alignment.core_principles_to_check.borderline_system_principle",
@@ -296,7 +288,6 @@ class AnnotationOptimizer:
             # TYPE G: CONFIDENCE DISAGREEMENTS - LOW PRIORITY (NEW)
             # =================================================================
             "Type G (Confidence)": {
-                "priority": "LOW",
                 "json_paths": [
                     # Full confidence synthesis stage
                     "adjudication_procedure.stage_4_confidence_synthesis",
@@ -312,7 +303,6 @@ class AnnotationOptimizer:
             # GENERAL: EVIDENCE WEIGHTING (Always included for disagreements)
             # =================================================================
             "Evidence Weighting": {
-                "priority": "HIGH",
                 "json_paths": [
                     # Tier 1 foundational correctness (disqualifying criteria)
                     "adjudication_procedure.stage_2_evidence_based_weighting.tier_1_foundational_correctness",
@@ -326,7 +316,6 @@ class AnnotationOptimizer:
             # GENERAL: ROOT CAUSE ANALYSIS
             # =================================================================
             "Root Cause Analysis": {
-                "priority": "MEDIUM",
                 "json_paths": [
                     "adjudication_procedure.stage_1_pre_adjudication_analysis.step_1_2_root_cause_identification"
                 ],
@@ -337,7 +326,6 @@ class AnnotationOptimizer:
             # GENERAL: GOLD ANNOTATION SYNTHESIS
             # =================================================================
             "Gold Synthesis": {
-                "priority": "MEDIUM",
                 "json_paths": [
                     "adjudication_procedure.stage_5_gold_annotation_synthesis.synthesis_principles",
                     "adjudication_procedure.stage_5_gold_annotation_synthesis.required_metadata"
