@@ -2,6 +2,17 @@
 """
 Script to flatten and unpivot JSON data from Optimized_final_decision column.
 Each expression (expr_1, expr_2, expr_3) becomes a separate row with its corresponding analysis.
+
+Generates TWO output versions:
+  - LONG: All flattened columns (45+ fields)
+  - SHORT: Essential classification columns only (sentence, expression, classifications, reasoning)
+
+Output structure:
+  result/flattened-by-expression/
+    ├── long/
+    │   └── {filename}_LONG.csv
+    └── short/
+        └── {filename}_SHORT.csv
 """
 
 import pandas as pd
@@ -182,13 +193,12 @@ def flatten_and_unpivot(df, json_column='Optimized_final_decision'):
                 'thesis_code': row.get('thesis_code', thesis_code_json),
                 'section': row.get('section', section_json),
                 'sentence': row.get('sentence', ''),
-                "expression":row.get('expression', ''),
-                # 'context_before': row.get('context_before', ''),
-                # 'context_after': row.get('context_after', ''),
+                'context_before': row.get('context_before', ''),
+                'context_after': row.get('context_after', ''),
                 'context_from_json': context_json,
-                # 'claude_metadiscourse_annotation': row.get('claude_metadiscourse_annotation', ''),
-                # 'gemini_metadiscourse_annotation': row.get('gemini_metadiscourse_annotation', ''),
-                # 'deepseek_metadiscourse_annotation': row.get('deepseek_metadiscourse_annotation', ''),
+                'claude_metadiscourse_annotation': row.get('claude_metadiscourse_annotation', ''),
+                'gemini_metadiscourse_annotation': row.get('gemini_metadiscourse_annotation', ''),
+                'deepseek_metadiscourse_annotation': row.get('deepseek_metadiscourse_annotation', ''),
                 'original_row_index': idx
             }
 
@@ -225,16 +235,63 @@ def flatten_and_unpivot(df, json_column='Optimized_final_decision'):
     return result_df
 
 
+# Columns for the SHORT version (essential classification fields only)
+SHORT_COLUMNS = [
+    # Identification
+    'thesis_code',
+    'section',
+    'sentence',
+    'expression_number',
+    'expression',
+    # Reflexivity
+    'is_reflexive',
+    'reflexivity_type',
+    'reflexivity_reasoning',
+    # Scope
+    'scope_classification',
+    'scope_reach',
+    'scope_reasoning',
+    # L1 Classification
+    'L1_classification',
+    'L1_reasoning',
+    # L2 Classification
+    'L2_classification',
+    'L2_reasoning',
+    # L3 Classification
+    'L3_classification',
+    'L3_borderline',
+    'L3_reasoning',
+    # L1 Borderline
+    'L1_borderline_is',
+    'L1_borderline_dominant',
+    'L1_borderline_secondary',
+    'L1_borderline_why',
+    # L2 Borderline
+    'L2_borderline_is',
+    'L2_borderline_primary',
+    'L2_borderline_secondary',
+    'L2_borderline_tertiary',
+    'L2_borderline_strength',
+    'L2_borderline_why',
+    # Justification
+    'comprehensive_justification',
+]
+
+
 def process_csv_files(input_dir='result/optimized', output_dir='result/flattened-by-expression'):
     """
     Process all CSV files in the input directory and create flattened versions.
+    Generates both LONG (all columns) and SHORT (essential columns) versions.
 
     Args:
         input_dir: directory containing CSV files to process
         output_dir: directory to save flattened CSV files
     """
-    # Create output directory if it doesn't exist
-    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    # Create output directories
+    long_dir = os.path.join(output_dir, 'long')
+    short_dir = os.path.join(output_dir, 'short')
+    Path(long_dir).mkdir(parents=True, exist_ok=True)
+    Path(short_dir).mkdir(parents=True, exist_ok=True)
 
     # Find all CSV files in the input directory
     csv_pattern = os.path.join(input_dir, '*.csv')
@@ -265,22 +322,42 @@ def process_csv_files(input_dir='result/optimized', output_dir='result/flattened
                 print(f"Warning: No data extracted from {csv_file}")
                 continue
 
-            # Generate output filename
+            # Generate output filenames
             input_filename = os.path.basename(csv_file)
-            output_filename = f"flattened_by_expr_{input_filename}"
-            output_path = os.path.join(output_dir, output_filename)
+            base_name = input_filename.replace('.csv', '')
 
-            # Save the flattened data with proper quoting for embedded JSON
-            # QUOTE_ALL ensures all fields are quoted, preventing issues with embedded commas/newlines
+            # === LONG VERSION (all columns) ===
+            long_filename = f"{base_name}_LONG.csv"
+            long_path = os.path.join(long_dir, long_filename)
+
             flattened_df.to_csv(
-                output_path,
+                long_path,
                 index=False,
                 quoting=csv.QUOTE_ALL,
                 escapechar='\\',
                 doublequote=True
             )
 
-            print(f"✓ Saved flattened data to: {output_path}")
+            # === SHORT VERSION (essential columns only) ===
+            # Filter to only include columns that exist in the dataframe
+            available_short_cols = [col for col in SHORT_COLUMNS if col in flattened_df.columns]
+            short_df = flattened_df[available_short_cols].copy()
+
+            short_filename = f"{base_name}_SHORT.csv"
+            short_path = os.path.join(short_dir, short_filename)
+
+            short_df.to_csv(
+                short_path,
+                index=False,
+                quoting=csv.QUOTE_ALL,
+                escapechar='\\',
+                doublequote=True
+            )
+
+            print(f"✓ Saved LONG version to: {long_path}")
+            print(f"  Columns: {len(flattened_df.columns)}")
+            print(f"✓ Saved SHORT version to: {short_path}")
+            print(f"  Columns: {len(short_df.columns)}")
             print(f"  Original rows: {len(df)}")
             print(f"  Flattened rows (one per expression): {len(flattened_df)}")
 
@@ -305,6 +382,9 @@ def main():
     print("  1. Parse the Optimized_final_decision JSON column")
     print("  2. Create separate rows for each expression (expr_1, expr_2, expr_3)")
     print("  3. Flatten the corresponding analysis into columns")
+    print("  4. Generate TWO output versions:")
+    print("     - LONG: All columns (full detail)")
+    print("     - SHORT: Essential classification columns only")
     print("=" * 60)
 
     # Default directories (adjust as needed)
@@ -322,6 +402,9 @@ def main():
 
     print("\n" + "=" * 60)
     print("JSON flattening and unpivoting process completed!")
+    print(f"Output locations:")
+    print(f"  LONG:  {output_directory}/long/")
+    print(f"  SHORT: {output_directory}/short/")
 
 
 if __name__ == "__main__":

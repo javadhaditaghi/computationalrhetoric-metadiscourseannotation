@@ -248,6 +248,7 @@
           "micro_scope_test": "Removal affects only immediate proposition?",
           "meso_scope_test": "Removal affects 2-5 related propositions within segment?",
           "macro_scope_test": "Removal affects understanding of major sections or entire text?",
+          "sequencer_test": "For first/then/secondly: Are sequenced items separate propositions (MESO) or sub-propositional elements within one claim (MICRO)?",
           "decision_logic": "IF tests confirm one annotator's scope → Adopt that scope. IF tests ambiguous → Consider context (section location, genre conventions)"
         },
 

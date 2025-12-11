@@ -192,6 +192,7 @@
           "micro": "Affects only immediate proposition?",
           "meso": "Affects 2-5 related propositions?",
           "macro": "Affects major sections or entire text?",
+            "sequencer": "For first/then/secondly: Sequenced items separate propositions (MESO) or sub-propositional elements within one claim (MICRO)?",
           "logic": "IF tests confirm one scope → Adopt. IF ambiguous → Genre/context conventions."
         },
 
