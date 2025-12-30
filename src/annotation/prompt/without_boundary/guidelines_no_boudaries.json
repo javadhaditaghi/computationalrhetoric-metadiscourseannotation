@@ -1,0 +1,1140 @@
+{
+  "task_name": "Metadiscourse Identification and Classification Task: Functional Scope Analysis Framework",
+  "objective": "identify and classify expressions in the text based on unit of analysis principle using a three-dimensional framework: (1) observable Realization (including reflexivity), (2) Functional Scope, and (3) Metadiscourse Type (explicit three-level hierarchy) in context (based on context analysis part).",
+  "important_rule_of_thumb": "Keep all your final explanations as clear and concise as possible.",
+  "unit_of_analysis_principles": {
+    "core_principle": "Analyze the METADISCURSIVE OPERATOR, NOT the PROPOSITIONAL OPERAND",
+    "definition": {
+      "metadiscursive_operator": "The linguistic element that performs the metadiscursive function (organizing, framing, evaluating, engaging)",
+      "propositional_operand": "The content that is being organized, framed, evaluated, or engaged with",
+      "critical_distinction": "The operator is METADISCOURSE; the operand is PROPOSITIONAL CONTENT",
+      "why_this_matters": "Incorrect unit identification lead to cascading errors through all three dimensions (observable realization, functional scope, and metadiscourse classification)",
+
+      "core_principle": "Analyze the METADISCURSIVE OPERATOR (what performs the MD function), NOT the PROPOSITIONAL OPERAND (the content being organized/evaluated)",
+
+      "basic_identification": {
+        "step_0_scanning": "How to systematically scan text? (1) Identify all reflexive elements first (guaranteed MD), (2) Scan for non-reflexive MD patterns, (3) For each candidate apply steps 1-3",
+        "step_1": "What discourse function is being performed? (organizing, evaluating, engaging)",
+        "step_2": "What linguistic elements perform this function?",
+        "step_3": "Apply removal test, function test, scope test to validate MD status"
+      },
+
+      "relationship_to_dimensions": {
+
+        "analytical_level": {
+          "dimension_1": "Describes HOW unit is observabelly realized",
+          "dimension_2": "Assesses HOW FAR unit's function extends",
+          "dimension_3": "Classifies WHAT functional type the unit is"
+        }
+      }
+
+    }
+  },
+
+  "theoretical_framework": {
+    "core_principle": {
+      "definition": "Metadiscourse refers to writer's rhetorical acts, organizing content and managing writer-reader interaction.",
+      "key_insight": "Identification requires analyzing: (1) HOW expression is structurally realized (including reflexivity), (2) HOW FAR function extends, (3) WHAT TYPE through three-level hierarchy.",
+      "reflexivity_principle": "All reflexive expressions are metadiscourse, but not all metadiscourse is reflexive. Reflexivity is SUFFICIENT but not NECESSARY for MD.",
+      "acknowledgment_of_fuzziness": "Metadiscourse boundaries are inherently fuzzy. Framework embraces gradient reality."
+    },
+    "dimensions": {
+      "dimension_1_observable_realization": {
+        "name": "Dimension 1: Observable Realization",
+        "description": "Observable linguistic properties including lexico-grammatical features, syntax, punctuation, grammatical integration, and REFLEXIVITY.",
+        "rationale": "Structural features provide evidence for functional analysis but do not determine function.",
+        "note": "When analyzing structural realization, work with the unit identified using unit_of_analysis_principles. D1 describes structure but does not determine boundaries.",
+        "analysis_components": [
+          {
+            "component": "Lexico-grammatical Form",
+            "description": "Word class and Lexico-grammatical properties",
+            "examples": [
+              "Modal verbs (may, might, could)",
+              "Adverbs (clearly, possibly)",
+              "Connectives (however, therefore)",
+              "Metadiscursive nouns (this thesis)",
+              "Reporting verbs (suggest, demonstrate)",
+              "Pronouns (I, we, you)"
+            ]
+          },
+          {
+            "component": "Syntactic Position",
+            "description": "Location within clause/sentence structure",
+            "types": [
+              "Initial",
+              "Medial",
+              "Final",
+              "Parenthetical",
+              "Integrated"
+            ]
+          },
+          {
+            "component": "Punctuation Cues",
+            "description": "Typographic signals of detachment or integration",
+            "markers": [
+              "Comma-bounded",
+              "Dash-bounded",
+              "Parenthetical",
+              "Colon-introduced",
+              "No punctuation"
+            ]
+          },
+          {
+            "component": "Grammatical Integration",
+            "description": "Degree of syntactic integration",
+            "scale": [
+              "Fully detached",
+              "Loosely attached",
+              "Integrated",
+              "Embedded"
+            ]
+          },
+          {
+            "component": "Reflexivity",
+            "description": "Self-referential patterns where language refers to itself, the text, or the discourse act. ALL REFLEXIVE EXPRESSIONS ARE METADISCOURSE, BUT NOT ALL METADISCOURSE IS REFLEXIVE.",
+            "rationale": "Reflexivity is observable structural property that strongly signals metadiscourse. When language refers to itself or text, it steps outside propositional content.",
+            "key_principle": "Reflexivity is NECESSARY marker\u2014if reflexive, it IS metadiscourse. However, reflexivity is NOT SUFFICIENT to identify ALL metadiscourse\u2014many MD markers (however, possibly) are not reflexive.",
+            "types": [
+              {
+                "type": "Text-Reflexive",
+                "definition": "References to the text itself as an object",
+                "indicators": [
+                  "Metatextual nouns: this thesis, this paper, this section",
+                  "Genre labels: the argument, the analysis",
+                  "Text-part references: the following sections, Figure 2"
+                ],
+                "examples": [
+                  "This thesis examines...",
+                  "In the following section...",
+                  "As discussed in Chapter 2..."
+                ]
+              },
+              {
+                "type": "Discourse-Act Reflexive",
+                "definition": "References to the discourse act being performed",
+                "indicators": [
+                  "Performative verbs: I argue, we demonstrate, we conclude",
+                  "Discourse act labels: to summarize, in conclusion",
+                  "Metalinguistic: that is, namely, i.e., e.g."
+                ],
+                "examples": [
+                  "To summarize...",
+                  "In other words...",
+                  "I will argue that..."
+                ]
+              },
+              {
+                "type": "Reader-Discourse Reflexive",
+                "definition": "References to reader's engagement with discourse",
+                "indicators": [
+                  "Reader directives: note that, consider, observe",
+                  "Discourse-oriented: as you can see",
+                  "Attention markers: it should be noted"
+                ],
+                "examples": [
+                  "Note that...",
+                  "As we will see...",
+                  "Consider the following..."
+                ]
+              },
+              {
+                "type": "Author-Discourse Reflexive",
+                "definition": "Author references to their own discourse production",
+                "indicators": [
+                  "First-person with discourse verbs: I suggest, we argue",
+                  "Authorial presence: in my view, our findings",
+                  "Research process: we examined, I analyzed"
+                ],
+                "examples": [
+                  "We argue that...",
+                  "I suggest that...",
+                  "Our analysis reveals..."
+                ]
+              }
+            ],
+            "identification_test": "Does expression refer to text itself, act of writing/reading, or discourse participants? If yes, it exhibits reflexivity.",
+            "relationship_to_function": "Reflexivity at structural level (D1) provides strong evidence for metadiscourse at functional level (D3). But final classification requires scope and functional analysis."
+          }
+
+        ],
+        "annotation_principle": "Record observable structural properties WITHOUT making functional judgments. Structural realization provides EVIDENCE for functional analysis."
+      },
+      "dimension_2_functional_scope": {
+        "name": "Dimension 2: Functional Scope",
+        "description": "The extent or reach of metadiscursive function\u2014how far across discourse the expression operates.",
+        "rationale": "Metadiscursive functions operate at different scales. Scope determined by functional reach, NOT syntactic position.",
+        "scope_levels": [
+          {
+            "level": "MICRO-SCOPE",
+            "definition": "Function operates within single proposition or closely related propositional cluster",
+            "functional_reach": "Modifies, qualifies, or comments on one claim",
+            "typical_distance": "Within current clause or tightly bound complex",
+            "examples": [
+              {
+                "expression": "clearly show",
+                "analysis": "'Clearly' modifies THIS proposition only"
+              },
+              {
+                "expression": "possibly affects",
+                "analysis": "'Possibly' hedges THIS claim only"
+              }
+            ],
+            "tests": [
+              "Remove: affects only immediate claim?",
+              "Substitute: meaning changes locally?"
+            ]
+          },
+          {
+            "level": "MESO-SCOPE",
+            "definition": "Function operates across 2-5 related propositions or within paragraph segment",
+            "functional_reach": "Connects, contrasts, or sequences multiple claims",
+            "typical_distance": "Across several sentences within coherent unit",
+            "examples": [
+              {
+                "expression": "However, these findings...",
+                "analysis": "Contrasts with PREVIOUS claim(s)"
+              },
+              {
+                "expression": "In addition, the model...",
+                "analysis": "Adds to PRECEDING proposition(s)"
+              }
+            ],
+            "tests": [
+              "What propositions does this connect?",
+              "Crosses into new topic?"
+            ]
+          },
+          {
+            "level": "MACRO-SCOPE",
+            "definition": "Function operates across major segments, organizing sections or whole text",
+            "functional_reach": "Structures overall organization, signals major transitions, frames arguments",
+            "typical_distance": "Across paragraphs, sections, or entire text",
+            "examples": [
+              {
+                "expression": "First, we examine...",
+                "analysis": "Signals start of multi-part structure"
+              },
+              {
+                "expression": "This thesis investigates...",
+                "analysis": "Refers to entire document"
+              }
+            ],
+            "tests": [
+              "Organizes major sections?",
+              "How far does anticipatory/retrospective reach extend?"
+            ]
+          }
+        ],
+        "annotation_principle": "Determine scope by HOW FAR function extends, NOT syntactic position. Expression in initial position might have micro or macro scope."
+      },
+      "dimension_3_metadiscourse_classification": {
+        "name": "Dimension 3: Metadiscourse Classification (Three-Level Hierarchy)",
+        "description": "Hierarchical classification: (1) MD or Propositional?, (2) If MD: Interactive or Interactional?, (3) Specific type?",
+        "rationale": "Explicit three-level hierarchy ensures clear judgment at each level of abstraction.",
+        "level_1_primary_classification": {
+          "name": "Level 1: Metadiscourse vs. Propositional",
+          "question": "Does this organize discourse, guide readers, express stance, or manage interaction? Or convey factual content?",
+          "options": {
+            "METADISCOURSE": {
+              "definition": "Organizes discourse, guides readers, expresses stance/attitude, or engages readers. Operates at discourse management level.",
+              "key_test": "If removed, propositional content intact but discourse guidance/organization/stance lost",
+              "reflexivity_indicator": "If REFLEXIVE \u2192 very strong evidence for METADISCOURSE",
+              "proceed_to": "Level 2: Interactive vs Interactional"
+            },
+            "PROPOSITIONAL": {
+              "definition": "Conveys factual, descriptive, referential content about world. Truth-conditional.",
+              "key_test": "If removed, factual information lost",
+              "reflexivity_indicator": "NEVER reflexive (propositional content doesn't refer to itself)",
+              "proceed_to": "Classification complete"
+            },
+
+            "BORDERLINE_MD_PROPOSITIONAL": {
+              "definition": "Serves BOTH functions (organizing/guiding/stance-taking AND conveying factual content) simultaneously OR gradient between MD and propositional",
+              "key_test": "Removal affects BOTH discourse structure AND propositional content; tests conflict; cannot clearly separate metadiscursive operator from propositional meaning",
+              "characteristics": [
+                "Dual function: discourse management AND factual content",
+                "Tests give conflicting results",
+                "Cannot cleanly separate MD and propositional elements",
+                "Expression is genuinely hybrid"
+              ],
+              "classification_strategy": "Determine which function is PRIMARY/DOMINANT → Classify based on dominant function → Flag Level 1 Borderline status",
+              "proceed_to": "Determine dominant function, then continue to Level 2 if dominant = MD"
+            }
+
+          }
+        },
+        "level_2_metadiscourse_subtype": {
+          "name": "Level 2: Interactive vs. Interactional",
+          "note": "Apply only if Level 1 = METADISCOURSE or BORDERLINE",
+          "question": "Does this primarily organize/guide (Interactive) or express stance/engage (Interactional)?",
+          "options": {
+            "INTERACTIVE": {
+              "definition": "Organizes propositional content, guides readers through text, manages information flow",
+              "function": "Help readers navigate structure and understand relationships",
+              "characteristics": [
+                "Organizes text structure",
+                "Signals relationships",
+                "Guides through argumentation",
+                "Creates references"
+              ],
+              "proceed_to": "Level 3: Interactive types"
+            },
+            "INTERACTIONAL": {
+              "definition": "Expresses stance toward content and engages with readers",
+              "function": "Writers express voice, credibility, evaluation, relationship with readers",
+              "characteristics": [
+                "Expresses stance/attitude",
+                "Modulates certainty",
+                "Engages readers directly",
+                "Constructs presence"
+              ],
+              "proceed_to": "Level 3: Interactional types"
+            }
+          }
+        },
+        "level_3_specific_types": {
+          "name": "Level 3: Specific Metadiscourse Type (with Level 2 Borderline Option)",
+          "note": "Apply after determining Interactive or Interactional, If expression exhibits features of MULTIPLE MD types, flag BORDERLINE_MD_FEATURES and identify PRIMARY and SECONDARY type(s)",
+          "borderline_md_features_protocol": {
+            "when_to_flag": "When expression clearly IS metadiscourse but exhibits characteristics of 2+ specific MD types simultaneously",
+            "procedure": [
+              "Step 1: Confirm Level 1 = METADISCOURSE (not borderline MD/Propositional)",
+              "Step 2: Identify ALL legitimate MD type interpretations",
+              "Step 3: Determine DOMINANT/PRIMARY MD function based on: (a) functional scope, (b) genre/section context, (c) strength of structural evidence",
+              "Step 4: Classify at Level 2 (Interactive/Interactional) based on PRIMARY function",
+              "Step 5: Classify at Level 3 based on PRIMARY type",
+              "Step 6: Flag BORDERLINE_MD_FEATURES = true",
+              "Step 7: Document SECONDARY type(s) and relative strength"
+            ],
+            "example": "'This study takes the standpoint that' → PRIMARY: Frame Marker (announces theoretical framework, macro-scope, organizing function dominant); SECONDARY: Self-Mention (authorial presence); TERTIARY: possibly Evidential (adopting position)",
+            "critical_note": "Level 2 Borderline is NOT about MD vs. Propositional—it's about WHICH metadiscourse type(s) when MD status is clear"
+          },
+          "interactive_types": [
+            {
+              "type": "Transitions",
+              "definition": "Express semantic relations between discourse segments",
+              "function": "Signal additive, contrastive, causal, temporal relationships",
+              "scope_tendency": "Typically meso-scope",
+              "reflexivity": "Generally NOT reflexive",
+              "examples": "however, therefore, in addition, furthermore, consequently",
+              "structural_cues": "Sentence-initial, comma-bounded or integrated",
+              "identification": "Remove and check if relationship becomes unclear"
+            },
+            {
+              "type": "Frame Markers",
+              "definition": "Signal discourse boundaries, sequence, stages, text organization",
+              "function": "Orient readers to text structure, guide through argumentation",
+              "scope_tendency": "Often macro-scope or meso-scope",
+              "reflexivity": "Often REFLEXIVE (refer to text structure or discourse acts)",
+              "examples": "first, second, finally, to begin with, in conclusion, to summarize, this section",
+              "structural_cues": "Sentence-initial, may reference text parts explicitly",
+              "identification": "Does this announce, sequence, or label discourse stages?"
+            },
+            {
+              "type": "Endophoric Markers",
+              "definition": "References to other parts of the text",
+              "function": "Create internal cross-references, guide to related material",
+              "scope_tendency": "Variable (meso or macro depending on distance)",
+              "reflexivity": "Always REFLEXIVE (by definition\u2014refers to text)",
+              "examples": "as mentioned earlier, see Figure 2, in section 3, noted above",
+              "structural_cues": "Parenthetical or integrated with deictics (this, that, above)",
+              "identification": "Does this point to another text location?"
+            },
+            {
+              "type": "Evidentials",
+              "definition": "References to external sources or evidence",
+              "function": "Attribute information, build intertextual relationships",
+              "scope_tendency": "Typically micro-scope",
+              "reflexivity": "Can be REFLEXIVE when author-oriented (I demonstrate), NOT reflexive when source-oriented (Smith argues)",
+              "examples": "according to Smith, Jones argues that, previous research suggests",
+              "structural_cues": "Integrated, often with reporting verbs",
+              "identification": "Does this attribute information to external source?"
+            },
+            {
+              "type": "Code Glosses",
+              "definition": "Elaborations or clarifications of propositional meanings",
+              "function": "Help readers grasp intended meanings through rephrasing/exemplification",
+              "scope_tendency": "Typically micro-scope",
+              "reflexivity": "Often REFLEXIVE (refer to discourse act of rephrasing: 'in other words')",
+              "examples": "in other words, that is, for example, i.e., e.g., such as, namely",
+              "structural_cues": "Parenthetical, comma-bounded",
+              "identification": "Does this rephrase or exemplify preceding content?"
+            }
+          ],
+          "interactional_types": [
+            {
+              "type": "Hedges",
+              "definition": "Withhold complete commitment to propositions",
+              "function": "Indicate epistemic caution, acknowledge alternatives, open dialogic space",
+              "scope_tendency": "Typically micro-scope",
+              "reflexivity": "Generally NOT reflexive (modify propositional content)",
+              "examples": "might, perhaps, possible, suggest, probably, may, appear, seem",
+              "structural_cues": "Modal verbs, adverbs, epistemic verbs, approximators",
+              "identification": "Does this reduce force or certainty?"
+            },
+            {
+              "type": "Boosters",
+              "definition": "Emphasize certainty or close down alternative views",
+              "function": "Express conviction, strengthen claims, construct authoritative voice",
+              "scope_tendency": "Typically micro-scope",
+              "reflexivity": "Generally NOT reflexive (modify propositional content)",
+              "examples": "clearly, obviously, demonstrate, prove, show, definitely, certainly, must",
+              "structural_cues": "Intensifying adverbs, emphatic verbs, absolute quantifiers",
+              "identification": "Does this strengthen force or certainty?"
+            },
+            {
+              "type": "Attitude Markers",
+              "definition": "Writer's affective or evaluative stance toward propositions",
+              "function": "Express surprise, importance, agreement, frustration",
+              "scope_tendency": "Variable scope",
+              "reflexivity": "Generally NOT reflexive (express attitude toward content)",
+              "examples": "unfortunately, importantly, surprisingly, interestingly, I agree that",
+              "structural_cues": "Attitudinal adverbs, evaluative adjectives, attitude verbs",
+              "identification": "Does this express writer's affective/evaluative stance?"
+            },
+            {
+              "type": "Engagement Markers",
+              "definition": "Directly address readers or draw them into discourse",
+              "function": "Build relationship, focus attention, include readers in argument",
+              "scope_tendency": "Variable scope",
+              "reflexivity": "Often REFLEXIVE (refer to reader's discourse act: 'note that', 'consider')",
+              "examples": "note that, consider, imagine, you can see, let us examine",
+              "structural_cues": "Imperatives, second-person pronouns, inclusive 'we'",
+              "identification": "Does this directly address or pull readers in?"
+            },
+            {
+              "type": "Self-Mentions",
+              "definition": "Explicit reference to author(s)",
+              "function": "Assert authorial presence, claim credit, express responsibility",
+              "scope_tendency": "Variable scope",
+              "reflexivity": "Always REFLEXIVE (by definition\u2014author is discourse participant)",
+              "examples": "I, we, me, my, our, the author, in our view, we argue that",
+              "structural_cues": "First-person pronouns and possessives",
+              "identification": "Does this make author(s) explicitly present?"
+            }
+          ]
+
+
+        }
+      }
+    },
+    "contextual_analysis": {
+      "theoretical_foundation": {
+        "cornish_triad": {
+          "text": "The connected sequence of verbal signs and nonverbal signals on the basis of which, in conjunction with the harnessing of a relevant context, discourse is co-constructed by the participants in an act of communication. Text in this conception is essentially linear.",
+          "discourse": "The ever-evolving, revisable interpretation of a particular communicative event, which is jointly constructed mentally by the discourse participants as the text and a relevant context are perceived and evoked. Discourse is structured hierarchically.",
+          "context": "Conceived in cognitive terms, in relation to the mental representations which speaker and addressee are jointly developing as the communication proceeds, and as such it is continuously evolving.",
+          "formula": "TEXT + CONTEXT → DISCOURSE"
+        },
+        "critical_insight_for_md": "Metadiscourse operates at the DISCOURSE level (hierarchically-structured mental representation), not the TEXT level (linear observable material). Context mediates between textual cues and discourse functions. Same textual form in different contexts can perform different discourse functions."
+      },
+
+      "understanding_context": {
+        "definition": "Context is conceived in cognitive terms, in relation to the mental representations which speaker and addressee are jointly developing as the communication proceeds, and as such it is continuously evolving.",
+
+        "context_comprises_at_least": [
+          {
+            "dimension": "Domain of Reference",
+            "cornish_exact_definition": "The domain of reference of a given text (including of course the local or general world knowledge that goes with it)",
+            "relevance_for_md": "Enables inference-based interpretation of MD markers; helps distinguish MD operator from propositional operand; contextualizes disciplinary MD conventions"
+          },
+          {
+            "dimension": "Surrounding Co-text",
+            "cornish_exact_definition": "The surrounding co-text of a given expression",
+            "relevance_for_md": "Essential for scope and anaphora. Provides structural evidence (D1 observable realization). Critical limitation: co-text is LINEAR while discourse is HIERARCHICAL—co-textual adjacency ≠ discourse adjacency"
+          },
+          {
+            "dimension": "Discourse Already Constructed Upstream",
+            "cornish_exact_definition": "The discourse already constructed upstream of its occurrence",
+            "relevance_for_md": "CRITICAL for MD annotation. Complete MD interpretation determined by discourse representations accrued upstream: what has been predicated, what coherence relations have been established, and how discourse is hierarchically structured. Discourse units are subclassified into background ones (which anchor) and foreground units (capable of advancing the communication). This hierarchical organization determines MD scope and function.",
+            "key_principle": "Scope determined by hierarchical discourse structure, NOT linear textual distance"
+          },
+          {
+            "dimension": "Occasion of the Exchange",
+            "cornish_exact_definition": "The occasion of the exchange",
+            "relevance_for_md": "The specific communicative event context (PhD thesis examination) shapes appropriate MD deployment, density, and distribution"
+          },
+          {
+            "dimension": "Genre of Speech Event in Progress",
+            "cornish_exact_definition": "The genre of speech event in progress",
+            "relevance_for_md": "PhD thesis genre and section location (Introduction/Methods/Results/Discussion/Conclusion) have characteristic MD patterns. Genre conventions provide probabilistic evidence for MD type and scope."
+          },
+          {
+            "dimension": "Socio-cultural Environment",
+            "cornish_exact_definition": "The socio-cultural environment in which the text occurs",
+            "relevance_for_md": "Academic discourse conventions and disciplinary norms affect appropriate MD choices, visibility of authorship, and evaluative stance"
+          },
+          {
+            "dimension": "Interactive Relationships",
+            "cornish_exact_definition": "The interactive relationships holding between the interlocutors at every point in the discourse",
+            "relevance_for_md": "Evolving writer-reader relationship shapes interactional MD deployment: engagement markers, self-mention visibility, evaluative stance, hedge/booster balance"
+          },
+          {
+            "dimension": "Immediate Context of Utterance",
+            "cornish_exact_definition": "The particular situational context of utterance at hand",
+            "cornish_emphasis": "THE MOST CENTRAL of the sub-types of context is the immediate context of utterance of each discourse act: this functions as a default grounding 'anchor' for the discourse being constructed as each utterance is produced",
+            "relevance_for_md": "Provides indexical grounding for reflexive MD expressions; determines WHAT discourse is being organized/evaluated/engaged at this specific moment"
+          }
+        ],
+
+        "discourse_hierarchical_structure": {
+          "cornish_principle": "Discourse units (DUs) are subclassified into background ones, which serve to anchor, both modally and referentially, the central discourse representations created, and foreground units capable of advancing the communication. It is the realization of these different functions that structures the discourse into hierarchically organized levels.",
+          "implication_for_md": "MD scope and type correlate with discourse status. Scope = functional reach in hierarchy, NOT linear distance in text."
+        }
+      },
+
+      "analytical_procedures": {
+        "note": "The following procedures are informed by Cornish's framework, applied to metadiscourse annotation. They operationalize his theoretical insights about text-discourse-context relations.",
+
+        "procedures": [
+          {
+            "procedure": "Removal Test (Discourse-Level)",
+            "rationale": "Text underdetermines discourse (Cornish). Removal reveals what expression contributes at discourse level vs. propositional level.",
+            "application": "Remove MD expression and assess what is lost",
+            "interpretation": [
+              "Propositional information lost → Propositional",
+              "Discourse guidance/organization lost (propositional content remains) → Interactive MD",
+              "Stance/evaluation/engagement lost (propositional content remains) → Interactional MD",
+              "Both affected → Borderline (determine dominant function)"
+            ],
+            "critical_note": "Apply to MD OPERATOR only, not propositional operand"
+          },
+          {
+            "procedure": "Reflexivity Analysis",
+            "rationale": "When language refers to itself, the text, or the discourse act, it steps outside propositional content (Cornish). Reflexivity is observable structural property strongly signaling metadiscourse.",
+            "application": "Does expression refer to: (1) text itself, (2) discourse act being performed, (3) discourse participants, or (4) reader's engagement with discourse?",
+            "interpretation": [
+              "YES (reflexive) → Strong evidence for Metadiscourse (reflexivity SUFFICIENT but not NECESSARY)",
+              "NO (non-reflexive) → MD still possible; apply other procedures (many MD markers are non-reflexive: 'however', 'possibly')"
+            ],
+            "reflexivity_types": "Text-reflexive ('this thesis'), Discourse-act reflexive ('I argue', 'to summarize'), Reader-discourse reflexive ('note that'), Author-discourse reflexive ('we demonstrate')"
+          },
+          {
+            "procedure": "Scope Identification via Discourse Structure",
+            "rationale": "Discourse is hierarchically structured, not linear (Cornish). Scope = functional reach in discourse hierarchy, NOT syntactic boundaries or textual distance.",
+            "application": "Identify what DISCOURSE UNITS (not textual units) expression operates over; assess hierarchical level and functional reach",
+            "interpretation": [
+              "Single proposition within current DU → MICRO-SCOPE",
+              "2-5 related propositions within coherent discourse segment → MESO-SCOPE",
+              "Across major discourse segments or entire text → MACRO-SCOPE"
+            ],
+            "validation_questions": [
+              "What hierarchical level does this operate at? (local claim / paragraph segment / section / entire thesis)",
+              "Does removal affect only local proposition, discourse segment, or global structure?",
+              "Is scope determined by discourse function or just syntactic position?"
+            ]
+          },
+          {
+            "procedure": "Coherence Relation Analysis",
+            "rationale": "Choice of coherence relation influences MD interpretation and anaphoric resolution (Cornish). MD expressions often signal coherence relations or operate within them.",
+            "application": "Identify coherence/rhetorical relation integrating MD-containing DU with prior discourse",
+            "use": "Relation type helps determine MD type (Contrast → transition; Elaboration → code gloss/frame marker; Result → transition; Sequence → frame marker)"
+          },
+          {
+            "procedure": "Host Predication Analysis",
+            "rationale": "Complete referent and discourse function determined by entire host predication, not MD expression in isolation (Cornish).",
+            "application": "Analyze complete predicative context of MD expression; examine what is predicated of/by the MD operator",
+            "use": "Determines: (1) functional scope ('this thesis' vs. 'this paragraph'), (2) type disambiguation"
+          },
+          {
+            "procedure": "Genre Convention Assessment",
+            "rationale": "Genre of speech event in progress is key context dimension (Cornish). Genre conventions provide probabilistic evidence.",
+            "application": "Is this MD expression conventional for PhD thesis genre and this section location?",
+            "interpretation": [
+              "Genre-conventional → Strong confirmatory evidence for MD classification",
+              "Unexpected for section → Requires justification; may signal strategic choice or boundary case"
+            ]
+          },
+          {
+            "procedure": "Discourse Status Assessment",
+            "rationale": "Discourse structured into foreground/background units (Cornish). MD type and scope correlate with discourse status.",
+            "application": "Is containing DU foreground (advancing) or background (anchoring)? Is operated-on element topical or focal?",
+            "use": "Foreground DUs often contain frame markers, transitions, attitude markers; background DUs often contain hedges, evidentials, code glosses"
+          }
+        ]
+      },
+
+      "annotation_procedure": {
+        "overview": "Apply Cornish's text-discourse-context framework to MD annotation",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Read sufficient context",
+            "details": "Read 2-3 sentences before/after (co-text); identify section location; note genre (PhD thesis) and occasion (examination)"
+          },
+          {
+            "step": 2,
+            "action": "Reconstruct discourse already constructed upstream",
+            "details": "What has been established as topical/focal? What is hierarchical structure of prior discourse? Are prior DUs foreground or background? What coherence flow established? At what hierarchical level is current DU operating?"
+          },
+          {
+            "step": 3,
+            "action": "Apply analytical procedures",
+            "details": "Use removal test, reflexivity analysis, scope identification via discourse structure, coherence relation analysis, host predication analysis, genre assessment, discourse status assessment"
+          },
+          {
+            "step": 4,
+            "action": "Determine decisive contextual dimension(s)",
+            "details": "Which context dimension(s) most crucial for this classification? Do dimensions converge (high confidence) or conflict (lower confidence, borderline)?"
+          },
+          {
+            "step": 5,
+            "action": "Validate and document",
+            "details": "Does interpretation align with discourse structure and genre expectations? Document which contextual factors were decisive in comprehensive justification"
+          }
+        ]
+      },
+
+      "critical_principles": {
+        "principle_1": "TEXT + CONTEXT → DISCOURSE. Context mediates between observable textual cues and mentally-constructed discourse.",
+        "principle_2": "Discourse is HIERARCHICALLY structured; text is LINEAR. Co-textual adjacency ≠ discourse adjacency.",
+        "principle_3": "Same textual form in different contexts = different discourse functions (possibly different MD classifications).",
+        "principle_4": "Most central context: immediate context of utterance—functions as default grounding 'anchor' for discourse construction.",
+        "principle_5": "Co-text provides structural evidence but does NOT determine function. Discourse already constructed determines scope and functional interpretation.",
+        "principle_6": "Scope = functional reach in hierarchical discourse structure, NOT linear textual distance or syntactic boundaries.",
+        "principle_7": "Discourse units subclassified into foreground (advancing) and background (anchoring). MD type and scope correlate with discourse status.",
+        "principle_8": "Complete MD interpretation requires analyzing: (1) discourse already constructed upstream, (2) coherence relations established, (3) hierarchical discourse organization."
+      },
+
+      "for_borderline_cases": {
+        "level_1_borderline": "When expression serves both MD and propositional functions, context (especially occasion of exchange, genre, discourse already constructed) reveals DOMINANT function.",
+        "level_2_borderline": "When expression exhibits features of multiple MD types, context (especially immediate context of utterance, coherence relation, discourse status) reveals PRIMARY vs. SECONDARY MD functions."
+      }
+    },
+    "annotation_procedure": {
+      "steps": [
+        {
+          "step": 1,
+          "action": "Read complete discourse context",
+          "details": "Read preceding/following sentences, section label, genre information"
+        },
+        {
+          "step": 2,
+          "action": "Identify structural realization",
+          "details": "Document: lexico-grammatical features, syntax, punctuation, integration, REFLEXIVITY",
+          "note": "Objective observations only"
+        },
+        {
+          "step": 3,
+          "action": "Apply scope identification",
+          "details": "Use removal test, scope test, co-textual analysis",
+          "output": "MICRO/MESO/MACRO-SCOPE"
+        },
+        {
+          "step": 4,
+          "action": "Apply Level 1 classification",
+          "details": "Use removal test, reflexivity test, genre test",
+          "output": "METADISCOURSE/PROPOSITIONAL/BORDERLINE"
+        },
+        {
+          "step": 5,
+          "action": "If MD: Apply Level 2",
+          "details": "Does it organize/guide or express stance/engage?",
+          "output": "INTERACTIVE or INTERACTIONAL"
+        },
+        {
+          "step": 6,
+          "action": "Apply Level 3",
+          "details": "Determine specific type with identification tests",
+          "output": "Specific Hyland category"
+        },
+        {
+          "step": 7,
+          "action": "Assess confidence",
+          "details": "Rate certainty (1-5) for: observable, scope, type",
+          "guidance": "Lower when tests conflict or multiple functions"
+        },
+        {
+          "step": 8,
+          "action": "Write justification",
+          "details": "Explain reasoning for each dimension, cite evidence, note ambiguities"
+        }
+      ]
+    },
+    "detailed_examples": {
+      "example_1_reflexive_frame_marker": {
+        "thesis_code": "EX1",
+        "section": "Introduction",
+        "expression": "This thesis examines",
+        "context": "Introduction section, early paragraph announcing the research focus.",
+        "analysis": {
+          "dimension_1_observable_realization": {
+            "Lexico_grammatical_form": "Demonstrative 'this' + genre noun 'thesis' + research verb 'examines'",
+            "syntactic_position": "Subject position, sentence-initial (integrated)",
+            "punctuation_cues": "None (fully integrated into sentence structure)",
+            "grammatical_integration": "Fully integrated as subject-verb structure",
+            "reflexivity": {
+              "is_reflexive": true,
+              "reflexivity_type": "Text-Reflexive",
+              "reflexivity_reasoning": "'This thesis' refers to the text itself as an object. The demonstrative 'this' and genre noun 'thesis' create explicit self-reference to the document being read."
+            }
+          },
+          "dimension_2_functional_scope": {
+            "classification": "MACRO-SCOPE",
+            "reach_description": "'This thesis' refers to entire document; 'examines' announces the global research purpose that structures the whole text.",
+            "removal_test_result": "If removed, the specific propositional content (what is being examined) remains, but the explicit framing as THIS THESIS's purpose is lost. Readers would not know this announces the global research focus.",
+            "boundary_test_result": "Functional reach extends across entire thesis. This is not a local claim but a global announcement that frames all subsequent content.",
+            "reasoning": "Grammatically local (single clause) but functionally global. Scope determined by referent ('this thesis' = whole document) and function (announcing research purpose). In Introduction sections, such expressions typically have macro-scope."
+          },
+          "dimension_3_metadiscourse_classification": {
+            "level_1_primary_classification": "METADISCOURSE",
+            "level_1_reasoning": "Strong reflexivity confirms metadiscourse status (text-reflexive expressions always MD). Removal test shows propositional content intact but metadiscursive framing lost. Function is to organize reader understanding of text's purpose, not to convey factual information about the world. Classic metadiscursive move in thesis introductions.",
+            "level_2_functional_category": "INTERACTIVE",
+            "level_2_reasoning": "Primary function is to organize and guide reader understanding of text structure and purpose. Not expressing stance or engaging readers, but announcing what the text does. Organizes reader expectations and frames the research architecture.",
+            "level_3_specific_type": "Frame Marker",
+            "level_3_reasoning": "Announces and labels the text's purpose and scope. Signals major structural element (research focus). Typical frame marker function: orienting readers to text organization. In academic introductions, 'This thesis examines' conventionally functions as frame marker announcing research purpose."
+          }
+        },
+        "confidence_ratings": {
+          "structural_realization": 5,
+          "functional_scope": 5,
+          "metadiscourse_type": 5,
+          "overall_confidence": 5,
+          "confidence_justification": "Prototypical case with maximum confidence. Clear text-reflexive structure, unambiguous macro-scope (refers to entire thesis), prototypical frame marker in Introduction. No borderline features at any level."
+        },
+        "borderline_classification": {
+          "level_1_borderline_md_propositional": {
+            "is_level_1_borderline": false,
+            "dominant_function": null,
+            "secondary_function": null,
+            "level_1_borderline_justification": null
+          },
+          "level_2_borderline_md_features": {
+            "is_level_2_borderline": false,
+            "primary_md_type": null,
+            "secondary_md_type": null,
+            "tertiary_md_type": null,
+            "relative_strength": null,
+            "level_2_borderline_justification": null
+          }
+        },
+        "comprehensive_justification": "Prototypical macro-scope frame marker in academic Introduction. STRUCTURAL: Text-reflexive ('this thesis' refers to document itself) - reflexivity is structural indicator strongly predicting metadiscourse. SCOPE: Macro-scope because expression refers to entire document and announces global research purpose. CLASSIFICATION: Clearly metadiscourse (reflexivity confirms), Interactive (organizing function), Frame Marker (announces text purpose and scope). Classic frame marker pattern in thesis introductions. No borderline features - clear single function at all levels. High confidence (5) across all dimensions."
+      },
+      "example_2_non_reflexive_transition": {
+        "thesis_code": "EX2",
+        "section": "Discussion",
+        "expression": "However",
+        "context": "Discussion section, sentence-initial position following presentation of results that differ from previous literature findings.",
+        "analysis": {
+          "dimension_1_observable_realization": {
+            "Lexico_grammatical_form": "Contrastive connective 'however' (conjunctive adverb)",
+            "syntactic_position": "Sentence-initial position",
+            "punctuation_cues": "Comma-bounded (followed by comma)",
+            "grammatical_integration": "Loosely attached - syntactically detached from main clause but semantically connects to both previous and current sentences",
+            "reflexivity": {
+              "is_reflexive": false,
+              "reflexivity_type": null,
+              "reflexivity_reasoning": "Does not refer to text, discourse act, or discourse participants. Signals semantic relationship (contrast) between propositional contents of discourse segments. Not self-referential."
+            }
+          },
+          "dimension_2_functional_scope": {
+            "classification": "MESO-SCOPE",
+            "reach_description": "Signals contrast between current sentence (current findings) and preceding 2-3 sentences (previous studies' findings). Connects discourse segments within coherent unit.",
+            "removal_test_result": "If removed, propositional content of both current and previous sentences remains intact, but the contrastive relationship between segments becomes unclear. Discourse coherence is affected.",
+            "boundary_test_result": "Functional reach extends across sentence boundary to connect current claim with preceding claims. Does not extend to entire section or text (not macro), limited to local coherent unit of 2-5 related propositions (meso).",
+            "reasoning": "Typical meso-scope for transitions. Connects current sentence to preceding discourse segment (2-3 sentences about previous research). Not micro (extends beyond single proposition) and not macro (doesn't organize entire sections)."
+          },
+          "dimension_3_metadiscourse_classification": {
+            "level_1_primary_classification": "METADISCOURSE",
+            "level_1_reasoning": "Removal test shows propositional content intact but discourse relationship (contrast) is lost. Organizes reader understanding of relationships between segments. Not reflexive, but clearly performs metadiscursive function (organizing discourse). Function is to guide reader understanding of how segments relate, not to convey factual content.",
+            "level_2_functional_category": "INTERACTIVE",
+            "level_2_reasoning": "Primary function is to organize and guide reader understanding of relationships between propositions. Not expressing stance toward content (would be Interactional) but organizing discourse structure by signaling contrastive relation.",
+            "level_3_specific_type": "Transition",
+            "level_3_reasoning": "Signals contrastive semantic relation between discourse segments. Prototypical transition marker - expresses additive/contrastive/causal relationship. 'However' is one of the most common contrastive transitions in academic writing."
+          }
+        },
+        "confidence_ratings": {
+          "structural_realization": 5,
+          "functional_scope": 5,
+          "metadiscourse_type": 5,
+          "overall_confidence": 5,
+          "confidence_justification": "Prototypical meso-scope transition with clear properties. No reflexivity (expected for transitions). Unambiguous contrastive function. Classic transition marker - no borderline features. Maximum confidence across all dimensions."
+        },
+        "borderline_classification": {
+          "level_1_borderline_md_propositional": {
+            "is_level_1_borderline": false,
+            "dominant_function": null,
+            "secondary_function": null,
+            "level_1_borderline_justification": null
+          },
+          "level_2_borderline_md_features": {
+            "is_level_2_borderline": false,
+            "primary_md_type": null,
+            "secondary_md_type": null,
+            "tertiary_md_type": null,
+            "relative_strength": null,
+            "level_2_borderline_justification": null
+          }
+        },
+        "comprehensive_justification": "Prototypical meso-scope transition marker. STRUCTURAL: Not reflexive - demonstrates that metadiscourse doesn't require reflexivity. Connective with loose attachment and comma-bounded position. SCOPE: Meso-scope - signals contrast between current sentence and preceding 2-3 sentences about previous research. CLASSIFICATION: Clearly metadiscourse (organizes discourse relationships), Interactive (guides understanding of structure), Transition (signals contrastive semantic relation). Example demonstrates that non-reflexive expressions can be clear metadiscourse when they organize discourse relationships. No ambiguity - single clear function. High confidence (5) across all dimensions."
+      },
+      "example_3_reflexive_self_mention": {
+        "thesis_code": "EX3",
+        "section": "Discussion",
+        "expression": "We argue that",
+        "context": "Discussion section, argumentative context where authors present their interpretation of findings.",
+        "analysis": {
+          "dimension_1_observable_realization": {
+            "Lexico_grammatical_form": "First-person plural pronoun 'we' + discourse/cognitive verb 'argue' + complementizer 'that'",
+            "syntactic_position": "Subject + main verb position (integrated), sentence-initial with complement clause following",
+            "punctuation_cues": "None - fully integrated into sentence structure",
+            "grammatical_integration": "Fully integrated - forms main clause structure with complement clause containing the argument",
+            "reflexivity": {
+              "is_reflexive": true,
+              "reflexivity_type": "Author-Discourse Reflexive",
+              "reflexivity_reasoning": "'We argue' refers to the authors' discourse act being performed in this text. 'We' makes authors present as discourse participants, and 'argue' refers to the illocutionary act of arguing within the discourse. Self-referential to discourse production."
+            }
+          },
+          "dimension_2_functional_scope": {
+            "classification": "MICRO-SCOPE",
+            "reach_description": "Expresses authorial stance on this specific claim about temperature. Primary effect is to mark this single proposition as the authors' argument.",
+            "removal_test_result": "If removed, propositional content (temperature is critical factor) remains, but authorial presence and assertion of this as authors' argument (vs. established fact) is lost. Affects stance marking on this claim.",
+            "boundary_test_result": "Functional reach primarily limited to current proposition. While 'we argue' could frame multiple claims if sustained across sentences, here it primarily marks this single interpretive claim.",
+            "reasoning": "Micro-scope because expression asserts authorial stance on this specific proposition. Could be meso-scope if part of sustained argumentative sequence ('We argue that X. We also argue that Y...'), but in typical use marks single claim. Context suggests local scope unless evidence of broader argumentative structure."
+          },
+          "dimension_3_metadiscourse_classification": {
+            "level_1_primary_classification": "METADISCOURSE",
+            "level_1_reasoning": "Strong reflexivity (author-discourse reflexive) confirms metadiscourse status. Removal test: propositional content remains but authorial presence and stance marking lost. Function is to assert authorial presence and claim responsibility for argument, not to convey factual information about world. Makes authors explicitly present as discourse agents.",
+            "level_2_functional_category": "INTERACTIONAL",
+            "level_2_reasoning": "Primary function is to express authorial stance and assert presence, not to organize text structure. While 'argue' has argumentative force, the main function is interactional - constructing authorial voice and claiming responsibility for interpretation. Expresses stance toward content rather than organizing relationships.",
+            "level_3_specific_type": "Self-Mention",
+            "level_3_reasoning": "Explicit first-person reference making author(s) present as discourse agent. 'We' is prototypical self-mention marker. Function is to assert authorial presence and claim responsibility for the argument. Classic self-mention pattern with first-person pronoun + discourse verb."
+          }
+        },
+        "confidence_ratings": {
+          "structural_realization": 5,
+          "functional_scope": 4,
+          "metadiscourse_type": 5,
+          "overall_confidence": 4,
+          "confidence_justification": "High confidence on structure (clear author-discourse reflexivity) and type (prototypical self-mention). Slightly lower confidence (4) on scope because could be meso if part of sustained argument, but context suggests micro. No borderline features - clear single metadiscourse type."
+        },
+        "borderline_classification": {
+          "level_1_borderline_md_propositional": {
+            "is_level_1_borderline": false,
+            "dominant_function": null,
+            "secondary_function": null,
+            "level_1_borderline_justification": null
+          },
+          "level_2_borderline_md_features": {
+            "is_level_2_borderline": false,
+            "primary_md_type": null,
+            "secondary_md_type": null,
+            "tertiary_md_type": null,
+            "relative_strength": null,
+            "level_2_borderline_justification": null
+          }
+        },
+        "comprehensive_justification": "Prototypical self-mention with author-discourse reflexivity. STRUCTURAL: 'We argue' is author-discourse reflexive - refers to authors' discourse act being performed. First-person pronoun + discourse verb is classic self-mention pattern. SCOPE: Primarily micro-scope (marks this specific claim), though confidence slightly lower (4) because could extend to meso if part of sustained argumentative sequence. CLASSIFICATION: Clearly metadiscourse (reflexivity confirms), Interactional (asserts presence and stance, not organizing), Self-Mention (explicit authorial reference). Function is to make authors explicitly present as discourse agents and claim responsibility for interpretation. No borderline features - single clear function. Overall confidence 4 (due to scope ambiguity micro vs. meso)."
+      },
+      "example_4_non_reflexive_hedge": {
+        "thesis_code": "EX4",
+        "section": "Results",
+        "expression": "possibly",
+        "context": "Results section following statistical analysis: 'The results possibly indicate a correlation between variables.'",
+        "analysis": {
+          "dimension_1_observable_realization": {
+            "Lexico_grammatical_form": "Epistemic adverb 'possibly' (adverb of probability/certainty)",
+            "syntactic_position": "Medial position - between subject ('results') and verb ('indicate')",
+            "punctuation_cues": "None - no punctuation separating adverb from surrounding elements",
+            "grammatical_integration": "Fully integrated as adverbial modifier within verb phrase",
+            "reflexivity": {
+              "is_reflexive": false,
+              "reflexivity_type": null,
+              "reflexivity_reasoning": "Modifies propositional content (certainty of indication), does not refer to text, discourse act, or discourse participants. Not self-referential to discourse - operates on epistemic status of proposition."
+            }
+          },
+          "dimension_2_functional_scope": {
+            "classification": "MICRO-SCOPE",
+            "reach_description": "Hedges only this specific claim about correlation. Expresses epistemic caution regarding this single proposition.",
+            "removal_test_result": "If removed ('The results indicate a correlation'), propositional content remains but epistemic qualification is lost - claim becomes unhedged/more certain. Affects certainty level of this specific proposition only.",
+            "boundary_test_result": "Functional reach limited to current proposition. Does not extend to other claims in Results section. Hedging applies only to this indication of correlation.",
+            "reasoning": "Clear micro-scope. 'Possibly' modifies only the certainty of this immediate claim, doesn't extend across multiple propositions or organize broader discourse segments."
+          },
+          "dimension_3_metadiscourse_classification": {
+            "level_1_primary_classification": "METADISCOURSE",
+            "level_1_reasoning": "Removal test shows propositional content intact but epistemic stance (hedging) is lost. Function is to express writer's cautious epistemic stance toward claim, not to convey factual information. Not reflexive, but clearly performs metadiscursive function of modulating certainty. Conventional hedging pattern in Results sections.",
+            "level_2_functional_category": "INTERACTIONAL",
+            "level_2_reasoning": "Primary function is to express epistemic stance (caution/uncertainty) toward propositional content, not to organize text structure. Modulates commitment to claim, opening dialogic space for alternative interpretations. Stance-marking rather than organizing.",
+            "level_3_specific_type": "Hedge",
+            "level_3_reasoning": "Withholds complete commitment to proposition. 'Possibly' is prototypical hedge - epistemic adverb expressing uncertainty/probability. Indicates epistemic caution, acknowledges alternatives, opens dialogic space. Typical hedging device in Results/Discussion sections."
+          }
+        },
+        "confidence_ratings": {
+          "structural_realization": 5,
+          "functional_scope": 5,
+          "metadiscourse_type": 5,
+          "overall_confidence": 5,
+          "confidence_justification": "Prototypical hedge with clear properties. Not reflexive (expected for hedges). Unambiguous micro-scope and epistemic stance function. Classic hedging pattern - no borderline features. Maximum confidence across all dimensions."
+        },
+        "borderline_classification": {
+          "level_1_borderline_md_propositional": {
+            "is_level_1_borderline": false,
+            "dominant_function": null,
+            "secondary_function": null,
+            "level_1_borderline_justification": null
+          },
+          "level_2_borderline_md_features": {
+            "is_level_2_borderline": false,
+            "primary_md_type": null,
+            "secondary_md_type": null,
+            "tertiary_md_type": null,
+            "relative_strength": null,
+            "level_2_borderline_justification": null
+          }
+        },
+        "comprehensive_justification": "Clear micro-scope hedge demonstrating non-reflexive metadiscourse. STRUCTURAL: Not reflexive - another example showing metadiscourse doesn't require reflexivity. Epistemic adverb fully integrated in verb phrase. SCOPE: Micro-scope - hedges only this specific claim about correlation. CLASSIFICATION: Clearly metadiscourse (expresses epistemic stance), Interactional (stance-marking toward content, not organizing), Hedge (withholds full commitment, expresses caution). 'Possibly' is prototypical hedge modifying certainty of proposition. Conventional pattern in Results/Discussion where researchers modulate claims. No ambiguity - single clear function. High confidence (5) across all dimensions."
+      },
+      "example_5_md_borderline_framemarker_selfmention":{
+        "thesis_code": "AP1",
+        "section": "Introduction",
+        "expression": "This study takes the standpoint that",
+        "context": "Introduction section, defining theoretical framework following discussion of sub-genres in political discourse.",
+        "analysis": {
+          "dimension_1_observable_realization": {
+            "Lexico_grammatical_form": "Demonstrative 'This' + genre noun 'study' + stance verb 'takes' + stance noun 'standpoint' + complementizer 'that'",
+            "syntactic_position": "Sentence-initial, subject position with complement clause",
+            "punctuation_cues": "No punctuation (fully integrated)",
+            "grammatical_integration": "Fully integrated - main clause with complement",
+            "reflexivity": {
+              "is_reflexive": true,
+              "reflexivity_type": "Text-Reflexive + Discourse-Act Reflexive (hybrid)",
+              "reflexivity_reasoning": "'This study' is text-reflexive (refers to thesis itself). 'Takes the standpoint' is discourse-act reflexive (refers to act of adopting theoretical position in discourse)."
+            }
+          },
+          "dimension_2_functional_scope": {
+            "classification": "MACRO-SCOPE",
+            "reach_description": "Announces theoretical framework underpinning entire study - global positioning statement framing research approach throughout thesis.",
+            "removal_test_result": "Propositional content (genre definition) remains, but explicit framing as THE STUDY'S theoretical position is lost.",
+            "boundary_test_result": "Functional reach extends across entire thesis - theoretical position informs analysis in multiple chapters.",
+            "reasoning": "In Introduction, such expressions announce macro-level theoretical commitments. Context confirms foundational framework establishment."
+          },
+          "dimension_3_metadiscourse_classification": {
+            "level_1_primary_classification": "METADISCOURSE",
+            "level_1_reasoning": "Strong reflexivity (text-reflexive + discourse-act reflexive). Removal test: propositional content remains but metadiscursive framing lost. Function is to organize reader understanding of study's theoretical framework. Classic metadiscursive move in academic introductions.",
+            "level_2_functional_category": "INTERACTIVE",
+            "level_2_reasoning": "PRIMARY function is organizational - announces framework structuring the research, guides readers through argumentative architecture. While authorial presence exists, DOMINANT function is organizing (Interactive) not stance-expressing (Interactional).",
+            "level_3_specific_type": "Frame Marker",
+            "level_3_reasoning": "PRIMARY type: Announces major structural element (theoretical framework). Signals discourse boundaries and stages. Conventional frame marker for announcing theoretical commitments in academic introductions. Macro-scope and text-reflexive properties align with frame markers."
+          }
+        },
+        "confidence_ratings": {
+          "structural_realization": 5,
+          "functional_scope": 5,
+          "metadiscourse_type": 4,
+          "overall_confidence": 4,
+          "confidence_justification": "Very high confidence on structure (clear reflexivity) and scope (prototypical Introduction framing). Slightly lower (4) on type due to Level 2 Borderline - expression has features of multiple MD types, though Frame Marker is dominant."
+        },
+        "borderline_classification": {
+          "level_1_borderline_md_propositional": {
+            "is_level_1_borderline": false,
+            "dominant_function": null,
+            "secondary_function": null,
+            "level_1_borderline_justification": null
+          },
+          "level_2_borderline_md_features": {
+            "is_level_2_borderline": true,
+            "primary_md_type": "Frame Marker (Interactive)",
+            "secondary_md_type": "Self-Mention (Interactional)",
+            "tertiary_md_type": "Evidential (Interactive) - weak",
+            "relative_strength": "PRIMARY (Frame Marker) strongly dominant - macro-scope, organizing function, conventional Introduction use. SECONDARY (Self-Mention) moderate - 'This study' asserts textual presence and agency. TERTIARY (Evidential) weak - adopting theoretical position.",
+            "level_2_borderline_justification": "Expression is clearly MD (not Level 1 Borderline) but exhibits multiple MD type characteristics (Level 2 Borderline). FRAME MARKER features: macro-scope across thesis, announces major structural element (theoretical framework), text-reflexive, conventional Introduction function, discourse-act reflexive. SELF-MENTION features: explicit textual reference ('This study'), asserts agency ('takes'), makes author/text present. EVIDENTIAL features (weak): 'takes the standpoint' suggests adopting position. Frame Marker PRIMARY because: (a) macro-scope suggests organizational function, (b) Introduction context where such expressions conventionally frame theoretical commitments, (c) primary effect is organizing reader understanding. Self-Mention SECONDARY but legitimate. Genuine multifunctionality."
+          }
+        },
+        "comprehensive_justification": "Prototypical macro-scope MD marker in academic Introduction exhibiting Level 2 Borderline (multiple MD functions). Level 1: Clearly METADISCOURSE (strong reflexivity, organizational function). NOT Level 1 Borderline. Level 2 Borderline: Exhibits features of multiple MD types simultaneously. PRIMARY = Frame Marker (announces theoretical framework, macro-scope, organizing dominant). SECONDARY = Self-Mention (authorial presence). TERTIARY = Evidential (weak - adopting position). Frame Marker classification justified as primary based on macro-scope, Introduction context, and dominant organizational function."
+      }
+    },
+    "quality_assurance": {
+      "confidence_scale": {
+        "5": "Certain - Prototypical case, clear properties, high confidence",
+        "4": "High confidence - Clear with minor ambiguities",
+        "3": "Moderate - Borderline, multiple functions, or uncertainty in one dimension",
+        "2": "Low - Significant ambiguity, conflicting tests",
+        "1": "Very uncertain - Cannot confidently classify"
+      },
+      "expected_IAA": {
+        "structural_realization": "\u03ba > 0.80 (objective features including reflexivity)",
+        "functional_scope": "\u03ba > 0.70 (operationalized with tests)",
+        "metadiscourse_type": "\u03ba > 0.65 (context-dependent, inherent fuzziness)",
+        "note": "Lower agreement on type expected and reflects genuine ambiguity"
+      },
+      "critical_checkpoints": [
+        "Read sufficient context (preceding/following discourse)?",
+        "Documented objective structural properties including REFLEXIVITY?",
+        "Applied ALL relevant scope identification tests?",
+        "Applied Level 1 classification (MD/Propositional/Borderline)?",
+        "If MD: Applied Level 2 (Interactive/Interactional)?",
+        "Applied Level 3 (specific type)?",
+        "Considered genre and section conventions?",
+        "Checked for multiple simultaneous functions?",
+        "Assessed confidence separately for each dimension?",
+        "Provided specific contextual evidence in justification?",
+        "If borderline, explained why and noted primary vs secondary functions?"
+      ],
+      "consistency_principles": [
+        "Reflexivity is SUFFICIENT for MD but NOT NECESSARY (all reflexive = MD, but MD \u2260 all reflexive)",
+        "Functional scope determined by REACH, not syntactic position",
+        "Similar structures in similar contexts should receive similar classifications",
+        "Same expression in different contexts may have different scope or type",
+        "When multiple functions present, identify primary vs. secondary",
+        "Borderline cases are legitimate\u2014don't force into binary categories",
+        "Lower confidence appropriate for genuinely ambiguous cases",
+        "Justifications must cite specific evidence including reflexivity analysis"
+      ]
+    },
+    "key_reminders": [
+      "TWO types of borderline: (1) MD/Propositional ambiguity (Level 1), (2) Multiple MD functions (Level 2)",
+      "Level 1 Borderline = fundamental category ambiguity between MD and Propositional",
+      "Level 2 Borderline = clear MD status but exhibits features of multiple MD types",
+      "For Level 2 Borderline, MUST identify PRIMARY (dominant), SECONDARY, and possibly TERTIARY MD types",
+      "ALL REFLEXIVE EXPRESSIONS ARE METADISCOURSE - reflexivity is sufficient indicator",
+      "NOT ALL METADISCOURSE IS REFLEXIVE - many MD markers (however, possibly) are not reflexive",
+      "Three-level hierarchy: Level 1 (MD/P/Borderline) \u2192 Level 2 (Interactive/Interactional) \u2192 Level 3 (Specific type or level 2 BORDERLINE with (primary, secondary or possibly tertiary role))",
+      "Metadiscourse boundaries inherently fuzzy\u2014embrace gradient classification through two-level borderline system",
+      "Scope determined by functional reach, not syntactic boundaries",
+      "Context operates at multiple levels: co-text, section, genre, rhetorical situation",
+      "Same structure can have different functions in different contexts",
+      "Borderline cases reflect real properties of MD, not annotation failure",
+      "Multiple simultaneous functions possible\u2014note primary and secondary",
+      "Structural realization provides evidence but doesn't determine function",
+      "When in doubt, document uncertainty with lower confidence and detailed justification"
+    ],
+     "output_format": {
+       "description": "MANDATORY: All annotations MUST follow this exact JSON structure",
+       "strict_schema": {
+         "thesis_code": "string (e.g., 'AP1')",
+         "section": "string (e.g., 'Introduction', 'Methods', 'Results', 'Discussion', 'Conclusion')",
+         "expression_1": "string (the exact expression being annotated)",
+         "expression_2": "string (if any)",
+         "expression_3": "string (if any)",
+         "context":"\"context\": \"Brief description of context (e.g., 'Introduction section, stating research scope')",
+         "analysis_1": {
+           "dimension_1_observable_realization": {
+             "Lexico-grammatical_form": "string",
+             "syntactic_position": "string",
+             "punctuation_cues": "string",
+             "grammatical_integration": "string",
+             "reflexivity": {
+               "is_reflexive": "boolean (true/false)",
+               "reflexivity_type": "string or null",
+               "reflexivity_reasoning": "string"
+             }
+           },
+           "dimension_2_functional_scope": {
+             "classification": "string (MICRO-SCOPE | MESO-SCOPE | MACRO-SCOPE)",
+             "reach_description": "string",
+             "removal_test_result": "string",
+             "boundary_test_result": "string",
+             "reasoning": "string"
+           },
+           "dimension_3_metadiscourse_classification": {
+             "level_1_primary_classification": "string (METADISCOURSE | PROPOSITIONAL | BORDERLINE_MD_PROPOSITIONAL)",
+             "level_1_reasoning": "string",
+             "level_2_functional_category": "string or null (INTERACTIVE | INTERACTIONAL)",
+             "level_2_reasoning": "string or null",
+             "level_3_specific_type": "string or null",
+             "level_3_borderline_features": "boolean (TRUE if specific types more than 1)",
+             "level_3_reasoning": "string or null"
+           },
+
+           "confidence_ratings": {
+             "structural_realization": "integer (1-5)",
+             "functional_scope": "integer (1-5)",
+             "metadiscourse_type": "integer (1-5)",
+             "overall_confidence": "integer (1-5)",
+             "confidence_justification": "string"
+           },
+           "borderline_classification": {
+              "level_1_borderline_md_propositional": {
+                "is_level_1_borderline": "boolean",
+                "dominant_function": "string or null (METADISCOURSE | PROPOSITIONAL)",
+                "secondary_function": "string or null",
+                "level_1_borderline_justification": "string (required if is_level_1_borderline=true)"
+              },
+              "level_2_borderline_md_features": {
+                "is_level_2_borderline": "boolean (true if multiple MD functions present)",
+                "primary_md_type": "string or null (e.g., 'Frame Marker')",
+                "secondary_md_type": "string or null (e.g., 'Self-Mention')",
+                "tertiary_md_type": "string or null (if applicable)",
+                "relative_strength": "string or null (e.g., 'PRIMARY strongly dominant, SECONDARY moderate, TERTIARY weak')",
+                "level_2_borderline_justification": "string (required if is_level_2_borderline=true, explain why expression exhibits multiple MD functions)"
+              }
+           }
+         },
+         "if expression_2": {
+           "analysis_2": {
+           "dimension_1_observable_realization": {
+             "Lexico-grammatical_form": "string",
+             "syntactic_position": "string",
+             "punctuation_cues": "string",
+             "grammatical_integration": "string",
+             "reflexivity": {
+               "is_reflexive": "boolean (true/false)",
+               "reflexivity_type": "string or null",
+               "reflexivity_reasoning": "string"
+             }
+           },
+           "dimension_2_functional_scope": {
+             "classification": "string (MICRO-SCOPE | MESO-SCOPE | MACRO-SCOPE)",
+             "reach_description": "string",
+             "removal_test_result": "string",
+             "boundary_test_result": "string",
+             "reasoning": "string"
+           },
+           "dimension_3_metadiscourse_classification": {
+             "level_1_primary_classification": "string (METADISCOURSE | PROPOSITIONAL | BORDERLINE_MD_PROPOSITIONAL)",
+             "level_1_reasoning": "string",
+             "level_2_functional_category": "string or null (INTERACTIVE | INTERACTIONAL)",
+             "level_2_reasoning": "string or null",
+             "level_3_specific_type": "string or null",
+             "level_3_borderline_features": "boolean (TRUE if specific types more than 1)",
+             "level_3_reasoning": "string or null"
+           },
+
+           "confidence_ratings": {
+             "structural_realization": "integer (1-5)",
+             "functional_scope": "integer (1-5)",
+             "metadiscourse_type": "integer (1-5)",
+             "overall_confidence": "integer (1-5)",
+             "confidence_justification": "string"
+           },
+           "borderline_classification": {
+              "level_1_borderline_md_propositional": {
+                "is_level_1_borderline": "boolean",
+                "dominant_function": "string or null (METADISCOURSE | PROPOSITIONAL)",
+                "secondary_function": "string or null",
+                "level_1_borderline_justification": "string (required if is_level_1_borderline=true)"
+              },
+              "level_2_borderline_md_features": {
+                "is_level_2_borderline": "boolean (true if multiple MD functions present)",
+                "primary_md_type": "string or null (e.g., 'Frame Marker')",
+                "secondary_md_type": "string or null (e.g., 'Self-Mention')",
+                "tertiary_md_type": "string or null (if applicable)",
+                "relative_strength": "string or null (e.g., 'PRIMARY strongly dominant, SECONDARY moderate, TERTIARY weak')",
+                "level_2_borderline_justification": "string (required if is_level_2_borderline=true, explain why expression exhibits multiple MD functions)"
+              }
+           }
+         }
+         },
+         "if expression_3": {
+           "analysis_3": "Same structure as expression 1 and 2."
+         },
+
+
+         "comprehensive_justification": "string <as short and concise as possible>",
+         "Important_remark":"If the number of metadiscourse expressions is more than one create the three levels of analysis again for them and mark it with analysis_2 and analysis_3."
+       },
+       "critical_rules": [
+        "RULE 1: Root key MUST be 'analysis', never 'classification'",
+        "RULE 2: confidence_ratings section is MANDATORY, never omit",
+        "RULE 3: If level_1 in dimension_3 = 'METADISCOURSE', MUST provide level_2 and level_3",
+        "RULE 4: If level_1 = 'BORDERLINE_MD_PROPOSITIONAL', is_level_1_borderline MUST be true AND must specify dominant_function",
+        "RULE 5: All boolean fields use lowercase: true/false, not True/False",
+        "RULE 6: Use null (not None) for empty optional fields",
+        "RULE 7: If expression has features of 2+ MD types, is_level_2_borderline MUST be true AND must specify primary_md_type and secondary_md_type",
+        "RULE 8: Level 1 borderline and Level 2 borderline are INDEPENDENT - can have neither, one, or both",
+        "RULE 9: Validate JSON structure before submitting annotation",
+        "RULE 10: Keep the explanations inside the final json structure as concise and clean as possible. It is important to have short and concise explanations instead of long explanations."
+       ]
+     }
+  }
+}
