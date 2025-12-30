@@ -1,0 +1,528 @@
+{
+  "task": "MD Annotation Adjudication",
+  "role": "Expert adjudicator reviewing 3 model annotations (Claude, Gemini, Deepseek) to produce gold-standard annotation",
+
+  "input_spec": {
+    "required": [
+      "sentence: Text segment analyzed",
+      "context: 2-3 sentences before/after, section, genre",
+      "ann_1: Claude annotation (JSON)",
+      "ann_2: Gemini annotation (JSON)",
+      "ann_3: Deepseek annotation (JSON)"
+    ],
+    "schema": "3-dimensional: D1 (Observable + reflexivity), D2 (Scope: MICRO/MESO/MACRO), D3 (Classification: L1 MD/Prop/Border, L2 Interactive/Interactional, L3 Specific type)"
+  },
+
+  "procedure": {
+    "overview": "5 stages: (1) Pre-adjudication, (2) Evidence weighting, (3) Dimensional adjudication, (4) Confidence synthesis, (5) Gold annotation",
+
+    "S1_pre_adjudication": {
+      "1.1_disagreement_map": {
+        "obj": "Map disagreements, classify type",
+        "actions": [
+          "Map across D1/D2/D3",
+          "Identify: reflex status, scope, L1/L2/L3, borderline",
+          "Classify: Type A-G"
+        ],
+        "types": {
+          "A_reflex": "Reflex disagreement - HIGHEST priority",
+          "B_scope": "MICRO/MESO/MACRO disagreement - MEDIUM",
+          "C_L1": "MD vs Prop vs Border - HIGH",
+          "D_type": "Interactive/Interactional or L3 type - MEDIUM",
+          "E_border": "L1 vs L2 borderline - MEDIUM-HIGH",
+          "F_conf": "Confidence only - LOW"
+        }
+      },
+
+      "1.2_root_cause": {
+        "obj": "Why disagreement occurred",
+        "causes": [
+          "Insufficient context",
+          "Reflex misidentification",
+          "Scope = syntax confusion",
+          "Genuine dual function",
+          "Genre/context ignored",
+          "Framework inconsistency"
+        ]
+      },
+
+      "1.3_framework_check": {
+        "obj": "Verify Cornish framework alignment",
+        "principles": {
+          "text_context_discourse": {
+            "rule": "TEXT + CONTEXT → DISCOURSE",
+            "green": ["Discourse structure ref", "Genre-aware", "Context-aware"],
+            "red": ["Scope = syntax", "No genre ref", "Word class only"]
+          },
+          "reflexivity": {
+            "rule": "Reflex SUFFICIENT not NECESSARY for MD. Reflex → MUST be MD",
+            "green": ["Reflex → MD", "Non-reflex → careful analysis", "Correct reflex type"],
+            "red": ["Reflex → PROP (DISQUALIFY)", "Misses clear reflex", "Confuses reflex with scope"]
+          },
+          "scope_function": {
+            "rule": "Scope = functional reach in discourse, NOT syntax/distance",
+            "green": ["Functional reach justified", "Discourse structure ref"],
+            "red": ["Sentence-initial → MACRO", "Modifies word → MICRO", "Linear distance"]
+          },
+          "borderline": {
+            "rule": "L1 (MD/Prop dual) and L2 (multiple MD types) are INDEPENDENT",
+            "green": ["Clear L1 vs L2", "Dominant function specified", "PRIMARY/SECONDARY hierarchy"],
+            "red": ["'Borderline' unspecified", "L1 = uncertainty escape", "No PRIMARY/SECONDARY"]
+          }
+        }
+      }
+
+    },
+
+    "S2_evidence_weight": {
+      "obj": "Establish most reliable annotator BEFORE adjudication",
+
+      "T1_foundational": {
+        "weight": "CRITICAL - DISQUALIFYING if violated",
+        "criteria": {
+          "reflex_correct": {
+            "rule": "If expression IS reflex and one identifies it → that annotator CORRECT",
+            "consequence": "Others DISQUALIFIED for D1 and L1 (reflex sufficient for MD)"
+          },
+          "framework_align": {
+            "rule": "If one aligns with Cornish, others use heuristics → HEAVILY WEIGHT that annotator",
+            "consequence": "Framework violations reduce credibility across all dimensions"
+          }
+        },
+        "decision": "If ANY correct on T1 and others wrong → AUTO-prioritize that annotator"
+      },
+
+      "T2_reasoning": {
+        "weight": "HIGH - Justification quality",
+        "criteria": {
+          "explicit_depth": "Specific evidence cited (tests, context, genre)?",
+          "systematic_tests": "Removal, scope, reflex tests applied?",
+          "context_thorough": "Upstream discourse, genre, section referenced?",
+          "internal_consistent": "All 3 dimensions logically aligned?"
+        },
+        "scoring": {
+          "3": "Comprehensive, evidence-based, systematic",
+          "2": "Good but gaps in evidence/tests",
+          "1": "Minimal/vague, lacks systematic analysis",
+          "0": "No reasoning or contradictions"
+        }
+      },
+
+      "T3_confidence": {
+        "weight": "MEDIUM - Uncertainty calibration",
+        "criteria": {
+          "conf_evidence_align": "Confidence matches justification?",
+          "uncertainty_flag": "Acknowledges ambiguity when present?",
+          "border_correct": "Borderline = genuine multifunctionality (not uncertainty)?"
+        },
+        "warnings": {
+          "over": "Conf 5 with vague justification",
+          "under": "Conf 2 with strong reasoning",
+          "border_misuse": "'Borderline' without L1 vs L2 spec"
+        }
+      },
+
+      "output": "For each: T1 (PASS/FAIL per criterion), T2 (0-3 per criterion), T3 (CALIBRATED/OVER/UNDER), Overall (HIGHEST/HIGH/MEDIUM/LOW)"
+    },
+
+    "S3_dimensional_adj": {
+      "obj": "Systematically adjudicate using weighted evidence",
+
+      "D1_observable": {
+        "priority": "CRITICAL - Reflex determines MD status",
+
+        "reflex_adj": {
+          "logic": "IF any identifies reflex WITH evidence → Reflex=TRUE. DISQUALIFY non-reflex annotators. Adopt analysis from correct annotator. ELSE IF all agree non-reflex → Reflex=FALSE. ELSE FLAG manual review.",
+          "types": {
+            "text": "Refs to text ('this thesis', 'Figure 2')",
+            "discourse_act": "Refs to act ('I argue', 'to summarize')",
+            "reader": "Refs to reader engagement ('note that', 'consider')",
+            "author": "Refs to author production ('we demonstrate', 'our analysis')"
+          },
+          "critical": "Reflex SUFFICIENT for MD. Reflex → MUST be MD. Any Reflex→PROP is AUTO-incorrect."
+        },
+
+        "structural_synth": {
+          "action": "For form, position, punctuation, integration: Compare, prefer most precise, merge complementary, flag contradictions",
+          "output": "Synthesized structural description"
+        },
+
+        "conf": {
+          "5": "All agree reflex AND structural",
+          "4": "2/3 agree reflex OR minor structural discrepancies",
+          "3": "Reflex disagreement resolved by evidence",
+          "2": "Significant structural disagreement remains"
+        }
+      },
+
+      "D2_scope": {
+        "priority": "HIGH - Determines functional reach",
+
+        "eval_justifications": {
+          "best": "Functional reach tied to discourse. Ex: 'Entire thesis → MACRO', '2-3 propositions → MESO', 'This proposition → MICRO'",
+          "weak": "Scope = syntax. Ex: 'Sentence-initial → MACRO', 'Modifies verb → MICRO'"
+        },
+
+        "scope_tests": {
+          "removal": "What lost when removed?",
+          "micro": "Affects only immediate proposition?",
+          "meso": "Affects 2-5 related propositions?",
+          "macro": "Affects major sections or entire text?",
+            "sequencer": "For first/then/secondly: Sequenced items separate propositions (MESO) or sub-propositional elements within one claim (MICRO)?",
+          "logic": "IF tests confirm one scope → Adopt. IF ambiguous → Genre/context conventions."
+        },
+
+        "resolve": {
+          "priority": [
+            "1. Scope + functional reach + test results",
+            "2. Genre conventions (e.g., 'This thesis' in Intro → MACRO)",
+            "3. Highest T2 reasoning score",
+            "4. MICRO vs MESO → lean MESO if connects claims",
+            "5. MESO vs MACRO → lean MACRO if section/text-level ref"
+          ]
+        },
+
+        "conf": {
+          "5": "All agree scope AND tests confirm",
+          "4": "2/3 agree AND tests support",
+          "3": "Resolved by genre/context",
+          "2": "Scope ambiguous after tests"
+        }
+      },
+
+      "D3_classification": {
+        "priority": "HIGHEST - Hierarchical L1→L2→L3",
+
+        "L1_md_prop_border": {
+          "reflex_check": {
+            "rule": "IF reflex=TRUE (from D1) → L1=MD (AUTO, non-negotiable). DISQUALIFY any PROP. Proceed to L2.",
+            "critical": "Reflex sufficient for MD. Foundational, overrides all."
+          },
+
+          "non_reflex_eval": {
+            "removal_test": "What lost if removed?",
+            "A_prop": "Only propositional content → PROP. Ex: 'the temperature'",
+            "B_md": "Only discourse guidance/organization/stance (content remains) → MD. Proceed L2. Ex: 'however'",
+            "C_dual": "BOTH content AND function → Check genuine dual. If genuine → BORDER_MD_PROP. If not (poor boundary) → Re-check, re-test."
+          },
+
+          "border_adj": {
+            "genuine": [
+              "Simultaneously conveys content AND organizes/guides",
+              "Removal test yields conflicting results",
+              "Multiple legitimate readings",
+              "Not boundary error or context gap"
+            ],
+            "pseudo": [
+              "'Borderline' = uncertainty escape",
+              "Boundary error (operand included)",
+              "Context insufficient",
+              "Single function but uncertain"
+            ],
+            "logic": "IF genuine dual → BORDER_MD_PROP, determine DOMINANT (MD or Prop), flag SECONDARY, conf ≤3. IF pseudo → Resolve to MD or PROP via strongest evidence."
+          },
+
+          "synth_L1": {
+            "all_agree": "Adopt consensus (conf 5)",
+            "2_agree": "Check if minority has superior T1-2 reasoning. IF YES → Adopt minority. IF NO → Adopt majority. Conf 4.",
+            "all_differ": "Apply T1 criteria (reflex, framework). Re-apply removal test. Check genuine dual. Adopt strongest evidence. Conf ≤3."
+          },
+
+          "conf": {
+            "5": "Reflex OR all agree with strong evidence",
+            "4": "2/3 agree, minority rejected",
+            "3": "Genuine L1 border OR resolved by framework",
+            "2": "Significant disagreement, weak evidence"
+          }
+        },
+
+        "L2_interactive_interactional": {
+          "condition": "Only if L1=MD or BORDER with MD dominant",
+
+          "functional_distinction": {
+            "interactive": [
+              "Organizes propositional content",
+              "Signals segment relationships (transitions, connectives)",
+              "Guides text structure (frame markers, sequencers)",
+              "Creates text references (endophoric)",
+              "Function = structural/organizational"
+            ],
+            "interactional": [
+              "Expresses epistemic/affective stance (hedges, boosters, attitude)",
+              "Modulates certainty/attitude",
+              "Engages readers (engagement markers, directives)",
+              "Asserts authorial presence (self-mentions)",
+              "Function = interpersonal/evaluative"
+            ]
+          },
+
+          "genre_scope_align": {
+            "heuristics": "MACRO in Intro/Conclusion → Frame Marker (Interactive). MICRO + epistemic → Hedge/Booster (Interactional). Connectives (however, therefore) → Transition (Interactive). First-person → Self-Mention (Interactional).",
+            "note": "Probabilistic not deterministic - always verify function"
+          },
+
+          "resolve": {
+            "action": "IF disagree Interactive vs Interactional → Check: (a) Scope (MACRO often Interactive, MICRO stance often Interactional), (b) Reflex type (text-reflex → Interactive; author-discourse-reflex → either), (c) Genre. Prefer explicit functional reasoning.",
+            "ambiguous": "IF genuinely ambiguous (e.g., 'We argue' = Self-Mention + argument guide) → Check L2 Border (multiple MD functions). Determine PRIMARY vs SECONDARY by functional dominance."
+          },
+
+          "conf": {
+            "5": "Clear distinction AND all agree",
+            "4": "Resolved by genre/scope with evidence",
+            "3": "L2 border (multiple MD) OR resolved",
+            "2": "Ambiguous function, weak evidence"
+          }
+        },
+
+        "L3_specific_type": {
+          "taxonomy": {
+            "interactive": "Transitions, Frame Markers, Endophoric Markers, Evidentials, Code Glosses",
+            "interactional": "Hedges, Boosters, Attitude Markers, Engagement Markers, Self-Mentions"
+          },
+
+          "verify_align": {
+            "checks": [
+              "Function matches Hyland taxonomy definition",
+              "Structural realization typical for type",
+              "Scope appropriate (e.g., Frame Markers often MACRO)",
+              "Genre-conventional usage (e.g., Hedges in Results/Discussion)"
+            ]
+          },
+
+          "resolve_type": {
+            "P1_L2_border": {
+              "desc": "Multiple MD types legitimate?",
+              "ex": "'This study takes standpoint that' = Frame Marker (framework) PRIMARY, Self-Mention (presence) SECONDARY, Evidential (position) TERTIARY",
+              "action": "If multiple legitimate → Flag L2 Border. Rank PRIMARY/SECONDARY/TERTIARY by functional dominance (scope, genre, context)."
+            },
+            "P2_single_type": {
+              "desc": "One says Frame Marker, one Transition - only ONE correct",
+              "action": "Apply type tests. Check scope alignment (Frame Markers MACRO, Transitions MESO). Prefer explicit type-selection reasoning."
+            },
+            "P3_genre_context": {
+              "examples": [
+                "Intro: Frame Marker > Transition for 'First, ...' (announces structure)",
+                "Results: Hedge > Attitude Marker for 'possibly' (epistemic caution)",
+                "Discussion: Self-Mention + Frame Marker hybrid for 'We argue that...'"
+              ]
+            }
+          },
+
+          "synth_L3": {
+            "if_L2_border": {
+              "output": {
+                "type": "PRIMARY type (strongest evidence)",
+                "border_feat": true,
+                "primary": "Strongest (scope, function, genre)",
+                "secondary": "Moderate evidence",
+                "tertiary": "Weak or null",
+                "strength": "PRIMARY strongly/moderately dominant, SECONDARY moderate/weak, TERTIARY weak",
+                "reasoning": "Why multiple detected, how PRIMARY determined"
+              }
+            },
+            "if_clear": {
+              "output": {
+                "type": "Consensus or adjudicated",
+                "border_feat": false,
+                "reasoning": "Synthesized from strongest justification"
+              }
+            }
+          },
+
+          "conf": {
+            "5": "Consensus on type AND clear match function/scope/genre",
+            "4": "Adjudicated with strong test evidence",
+            "3": "L2 border OR type ambiguous but PRIMARY determined",
+            "2": "Multiple legitimate interpretations"
+          }
+        }
+      }
+    },
+
+    "S4_conf_synth": {
+      "obj": "Assign final confidence per dimension and overall",
+
+      "dim_specific": {
+        "D1": {
+          "5": "All agree reflex AND structural",
+          "4": "2/3 agree reflex OR minor structural resolved",
+          "3": "Reflex disagreement resolved, some structural uncertainty",
+          "2": "Significant structural disagreement remains"
+        },
+        "D2": {
+          "5": "All agree scope AND tests confirm",
+          "4": "2/3 agree AND tests support, minority rejected",
+          "3": "Resolved by genre/context, tests somewhat ambiguous",
+          "2": "Scope ambiguous after tests"
+        },
+        "D3": {
+          "L1": {
+            "5": "Reflex OR all agree with strong removal test",
+            "4": "2/3 agree, minority rejected",
+            "3": "Genuine L1 border OR resolved by framework",
+            "2": "Significant disagreement, weak evidence"
+          },
+          "L2": {
+            "5": "Clear Interactive/Interactional distinction AND agreement",
+            "4": "Resolved by genre/scope with evidence",
+            "3": "L2 border (multiple MD) OR ambiguous but resolved"
+          },
+          "L3": {
+            "5": "Consensus on type AND clear match",
+            "4": "Adjudicated with strong test evidence",
+            "3": "L2 border OR type ambiguous but PRIMARY determined",
+            "2": "Multiple legitimate interpretations"
+          }
+        }
+      },
+
+      "overall_calc": {
+        "method": "Weighted avg: D1(20%) + D2(20%) + D3(60%)",
+        "adjust": "Round down if significant disagreement in any dimension OR L1/L2 border flagged",
+        "floor": "Overall cannot exceed lowest dimension by >1 point"
+      },
+
+      "conf_just_template": {
+        "structure": "[Agreement: All|2/3|All differ] + [Key evidence: Reflex clear|Tests confirm scope|Genre-conventional type|Framework align] + [Uncertainty: if <5, state source] + [Border: if applicable, L1 or L2 with dominant]",
+        "ex": "2/3 agree with strong reflex evidence (text-reflex 'this thesis'). Minority violated reflex principle. Tests confirm MACRO. Frame Marker supported by Intro genre conventions. High confidence despite initial disagreement."
+      }
+    },
+
+    "S5_gold_synth": {
+      "obj": "Generate final gold annotation in strict JSON",
+
+      "synth_principles": {
+        "structural": "Synthesize from most precise/complete descriptions",
+        "reflex": "Use analysis from annotator who correctly identified reflex",
+        "scope": "Use classification from strongest functional reach + test confirmation",
+        "classification": "Use hierarchical adjudication from S3 (L1→L2→L3)",
+        "justifications": "Synthesize from strongest evidence, cite specific tests/principles",
+        "confidence": "Use ratings from S4"
+      },
+
+      "required_metadata": {
+        "adj_meta": {
+          "agreement": "all_agree | majority_2-1 | all_differ",
+          "disagree_type": "From S1.1.1 (Type A/B/C/D/E/F/G)",
+          "root_cause": "From S1.1.2 (specific cause)",
+          "resolution_basis": "reflex | framework | tests | genre | T1_weight",
+          "theoretical_violations": "List principle violations",
+          "T1_disqualifications": "Note any T1 disqualifications"
+        }
+      }
+    }
+  },
+
+  "output_format": {
+    "desc": "Gold-standard JSON annotation with adjudication metadata",
+    "schema": {
+      "thesis_code": "string",
+      "section": "string",
+      "expr_1": "string",
+      "expr_2": "string | null",
+      "expr_3": "string | null",
+      "ctx": "string (synthesized/complete)",
+
+      "analysis_1": {
+        "D1": {
+          "form": "string (synthesized)",
+          "pos": "string (synthesized)",
+          "punct": "string (synthesized)",
+          "gram_int": "string (synthesized)",
+          "reflex": {
+            "is": "boolean",
+            "type": "string | null (text | act | reader | author)",
+            "why": "string"
+          }
+        },
+
+        "D2": {
+          "class": "string (MICRO | MESO | MACRO)",
+          "reach": "string (synthesized)",
+          "removal": "string (synthesized)",
+          "boundary": "string (synthesized)",
+          "why": "string (synthesized)"
+        },
+
+        "D3": {
+          "L1": "string (MD | PROP | BORDER)",
+          "L1_why": "string (synthesized)",
+          "L2": "string | null (INT_ACTIVE | INT_ACTIONAL)",
+          "L2_why": "string | null (synthesized)",
+          "L3": "string | null (Hyland type)",
+          "L3_border": "boolean (true if multiple MD types)",
+          "L3_why": "string | null (synthesized)"
+        },
+
+        "conf": {
+          "D1": "integer (1-5)",
+          "D2": "integer (1-5)",
+          "D3": "integer (1-5)",
+          "overall": "integer (1-5)",
+          "just": "string"
+        },
+
+        "border": {
+          "L1": {
+            "is": "boolean",
+            "dom": "string | null (MD | PROP)",
+            "sec": "string | null",
+            "why": "string | null (required if is=true)"
+          },
+          "L2": {
+            "is": "boolean",
+            "pri": "string | null",
+            "sec": "string | null",
+            "ter": "string | null",
+            "strength": "string | null",
+            "why": "string | null (required if is=true)"
+          }
+        },
+
+        "comp_just": "string (concise synthesis across dimensions)",
+
+        "adj": {
+          "agree": "string (all | 2-1 | differ)",
+          "disagree": "string (A | B | C | D | E | F | G)",
+          "cause": "string (from S1)",
+          "basis": "string (reflex | framework | tests | genre | T1_weight)",
+          "violations": "string | null",
+          "disqual": "string | null",
+          "ctx_suff": "string (SUFF | INSUFF)",
+          "improve": "string"
+        }
+      },
+      "if analysis_2": {
+        "analysis_2":"The same structure as analysis_1"
+      },
+      "if analysis_3": {
+        "analysis_3":"The same structure as analysis_1"
+      }
+    }
+    },
+
+  "rules": [
+    "R1: Complete all 5 stages systematically",
+    "R2: Reflex FOUNDATIONAL - resolve first. Reflex → MUST be MD. Reflex→PROP = AUTO-wrong",
+    "R4: L1 and L2 borderline INDEPENDENT - can have neither, one, or both",
+    "R5: T1 criteria DISQUALIFYING - auto-prioritize correct annotator",
+    "R6: Scope = functional reach in discourse, NOT syntax/distance",
+    "R7: L2 Border MUST specify PRIMARY/SECONDARY/TERTIARY with strength",
+    "R8: Confidence aligns with evidence - not mechanical average",
+    "R9: Booleans lowercase: true/false not True/False",
+    "R10: Use null not None for empty optional fields",
+    "R11: Synthesize from STRONGEST evidence, cite tests/principles",
+    "R12: Include adj_meta for transparency",
+    "R13: Output ONLY valid JSON, no commentary",
+    "R14: Keep explanations concise, evidence-based - WHY not lengthy descriptions"
+  ],
+
+  "final": {
+    "systematic": "Follow 5 stages in exact order. No skipping, no intuitive judgments without systematic analysis.",
+    "evidence_primacy": "Base decisions on explicit evidence (reflex, tests, framework) not voting or averaging.",
+    "theoretical_grounding": "Every decision aligns with Cornish (TEXT+CONTEXT→DISCOURSE) and MD principles (reflex sufficiency, scope-function, borderline system).",
+    "transparency": "Document reasoning in adj_meta for full traceability.",
+    "conciseness": "Clear, concise justifications - cite key evidence/tests, avoid redundancy.",
+    "output_req": "Respond with ONLY single valid JSON object. No commentary before/after."
+  }
+}
