@@ -10,6 +10,7 @@ import logging
 from unidecode import unidecode
 import string
 from json_repair import repair_json
+import argparse
 
 # Add the project root to the path to import config
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
@@ -1726,28 +1727,57 @@ Based on the JSON input above, analyze the three model annotations and provide y
 
 
 if __name__ == "__main__":
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description='Annotation Optimizer')
+    parser.add_argument('input_file', nargs='?', default=None,
+                        help='Input CSV file (optional)')
+    parser.add_argument('--rows', type=int, default=None,
+                        help='Maximum rows to process')
+    parser.add_argument('--context-before', type=int, default=30,
+                        help='Words of context before sentence')
+    parser.add_argument('--context-after', type=int, default=30,
+                        help='Words of context after sentence')
+    parser.add_argument('--skip-diagnosis', action='store_true',
+                        help='Skip annotation structure diagnosis')
+    parser.add_argument('--skip-test', action='store_true',
+                        help='Skip normalization test')
+    parser.add_argument('--auto-run', action='store_true',
+                        help='Run full pipeline without confirmation')
+
+    args = parser.parse_args()
+
+    # Initialize optimizer with CLI arguments
     optimizer = AnnotationOptimizer(
         openai_api_key=Config.OPENAI_API_KEY,
         model=Config.OPENAI_MODEL,
+        context_words_before=args.context_before,
+        context_words_after=args.context_after,
         use_retrieval=True
     )
 
-    # DIAGNOSE ANNOTATION STRUCTURE FIRST (optional but recommended)
-    print("\n🔍 Diagnosing annotation structure...")
-    optimizer.diagnose_annotation_structure(max_samples=10)
+    # Optional: Diagnosis
+    if not args.skip_diagnosis:
+        print("\n🔍 Diagnosing annotation structure...")
+        optimizer.diagnose_annotation_structure(max_samples=min(10, args.rows or 10))
 
-    # Then test normalization
-    print("\n🧪 Testing normalization with real data...")
-    stats = optimizer.test_normalization_with_real_data(max_cases=10)
+    # Optional: Normalization test
+    if not args.skip_test:
+        print("\n🧪 Testing normalization with real data...")
+        stats = optimizer.test_normalization_with_real_data(
+            max_cases=min(10, args.rows or 10)
+        )
 
-    if stats:
+    # Run pipeline
+    if args.auto_run:
+        run_pipeline = True
+    else:
         print("\nWould you like to proceed with the full pipeline? (y/n): ", end='')
-        user_input = input()
+        run_pipeline = input().lower() == 'y'
 
-        if user_input.lower() == 'y':
-            optimized_df, error_analysis = optimizer.run_full_pipeline(
-                debug_parsing=False,
-                max_rows=None
-            )
-            print(f"\n✅ Optimization completed!")
-            print(f"Total cases processed: {len(optimized_df)}")
+    if run_pipeline:
+        optimized_df, error_analysis = optimizer.run_full_pipeline(
+            debug_parsing=False,
+            max_rows=args.rows
+        )
+        print(f"\n✅ Optimization completed!")
+        print(f"Total cases processed: {len(optimized_df)}")
