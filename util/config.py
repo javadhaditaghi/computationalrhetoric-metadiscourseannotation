@@ -14,16 +14,22 @@ class Config:
     # File paths (relative to project root)
     BASE_DATA_PATH = 'result'
     # OUTPUT_DIR = 'result/optimized'
-    OUTPUT_CSV_PATH = 'result/optimized/optimized_annotations.csv'
+    OUTPUT_CSV_PATH_WITHOUT_BOUNDARY = 'result/optimized/without_boundary/optimized_annotations.csv'
     OPTIMIZATION_PROMPT_PATH = 'src/annotation/prompt/adjunction_protocol.json'
     INTERNAL_EXTERNAL_PROMPT_PATH = 'src/annotation/prompt/internalexternal.txt'
     IMPROVED_PROMPT_PATH = 'src/annotation/prompt/improved_internalexternal.txt'
     ADJUDICATION_PROTOCOL_PATH = "src/annotation/prompt/adjunction_protocol.json"
     ADJUNCTION_PROTOCOL_PATH = "src/annotation/prompt/adjunction_protocol.json"
-
     MINIMAL_ADJUDICATION_PROMPT_PATH = "src/annotation/prompt/minimal_adjudication_prompt.json"
     ANNOTATION_FRAMEWORK_PATH = "src/annotation/prompt/guidelines.json"
     FAILED_ANNOTATION_PATH = "data/output/failed_annotation_error.csv"
+
+    # Without boundary prompts
+    ADJUDICATION_PROTOCOL_PATH_WITHOUT_BOUNDARY = 'src/annotation/prompt/without_boundary/adjunction_protocol_no_boundaries.json'
+    ADJUNCTION_PROTOCOL_PATH_WITHOUT_BOUNDARY = 'src/annotation/prompt/without_boundary/adjunction_protocol_no_boundaries.json'
+    OPTIMIZATION_PROMPT_PATH_WITHOUT_BOUNDARY = 'src/annotation/prompt/without_boundary/adjunction_protocol_no_boundaries.json'
+    MINIMAL_ADJUDICATION_PROMPT_PATH_WITHOUT_BOUNDARY = "src/annotation/prompt/without_boundary/minimal_adjudication_prompt_no_boundaries.json"
+
 
     # Processing configuration
     BATCH_SIZE = 10  # Process annotations in batches to manage API rate limits
