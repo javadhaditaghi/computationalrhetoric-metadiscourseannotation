@@ -48,7 +48,7 @@ class ClaudeMetadiscourseAnnotator:
 
     def _load_prompt(self) -> dict:
         """Load the metadiscourse prompt from JSON file."""
-        prompt_path = Path("src/annotation/prompt/guidelines.json")
+        prompt_path = Path("src/annotation/prompt/without_boundary/guidelines_no_boudaries.json")
 
         if not prompt_path.exists():
             raise FileNotFoundError(f"Prompt file not found at {prompt_path}")

@@ -215,7 +215,7 @@
             ],
             "pseudo": [
               "'Borderline' = uncertainty escape",
-              "Boundary error (operand included)",
+              "Boundary error",
               "Context insufficient",
               "Single function but uncertain"
             ],

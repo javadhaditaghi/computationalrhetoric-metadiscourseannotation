@@ -278,7 +278,7 @@ SHORT_COLUMNS = [
 ]
 
 
-def process_csv_files(input_dir='result/optimized', output_dir='result/flattened-by-expression'):
+def process_csv_files(input_dir='result/optimized/without_boundary', output_dir='result/flattened-by-expression'):
     """
     Process all CSV files in the input directory and create flattened versions.
     Generates both LONG (all columns) and SHORT (essential columns) versions.

@@ -1,36 +1,7 @@
 {
   "task_name": "Metadiscourse Identification and Classification Task: Functional Scope Analysis Framework",
-  "objective": "identify and classify expressions in the text based on unit of analysis principle using a three-dimensional framework: (1) observable Realization (including reflexivity), (2) Functional Scope, and (3) Metadiscourse Type (explicit three-level hierarchy) in context (based on context analysis part).",
+  "objective": "identify and classify expressions in the text using a three-dimensional framework: (1) observable Realization (including reflexivity), (2) Functional Scope, and (3) Metadiscourse Type (explicit three-level hierarchy) in context (based on context analysis part).",
   "important_rule_of_thumb": "Keep all your final explanations as clear and concise as possible.",
-  "unit_of_analysis_principles": {
-    "core_principle": "Analyze the METADISCURSIVE OPERATOR, NOT the PROPOSITIONAL OPERAND",
-    "definition": {
-      "metadiscursive_operator": "The linguistic element that performs the metadiscursive function (organizing, framing, evaluating, engaging)",
-      "propositional_operand": "The content that is being organized, framed, evaluated, or engaged with",
-      "critical_distinction": "The operator is METADISCOURSE; the operand is PROPOSITIONAL CONTENT",
-      "why_this_matters": "Incorrect unit identification lead to cascading errors through all three dimensions (observable realization, functional scope, and metadiscourse classification)",
-
-      "core_principle": "Analyze the METADISCURSIVE OPERATOR (what performs the MD function), NOT the PROPOSITIONAL OPERAND (the content being organized/evaluated)",
-
-      "basic_identification": {
-        "step_0_scanning": "How to systematically scan text? (1) Identify all reflexive elements first (guaranteed MD), (2) Scan for non-reflexive MD patterns, (3) For each candidate apply steps 1-3",
-        "step_1": "What discourse function is being performed? (organizing, evaluating, engaging)",
-        "step_2": "What linguistic elements perform this function?",
-        "step_3": "Apply removal test, function test, scope test to validate MD status"
-      },
-
-      "relationship_to_dimensions": {
-
-        "analytical_level": {
-          "dimension_1": "Describes HOW unit is observabelly realized",
-          "dimension_2": "Assesses HOW FAR unit's function extends",
-          "dimension_3": "Classifies WHAT functional type the unit is"
-        }
-      }
-
-    }
-  },
-
   "theoretical_framework": {
     "core_principle": {
       "definition": "Metadiscourse refers to writer's rhetorical acts, organizing content and managing writer-reader interaction.",
@@ -43,7 +14,6 @@
         "name": "Dimension 1: Observable Realization",
         "description": "Observable linguistic properties including lexico-grammatical features, syntax, punctuation, grammatical integration, and REFLEXIVITY.",
         "rationale": "Structural features provide evidence for functional analysis but do not determine function.",
-        "note": "When analyzing structural realization, work with the unit identified using unit_of_analysis_principles. D1 describes structure but does not determine boundaries.",
         "analysis_components": [
           {
             "component": "Lexico-grammatical Form",
@@ -250,7 +220,7 @@
 
             "BORDERLINE_MD_PROPOSITIONAL": {
               "definition": "Serves BOTH functions (organizing/guiding/stance-taking AND conveying factual content) simultaneously OR gradient between MD and propositional",
-              "key_test": "Removal affects BOTH discourse structure AND propositional content; tests conflict; cannot clearly separate metadiscursive operator from propositional meaning",
+              "key_test": "Removal affects BOTH discourse structure AND propositional content; tests conflict; cannot clearly separate metadiscursive from propositional meaning",
               "characteristics": [
                 "Dual function: discourse management AND factual content",
                 "Tests give conflicting results",
@@ -436,7 +406,7 @@
           {
             "dimension": "Domain of Reference",
             "cornish_exact_definition": "The domain of reference of a given text (including of course the local or general world knowledge that goes with it)",
-            "relevance_for_md": "Enables inference-based interpretation of MD markers; helps distinguish MD operator from propositional operand; contextualizes disciplinary MD conventions"
+            "relevance_for_md": "Enables inference-based interpretation of MD markers; helps distinguish MD from propositional; contextualizes disciplinary MD conventions"
           },
           {
             "dimension": "Surrounding Co-text",
@@ -497,7 +467,7 @@
               "Stance/evaluation/engagement lost (propositional content remains) → Interactional MD",
               "Both affected → Borderline (determine dominant function)"
             ],
-            "critical_note": "Apply to MD OPERATOR only, not propositional operand"
+            "critical_note": "Apply to MD only, not propositional"
           },
           {
             "procedure": "Reflexivity Analysis",
@@ -533,7 +503,7 @@
           {
             "procedure": "Host Predication Analysis",
             "rationale": "Complete referent and discourse function determined by entire host predication, not MD expression in isolation (Cornish).",
-            "application": "Analyze complete predicative context of MD expression; examine what is predicated of/by the MD operator",
+            "application": "Analyze complete predicative context of MD expression; examine what is predicated of/by the MD",
             "use": "Determines: (1) functional scope ('this thesis' vs. 'this paragraph'), (2) type disambiguation"
           },
           {

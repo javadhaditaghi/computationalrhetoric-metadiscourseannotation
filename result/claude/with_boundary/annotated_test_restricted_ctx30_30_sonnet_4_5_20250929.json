@@ -3,7 +3,7 @@
   "successful_annotations": 25,
   "failed_annotations": 0,
   "success_rate": 1.0,
-  "annotation_model": "gemini-3-pro-preview",
+  "annotation_model": "claude-sonnet-4-5-20250929",
   "breakdown_by_thesis_section": {
     "AP1": {
       "Introduction": {
