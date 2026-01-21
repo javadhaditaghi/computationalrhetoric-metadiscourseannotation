@@ -396,7 +396,7 @@ class ClaudeMetadiscourseAnnotator:
         """
         # Ensure the result/claude directory exists
         output_path = Path(output_file)
-        result_dir = Path("result/claude")
+        result_dir = Path("result/claude/with_boundary/new")
         result_dir.mkdir(parents=True, exist_ok=True)
 
         # Update output path to be in result/claude directory

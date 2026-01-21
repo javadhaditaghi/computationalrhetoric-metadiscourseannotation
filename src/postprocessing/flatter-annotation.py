@@ -278,7 +278,7 @@ SHORT_COLUMNS = [
 ]
 
 
-def process_csv_files(input_dir='result/optimized/without_boundary', output_dir='result/flattened-by-expression'):
+def process_csv_files(input_dir='result/optimized/without_boundary', output_dir='result/flattened-by-expression/without_boundary'):
     """
     Process all CSV files in the input directory and create flattened versions.
     Generates both LONG (all columns) and SHORT (essential columns) versions.
@@ -388,8 +388,8 @@ def main():
     print("=" * 60)
 
     # Default directories (adjust as needed)
-    input_directory = 'result/optimized'
-    output_directory = 'result/flattened-by-expression'
+    input_directory = 'result/optimized/without_boundary'
+    output_directory = 'result/flattened-by-expression/without_boundary'
 
     # Check if input directory exists
     if not os.path.exists(input_directory):

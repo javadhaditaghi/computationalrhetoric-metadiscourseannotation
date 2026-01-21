@@ -473,7 +473,7 @@ Provide your classification in JSON format."""
         """
         # Ensure the result/deepseek directory exists
         output_path = Path(output_file)
-        result_dir = Path("result/deepseek")
+        result_dir = Path("result/deepseek/with_boundary/new")
         result_dir.mkdir(parents=True, exist_ok=True)
 
         # Update output path to be in result/deepseek directory
