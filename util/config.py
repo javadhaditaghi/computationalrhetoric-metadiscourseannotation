@@ -39,7 +39,7 @@ class Config:
     MAX_TOKENS = 12000  # Maximum tokens for GPT responses
 
     # Model directories
-    MODEL_DIRECTORIES = ['claude', 'gemini', 'deepseek']
+    MODEL_DIRECTORIES = ['claude/without_boundary', 'gemini/without_boundary', 'deepseek/without_boundary']
 
     # Logging
     LOG_LEVEL = 'INFO'

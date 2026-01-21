@@ -1,0 +1,25 @@
+{
+  "total_rows": 25,
+  "successful_annotations": 25,
+  "failed_annotations": 0,
+  "success_rate": 1.0,
+  "annotation_model": "gemini-3-pro-preview",
+  "breakdown_by_thesis_section": {
+    "AP1": {
+      "Introduction": {
+        "total": 13,
+        "successful": 13,
+        "failed": 0,
+        "success_rate": 1.0
+      }
+    },
+    "AP2": {
+      "Method": {
+        "total": 12,
+        "successful": 12,
+        "failed": 0,
+        "success_rate": 1.0
+      }
+    }
+  }
+}
