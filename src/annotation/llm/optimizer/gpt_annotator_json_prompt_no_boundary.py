@@ -1130,7 +1130,11 @@ class AnnotationOptimizer:
             file_path = os.path.join(model_path, csv_file)
 
             df = pd.read_csv(file_path)
-            dataframes[model] = df
+
+            # Extract base model name from path (e.g., 'claude/without_boundary' → 'claude')
+            model_name = model.split('/')[0]
+
+            dataframes[model_name] = df
             logger.info(f"Loaded {len(df)} rows from {file_path}")
 
         return dataframes
