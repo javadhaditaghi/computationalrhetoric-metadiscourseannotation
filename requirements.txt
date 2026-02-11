@@ -649,11 +649,11 @@ pytz==2025.2
     # via
     #   -r requirements.in
     #   pandas
-pywin32==311
+pywin32==311; platform_system=="Windows"
     # via
     #   -r requirements.in
     #   jupyter-core
-pywinpty==3.0.0
+pywinpty==3.0.0; platform_system=="Windows"
     # via
     #   -r requirements.in
     #   jupyter-server
