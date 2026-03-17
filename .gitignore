@@ -1,2 +1,5 @@
 .env
 analysis/*.png
+venv/
+__pycache__/
+*.pyc
